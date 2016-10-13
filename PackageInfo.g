@@ -1,102 +1,156 @@
 #############################################################################
-##  
-##  Demo PackageInfo.g for the GitHubPagesForGAP
+##
+##  PackageInfo.g  file for the package XMod 
+##  Chris Wensley and Murat Alp 
 ##
 
 SetPackageInfo( rec(
+PackageName := "XMod",
+Packagename := "xmod",
+Subtitle := "Crossed Modules and Cat1-Groups",
 
-PackageName := "GitHubPagesForGAP",
+Version := "2.57",
+Date := "13/10/2016",
 
-Subtitle := "A GitHubPages generator for GAP packages",
-Version := "0.1",
-Date := "21/03/2014", # dd/mm/yyyy format
+##  duplicate these values for inclusion in the manual: 
+##  <#GAPDoc Label="PKGVERSIONDATA">
+##  <!ENTITY XMODVERSION "2.57">
+##  <!ENTITY XMODTARFILENAME "xmod-2.57.tar.gz">
+##  <!ENTITY XMODHTMLFILENAME "xmod.html">
+##  <!ENTITY XMODRELEASEDATE "13/10/2016">
+##  <!ENTITY XMODLONGRELEASEDATE "13th October 2016">
+##  <!ENTITY XMODCOPYRIGHTYEARS "1997-2016">
+##  <#/GAPDoc>
 
 Persons := [
   rec(
-    LastName      := "Horn",
-    FirstNames    := "Max",
+    LastName      := "Wensley",
+    FirstNames    := "Christopher D.",
     IsAuthor      := true,
     IsMaintainer  := true,
-    Email         := "max.horn@math.uni-giessen.de",
-    WWWHome       := "http://www.quendi.de/math",
-    PostalAddress := Concatenation(
-                       "AG Algebra\n",
-                       "Mathematisches Institut\n",
-                       "Justus-Liebig-Universität Gießen\n",
-                       "Arndtstraße 2\n",
-                       "35392 Gießen\n",
-                       "Germany" ),
-    Place         := "Gießen",
-    Institution   := "Justus-Liebig-Universität Gießen"
+    Email         := "c.d.wensley@bangor.ac.uk",
+    WWWHome       := "http://pages.bangor.ac.uk/~mas023/",
+    ## PostalAddress := Concatenation( [
+    ##                    "Dr. C.D. Wensley\n",
+    ##                    "School of Computer Science\n",
+    ##                    "Bangor University\n",
+    ##                    "Dean Street\n",
+    ##                    "Bangor\n",
+    ##                    "Gwynedd LL57 1UT\n",
+    ##                    "UK"] ),
+    Place         := "Bangor",
+    Institution   := "Bangor University"
   ),
-
   rec(
-    LastName      := "Thor",
-    FirstNames    := "A. U.",
+    LastName      := "Alp",
+    FirstNames    := "Murat",
     IsAuthor      := true,
     IsMaintainer  := false,
-    #Email         := "author@example.com",
+    Email         := "muratalp@nigde.edu.tr",
+    PostalAddress := Concatenation( [ 
+                       "Prof. Dr. M. Alp\n",
+                       "Nigde Universitesi\n",
+                       "Fen-Edebiyat Fakultesi\n",
+                       "Matematik Bolumu\n",
+                       "Nigde\n",
+                       "Turkey"] ),
+    Place         := "Nigde",
+    Institution   := "Nigde University"
   ),
-
-  rec(
-    LastName      := "Itor",
-    FirstNames    := "Jan",
-    IsAuthor      := false,
-    IsMaintainer  := true,
-    #Email         := "janitor@example.com",
+    rec(
+    LastName      := "Odabas",
+    FirstNames    := "Alper",
+    IsAuthor      := true,
+    IsMaintainer  := false,
+    Email         := "aodabas@ogu.edu.tr",
+    PostalAddress := Concatenation( [ 
+                       "Dr. A. Odabas \n",
+                       "Osmangazi University \n",
+                       "Arts and Sciences Faculty \n",
+                       "Department of Mathematics and Computer Science \n",
+                       "Eskisehir \n",
+                       "Turkey"] ),
+    Place         := "Eskisehir",
+    Institution   := "Osmangazi University"
   ),
+    rec(
+    LastName      := "Uslu",
+    FirstNames    := "Enver Onder",
+    IsAuthor      := true,
+    IsMaintainer  := false,
+    Email         := "enveruslu@ogu.edu.tr",
+    PostalAddress := Concatenation( [ 
+                       "Dr. E. O. Uslu \n",
+                       "Osmangazi University \n",
+                       "Arts and Sciences Faculty \n",
+                       "Department of Mathematics and Computer Science \n",
+                       "Eskisehir \n",
+                       "Turkey"] ),
+    Place         := "Eskisehir",
+    Institution   := "Osmangazi University"
+  )
 ],
 
-Status := "other",
+Status := "accepted",
+CommunicatedBy := "Derek Holt (Warwick)",
+AcceptDate := "12/1996",
 
-# The following are not strictly necessary in your own PackageInfo.g
-# (in the sense that update.g only looks at the usual fields
-# like PackageWWWHome, ArchiveURL etc.). But they are convenient
-# if you use exactly the scheme for your package website that we propose.
-GithubUser := "fingolfin",
-GithubRepository := ~.PackageName,
-GithubWWW := Concatenation("https://github.com/", ~.GithubUser, "/", ~.GithubRepository),
+SourceRepository := rec( 
+  Type := "git", 
+  URL := "https://github.com/gap-packages/xmod"
+),
+IssueTrackerURL := Concatenation( ~.SourceRepository.URL, "/issues" ),
+PackageWWWHome  := "http://gap-packages.github.io/xmod/",
+README_URL      := Concatenation( ~.PackageWWWHome, "README" ),
+PackageInfoURL  := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
+ArchiveURL      := Concatenation( ~.SourceRepository.URL, 
+                                  "/releases/download/v", ~.Version, 
+                                  "/", ~.PackageName, "-", ~.Version ), 
+SupportEmail := "cdwensley.maths@btinternet.com",
+ArchiveFormats  := ".tar.gz",
 
-PackageWWWHome := Concatenation("http://", ~.GithubUser, ".github.io/", ~.GithubRepository, "/"),
-README_URL     := Concatenation( ~.PackageWWWHome, "README" ),
-PackageInfoURL := Concatenation( ~.PackageWWWHome, "PackageInfo.g" ),
-# The following assumes you are using the Github releases system. If not, adjust
-# it accordingly.
-ArchiveURL     := Concatenation(~.GithubWWW,
-                    "/releases/download/v", ~.Version, "/",
-                    ~.GithubRepository, "-", ~.Version),
-
-ArchiveFormats := ".tar.gz .tar.bz2",
-
-AbstractHTML := 
-  "This is a pseudo package that contains no actual\
-  <span class=\"pkgname\">GAP</span> code. Instead, it is a template for other\
-  GAP packages that allows to quickly setup GitHub pages.",
+AbstractHTML :=
+ "The <span class=\"pkgname\">XMod</span> package provides a collection \
+  of functions for computing with crossed modules and cat1-groups, \
+their derivations and sections, morphisms of these structures, \
+and higher-dimensional generalisations.",
 
 PackageDoc := rec(
-  BookName  := "GitHubPagesForGAP",
+  BookName  := "XMod",
   ArchiveURLSubset := ["doc"],
   HTMLStart := "doc/chap0.html",
   PDFFile   := "doc/manual.pdf",
   SixFile   := "doc/manual.six",
-  LongTitle := "A GitHubPages generator for GAP packages",
+  LongTitle := "Crossed Modules and Cat1-Groups in GAP",
+  Autoload  := true
 ),
 
-# The following dependencies are fake and for testing / demo purposes
 Dependencies := rec(
-  GAP := ">=4.5.5",
-  NeededOtherPackages := [
-    ["GAPDoc", ">= 1.2"],
-    ["IO", ">= 4.1"],
-  ],
-  SuggestedOtherPackages := [["orb", ">= 4.2"]],
-  ExternalConditions := []
+  GAP := ">=4.8.2",
+  NeededOtherPackages := [ ["Utils", ">= 0.40"], 
+                           ["Gpd", ">= 1.44"], 
+                           ["Hap", ">= 1.11"],
+                           ["AutPGrp", ">= 1.6"] ], 
+  SuggestedOtherPackages := [ ["GAPDoc", ">= 1.5.1"] ],
+  ExternalConditions := [ ]
 ),
 
 AvailabilityTest := ReturnTrue,
 
-Keywords := ["GitHub pages", "GAP"]
+BannerString := Concatenation( 
+  "Loading XMod ", String( ~.Version ), 
+  " (methods for crossed modules and cat1-groups)\n",
+  "by Chris Wensley (http://pages.bangor.ac.uk/~mas023/),", 
+  " with contributions by:\n", 
+  "    Murat Alp (muratalp@nigde.edu.tr),\n", 
+  "    Alper Odabas (aodabas@ogu.edu.tr),\n", 
+  "and Enver Uslu (enveruslu@ogu.edu.tr).\n", 
+  "----------",
+  "-------------------------------------------------------------------\n" ), 
+
+TestFile := "tst/testall.g",
+
+Keywords := ["crossed module", "cat1-group", "derivation", "section", 
+             "actor", "crossed square" ]
 
 ));
-
-
