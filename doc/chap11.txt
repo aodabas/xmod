@@ -133,7 +133,7 @@
   
   [1X11.2-3 [33X[0;0YLatest Version[133X[101X
   
-  [33X[0;0YThe latest version, 2.57, was released on 13th October 2016.[133X
+  [33X[0;0YThe latest version, 2.58, was released on 2nd November 2016.[133X
   
   
   [1X11.3 [33X[0;0YWhat needs doing next?[133X[101X

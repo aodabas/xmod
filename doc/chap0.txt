@@ -6,10 +6,10 @@
                      [1XCrossed modules and cat1-groups in [5XGAP[105X[101X
   
   
-                                  Version 2.57
+                                  Version 2.58
   
   
-                                   13/10/2016
+                                   02/11/2016
   
   
                                  Chris Wensley
@@ -23,8 +23,12 @@
   
   
   Chris Wensley
-      Email:    [7Xmailto:cdwensley.maths@btinternet.com[107X
+      Email:    [7Xmailto:c.d.wensley@bangor.ac.uk[107X
       Homepage: [7Xhttp://pages.bangor.ac.uk/~mas023/[107X
+      Address:  [33X[0;14YSchool of Computer Science, Bangor University,[133X
+                [33X[0;14YDean Street, Bangor, Gwynedd, LL57 1UT, U.K.[133X
+  
+  
   Murat Alp
       Email:    [7Xmailto:muratalp@nigde.edu.tr[107X
       Address:  [33X[0;14YNigde Üniversitesi,[133X
@@ -78,11 +82,11 @@
   modules,  written  by  Alper  Odabaş  and  Enver Uslu, were added. These are
   contained in Chapter [14X4[114X, and are described in detail in the paper [IOU16].[133X
   
-  [33X[0;0YThe current version is 2.57, released 13th October 2016 for [5XGAP[105X 4.8.[133X
+  [33X[0;0YThe current version is 2.58, released 2nd November 2016 for [5XGAP[105X 4.8.[133X
   
   [33X[0;0YBug reports, suggestions and comments are, of course, welcome. Please submit
   an  issue at [7Xhttp://github.com/gap-packages/xmod/issues/[107X or send an email to
-  the first author at [7Xmailto:cdwensley.maths@btinternet.com[107X.[133X
+  the first author at [7Xmailto:c.d.wensley@bangor.ac.uk[107X.[133X
   
   
   -------------------------------------------------------
@@ -96,11 +100,11 @@
   
   -------------------------------------------------------
   [1XAcknowledgements[101X
-  [33X[0;0YThis  documentation was prepared with the [5XGAPDoc[105X package of Frank Lübeck and
-  Max Neunhöffer.[133X
+  [33X[0;0YThis  documentation  was  prepared  with  the [5XGAPDoc[105X package [LN12] of Frank
+  Lübeck and Max Neunhöffer.[133X
   
   [33X[0;0YThe  procedure  used  to  mount  new  releases  on  GitHub uses the packages
-  [5XGitHubPagesForGAP[105X and [5XReleaseTools[105X of Max Horn.[133X
+  [5XGitHubPagesForGAP[105X [Hor14] and [5XReleaseTools[105X of Max Horn.[133X
   
   [33X[0;0YThe  second  author wishes to acknowledge support from Dumlupinar University
   and the Turkish government.[133X

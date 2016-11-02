@@ -50,9 +50,9 @@
   and  crossed modules are contained in Chapter [14X4[114X, and are described in detail
   in their paper [IOU16].[133X
   
-  [33X[0;0YThe current version is 2.57 for [5XGAP[105X 4.8, released on 13th October 2016.[133X
+  [33X[0;0YThe current version is 2.58 for [5XGAP[105X 4.8, released on 2nd November 2016.[133X
   
-  [33X[0;0YThe package may be obtained as a compressed tar file [11Xxmod-2.57.tar.gz[111X by ftp
+  [33X[0;0YThe package may be obtained as a compressed tar file [11Xxmod-2.58.tar.gz[111X by ftp
   from one of the following sites:[133X
   
   [30X    [33X[0;6Yany                  [5XGAP[105X                 archive,                 e.g.
@@ -149,5 +149,6 @@
   [4X[32X[104X
   
   [33X[0;0YAdditional  information can be found on the [13XComputational Higher-dimensional
-  Discrete Algebra[113X website at [7Xhttp://pages.bangor.ac.uk/~mas023/chda/[107X.[133X
+  Discrete                 Algebra[113X                 website                 at:
+  [7Xhttp://pages.bangor.ac.uk/~mas023/chda/intro.html[107X.[133X
   
