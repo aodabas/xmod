@@ -23,10 +23,11 @@
   
   [33X[0;0YData  for  the  cases  of  algebraic  interest  is provided by a conjugation
   crossed  module  [22Xcal X = (∂ : S -> R)[122X and a homomorphism [22Xι[122X from [22XR[122X to a third
-  group [22XQ[122X. The output from the calculation is a crossed module [22Xι_∗cal X = (δ :
-  ι_∗S  ->  Q)[122X  together with a morphism of crossed modules [22Xcal X -> ι_∗cal X[122X.
-  When  [22Xι[122X is a surjection with kernel [22XK[122X then [22Xι_∗S = [S,K][122X (see [BH78]). When [22Xι[122X
-  is an inclusion the induced crossed module may be calculated using a copower
+  group  [22XQ[122X.  (It  is hoped to implement more general cases in due course.) The
+  output  from  the calculation is a crossed module [22Xι_∗cal X = (δ : ι_∗S -> Q)[122X
+  together  with  a morphism of crossed modules [22Xcal X -> ι_∗cal X[122X. When [22Xι[122X is a
+  surjection  with  kernel  [22XK[122X  then  [22Xι_∗S  =  [S,K][122X (see [BH78]). When [22Xι[122X is an
+  inclusion  the  induced  crossed  module  may  be calculated using a copower
   construction [BW95] or, in the case when [22XR[122X is normal in [22XQ[122X, as a coproduct of
   crossed  modules  ([BW96],  but  not  yet  implemented). When [22Xι[122X is neither a
   surjection  nor  an  inclusion,  [22Xι[122X  is  factored  as  the  composite  of the

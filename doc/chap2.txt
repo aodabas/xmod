@@ -16,7 +16,7 @@
   
   
   [33X[0;0YWhen only the first of these axioms is satisfied, the resulting structure is
-  a  [13Xpre-crossed  module[113X (see section [14X2.2[114X). (Much of the literature on crossed
+  a  [13Xpre-crossed  module[113X (see section [14X2.3[114X). (Much of the literature on crossed
   modules  uses  left actions, but we have chosen to use right actions in this
   package since that is the standard choice for group actions in [5XGAP[105X.)[133X
   
@@ -92,8 +92,8 @@
   concatenating  the  names of the source and range (if these exist). [10XSize[110X and
   [10XIdGroup[110X return two-element lists.[133X
   
-  [33X[0;0YThe  [10XExternalSetXMod"[110X for a crossed module is the source group considered as
-  a G-set of the range group using the crossed module action.[133X
+  [33X[0;0YThe [10XExternalSetXMod[110X for a crossed module is the source group considered as a
+  G-set of the range group using the crossed module action.[133X
   
   [33X[0;0YThe [10XDisplay[110X function is used to print details of 2d-groups.[133X
   
@@ -127,18 +127,24 @@
     [4X[28X[ [ () ], [ (5,6,7,8,9), (5,7,9,6,8), (5,9,8,7,6), (5,8,6,9,7) ] ][128X[104X
     [4X[25Xgap>[125X [27XRepresentationsOfObject( X1 );[127X[104X
     [4X[28X[ "IsComponentObjectRep", "IsAttributeStoringRep", "IsPreXModObj" ][128X[104X
-    [4X[25Xgap>[125X [27XKnownPropertiesOfObject( X1 );[127X[104X
-    [4X[28X[ "IsEmpty", "IsTrivial", "IsNonTrivial", "IsFinite", [128X[104X
-    [4X[28X  "CanEasilyCompareElements", "CanEasilySortElements", "IsDuplicateFree", [128X[104X
-    [4X[28X  "IsGeneratorsOfSemigroup", "IsPreXModDomain", "IsPerm2dGroup", "IsPreXMod", [128X[104X
-    [4X[28X  "IsXMod", "IsAutomorphismGroup2dGroup" ][128X[104X
     [4X[25Xgap>[125X [27XKnownAttributesOfObject( X1);[127X[104X
     [4X[28X[ "Name", "Size", "Range", "Source", "IdGroup", "Boundary", "AutoGroup", [128X[104X
     [4X[28X  "XModAction", "ExternalSetXMod" ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X2.1-4 IsXMod[101X
+  
+  [1X2.2 [33X[0;0YProperties of crossed modules[133X[101X
+  
+  [33X[0;0YThe  underlying  category  structures  for  the  objects constructed in this
+  chapter   follow   the  sequence  [10XIs2dDomain[110X;  [10XIs2dMagma[110X;  [10XIs2dMagmaWithOne[110X;
+  [10XIs2dMagmaWithInverses[110X, mirroring the situation for (one-dimensional) groups.
+  From these we construct [10XIs2dSemigroup[110X, [10XIs2dMonoid[110X and [10XIs2dGroup[110X.[133X
+  
+  [33X[0;0YThere  are  then  a  variety  of properties associated with crossed modules,
+  starting with [10XIsPreXMod[110X and [10XIsXMod[110X.[133X
+  
+  [1X2.2-1 IsXMod[101X
   
   [29X[2XIsXMod[102X( [3XX0[103X ) [32X property
   [29X[2XIsPreXMod[102X( [3XX0[103X ) [32X property
@@ -146,21 +152,26 @@
   [29X[2XIsPc2dGroup[102X( [3XX0[103X ) [32X property
   [29X[2XIsFp2dGroup[102X( [3XX0[103X ) [32X property
   
-  [33X[0;0YThe  underlying  category  structures  for  the  objects constructed in this
-  chapter   follow   the  sequence  [10XIs2dDomain[110X;  [10XIs2dMagma[110X;  [10XIs2dMagmaWithOne[110X;
-  [10XIs2dMagmaWithInverses[110X, mirroring the situation for (one-dimensional) groups.
-  From these we construct [10XIs2dSemigroup[110X, [10XIs2dMonoid[110X and [10XIs2dGroup[110X.[133X
-  
   [33X[0;0YA   structure   which   has  [10XIsPerm2dGroup[110X  is  a  precrossed  module  or  a
-  pre-cat1-group (see section [14X2.3[114X) whose source and range are both permutation
-  groups.  The  properties  [10XIsPc2dGroup[110X, [10XIsFp2dGroup[110X are defined similarly. We
-  see in the previous example that [10XX1[110X has [10XIsPreXMod[110X, [10XIsXMod[110X and [10XIsPerm2dGroup[110X.
+  pre-cat1-group (see section [14X2.4[114X) whose source and range are both permutation
+  groups.  The  properties  [10XIsPc2dGroup[110X, [10XIsFp2dGroup[110X are defined similarly. In
+  the  example  below  we see that [10XX1[110X has [10XIsPreXMod[110X, [10XIsXMod[110X and [10XIsPerm2dGroup[110X.
   There  are also properties corresponding to the various construction methods
   listed  in  section  [14X2.1[114X:  [10XIsTrivialAction2dGroup[110X;  [10XIsNormalSubgroup2dGroup[110X;
   [10XIsCentralExtension2dGroup[110X;                       [10XIsAutomorphismGroup2dGroup[110X;
   [10XIsAbelianModule2dGroup[110X.[133X
   
-  [1X2.1-5 SubXMod[101X
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XKnownPropertiesOfObject( X1 );[127X[104X
+    [4X[28X[ "IsEmpty", "IsTrivial", "IsNonTrivial", "IsFinite", [128X[104X
+    [4X[28X  "CanEasilyCompareElements", "CanEasilySortElements", "IsDuplicateFree", [128X[104X
+    [4X[28X  "IsGeneratorsOfSemigroup", "IsPreXModDomain", "IsPerm2dGroup", "IsPreXMod", [128X[104X
+    [4X[28X  "IsXMod", "IsAutomorphismGroup2dGroup" ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-2 SubXMod[101X
   
   [29X[2XSubXMod[102X( [3XX0[103X, [3Xsrc[103X, [3Xrng[103X ) [32X operation
   [29X[2XTrivialSubXMod[102X( [3XX0[103X ) [32X attribute
@@ -208,9 +219,9 @@
   [4X[32X[104X
   
   
-  [1X2.2 [33X[0;0YPre-crossed modules[133X[101X
+  [1X2.3 [33X[0;0YPre-crossed modules[133X[101X
   
-  [1X2.2-1 PreXModByBoundaryAndAction[101X
+  [1X2.3-1 PreXModByBoundaryAndAction[101X
   
   [29X[2XPreXModByBoundaryAndAction[102X( [3Xbdy[103X, [3Xact[103X ) [32X operation
   [29X[2XSubPreXMod[102X( [3XX0[103X, [3Xsrc[103X, [3Xrng[103X ) [32X operation
@@ -236,7 +247,7 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X2.2-2 PeifferSubgroup[101X
+  [1X2.3-2 PeifferSubgroup[101X
   
   [29X[2XPeifferSubgroup[102X( [3XX0[103X ) [32X attribute
   [29X[2XXModByPeifferQuotient[102X( [3Xprexmod[103X ) [32X attribute
@@ -276,9 +287,9 @@
   [4X[32X[104X
   
   
-  [1X2.3 [33X[0;0YCat1-groups and pre-cat1-groups[133X[101X
+  [1X2.4 [33X[0;0YCat1-groups and pre-cat1-groups[133X[101X
   
-  [1X2.3-1 Source[101X
+  [1X2.4-1 Source[101X
   
   [29X[2XSource[102X( [3XC[103X ) [32X attribute
   [29X[2XRange[102X( [3XC[103X ) [32X attribute
@@ -313,7 +324,7 @@
   the  [10XKernelEmbedding[110X  is  the  inclusion  of  the  kernel of [10Xt[110X in [10XG[110X, and the
   [10XBoundary[110X is the restriction of [10Xh[110X to the kernel of [10Xt[110X.[133X
   
-  [1X2.3-2 Cat1[101X
+  [1X2.4-2 Cat1[101X
   
   [29X[2XCat1[102X( [3Xargs[103X ) [32X attribute
   [29X[2XPreCat1ByTailHeadEmbedding[102X( [3Xt[103X, [3Xh[103X, [3Xe[103X ) [32X attribute
@@ -370,7 +381,37 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X2.3-3 Cat1OfXMod[101X
+  
+  [1X2.5 [33X[0;0YProperties of cat1-groups[133X[101X
+  
+  [33X[0;0YMany of the properties listed in section [14X2.2[114X apply to pre-cat1-groups and to
+  cat1-groups  since  these  are  also 2d-groups. There are also more specific
+  properties.[133X
+  
+  [1X2.5-1 IsCat1[101X
+  
+  [29X[2XIsCat1[102X( [3XC0[103X ) [32X property
+  [29X[2XIsPreXCat1[102X( [3XC0[103X ) [32X property
+  [29X[2XIsIdentityCat1[102X( [3XC0[103X ) [32X property
+  [29X[2XIsEndomorphismPreCat1[102X( [3XC0[103X ) [32X property
+  
+  [33X[0;0Y[10XIsIdentityCat1(C0)[110X  is  true  when the head and tail maps of [10XC0[110X are identity
+  mappings.  [10XIsEndomorphismPreCat1(C0)[110X  is  true  when  the  range  of [10XC0[110X is a
+  subgroup of the source.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XKnownPropertiesOfObject( C2 );[127X[104X
+    [4X[28X[ "CanEasilyCompareElements", "CanEasilySortElements", "IsDuplicateFree", [128X[104X
+    [4X[28X  "IsGeneratorsOfSemigroup", "IsPreCat1Domain", "IsPerm2dGroup", [128X[104X
+    [4X[28X  "IsPc2dGroup", "IsPreCat1", "IsCat1", "IsIdentityCat1", [128X[104X
+    [4X[28X  "IsEndomorphismPreCat1" ][128X[104X
+    [4X[25Xgap>[125X [27XIsEndomorphissmPreCat1( C2 ); [127X[104X
+    [4X[28Xfalse[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.5-2 Cat1OfXMod[101X
   
   [29X[2XCat1OfXMod[102X( [3XX0[103X ) [32X attribute
   [29X[2XXModOfCat1[102X( [3XC0[103X ) [32X attribute
@@ -423,7 +464,7 @@
   [4X[32X[104X
   
   
-  [1X2.4 [33X[0;0YSelection of a small cat1-group[133X[101X
+  [1X2.6 [33X[0;0YSelection of a small cat1-group[133X[101X
   
   [33X[0;0YThe  [10XCat1[110X function may also be used to select a cat1-group from a data file.
   All cat1-structures on groups of size up to [22X70[122X (ordered according to the [5XGAP[105X
@@ -432,7 +473,7 @@
   stored.  The data is read into the list [10XCAT1_LIST[110X only when this function is
   called.[133X
   
-  [1X2.4-1 Cat1Select[101X
+  [1X2.6-1 Cat1Select[101X
   
   [29X[2XCat1Select[102X( [3Xsize[103X, [3Xgpnum[103X, [3Xnum[103X ) [32X attribute
   
@@ -470,7 +511,7 @@
     [4X[25Xgap>[125X [27X## convert from a pc-cat1-group to a permutation cat1-group[127X[104X
     [4X[25Xgap>[125X [27Xiso18 := IsomorphismPermObject( C18 );;[127X[104X
     [4X[25Xgap>[125X [27XPC18 := Image( iso18 );;[127X[104X
-    [4X[25Xgap>[125X [27XDisplay( PC18 );                     [127X[104X
+    [4X[25Xgap>[125X [27XDisplay( PC18 );[127X[104X
     [4X[28XCat1-group :- [128X[104X
     [4X[28X: Source group has generators:[128X[104X
     [4X[28X  [ (2,3)(5,6), (4,5,6), (1,2,3) ][128X[104X
@@ -507,7 +548,7 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X2.4-2 AllCat1sBasic[101X
+  [1X2.6-2 AllCat1sBasic[101X
   
   [29X[2XAllCat1sBasic[102X( [3Xgp[103X ) [32X operation
   
@@ -537,7 +578,7 @@
   [4X[32X[104X
   
   
-  [1X2.5 [33X[0;0YMore functions for crossed modules and cat1-groups[133X[101X
+  [1X2.7 [33X[0;0YMore functions for crossed modules and cat1-groups[133X[101X
   
   [33X[0;0YChapter  [14X4[114X  contains  functions  for  quotient  crossed modules; centre of a
   crossed module; commutator and derived subcrossed modules; etc.[133X
@@ -545,7 +586,7 @@
   [33X[0;0YHere  we  mention  two  functions for groups which have been extended to the
   two-dimensional case.[133X
   
-  [1X2.5-1 IdGroup[101X
+  [1X2.7-1 IdGroup[101X
   
   [29X[2XIdGroup[102X( [3X2dgroup[103X ) [32X operation
   [29X[2XStructureDescription[102X( [3X2dgroup[103X ) [32X operation
@@ -555,10 +596,10 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XIdGroup( X16 );[127X[104X
-    [4X[28X[ [ 8, 3 ], [ 16, 7 ] ][128X[104X
+    [4X[25Xgap>[125X [27XIdGroup( X2 );[127X[104X
+    [4X[28X[ [ 24, 6 ], [ 12, 4 ] ][128X[104X
     [4X[25Xgap>[125X [27XStructureDescription( C2 );[127X[104X
-    [4X[28X[ "(S3 x d24) : C2", "d12" ][128X[104X
+    [4X[28X[ "(S3 x D24) : C2", "D12" ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
