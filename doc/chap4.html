@@ -25,7 +25,7 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap4.html#X7E373BF3836B3A9C">4.1 <span class="Heading">More operations for crossed modules</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7F83C9347F1DC7CC">4.1-1 FactorXMod</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X873ED97185D9176E">4.1-1 FactorPreXMod</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X8591E25680C5C575">4.1-2 IntersectionSubXMods</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7E20208279038BB8">4.1-3 Displacement</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X86ACB83E7D70C625">4.1-4 CommutatorSubXMod</a></span>
@@ -33,7 +33,7 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X85640DD17F5A2949">4.1-6 FixedPointSubgroupXMod</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7B57446086BA1BF0">4.1-7 CentreXMod</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X814D9E1E78EEE665">4.1-8 CentralQuotient</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7A49EABB80CC67AD">4.1-9 IsAbelian2dGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7F4222757B0E08B6">4.1-9 IsAbelian2DimensionalGroup</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X87C524C08588AAC0">4.1-10 LowerCentralSeriesOfXMod</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X81EE2188863E6E85">4.1-11 AllXMods</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap4.html#X7C67623F797A0301">4.1-12 IsomorphismXMods</a></span>
@@ -62,13 +62,13 @@
 
 <h4>4.1 <span class="Heading">More operations for crossed modules</span></h4>
 
-<p><a id="X7F83C9347F1DC7CC" name="X7F83C9347F1DC7CC"></a></p>
+<p><a id="X873ED97185D9176E" name="X873ED97185D9176E"></a></p>
 
-<h5>4.1-1 FactorXMod</h5>
+<h5>4.1-1 FactorPreXMod</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FactorXMod</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NaturalMorphismByNormalSubXMod</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<p>When <span class="SimpleMath">mathcalX_2 = (∂_2 : S_2 -&gt; R_2)</span> is a normal subcrossed module of <span class="SimpleMath">mathcalX_1 = (∂_1 : S_1 -&gt; R_1)</span>, then the quotient crossed module is <span class="SimpleMath">(∂ : S_2/S_1 -&gt; R_2/R_1)</span> with the induced boundary and action maps.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; FactorPreXMod</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NaturalMorphismByNormalSubPreXMod</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p>When <span class="SimpleMath">mathcalX_2 = (∂_2 : S_2 -&gt; R_2)</span> is a normal sub-precrossed module of <span class="SimpleMath">mathcalX_1 = (∂_1 : S_1 -&gt; R_1)</span>, then the quotient precrossed module is <span class="SimpleMath">(∂ : S_2/S_1 -&gt; R_2/R_1)</span> with the induced boundary and action maps. Quotienting a precrossed module by it's Peiffer subgroup is a special case of this construction.</p>
 
 
 <div class="example"><pre>
@@ -81,13 +81,11 @@
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pos1 := Position( ids, [ [4,1], [8,3] ] );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Xn1 := nsx[pos1]; </span>
 [Group( [ f2*f4^2, f3*f4 ] )-&gt;Group( [ f3, f4, f5 ] )]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( Xn1 );</span>
-[ 4, 8 ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nat1 := NaturalMorphismByNormalSubXMod( X24, Xn1 ); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nat1 := NaturalMorphismByNormalSubPreXMod( X24, Xn1 ); </span>
 [[d24-&gt;PAut(d24)] =&gt; [..]]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Qn1 := FactorXMod( X24, Xn1 );; </span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( Qn1 );</span>
-[ 6, 6 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Qn1 := FactorPreXMod( X24, Xn1 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ Size(Xn1), Size(Qn1) ];</span>
+[ [ 4, 8 ], [ 6, 6 ] ]
 
 </pre></div>
 
@@ -253,7 +251,7 @@ Group([ f5, f2*f3 ])
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CentralQuotient</code>( <var class="Arg">G</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p>The <code class="code">CentralQuotient</code> of a group <span class="SimpleMath">G</span> is the crossed module <span class="SimpleMath">(G -&gt; G/Z(G))</span> with the natural homomorphism as the boundary map. This is a special case of <code class="code">XModByCentralExtension</code> (see <a href="chap2.html#X7BAD9A7F7AFEEC89"><span class="RefLink">2.1</span></a>).</p>
 
-<p>Similarly, the central quotient of a crossed module <span class="SimpleMath">mathcalX</span> is the crossed square <span class="SimpleMath">(mathcalX ⇒ mathcalX/Z(mathcalX)</span> (see section <a href="chap8.html#X820A7D30847BC828"><span class="RefLink">8.1</span></a>).</p>
+<p>Similarly, the central quotient of a crossed module <span class="SimpleMath">mathcalX</span> is the crossed square <span class="SimpleMath">(mathcalX ⇒ mathcalX/Z(mathcalX)</span> (see section <a href="chap8.html#X820A7D30847BC828"><span class="RefLink">8.2</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -264,14 +262,14 @@ Group([ f5, f2*f3 ])
 
 </pre></div>
 
-<p><a id="X7A49EABB80CC67AD" name="X7A49EABB80CC67AD"></a></p>
+<p><a id="X7F4222757B0E08B6" name="X7F4222757B0E08B6"></a></p>
 
-<h5>4.1-9 IsAbelian2dGroup</h5>
+<h5>4.1-9 IsAbelian2DimensionalGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsAbelian2dGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsAspherical2dGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSimplyConnected2dGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFaithful2dGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsAbelian2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsAspherical2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSimplyConnected2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFaithful2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
 <p>A crossed module is <em>abelian</em> if it equal to its centre. This is the case when the range group is abelian and the action is trivial.</p>
 
 <p>A crossed module is <em>aspherical</em> if the boundary has trivial kernel.</p>
@@ -283,14 +281,14 @@ Group([ f5, f2*f3 ])
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ IsAbelian2dGroup(Xn4), IsAbelian2dGroup(X24) ];</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ IsAbelian2DimensionalGroup(Xn4), IsAbelian2DimensionalGroup(X24) ];</span>
 [ false, false ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pos7 := Position( ids, [ [3,1], [6,1] ] );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ IsAspherical2dGroup(nsx[pos7]), IsAspherical2dGroup(X24) ];</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ IsAspherical2DimensionalGroup(nsx[pos7]), IsAspherical2DimensionalGroup(X24) ];</span>
 [ true, false ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ IsSimplyConnected2dGroup(Xn4), IsSimplyConnected2dGroup(X24) ];</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ IsSimplyConnected2DimensionalGroup(Xn4), IsSimplyConnected2DimensionalGroup(X24) ];</span>
 [ true, true ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ IsFaithful2dGroup(Xn4), IsFaithful2dGroup(X24) ];              </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ IsFaithful2DimensionalGroup(Xn4), IsFaithful2DimensionalGroup(X24) ];              </span>
 [ false, true ] 
 
 </pre></div>
@@ -300,8 +298,8 @@ Group([ f5, f2*f3 ])
 <h5>4.1-10 LowerCentralSeriesOfXMod</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; LowerCentralSeriesOfXMod</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsNilpotent2dGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NilpotencyClass2dGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsNilpotent2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; NilpotencyClass2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p>Let <span class="SimpleMath">mathcalY</span> be a subcrossed module of <span class="SimpleMath">mathcalX</span>. A <em> series of length</em> <span class="SimpleMath">n</span> from <span class="SimpleMath">mathcalX</span> to <span class="SimpleMath">mathcalY</span> has the form</p>
 
 <p class="pcenter">
@@ -341,9 +339,9 @@ Group([ f5, f2*f3 ])
 [ [d24-&gt;PAut(d24)], [Group( [ f2 ] )-&gt;Group( [ f2, f5 ] )], 
   [Group( [ f3*f4^2 ] )-&gt;Group( [ f2 ] )], [Group( [ f4 ] )-&gt;Group( [ f2 ] )] 
  ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsNilpotent2dGroup(X24);      </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsNilpotent2DimensionalGroup(X24);      </span>
 false
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NilpotencyClassOf2dGroup(X24);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NilpotencyClassOf2DimensionalGroup(X24);</span>
 0
 
 </pre></div>

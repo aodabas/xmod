@@ -15,14 +15,16 @@
   
   [1X4.1 [33X[0;0YMore operations for crossed modules[133X[101X
   
-  [1X4.1-1 FactorXMod[101X
+  [1X4.1-1 FactorPreXMod[101X
   
-  [29X[2XFactorXMod[102X( [3XX1[103X, [3XX2[103X ) [32X operation
-  [29X[2XNaturalMorphismByNormalSubXMod[102X( [3XX1[103X, [3XX2[103X ) [32X operation
+  [29X[2XFactorPreXMod[102X( [3XX1[103X, [3XX2[103X ) [32X operation
+  [29X[2XNaturalMorphismByNormalSubPreXMod[102X( [3XX1[103X, [3XX2[103X ) [32X operation
   
-  [33X[0;0YWhen  [22XmathcalX_2  =  (∂_2  :  S_2  ->  R_2)[122X is a normal subcrossed module of
-  [22XmathcalX_1  =  (∂_1  : S_1 -> R_1)[122X, then the quotient crossed module is [22X(∂ :
-  S_2/S_1 -> R_2/R_1)[122X with the induced boundary and action maps.[133X
+  [33X[0;0YWhen  [22XmathcalX_2  =  (∂_2 : S_2 -> R_2)[122X is a normal sub-precrossed module of
+  [22XmathcalX_1 = (∂_1 : S_1 -> R_1)[122X, then the quotient precrossed module is [22X(∂ :
+  S_2/S_1 -> R_2/R_1)[122X with the induced boundary and action maps. Quotienting a
+  precrossed  module  by  it's  Peiffer  subgroup  is  a  special case of this
+  construction.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -34,13 +36,11 @@
     [4X[25Xgap>[125X [27Xpos1 := Position( ids, [ [4,1], [8,3] ] );;[127X[104X
     [4X[25Xgap>[125X [27XXn1 := nsx[pos1]; [127X[104X
     [4X[28X[Group( [ f2*f4^2, f3*f4 ] )->Group( [ f3, f4, f5 ] )][128X[104X
-    [4X[25Xgap>[125X [27XSize( Xn1 );[127X[104X
-    [4X[28X[ 4, 8 ][128X[104X
-    [4X[25Xgap>[125X [27Xnat1 := NaturalMorphismByNormalSubXMod( X24, Xn1 ); [127X[104X
+    [4X[25Xgap>[125X [27Xnat1 := NaturalMorphismByNormalSubPreXMod( X24, Xn1 ); [127X[104X
     [4X[28X[[d24->PAut(d24)] => [..]][128X[104X
-    [4X[25Xgap>[125X [27XQn1 := FactorXMod( X24, Xn1 );; [127X[104X
-    [4X[25Xgap>[125X [27XSize( Qn1 );[127X[104X
-    [4X[28X[ 6, 6 ][128X[104X
+    [4X[25Xgap>[125X [27XQn1 := FactorPreXMod( X24, Xn1 );; [127X[104X
+    [4X[25Xgap>[125X [27X[ Size(Xn1), Size(Qn1) ];[127X[104X
+    [4X[28X[ [ 4, 8 ], [ 6, 6 ] ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -221,7 +221,7 @@
   [10XXModByCentralExtension[110X (see [14X2.1[114X).[133X
   
   [33X[0;0YSimilarly,  the central quotient of a crossed module [22XmathcalX[122X is the crossed
-  square [22X(mathcalX ⇒ mathcalX/Z(mathcalX)[122X (see section [14X8.1[114X).[133X
+  square [22X(mathcalX ⇒ mathcalX/Z(mathcalX)[122X (see section [14X8.2[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -231,12 +231,12 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X4.1-9 IsAbelian2dGroup[101X
+  [1X4.1-9 IsAbelian2DimensionalGroup[101X
   
-  [29X[2XIsAbelian2dGroup[102X( [3XX0[103X ) [32X property
-  [29X[2XIsAspherical2dGroup[102X( [3XX0[103X ) [32X property
-  [29X[2XIsSimplyConnected2dGroup[102X( [3XX0[103X ) [32X property
-  [29X[2XIsFaithful2dGroup[102X( [3XX0[103X ) [32X property
+  [29X[2XIsAbelian2DimensionalGroup[102X( [3XX0[103X ) [32X property
+  [29X[2XIsAspherical2DimensionalGroup[102X( [3XX0[103X ) [32X property
+  [29X[2XIsSimplyConnected2DimensionalGroup[102X( [3XX0[103X ) [32X property
+  [29X[2XIsFaithful2DimensionalGroup[102X( [3XX0[103X ) [32X property
   
   [33X[0;0YA crossed module is [13Xabelian[113X if it equal to its centre. This is the case when
   the range group is abelian and the action is trivial.[133X
@@ -249,14 +249,14 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27X[ IsAbelian2dGroup(Xn4), IsAbelian2dGroup(X24) ];[127X[104X
+    [4X[25Xgap>[125X [27X[ IsAbelian2DimensionalGroup(Xn4), IsAbelian2DimensionalGroup(X24) ];[127X[104X
     [4X[28X[ false, false ][128X[104X
     [4X[25Xgap>[125X [27Xpos7 := Position( ids, [ [3,1], [6,1] ] );;[127X[104X
-    [4X[25Xgap>[125X [27X[ IsAspherical2dGroup(nsx[pos7]), IsAspherical2dGroup(X24) ];[127X[104X
+    [4X[25Xgap>[125X [27X[ IsAspherical2DimensionalGroup(nsx[pos7]), IsAspherical2DimensionalGroup(X24) ];[127X[104X
     [4X[28X[ true, false ][128X[104X
-    [4X[25Xgap>[125X [27X[ IsSimplyConnected2dGroup(Xn4), IsSimplyConnected2dGroup(X24) ];[127X[104X
+    [4X[25Xgap>[125X [27X[ IsSimplyConnected2DimensionalGroup(Xn4), IsSimplyConnected2DimensionalGroup(X24) ];[127X[104X
     [4X[28X[ true, true ][128X[104X
-    [4X[25Xgap>[125X [27X[ IsFaithful2dGroup(Xn4), IsFaithful2dGroup(X24) ];              [127X[104X
+    [4X[25Xgap>[125X [27X[ IsFaithful2DimensionalGroup(Xn4), IsFaithful2DimensionalGroup(X24) ];              [127X[104X
     [4X[28X[ false, true ] [128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
@@ -264,8 +264,8 @@
   [1X4.1-10 LowerCentralSeriesOfXMod[101X
   
   [29X[2XLowerCentralSeriesOfXMod[102X( [3XX0[103X ) [32X attribute
-  [29X[2XIsNilpotent2dGroup[102X( [3XX0[103X ) [32X property
-  [29X[2XNilpotencyClass2dGroup[102X( [3XX0[103X ) [32X attribute
+  [29X[2XIsNilpotent2DimensionalGroup[102X( [3XX0[103X ) [32X property
+  [29X[2XNilpotencyClass2DimensionalGroup[102X( [3XX0[103X ) [32X attribute
   
   [33X[0;0YLet  [22XmathcalY[122X be a subcrossed module of [22XmathcalX[122X. A [13X series of length[113X [22Xn[122X from
   [22XmathcalX[122X to [22XmathcalY[122X has the form[133X
@@ -309,9 +309,9 @@
     [4X[28X[ [d24->PAut(d24)], [Group( [ f2 ] )->Group( [ f2, f5 ] )], [128X[104X
     [4X[28X  [Group( [ f3*f4^2 ] )->Group( [ f2 ] )], [Group( [ f4 ] )->Group( [ f2 ] )] [128X[104X
     [4X[28X ][128X[104X
-    [4X[25Xgap>[125X [27XIsNilpotent2dGroup(X24);      [127X[104X
+    [4X[25Xgap>[125X [27XIsNilpotent2DimensionalGroup(X24);      [127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XNilpotencyClassOf2dGroup(X24);[127X[104X
+    [4X[25Xgap>[125X [27XNilpotencyClassOf2DimensionalGroup(X24);[127X[104X
     [4X[28X0[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X

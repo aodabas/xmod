@@ -48,7 +48,7 @@
 <li><p>the actor crossed square of a crossed module;</p>
 
 </li>
-<li><p>crossed squares and their morphisms (experimental version);</p>
+<li><p>crossed squares, cat2-groups, and their morphisms (experimental version);</p>
 
 </li>
 <li><p>crossed modules of groupoids (experimental version).</p>
@@ -70,9 +70,9 @@
 
 <p>In October 2015 Alper Odabaş and Enver Uslu were added to the list of package authors. Their functions for computing isoclinism classes of groups and crossed modules are contained in Chapter <a href="chap4_mj.html#X802AFE8E7EDB435E"><span class="RefLink">4</span></a>, and are described in detail in their paper <a href="chapBib_mj.html#biBIOU1">[IOU16]</a>.</p>
 
-<p>The current version is 2.59 for <strong class="pkg">GAP</strong> 4.8, released on 21st March 2017.</p>
+<p>The current version is 2.61 for <strong class="pkg">GAP</strong> 4.8, released on 7th August 2017.</p>
 
-<p>The package may be obtained as a compressed tar file <code class="file">xmod-2.59.tar.gz</code> by ftp from one of the following sites:</p>
+<p>The package may be obtained as a compressed tar file <code class="file">xmod-2.61.tar.gz</code> by ftp from one of the following sites:</p>
 
 
 <ul>
@@ -86,7 +86,7 @@
 
 </li>
 </ul>
-<p>Crossed modules and cat1-groups are special types of <em>2-dimensional groups</em> <a href="chapBib_mj.html#biBB82">[Bro82]</a>, <a href="chapBib_mj.html#biBbrow:hig:siv">[BHS11]</a>, and are implemented as <code class="code">2dDomains</code> and <code class="code">2dGroups</code> having a <code class="code">Source</code> and a <code class="code">Range</code>.</p>
+<p>Crossed modules and cat1-groups are special types of <em>2-dimensional groups</em> <a href="chapBib_mj.html#biBB82">[Bro82]</a>, <a href="chapBib_mj.html#biBbrow:hig:siv">[BHS11]</a>, and are implemented as <code class="code">2DimensionalDomains</code> and <code class="code">2DimensionalGroups</code> having a <code class="code">Source</code> and a <code class="code">Range</code>.</p>
 
 <p>The package divides into eight parts. The first part is concerned with the standard constructions for pre-crossed modules and crossed modules; together with direct products; normal sub-crossed modules; and quotients. Operations for constructing pre-cat1-groups and cat1-groups, and for converting between cat1-groups and crossed modules, are also included.</p>
 
@@ -138,6 +138,8 @@
 </pre></div>
 
 <p>Additional information can be found on the <em>Computational Higher-dimensional Discrete Algebra</em> website at: <span class="URL"><a href="http://pages.bangor.ac.uk/~mas023/chda/intro.html">http://pages.bangor.ac.uk/~mas023/chda/intro.html</a></span>.</p>
+
+<p>This version 2.61 had to be released in a hurry when required package <strong class="pkg">Gpd</strong> was renamed as <strong class="pkg">groupoids</strong>. As a result some functions for crossed squares and cat2-groups, still under development, had to be temporarily removed, and two test files had to be removed from the list of files to be tested.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0_mj.html">[Top of Book]</a>&nbsp;  <a href="chap0_mj.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap0_mj.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap2_mj.html">[Next Chapter]</a>&nbsp;  </div>

@@ -6,10 +6,10 @@
                      [1XCrossed modules and cat1-groups in [5XGAP[105X[101X
   
   
-                                  Version 2.59
+                                  Version 2.61
   
   
-                                   21/03/2017
+                                   07/08/2017
   
   
                                  Chris Wensley
@@ -39,13 +39,6 @@
   Alper Odabaş
       Email:    [7Xmailto:aodabas@ogu.edu.tr[107X
       Homepage: [7Xhttp://fef.ogu.edu.tr/matbil/aodabas/[107X
-      Address:  [33X[0;14YDepartment of Mathematics and Computer Science,[133X
-                [33X[0;14YOsmangazi University, Eskişehir, Turkey[133X
-  
-  
-  Enver Önder Uslu
-      Email:    [7Xmailto:enveruslu@ogu.edu.tr[107X
-      Homepage: [7Xhttp://fef.ogu.edu.tr/matbil/enveruslu/[107X
       Address:  [33X[0;14YDepartment of Mathematics and Computer Science,[133X
                 [33X[0;14YOsmangazi University, Eskişehir, Turkey[133X
   
@@ -82,7 +75,7 @@
   modules,  written  by  Alper  Odabaş  and  Enver Uslu, were added. These are
   contained in Chapter [14X4[114X, and are described in detail in the paper [IOU16].[133X
   
-  [33X[0;0YThe current version is 2.59, released 21st March 2017 for [5XGAP[105X 4.8.[133X
+  [33X[0;0YThe current version is 2.61, released 7th August 2017 for [5XGAP[105X 4.8.[133X
   
   [33X[0;0YBug reports, suggestions and comments are, of course, welcome. Please submit
   an  issue at [7Xhttp://github.com/gap-packages/xmod/issues/[107X or send an email to
@@ -128,31 +121,34 @@
       2.3-1 PreXModByBoundaryAndAction
       2.3-2 PeifferSubgroup
     2.4 [33X[0;0YCat1-groups and pre-cat1-groups[133X
-      2.4-1 Source
-      2.4-2 Cat1
-    2.5 [33X[0;0YProperties of cat1-groups[133X
-      2.5-1 IsCat1
-      2.5-2 Cat1OfXMod
+      2.4-1 Cat1Group
+      2.4-2 Source
+      2.4-3 DiagonalCat1Group
+    2.5 [33X[0;0YProperties of cat1-groups and pre-cat1-groups[133X
+      2.5-1 IsCat1Group
+      2.5-2 Cat1GroupOfXMod
     2.6 [33X[0;0YSelection of a small cat1-group[133X
       2.6-1 Cat1Select
-      2.6-2 AllCat1sBasic
+      2.6-2 AllCat1DataGroupsBasic
     2.7 [33X[0;0YMore functions for crossed modules and cat1-groups[133X
       2.7-1 IdGroup
   3 [33X[0;0Y2d-mappings[133X
-    3.1 [33X[0;0YMorphisms of 2d-groups[133X
+    3.1 [33X[0;0YMorphisms of 2-dimensional groups[133X
       3.1-1 Source
     3.2 [33X[0;0YMorphisms of pre-crossed modules[133X
       3.2-1 IsXModMorphism
       3.2-2 IsInjective
       3.2-3 XModMorphism
+      3.2-4 IsomorphismPerm2DimensionalGroup
     3.3 [33X[0;0YMorphisms of pre-cat1-groups[133X
       3.3-1 IsCat1Morphism
+      3.3-2 IsomorphismPermObject
     3.4 [33X[0;0YOperations on morphisms[133X
       3.4-1 CompositionMorphism
       3.4-2 Kernel
   4 [33X[0;0YIsoclinism of groups and crossed modules[133X
     4.1 [33X[0;0YMore operations for crossed modules[133X
-      4.1-1 FactorXMod
+      4.1-1 FactorPreXMod
       4.1-2 IntersectionSubXMods
       4.1-3 Displacement
       4.1-4 CommutatorSubXMod
@@ -160,7 +156,7 @@
       4.1-6 FixedPointSubgroupXMod
       4.1-7 CentreXMod
       4.1-8 CentralQuotient
-      4.1-9 IsAbelian2dGroup
+      4.1-9 IsAbelian2DimensionalGroup
       4.1-10 LowerCentralSeriesOfXMod
       4.1-11 AllXMods
       4.1-12 IsomorphismXMods
@@ -187,18 +183,25 @@
       6.1-2 WhiteheadXMod
       6.1-3 XModCentre
   7 [33X[0;0YInduced constructions[133X
-    7.1 [33X[0;0YInduced crossed modules[133X
-      7.1-1 InducedXMod
-      7.1-2 AllInducedXMods
-  8 [33X[0;0YCrossed squares and their morphisms[133X
-    8.1 [33X[0;0YConstructions for crossed squares[133X
-      8.1-1 CrossedSquare
-      8.1-2 CentralQuotient
-      8.1-3 IsCrossedSquare
-      8.1-4 Up2dGroup
-    8.2 [33X[0;0YMorphisms of crossed squares[133X
-      8.2-1 Source
-      8.2-2 IsCrossedSquareMorphism
+    7.1 [33X[0;0YCoproducts of crossed modules[133X
+      7.1-1 CoproductXMod
+    7.2 [33X[0;0YInduced crossed modules[133X
+      7.2-1 InducedXMod
+      7.2-2 AllInducedXMods
+  8 [33X[0;0Y3d-groups and 3d-mappings : crossed squares and cat[22X^2[122X-groups[133X
+    8.1 [33X[0;0YDefinition of a crossed square and a crossed [22Xn[122X-cube of groups[133X
+    8.2 [33X[0;0YConstructions for crossed squares[133X
+      8.2-1 CrossedSquare
+      8.2-2 CentralQuotient
+      8.2-3 IsCrossedSquare
+      8.2-4 Up2DimensionalGroup
+    8.3 [33X[0;0YMorphisms of crossed squares[133X
+      8.3-1 Source
+      8.3-2 IsCrossedSquareMorphism
+    8.4 [33X[0;0YDefinitions and constructions for cat[22X^2[122X-groups and their morphisms[133X
+      8.4-1 Cat2Group
+      8.4-2 Cat2GroupOfCrossedSquare
+    8.5 [33X[0;0YDefinition and constructions for cat[22X^n[122X-groups and their morphisms[133X
   9 [33X[0;0YCrossed modules of groupoids[133X
     9.1 [33X[0;0YConstructions for crossed modules of groupoids[133X
       9.1-1 DiscreteNormalPreXModWithObjects
@@ -219,7 +222,8 @@
     11.2 [33X[0;0YVersions for [5XGAP[105X [4.5 .. 4.8][133X
       11.2-1 [33X[0;0YAllCat1s[133X
       11.2-2 [33X[0;0YVersions 2.43 - 2.56[133X
-      11.2-3 [33X[0;0YLatest Version[133X
+      11.2-3 [33X[0;0YVersion 2.61[133X
+      11.2-4 [33X[0;0YLatest Version[133X
     11.3 [33X[0;0YWhat needs doing next?[133X
   
   

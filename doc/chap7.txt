@@ -1,33 +1,82 @@
   
   [1X7 [33X[0;0YInduced constructions[133X[101X
   
+  [33X[0;0YBefore  describing  general  functions  for computing induced structures, we
+  consider coproducts of crossed modules which provide induced crossed modules
+  in certain cases.[133X
   
-  [1X7.1 [33X[0;0YInduced crossed modules[133X[101X
   
-  [1X7.1-1 InducedXMod[101X
+  [1X7.1 [33X[0;0YCoproducts of crossed modules[133X[101X
+  
+  [33X[0;0YNeed to add here a reference (or two) for coproducts.[133X
+  
+  [1X7.1-1 CoproductXMod[101X
+  
+  [29X[2XCoproductXMod[102X( [3XX1[103X, [3XX2[103X ) [32X operation
+  
+  [33X[0;0YThis  function  calculates  the  coproduct crossed module of crossed modules
+  [22Xmathcal X_1 = (∂_1 : S_1 -> R)[122X and [22Xmathcal X_2 = (∂_2 : S_2 -> R)[122X which have
+  a  common range [22XR[122X. The source [22XS_2[122X of [22Xmathcal X_2[122X acts on [22XS_1[122X via [22X∂_2[122X and the
+  action of [22Xmathcal X_1[122X, so we can form a precrossed module [22X(∂' : S_1 ⋉ S_2 ->
+  R)[122X  where  [22X∂'(s_1,s_2)  =  (∂_1 s_1)(∂_2 s_2)[122X. The action of this precrossed
+  module  is the diagonal action [22X(s_1,s_2)^r = (s_1^r,s_2^r)[122X. Factoring out by
+  the  Peiffer  subgroup, we obtain the coproduct crossed module [22Xmathcal X_1 ∘
+  mathcal X_2[122X.[133X
+  
+  [33X[0;0YIn  the  example  the  structure  descriptions of the precrossed module, the
+  Peiffer   subgroup,  and  the  resulting  coproduct  are  printed  out  when
+  [10XInfoLevel(InfoXMod}[110X  is  at  least  [22X1[122X.  The  coproduct  comes  supplied with
+  attribute  [10XCoproductInfo[110X,  which includes the embedding morphisms of the two
+  factors.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xq8 := Group( (1,2,3,4)(5,8,7,6), (1,5,3,7)(2,6,4,8) );;[127X[104X
+    [4X[25Xgap>[125X [27XX8 := XModByAutomorphismGroup( q8 );;[127X[104X
+    [4X[25Xgap>[125X [27Xs4 := Range( X8 );; [127X[104X
+    [4X[25Xgap>[125X [27XSetName( q8, "q8" );  SetName( s4, "s4" ); [127X[104X
+    [4X[25Xgap>[125X [27Xk4 := NormalSubgroups( s4 )[3];;  SetName( k4, "k4" );[127X[104X
+    [4X[25Xgap>[125X [27XZ8 := XModByNormalSubgroup( s4, k4 );;[127X[104X
+    [4X[25Xgap>[125X [27XSetName( X8, "X8" );  SetName( Z8, "Z8" );  [127X[104X
+    [4X[25Xgap>[125X [27XSetInfoLevel( InfoXMod, 1 ); [127X[104X
+    [4X[25Xgap>[125X [27XXZ8 := CoproductXMod( X8, Z8 );[127X[104X
+    [4X[28X#I  prexmod is [ "C2 x C2 x Q8", "S4" ][128X[104X
+    [4X[28X#I  peiffer subgroup is C2[128X[104X
+    [4X[28X#I  the coproduct is [ "C2 x C2 x C2 x C2", "S4" ][128X[104X
+    [4X[28X[Group( [ f1, f2, f3, f4 ] )->s4][128X[104X
+    [4X[25Xgap>[125X [27XSetName( XZ8, "XZ8" ); [127X[104X
+    [4X[25Xgap>[125X [27Xinfo := CoproductInfo( XZ8 );[127X[104X
+    [4X[28Xrec( embeddings := [ [X8 => XZ8], [Z8 => XZ8] ], xmods := [ X8, Z8 ] )[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X7.2 [33X[0;0YInduced crossed modules[133X[101X
+  
+  [1X7.2-1 InducedXMod[101X
   
   [29X[2XInducedXMod[102X( [3Xargs[103X ) [32X function
   [29X[2XInducedCat1[102X( [3Xargs[103X ) [32X function
   [29X[2XIsInducedXMod[102X( [3Xxmod[103X ) [32X property
   [29X[2XMorphismOfInducedXMod[102X( [3Xxmod[103X ) [32X attribute
   
-  [33X[0;0YA  morphism  of crossed modules [22X(σ, ρ) : cal X_1 -> cal X_2[122X factors uniquely
-  through  an  induced  crossed  module  [22Xρ_∗  cal  X_1 = (δ : ρ_∗ S_1 -> R_2)[122X.
-  Similarly,  a morphism of cat1-groups factors through an induced cat1-group.
-  Calculation  of  induced crossed modules of [22Xcal X[122X also provides an algebraic
-  means  of  determining  the  homotopy  [22X2[122X-type  of  homotopy  pushouts of the
-  classifying  space of [22Xcal X[122X. For more background from algebraic topology see
-  references  in  [BH78],  [BW95], [BW96]. Induced crossed modules and induced
-  cat1-groups  also  provide  the building blocks for constructing pushouts in
-  the categories [13XXMod[113X and [13XCat1[113X.[133X
+  [33X[0;0YA  morphism  of  crossed modules [22X(σ, ρ) : mathcal X_1 -> mathcal X_2[122X factors
+  uniquely through an induced crossed module [22Xρ_∗ mathcal X_1 = (δ : ρ_∗ S_1 ->
+  R_2)[122X.  Similarly,  a  morphism  of  cat1-groups  factors  through an induced
+  cat1-group.  Calculation  of  induced  crossed  modules  of  [22Xmathcal  X[122X also
+  provides  an  algebraic means of determining the homotopy [22X2[122X-type of homotopy
+  pushouts  of  the  classifying  space of [22Xmathcal X[122X. For more background from
+  algebraic topology see references in [BH78], [BW95], [BW96]. Induced crossed
+  modules  and  induced  cat1-groups  also  provide  the  building  blocks for
+  constructing pushouts in the categories [13XXMod[113X and [13XCat1[113X.[133X
   
   [33X[0;0YData  for  the  cases  of  algebraic  interest  is provided by a conjugation
-  crossed  module  [22Xcal X = (∂ : S -> R)[122X and a homomorphism [22Xι[122X from [22XR[122X to a third
-  group  [22XQ[122X.  (It  is hoped to implement more general cases in due course.) The
-  output  from  the calculation is a crossed module [22Xι_∗cal X = (δ : ι_∗S -> Q)[122X
-  together  with  a morphism of crossed modules [22Xcal X -> ι_∗cal X[122X. When [22Xι[122X is a
-  surjection  with  kernel  [22XK[122X  then  [22Xι_∗S  =  [S,K][122X (see [BH78]). When [22Xι[122X is an
-  inclusion  the  induced  crossed  module  may  be calculated using a copower
+  crossed  module  [22Xmathcal  X  = (∂ : S -> R)[122X and a homomorphism [22Xι[122X from [22XR[122X to a
+  third  group [22XQ[122X. (It is hoped to implement more general cases in due course.)
+  The output from the calculation is a crossed module [22Xι_∗mathcal X = (δ : ι_∗S
+  -> Q)[122X together with a morphism of crossed modules [22Xmathcal X -> ι_∗mathcal X[122X.
+  When  [22Xι[122X is a surjection with kernel [22XK[122X then [22Xι_∗S = [S,K][122X (see [BH78]). When [22Xι[122X
+  is an inclusion the induced crossed module may be calculated using a copower
   construction [BW95] or, in the case when [22XR[122X is normal in [22XQ[122X, as a coproduct of
   crossed  modules  ([BW96],  but  not  yet  implemented). When [22Xι[122X is neither a
   surjection  nor  an  inclusion,  [22Xι[122X  is  factored  as  the  composite  of the
@@ -35,7 +84,7 @@
   composite  induced  crossed  module  is constructed. These constructions use
   Tietze transformation routines in the library file [10Xtietze.gi[110X.[133X
   
-  [33X[0;0YAs  a  first,  surjective  example,  we  take for [22Xcal X[122X the normal inclusion
+  [33X[0;0YAs  a  first, surjective example, we take for [22Xmathcal X[122X the normal inclusion
   crossed  module  of  [10Xa4[110X  in  [10Xs4[110X, and for [22Xι[122X the surjection from [10Xs4[110X to [10Xs3[110X with
   kernel [10Xk4[110X. The induced crossed module is isomorphic to [10XX3[110X.[133X
   
@@ -69,7 +118,7 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [33X[0;0YFor  a  second,  injective  example  we take for [22Xcal X[122X a conjugation crossed
+  [33X[0;0YFor  a second, injective example we take for [22Xmathcal X[122X a conjugation crossed
   module.[133X
   
   [4X[32X  Example  [32X[104X
@@ -82,7 +131,7 @@
     [4X[28X[d8->d16][128X[104X
     [4X[25Xgap>[125X [27XY8 := SubXMod( Y16, c4, d8 );            [127X[104X
     [4X[28X[c4->d8][128X[104X
-    [4X[25Xgap>[125X [27Xinc8 := InclusionMorphism2dDomains( Y16, Y8 ); [127X[104X
+    [4X[25Xgap>[125X [27Xinc8 := InclusionMorphism2DimensionalDomains( Y16, Y8 ); [127X[104X
     [4X[28X[[c4->d8] => [d8->d16]][128X[104X
     [4X[25Xgap>[125X [27Xincd8 := RangeHom( inc8 );;[127X[104X
     [4X[25Xgap>[125X [27XindY8 := InducedXMod( Y8, incd8 );[127X[104X
@@ -110,7 +159,7 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
-  [1X7.1-2 AllInducedXMods[101X
+  [1X7.2-2 AllInducedXMods[101X
   
   [29X[2XAllInducedXMods[102X( [3XQ[103X ) [32X operation
   

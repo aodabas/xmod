@@ -8,7 +8,7 @@
   
   [29X[2XIsDerivation[102X( [3Xmap[103X ) [32X property
   [29X[2XIsSection[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsUp2dMapping[102X( [3Xmap[103X ) [32X property
+  [29X[2XIsUp2DimensionalMapping[102X( [3Xmap[103X ) [32X property
   
   [33X[0;0YThe  Whitehead monoid [22XDer(mathcalX)[122X of [22XmathcalX[122X was defined in [Whi48] to be
   the monoid of all [13Xderivations[113X from [22XR[122X to [22XS[122X, that is the set of all maps [22Xχ : R

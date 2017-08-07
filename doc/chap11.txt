@@ -131,9 +131,19 @@
         [5XUtils[105X package.[133X
   
   
-  [1X11.2-3 [33X[0;0YLatest Version[133X[101X
+  [1X11.2-3 [33X[0;0YVersion 2.61[133X[101X
   
-  [33X[0;0YThe latest version, 2.59, was released on 21st March 2017.[133X
+  [33X[0;0YMajor  changes  in names took place, with [10X2dDomain, 2dGroup, 2dMapping[110X, etc.
+  becoming  [10X2DimensionalDomain,  2DimensionalGroup, 2DimensionalMapping[110X, etc.,
+  and  similarly  for 3-dimensional versions. Also [10XHigherDimensionalDomain[110X and
+  related  categories,  domains,  properties,  attributes  and operations were
+  introduced.  At  the same time, functions for cat2-groups were introduced by
+  Alper Odabas.[133X
+  
+  
+  [1X11.2-4 [33X[0;0YLatest Version[133X[101X
+  
+  [33X[0;0YThe latest version, 2.61, was released on 7th August 2017.[133X
   
   
   [1X11.3 [33X[0;0YWhat needs doing next?[133X[101X
