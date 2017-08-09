@@ -6,10 +6,10 @@
                      [1XCrossed modules and cat1-groups in [5XGAP[105X[101X
   
   
-                                  Version 2.61
+                                  Version 2.62
   
   
-                                   07/08/2017
+                                   09/08/2017
   
   
                                  Chris Wensley
@@ -75,7 +75,7 @@
   modules,  written  by  Alper  Odabaş  and  Enver Uslu, were added. These are
   contained in Chapter [14X4[114X, and are described in detail in the paper [IOU16].[133X
   
-  [33X[0;0YThe current version is 2.61, released 7th August 2017 for [5XGAP[105X 4.8.[133X
+  [33X[0;0YThe current version is 2.62, released 9th August 2017 for [5XGAP[105X 4.8.[133X
   
   [33X[0;0YBug reports, suggestions and comments are, of course, welcome. Please submit
   an  issue at [7Xhttp://github.com/gap-packages/xmod/issues/[107X or send an email to
