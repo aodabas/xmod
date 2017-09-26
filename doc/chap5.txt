@@ -15,10 +15,10 @@
   -> S[122X, with [13XWhitehead multiplication[113X [22X⋆[122X (on the [13Xright[113X) satisfying:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y{\bf Der\ 1}: \chi(qr) ~=~ (\chi q)^{r} \; (\chi r), \qquad {\bf Der\
-        2}: (\chi_1 \star \chi_2)(r) ~=~ (\chi_2 r)(\chi_1 r)(\chi_2 \partial
-        \chi_1 r).[133X [124X[133X
+  [24X[33X[0;6Y{\bf  Der\  1}:  \chi(qr) ~=~ (\chi q)^{r} \; (\chi r), \qquad {\bf Der\ 2}:
+  (\chi_1 \star \chi_2)(r) ~=~ (\chi_2 r)(\chi_1 r)(\chi_2 \partial \chi_1 r).[133X
   
+  [124X
   
   [33X[0;0YThe  zero  map  is the identity for this composition. Invertible elements in
   the  monoid are called [13Xregular[113X. The Whitehead group of [22XmathcalX[122X is the group
@@ -33,10 +33,11 @@
   [22X⋆[122X (on the [13Xright[113X) satisfying:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y{\bf Sect\ 1}: t \circ \xi ~=~ {\rm id}_R, \quad {\bf Sect\ 2}: (\xi_1
-        \star \xi_2)(r) ~=~ (\xi_1 r)(e h \xi_1 r)^{-1}(\xi_2 h \xi_1 r) ~=~
-        (\xi_2 h \xi_1 r)(e h \xi_1 r)^{-1}(\xi_1 r).[133X [124X[133X
+  [24X[33X[0;6Y{\bf Sect\ 1}: t \circ \xi ~=~ {\rm id}_R, \quad {\bf Sect\ 2}: (\xi_1 \star
+  \xi_2)(r)  ~=~  (\xi_1  r)(e  h  \xi_1 r)^{-1}(\xi_2 h \xi_1 r) ~=~ (\xi_2 h
+  \xi_1 r)(e h \xi_1 r)^{-1}(\xi_1 r).[133X
   
+  [124X
   
   [33X[0;0YThe  embedding [22Xe[122X is the identity for this composition, and [22Xh(ξ_1 ⋆ ξ_2) = (h
   ξ_1)(h ξ_2)[122X. A section is [13Xregular[113X when [22Xh ξ[122X is an automorphism, and the group
@@ -45,9 +46,10 @@
   [33X[0;0YIf [22Xϵ[122X denotes the inclusion of [22XS = ker t[122X in [22XG[122X then [22X∂ = h ϵ : S -> R[122X and[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\xi r ~=~ (e r)(e \chi r), \quad\mbox{which equals}\quad (r, \chi r)
-        ~\in~ R \ltimes S,[133X [124X[133X
+  [24X[33X[0;6Y\xi r ~=~ (e r)(e \chi r), \quad\mbox{which equals}\quad (r, \chi r) ~\in~ R
+  \ltimes S,[133X
   
+  [124X
   
   [33X[0;0Ydetermines  a section [22Xξ[122X of [22XmathcalC[122X in terms of the corresponding derivation
   [22Xχ[122X of [22XmathcalX[122X, and conversely.[133X

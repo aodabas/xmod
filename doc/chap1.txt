@@ -51,9 +51,9 @@
   and  crossed modules are contained in Chapter [14X4[114X, and are described in detail
   in their paper [IOU16].[133X
   
-  [33X[0;0YThe current version is 2.62 for [5XGAP[105X 4.8, released on 9th August 2017.[133X
+  [33X[0;0YThe current version is 2.63 for [5XGAP[105X 4.8, released on 26th September 2017.[133X
   
-  [33X[0;0YThe package may be obtained as a compressed tar file [11Xxmod-2.62.tar.gz[111X by ftp
+  [33X[0;0YThe package may be obtained as a compressed tar file [11Xxmod-2.63.tar.gz[111X by ftp
   from one of the following sites:[133X
   
   [30X    [33X[0;6Yany                  [5XGAP[105X                 archive,                 e.g.

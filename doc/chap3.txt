@@ -33,16 +33,18 @@
   the two actions:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\partial_2 \circ \sigma ~=~ \rho \circ \partial_1, \qquad \sigma(s^r)
-        ~=~ (\sigma s)^{\rho r}.[133X [124X[133X
+  [24X[33X[0;6Y\partial_2  \circ  \sigma  ~=~ \rho \circ \partial_1, \qquad \sigma(s^r) ~=~
+  (\sigma s)^{\rho r}.[133X
   
+  [124X
   
   [33X[0;0YHere is a diagram of the situation.[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\vcenter{\xymatrix{ S_1 \ar[rr]^{\sigma} \ar[dd]_{\partial_1} && S_2
-        \ar[dd]^{\partial_2} \\ && \\ R_1 \ar[rr]_{\rho} && R_2 }}[133X [124X[133X
+  [24X[33X[0;6Y\vcenter{\xymatrix{   S_1   \ar[rr]^{\sigma}   \ar[dd]_{\partial_1}  &&  S_2
+  \ar[dd]^{\partial_2} \\ && \\ R_1 \ar[rr]_{\rho} && R_2 }}[133X
   
+  [124X
   
   [33X[0;0YHere  [22Xσ[122X  is  the  [10XSourceHom[110X  and  [22Xρ[122X  is  the  [10XRangeHom[110X of the morphism. When
   [22XmathcalX_1  =  mathcalX_2[122X  and  [22Xσ,  ρ[122X  are  automorphisms  then [22X(σ, ρ)[122X is an
@@ -155,9 +157,10 @@
   G_2[122X and [22Xρ : R_1 -> R_2[122X are homomorphisms satisfying[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Yh_2 \circ \gamma ~=~ \rho \circ h_1, \qquad t_2 \circ \gamma ~=~ \rho
-        \circ t_1, \qquad e_2 \circ \rho ~=~ \gamma \circ e_1.[133X [124X[133X
+  [24X[33X[0;6Yh_2  \circ \gamma ~=~ \rho \circ h_1, \qquad t_2 \circ \gamma ~=~ \rho \circ
+  t_1, \qquad e_2 \circ \rho ~=~ \gamma \circ e_1.[133X
   
+  [124X
   
   [1X3.3-1 IsCat1Morphism[101X
   

@@ -20,11 +20,11 @@
   [30X    [33X[0;6Ya commutative diagram of group homomorphisms:[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y\ddot{\partial}_1 : S_{[2]} \to S_{\{2\}}, \quad
-              \ddot{\partial}_2 : S_{[2]} \to S_{\{1\}}, \quad
-              \dot{\partial}_1 : S_{\{1\}} \to S_{\emptyset}, \quad
-              \dot{\partial}_2 : S_{\{2\}} \to S_{\emptyset};[133X [124X[133X
+  [24X      [33X[0;6Y\ddot{\partial}_1  :  S_{[2]} \to S_{\{2\}}, \quad \ddot{\partial}_2 :
+        S_{[2]}   \to   S_{\{1\}},  \quad  \dot{\partial}_1  :  S_{\{1\}}  \to
+        S_{\emptyset}, \quad \dot{\partial}_2 : S_{\{2\}} \to S_{\emptyset};[133X
   
+  [124X
   
   [30X    [33X[0;6Yactions  of  [22XS_∅[122X  on [22XS_{1}, S_{2}[122X and [22XS_[2][122X which determine actions of
         [22XS_{1}[122X  on [22XS_{2}[122X and [22XS_[2][122X via [22Xdot∂_1[122X and actions of [22XS_{2}[122X on [22XS_{1}[122X and
@@ -35,11 +35,12 @@
   [33X[0;0YHere is a picture of the situation:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\vcenter{\xymatrix{ & & S_{[2]} \ar[rr]^{\ddot{\partial}_1}
-        \ar[dd]_{\ddot{\partial}_2} && S_{\{2\}} \ar[dd]^{\dot{\partial}_2} &
-        \\ \mathcal{S} & = & && \\ & & S_{\{1\}} \ar[rr]_{\dot{\partial}_1} &&
-        S_{\emptyset} }} }}[133X [124X[133X
+  [24X[33X[0;6Y\vcenter{\xymatrix{      &     &     S_{[2]}     \ar[rr]^{\ddot{\partial}_1}
+  \ar[dd]_{\ddot{\partial}_2}  &&  S_{\{2\}}  \ar[dd]^{\dot{\partial}_2}  & \\
+  \mathcal{S}  &  =  &  &&  \\  &  &  S_{\{1\}}  \ar[rr]_{\dot{\partial}_1} &&
+  S_{\emptyset} }} }}[133X
   
+  [124X
   
   [33X[0;0YThe following axioms must be satisfied for all [22Xl ∈ S_[2], m,m_1,m_2 ∈ S_{1},
   n,n_1,n_2 ∈ S_{2}, p ∈ S_∅[122X:[133X
@@ -50,20 +51,21 @@
         square,[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y\ddot{\mathcal{S}}_1 = (\ddot{\partial}_1 : S_{[2]} \to
-              S_{\{2\}}), \ddot{\mathcal{S}}_2 = (\ddot{\partial}_2 : S_{[2]}
-              \to S_{\{1\}}), \dot{\mathcal{S}}_1 = (\dot{\partial}_1 :
-              S_{\{1\}} \to S_{\emptyset}), \dot{\mathcal{S}}_2 =
-              (\dot{\partial}_2 : S_{\{2\}} \to S_{\emptyset}),[133X [124X[133X
+  [24X      [33X[0;6Y\ddot{\mathcal{S}}_1  =  (\ddot{\partial}_1  : S_{[2]} \to S_{\{2\}}),
+        \ddot{\mathcal{S}}_2  =  (\ddot{\partial}_2  : S_{[2]} \to S_{\{1\}}),
+        \dot{\mathcal{S}}_1    =    (\dot{\partial}_1    :    S_{\{1\}}    \to
+        S_{\emptyset}),  \dot{\mathcal{S}}_2  =  (\dot{\partial}_2 : S_{\{2\}}
+        \to S_{\emptyset}),[133X
   
+  [124X
   
         [33X[0;6Yand the diagonal[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y\mathcal{S}_{12} = (\partial_{12} :=
-              \dot{\partial}_1\ddot{\partial}_2 =
-              \dot{\partial}_2\ddot{\partial}_1 : S_{[2]} \to S_{\emptyset})[133X [124X[133X
+  [24X      [33X[0;6Y\mathcal{S}_{12} = (\partial_{12} := \dot{\partial}_1\ddot{\partial}_2
+        = \dot{\partial}_2\ddot{\partial}_1 : S_{[2]} \to S_{\emptyset})[133X
   
+  [124X
   
         [33X[0;6Yare crossed modules (with actions via [22XS_∅[122X);[133X
   
@@ -85,9 +87,10 @@
   compatible since[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y{m_1}^{(n^m)} \;=\; {m_1}^{\dot{\partial}_2(n^m)} \;=\;
-        {m_1}^{m^{-1}(\dot{\partial}_2 n)m} \;=\; (({m_1}^{m^{-1}})^n)^m.[133X [124X[133X
+  [24X[33X[0;6Y{m_1}^{(n^m)}        \;=\;        {m_1}^{\dot{\partial}_2(n^m)}        \;=\;
+  {m_1}^{m^{-1}(\dot{\partial}_2 n)m} \;=\; (({m_1}^{m^{-1}})^n)^m.[133X
   
+  [124X
   
   [33X[0;0Y(A  [13Xprecrossed  square[113X is a similar structure which satisfies some subset of
   these axioms. [More needed here.])[133X
@@ -140,9 +143,10 @@
         with crossed pairing[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y\boxtimes \;:\; M \times N \to M\cap N, \quad (m,n) \mapsto
-              [m,n] \,=\, m^{-1}n^{-1}mn \,=\,(n^{-1})^mn \,=\, m^{-1}m^n\,.[133X [124X[133X
+  [24X      [33X[0;6Y\boxtimes  \;:\;  M  \times  N  \to M\cap N, \quad (m,n) \mapsto [m,n]
+        \,=\, m^{-1}n^{-1}mn \,=\,(n^{-1})^mn \,=\, m^{-1}m^n\,.[133X
   
+  [124X
   
         [33X[0;6YThis          construction          is          implemented         as
         [10XCrossedSquareByNormalSubgroups(P,N,M,L);[110X.[133X
@@ -151,9 +155,10 @@
         described in Chapter 5. The crossed pairing is given by[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y\boxtimes \;:\; R \times W \,\to\, S, \quad (r,\chi)
-              \,\mapsto\, \chi r~.[133X [124X[133X
+  [24X      [33X[0;6Y\boxtimes  \;:\; R \times W \,\to\, S, \quad (r,\chi) \,\mapsto\, \chi
+        r~.[133X
   
+  [124X
   
         [33X[0;6YThis is implemented as [10XActorCrossedSquare( X0 );[110X.[133X
   
@@ -162,10 +167,10 @@
         [22Xdot∂_1[122X with [22Xdot∂_2[122X. The crossed pairing is given by[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y\tilde{\boxtimes} \;:\; S_{\{2\}} \times S_{\{1\}} \to S_{[2]},
-              \quad (n,m) \;\mapsto\; n\,\tilde{\boxtimes}\,m := (m \boxtimes
-              n)^{-1}~.[133X [124X[133X
+  [24X      [33X[0;6Y\tilde{\boxtimes}  \;:\; S_{\{2\}} \times S_{\{1\}} \to S_{[2]}, \quad
+        (n,m) \;\mapsto\; n\,\tilde{\boxtimes}\,m := (m \boxtimes n)^{-1}~.[133X
   
+  [124X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -390,16 +395,17 @@
   of [22X[2][122X) and [22X15[122X homomorphisms, as shown in the following diagram:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\vcenter{\xymatrix{ & C_{[2]} \ar[ddd] <-1.2ex> \ar[ddd]
-        <-2.0ex>_{\ddot{t}_2,\ddot{h}_2} \ar[rrr] <+1.2ex> \ar[rrr]
-        <+2.0ex>^{\ddot{t}_1,\ddot{h}_1} \ar[dddrrr] <-0.2ex> \ar[dddrrr]
-        <-1.0ex>_(0.55){t_{[2]},h_{[2]}} &&& C_{\{2\}} \ar[lll]^{\ddot{e}_1}
-        \ar[ddd]<+1.2ex> \ar[ddd] <+2.0ex>^{\dot{t}_2,\dot{h}_2} \\
-        \mathcal{C} \quad = \quad & &&& \\ & &&& \\ & C_{\{1\}}
-        \ar[uuu]_{\ddot{e}_2} \ar[rrr] <-1.2ex> \ar[rrr]
-        <-2.0ex>_{\dot{t}_1,\dot{h}_1} &&& C_{\emptyset} \ar[uuu]^{\dot{e}_2}
-        \ar[lll]_{\dot{e}_1} \ar[uuulll] <-1.0ex>_{e_{[2]}} \\ }}[133X [124X[133X
+  [24X[33X[0;6Y\vcenter{\xymatrix{     &     C_{[2]}     \ar[ddd]     <-1.2ex>     \ar[ddd]
+  <-2.0ex>_{\ddot{t}_2,\ddot{h}_2}       \ar[rrr]       <+1.2ex>      \ar[rrr]
+  <+2.0ex>^{\ddot{t}_1,\ddot{h}_1}     \ar[dddrrr]     <-0.2ex>    \ar[dddrrr]
+  <-1.0ex>_(0.55){t_{[2]},h_{[2]}}    &&&    C_{\{2\}}   \ar[lll]^{\ddot{e}_1}
+  \ar[ddd]<+1.2ex>   \ar[ddd]  <+2.0ex>^{\dot{t}_2,\dot{h}_2}  \\  \mathcal{C}
+  \quad  =  \quad & &&& \\ & &&& \\ & C_{\{1\}} \ar[uuu]_{\ddot{e}_2} \ar[rrr]
+  <-1.2ex>    \ar[rrr]    <-2.0ex>_{\dot{t}_1,\dot{h}_1}   &&&   C_{\emptyset}
+  \ar[uuu]^{\dot{e}_2}  \ar[lll]_{\dot{e}_1} \ar[uuulll] <-1.0ex>_{e_{[2]}} \\
+  }}[133X
   
+  [124X
   
   [33X[0;0YThe following axioms are satisfied by these homomorphisms:[133X
   
@@ -441,10 +447,10 @@
   following conditions:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y(t \circ e) ~\mbox{and}~ (h \circ e) ~\mbox{are the identity mapping
-        on}~ \mathcal{C}_2, \qquad [\ker t, \ker h] = \{ 1_{\mathcal{C}_1} \},[133X
-        [124X[133X
+  [24X[33X[0;6Y(t  \circ  e)  ~\mbox{and}~ (h \circ e) ~\mbox{are the identity mapping on}~
+  \mathcal{C}_2, \qquad [\ker t, \ker h] = \{ 1_{\mathcal{C}_1} \},[133X
   
+  [124X
   
   [33X[0;0Ywhere [22Xker t = (ker ddott, ker dott)[122X, and similarly for [22Xker h[122X.[133X
   
@@ -507,10 +513,11 @@
   [30X    [33X[0;6YGroup homomorphisms forming [22Xn2^n-1[122X commuting cat[22X^1[122X-groups,[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y\mathcal{C}_{A,i} ~=~ (e_{A,i};\; t_{A,i},\; h_{A,i} \ :\ G_A
-              \to G_{A \setminus \{i\}}), \quad\mbox{for all} \quad A
-              \subseteq [n],~ i \in A,[133X [124X[133X
+  [24X      [33X[0;6Y\mathcal{C}_{A,i} ~=~ (e_{A,i};\; t_{A,i},\; h_{A,i} \ :\ G_A \to G_{A
+        \setminus  \{i\}}),  \quad\mbox{for all} \quad A \subseteq [n],~ i \in
+        A,[133X
   
+  [124X
   
         [33X[0;6Ythe [13Xedges[113X of the cube.[133X
   
@@ -529,9 +536,10 @@
   [22X[n][122X, and [22X3n[122X homomorphisms[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Yt_{[n],i}, h_{[n],i} : G_{[n]} \to G_{n \setminus \{i\}},~ e_{[n],i} :
-        G_{[n] \setminus \{i\}} \to G_{[n]},[133X [124X[133X
+  [24X[33X[0;6Yt_{[n],i},  h_{[n],i}  :  G_{[n]}  \to  G_{n  \setminus \{i\}},~ e_{[n],i} :
+  G_{[n] \setminus \{i\}} \to G_{[n]},[133X
   
+  [124X
   
   [33X[0;0Ysatisfying the following axioms for all [22X1 leqslant i leqslant n[122X,}[133X
   
@@ -559,8 +567,8 @@
         mathcalA[122X subject to the following conditions:[133X
   
   
-              [33X[1;12Y[24X [33X[0;6Y(t \circ e) ~\mbox{and}~ (h \circ e) ~\mbox{are the identity
-              mapping on}~ \mathcal{B}, \qquad [\ker t, \ker h] = \{
-              1_{\mathcal{A}} \}.[133X [124X[133X
+  [24X      [33X[0;6Y(t  \circ  e) ~\mbox{and}~ (h \circ e) ~\mbox{are the identity mapping
+        on}~ \mathcal{B}, \qquad [\ker t, \ker h] = \{ 1_{\mathcal{A}} \}.[133X
   
+  [124X
   

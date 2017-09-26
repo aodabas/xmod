@@ -143,7 +143,7 @@
   
   [1X11.2-4 [33X[0;0YLatest Version[133X[101X
   
-  [33X[0;0YThe latest version, 2.62, was released on 9th August 2017.[133X
+  [33X[0;0YThe latest version, 2.63, was released on 26th September 2017.[133X
   
   
   [1X11.3 [33X[0;0YWhat needs doing next?[133X[101X
@@ -177,9 +177,10 @@
               with sides[133X
   
   
-                    [33X[1;18Y[24X [33X[0;12Y0 : A \to N,\quad 0 : A \to M,\quad 0 : M \to P,\quad 0 :
-                    N \to P.[133X [124X[133X
+  [24X            [33X[0;12Y0  : A \to N,\quad 0 : A \to M,\quad 0 : M \to P,\quad 0 : N \to
+              P.[133X
   
+  [124X
   
         [30X    [33X[0;12YFor a group [22XL[122X, the automorphism crossed module [22XAct L = (ι : L ->
               Aut  L)[122X splits to form the square with [22X(ι_1 : L -> Inn L)[122X on two
@@ -189,10 +190,10 @@
               actions are standard, and the crossed pairing is[133X
   
   
-                    [33X[1;18Y[24X [33X[0;12Y\boxtimes \;:\; {\rm Inn}\ L \times {\rm Inn}\ L \to L,
-                    \quad (\beta_l, \beta_{l^{\prime}}) \;\mapsto\; [l,
-                    l^{\prime}]~.[133X [124X[133X
+  [24X            [33X[0;12Y\boxtimes  \;:\;  {\rm  Inn}\ L \times {\rm Inn}\ L \to L, \quad
+              (\beta_l, \beta_{l^{\prime}}) \;\mapsto\; [l, l^{\prime}]~.[133X
   
+  [124X
   
   [30X    [33X[0;6YImprove the interaction with the [5XHAP[105X package.[133X
   

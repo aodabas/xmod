@@ -76,9 +76,10 @@
   satisfy identities[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y[r,q]^p = [r^p,q^p], \qquad [pr,q] = [p,q]^r[r,q], \qquad [r,pq] =
-        [r,q][r,p]^q, \qquad [r,q]^{-1} = [q,r].[133X [124X[133X
+  [24X[33X[0;6Y[r,q]^p   =  [r^p,q^p],  \qquad  [pr,q]  =  [p,q]^r[r,q],  \qquad  [r,pq]  =
+  [r,q][r,p]^q, \qquad [r,q]^{-1} = [q,r].[133X
   
+  [124X
   
   [33X[0;0YIn  a similar way, when a group [22XR[122X acts on a group [22XS[122X, the [13Xdisplacement[113X of [22Xs ∈
   S[122X by [22Xr ∈ R[122X is defined to be [22X⟨ r,s ⟩ := (s^-1)^rs ∈ S[122X. When [22XmathcalX = (∂ : S
@@ -88,11 +89,12 @@
   [22Xs,t ∈ S,~ p,q,r ∈ R[122X:[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\langle r,s \rangle^p = \langle r^p,s^p \rangle, \qquad \langle qr,s
-        \rangle = \langle q,s \rangle^r \langle r,s \rangle, \qquad \langle
-        r,st \rangle = \langle r,t \rangle \langle r,s \rangle^t, \qquad
-        \langle r,s \rangle^{-1} = \langle r^{-1},s^r \rangle.[133X [124X[133X
+  [24X[33X[0;6Y\langle r,s \rangle^p = \langle r^p,s^p \rangle, \qquad \langle qr,s \rangle
+  =  \langle  q,s \rangle^r \langle r,s \rangle, \qquad \langle r,st \rangle =
+  \langle r,t \rangle \langle r,s \rangle^t, \qquad \langle r,s \rangle^{-1} =
+  \langle r^{-1},s^r \rangle.[133X
   
+  [124X
   
   [33X[0;0YThe  [10XDisplacementSubgroup[110X  of  [22XmathcalX[122X  is the subgroup [22XDisp(mathcalX)[122X of [22XS[122X
   generated  by  these  displacements.  The  identities  imply  [22X⟨  r,s ⟩^t = ⟨
@@ -271,10 +273,11 @@
   [22XmathcalX[122X to [22XmathcalY[122X has the form[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\mathcal{X} ~=~ \mathcal{X}_0 ~\unrhd~ \mathcal{X}_1 ~\unrhd~ \cdots
-        ~\unrhd~ \mathcal{X}_i ~\unrhd~ \cdots ~\unrhd~ \mathcal{X}_n ~=~
-        \mathcal{Y} \quad (1 \leqslant i \leqslant n).[133X [124X[133X
+  [24X[33X[0;6Y\mathcal{X}   ~=~   \mathcal{X}_0  ~\unrhd~  \mathcal{X}_1  ~\unrhd~  \cdots
+  ~\unrhd~   \mathcal{X}_i   ~\unrhd~   \cdots   ~\unrhd~   \mathcal{X}_n  ~=~
+  \mathcal{Y} \quad (1 \leqslant i \leqslant n).[133X
   
+  [124X
   
   [33X[0;0YThe  quotients [22XmathcalF_i = mathcalX_i / mathcalX_i-1[122X are the [13Xfactors[113X of the
   series.[133X
@@ -292,10 +295,11 @@
   [33X[0;0YThe [13Xlower central series[113X of [22XmathcalX[122X is the sequence (see [Nor87], p.77):[133X
   
   
-        [33X[1;6Y[24X[33X[0;0Y\mathcal{X} ~=~ \Gamma_1(\mathcal{X}) ~\unrhd~ \Gamma_2(\mathcal{X})
-        ~\unrhd~ \cdots \qquad \mbox{where} \qquad \Gamma_j(\mathcal{X}) ~=~ [
-        \Gamma_{j-1}(\mathcal{X}), \mathcal{X}].[133X [124X[133X
+  [24X[33X[0;6Y\mathcal{X}   ~=~   \Gamma_1(\mathcal{X})   ~\unrhd~   \Gamma_2(\mathcal{X})
+  ~\unrhd~  \cdots  \qquad  \mbox{where}  \qquad  \Gamma_j(\mathcal{X})  ~=~ [
+  \Gamma_{j-1}(\mathcal{X}), \mathcal{X}].[133X
   
+  [124X
   
   [33X[0;0YIf  [22XmathcalX[122X is nilpotent, then its lower central series is its most rapidly
   descending central series.[133X
