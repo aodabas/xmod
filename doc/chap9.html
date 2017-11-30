@@ -25,46 +25,126 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap9.html#X847F4ED77F50528C">9.1 <span class="Heading">Constructions for crossed modules of groupoids</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap9.html#X7A8F33BC7E00A6B8">9.1-1 DiscreteNormalPreXModWithObjects</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap9.html#X86CD034F82F5F029">9.1-1 SinglePiecePreXModWithObjects</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap9.html#X7B76F2BF82E075FF">9.1-2 IsXModWithObjects</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap9.html#X858EB4F97D04D012">9.1-3 IsPermPreXModWithObjects</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap9.html#X797B1CD07C3682EE">9.1-4 Root2dGroup</a></span>
 </div></div>
 </div>
 
 <h3>9 <span class="Heading">Crossed modules of groupoids</span></h3>
 
+<p>The material documented in this chapter is experimental, and is likely to be changed very soon.</p>
+
 <p><a id="X847F4ED77F50528C" name="X847F4ED77F50528C"></a></p>
 
 <h4>9.1 <span class="Heading">Constructions for crossed modules of groupoids</span></h4>
 
-<p>A typical example of a crossed module <span class="SimpleMath">mathcalX</span> over a groupoid has for its range a connected groupoid. This is a direct product of a group with a complete graph, and we call the vertices of the graph the <em>objects</em> of the crossed module. The source of <span class="SimpleMath">mathcalX</span> is a totally disconnected groupoid, with the same objects. The boundary morphism is constant on objects. For details and other references see <a href="chapBib.html#biBAW2">[AW10]</a>.</p>
+<p>A typical example of a crossed module <span class="SimpleMath">mathcalX</span> over a groupoid has for its range a connected groupoid. This is a direct product of a group with a complete graph, and we call the vertices of the graph the <em>objects</em> of the crossed module. The source of <span class="SimpleMath">mathcalX</span> is a groupoid, with the same objects, which is either discrete or connected. The boundary morphism is constant on objects. For details and other references see <a href="chapBib.html#biBAW2">[AW10]</a>.</p>
 
-<p><a id="X7A8F33BC7E00A6B8" name="X7A8F33BC7E00A6B8"></a></p>
+<p><a id="X86CD034F82F5F029" name="X86CD034F82F5F029"></a></p>
 
-<h5>9.1-1 DiscreteNormalPreXModWithObjects</h5>
+<h5>9.1-1 SinglePiecePreXModWithObjects</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DiscreteNormalPreXModWithObjects</code>( <var class="Arg">gpd</var>, <var class="Arg">gp</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreXModWithObjectsObj</code>( <var class="Arg">obs</var>, <var class="Arg">bdy</var>, <var class="Arg">act</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<p>The next stage of development of this package will be to implement constuctions of crossed modules over groupoids. This will require further developments in the <strong class="pkg">Gpd</strong> package. The following example is all that can be shown at the moment. More was achieved in an earlier version, but produces errors in <strong class="pkg">GAP</strong> 4.7.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SinglePiecePreXModWithObjects</code>( <var class="Arg">pxmod</var>, <var class="Arg">obs</var>, <var class="Arg">isdisc</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p>At present the experimental operation <code class="code">SinglePiecePreXModWithObjects</code> accepts a precrossed module <code class="code">pxmod</code>, a set of objects <code class="code">obs</code>, and a boolean <code class="code">isdisc</code> which is <code class="code">true</code> when the source groupoid is homogeneous and discrete and <code class="code">false</code> when the source groupoid is connected. Other operations will be added as time permits.</p>
+
+<p>In the example the crossed module <code class="code">DX4</code> has discrete source, and is a groupoid equivalent of <code class="code">XModByNormalSubgroup</code>.</p>
 
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Ga4 := SinglePieceGroupoid( a4, [-9,-8,-7] );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( Ga4 );</span>
-single piece groupoid: 
-  objects: [ -9, -8, -7 ]
-    group: a4 = &lt;[ (1,2,3), (2,3,4) ]&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">GeneratorsOfGroup( k4 );</span>
-[ (1,2)(3,4), (1,3)(2,4) ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">PXO := DiscreteNormalPreXModWithObjects( Ga4, k4 );</span>
-homogeneous, discrete groupoid with:
-  group: k4 = &lt;[ (1,2)(3,4), (1,3)(2,4) ]&gt; &gt;
-objects: [ -9, -8, -7 ]
-#I  now need to be able to test:   ok := IsXMod( PM );
-&lt;semigroup&gt;
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Source( PXO ); </span>
-perm homogeneous, discrete groupoid: &lt; k4, [ -9, -8, -7 ] &gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s4 := Group( (1,2,3,4), (3,4) );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( s4, "s4" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a4 := Subgroup( s4, [ (1,2,3), (2,3,4) ] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( a4, "a4" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X4 := XModByNormalSubgroup( s4, a4 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DX4 := SinglePiecePreXModWithObjects( X4, [-9,-8,-7], false );</span>
+precrossed module with source groupoid:
+single piece groupoid: &lt; a4, [ -9, -8, -7 ] &gt;
+and range groupoid:
+single piece groupoid: &lt; s4, [ -9, -8, -7 ] &gt;
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Ga4 := Source( DX4 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Gs4 := Range( DX4 );;</span>
 
 </pre></div>
+
+<p><a id="X7B76F2BF82E075FF" name="X7B76F2BF82E075FF"></a></p>
+
+<h5>9.1-2 IsXModWithObjects</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDirectProductWithCompleteDigraphDomain</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>The precrossed module <code class="code">DX4</code> belongs to the category <code class="code">Is2DimensionalGroupWithObjects</code> and is, of course, a crossed module.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsXModWithObjects( DX4 ); </span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownPropertiesOfObject( DX4 ); </span>
+[ "CanEasilyCompareElements", "CanEasilySortElements", "IsDuplicateFree", 
+  "IsGeneratorsOfSemigroup", "IsSinglePieceDomain", 
+  "IsDirectProductWithCompleteDigraphDomain", "IsPreXModWithObjects", 
+  "IsXModWithObjects" ]
+
+</pre></div>
+
+<p><a id="X858EB4F97D04D012" name="X858EB4F97D04D012"></a></p>
+
+<h5>9.1-3 IsPermPreXModWithObjects</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPermPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPcPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFpPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<p>To test these properties we test the precrossed modules from which they were constructed.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPermPreXModWithObjects( DX4 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsPcPreXModWithObjects( DX4 );  </span>
+false
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsFpPreXModWithObjects( DX4 );</span>
+false
+
+</pre></div>
+
+<p><a id="X797B1CD07C3682EE" name="X797B1CD07C3682EE"></a></p>
+
+<h5>9.1-4 Root2dGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Root2dGroup</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModAction</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<p>The attributes of a precrossed module with objects include the standard <code class="code">Source</code>; <code class="code">Range</code>; <code class="code">Boundary</code>; and <code class="code">XModAction</code> as with precrossed modules of groups. There is also <code class="code">ObjectList</code>, as in the <strong class="pkg">groupoids</strong> package. Additionally there is <code class="code">Root2dGroup</code> which is the underlying precrossed module used in the construction.</p>
+
+<p>Note that <code class="code">XModAction</code> is now a groupoid homomorphism from the source groupoid to a one-object groupoid (with object <code class="code">0</code>) where the group is the automorphism group of the range groupoid.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownAttributesOfObject(DX4);</span>
+[ "Range", "Source", "Boundary", "ObjectList", "XModAction", "Root2dGroup" ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Root2dGroup( DX4 ); </span>
+[a4-&gt;s4]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">act := XModAction( DX4 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">r := Arrow( Gs4, (1,2,3,4), -7, -8 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ImageElm( act, r );            </span>
+[groupoid homomorphism : 
+[ [ [(1,2,3) : -9 -&gt; -9], [(2,3,4) : -9 -&gt; -9], [() : -9 -&gt; -8], 
+      [() : -9 -&gt; -7] ], 
+  [ [(2,3,4) : -9 -&gt; -9], [(1,3,4) : -9 -&gt; -9], [() : -9 -&gt; -7], 
+      [() : -9 -&gt; -8] ] ] : 0 -&gt; 0]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s := Arrow( Ga4, (1,2,4), -8, -8 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">##  calculate s^r </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ims := ImageElmXModAction( DX4, s, r );</span>
+[(1,2,3) : -7 -&gt; -7]
+
+</pre></div>
+
+<p>There is much more to be done with these constructions.</p>
 
 
 <div class="chlinkprevnextbot">&nbsp;<a href="chap0.html">[Top of Book]</a>&nbsp;  <a href="chap0.html#contents">[Contents]</a>&nbsp;  &nbsp;<a href="chap8.html">[Previous Chapter]</a>&nbsp;  &nbsp;<a href="chap10.html">[Next Chapter]</a>&nbsp;  </div>

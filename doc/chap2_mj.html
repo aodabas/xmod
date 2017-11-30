@@ -30,7 +30,8 @@
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7C8175AE7F76B586">2.1-1 XMod</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7DE8173F80E07AB1">2.1-2 Source</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X858ADA3B7A684421">2.1-3 Size</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X7AF6602C87845F1D">2.1-3 ImageElmXModAction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2_mj.html#X858ADA3B7A684421">2.1-4 Size</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2_mj.html#X7CF622538749FE73">2.2 <span class="Heading">Properties of crossed modules</span></a>
 </span>
@@ -109,7 +110,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByInnerAutomorphismGroup</code>( <var class="Arg">grp</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByGroupOfAutomorphisms</code>( <var class="Arg">G</var>, <var class="Arg">A</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByAbelianModule</code>( <var class="Arg">abmod</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DirectProduct</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DirectProductOp</code>( <var class="Arg">L</var>, <var class="Arg">X1</var> )</td><td class="tdright">( operation )</td></tr></table></div>
 <p>The global function <code class="code">XMod</code> implements one of the following standard constructions:</p>
 
 
@@ -131,6 +132,8 @@
 </li>
 <li><p>The direct product <span class="SimpleMath">\(\mathcal{X}_{1} \times \mathcal{X}_{2}\)</span> of two crossed modules has source <span class="SimpleMath">\(S_1 \times S_2\)</span>, range <span class="SimpleMath">\(R_1 \times R_2\)</span> and boundary <span class="SimpleMath">\(\partial_1 \times \partial_2\)</span>, with <span class="SimpleMath">\(R_1,\ R_2\)</span> acting trivially on <span class="SimpleMath">\(S_2,\ S_1\)</span> respectively.</p>
 
+<p>Since <code class="code">DirectProduct</code> is a global function which only accepts groups, it is necessary to provide an "other method" for operation <code class="code">DirectProductOp</code> which, as usual, takes as parameters a list of crossed modules, followed by the first of these: <code class="code">DirectProductOp([X1,X2],X1);</code></p>
+
 </li>
 </ul>
 <p><a id="X7DE8173F80E07AB1" name="X7DE8173F80E07AB1"></a></p>
@@ -140,7 +143,6 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Source</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Range</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Boundary</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AutoGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModAction</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <p>The following attributes are used in the construction of a crossed module <code class="code">X0</code>.</p>
 
@@ -149,16 +151,22 @@
 <li><p><code class="code">Source(X0)</code> and <code class="code">Range(X0)</code> are the source <span class="SimpleMath">\(S\)</span> and range <span class="SimpleMath">\(R\)</span> of <span class="SimpleMath">\(\partial\)</span>, the boundary <code class="code">Boundary(X0)</code>;</p>
 
 </li>
-<li><p><code class="code">AutoGroup(X0)</code> is a group of automorphisms of <span class="SimpleMath">\(S\)</span>;</p>
-
-</li>
-<li><p><code class="code">XModAction(X0)</code> is a homomorphism from <span class="SimpleMath">\(R\)</span> to <code class="code">AutoGroup(X0)</code>.</p>
+<li><p><code class="code">XModAction(X0)</code> is a homomorphism from <span class="SimpleMath">\(R\)</span> to a group of automorphisms of <code class="code">X0</code>.</p>
 
 </li>
 </ul>
+<p>(Up until version 2.63 there was an additional attribute <code class="code">AutoGroup</code>, the range of <code class="code">XModAction(X0)</code>.)</p>
+
+<p><a id="X7AF6602C87845F1D" name="X7AF6602C87845F1D"></a></p>
+
+<h5>2.1-3 ImageElmXModAction</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ImageElmXModAction</code>( <var class="Arg">X0</var>, <var class="Arg">s</var>, <var class="Arg">r</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<p>This function returns the element <span class="SimpleMath">\(s^r\)</span> given by <code class="code">XModAction(X0)</code>.</p>
+
 <p><a id="X858ADA3B7A684421" name="X858ADA3B7A684421"></a></p>
 
-<h5>2.1-3 Size</h5>
+<h5>2.1-4 Size</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Size</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Name</code>( <var class="Arg">X0</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
@@ -197,11 +205,13 @@ Crossed module [c5 -&gt; PAut(c5)] :-
 &lt;xset:[ (), (5,6,7,8,9), (5,7,9,6,8), (5,8,6,9,7), (5,9,8,7,6) ]&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Orbits( ext );</span>
 [ [ () ], [ (5,6,7,8,9), (5,7,9,6,8), (5,9,8,7,6), (5,8,6,9,7) ] ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ImageElmXModAction( X1, (5,6,7,8,9), (1,2,3,4) );</span>
+(5,7,9,6,8)
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentationsOfObject( X1 );</span>
 [ "IsComponentObjectRep", "IsAttributeStoringRep", "IsPreXModObj" ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownAttributesOfObject( X1);</span>
-[ "Name", "Size", "Range", "Source", "IdGroup", "Boundary", "AutoGroup", 
-  "XModAction", "ExternalSetXMod" ]
+[ "Name", "Size", "Range", "Source", "IdGroup", "Boundary", "XModAction", 
+  "ExternalSetXMod" ]
 
 </pre></div>
 
@@ -622,7 +632,7 @@ Crossed module X([G2=&gt;d12]) :-
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">L18 := Cat1Select( 18 ); </span>
 Usage:  Cat1Select( size, gpnum, num );
 [ "D18", "C18", "C3 x S3", "(C3 x C3) : C2", "C6 x C3" ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">## check the number of cat1-structrues on the fourth of these</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">## check the number of cat1-structures on the fourth of these</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Cat1Select( 18, 4 );</span>
 Usage:  Cat1Select( size, gpnum, num );
 There are 4 cat1-structures for the group (C3 x C3) : C2.

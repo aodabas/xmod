@@ -51,9 +51,9 @@
   and  crossed modules are contained in Chapter [14X4[114X, and are described in detail
   in their paper [IOU16].[133X
   
-  [33X[0;0YThe current version is 2.63 for [5XGAP[105X 4.8, released on 26th September 2017.[133X
+  [33X[0;0YThe current version is 2.64 for [5XGAP[105X 4.8, released on 30th November 2017.[133X
   
-  [33X[0;0YThe package may be obtained as a compressed tar file [11Xxmod-2.63.tar.gz[111X by ftp
+  [33X[0;0YThe package may be obtained as a compressed tar file [11Xxmod-2.64.tar.gz[111X by ftp
   from one of the following sites:[133X
   
   [30X    [33X[0;6Yany                  [5XGAP[105X                 archive,                 e.g.
@@ -103,7 +103,7 @@
   from a crossed module to its actor.[133X
   
   [33X[0;0YThe  eighth  part  has  some  experimental  functions for crossed modules of
-  groupoids,  interacting  with  the  package  [5XGpd[105X.  Much more work on this is
+  groupoids, interacting with the package [5Xgroupoids[105X. Much more work on this is
   needed.[133X
   
   [33X[0;0YFuture  plans  include the implementation of [13Xgroup-graphs[113X which will provide
@@ -114,7 +114,7 @@
   [33X[0;0YThe  equivalent categories [10XXMod[110X (crossed modules) and [10XCat1[110X (cat1-groups) are
   also  equivalent  to [10XGpGpd[110X, the subcategory of group objects in the category
   [10XGpd[110X  of  groupoids.  Finite  groupoids have been implemented in Emma Moore's
-  package [5XGpd[105X [Moo01] for groupoids and crossed resolutions.[133X
+  package [5Xgroupoids[105X [Moo01] for groupoids and crossed resolutions.[133X
   
   [33X[0;0YIn  order  that  the  user  has  some  control  of the verbosity of the [5XXMod[105X
   package's functions, an [10XInfoClass[110X [10XInfoXMod[110X is provided (see Chapter [10Xref:Info
@@ -153,8 +153,9 @@
   Discrete                 Algebra[113X                 website                 at:
   [7Xhttp://pages.bangor.ac.uk/~mas023/chda/intro.html[107X.[133X
   
-  [33X[0;0YThis  version  2.61  had to be released in a hurry when required package [5XGpd[105X
-  was renamed as [5Xgroupoids[105X. As a result some functions for crossed squares and
-  cat2-groups, still under development, had to be temporarily removed, and two
-  test files had to be removed from the list of files to be tested.[133X
+  [33X[0;0YThis  version  2.61  had  to  be  released  in a hurry when required package
+  [5Xgroupoids[105X  was  renamed as [5Xgroupoids[105X. As a result some functions for crossed
+  squares  and  cat2-groups,  still  under  development, had to be temporarily
+  removed,  and  two test files had to be removed from the list of files to be
+  tested.[133X
   

@@ -143,7 +143,7 @@
   
   [1X11.2-4 [33X[0;0YLatest Version[133X[101X
   
-  [33X[0;0YThe latest version, 2.63, was released on 26th September 2017.[133X
+  [33X[0;0YThe latest version, 2.64, was released on 30th November 2017.[133X
   
   
   [1X11.3 [33X[0;0YWhat needs doing next?[133X[101X
@@ -152,7 +152,7 @@
   
   [30X    [33X[0;6YAdd more functions for [10X3dObjects[110X and implement [10Xcat2-groups[110X.[133X
   
-  [30X    [33X[0;6YImprove  interaction  with  the  package  [5XGpd[105X  implementing  the group
+  [30X    [33X[0;6YImprove  interaction with the package [5Xgroupoids[105X implementing the group
         groupoid  version  of  a crossed module, and adding more functions for
         crossed modules of groupoids.[133X
   

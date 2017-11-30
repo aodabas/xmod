@@ -439,7 +439,7 @@
   [30X    [33X[0;6Y[22X(e_1  ∘  t_1)  ∘  (e_2 ∘ h_2) = (e_2 ∘ h_2) ∘ (e_1 ∘ t_1), quad (e_2 ∘
         t_2) ∘ (e_1 ∘ h_1) = (e_1 ∘ h_1) ∘ (e_2 ∘ t_2).[122X[133X
   
-  [33X[0;0YOur   third   definition   defines  a  cat[22X^2[122X-groups  as  a  "cat[22X^1[122X-group  of
+  [33X[0;0YOur   third   definition   defines   a  cat[22X^2[122X-group  as  a  "cat[22X^1[122X-group  of
   cat[22X^1[122X-groups".   A   cat[22X^2[122X-group   [22XmathcalC[122X  consists  of  two  cat[22X^1[122X-groups
   [22XmathcalC_1  = (e_1;t_1,h_1 : G_1 -> R_1)[122X and [22XmathcalC_2 = (e_2;t_2,h_2 : G_2
   ->  R_2)[122X and cat[22X^1[122X-morphisms [22Xt = (ddott,dott), h = (ddoth,doth) : mathcalC_1
@@ -480,7 +480,7 @@
   [29X[2XCat2GroupOfCrossedSquare[102X( [3Xxsq[103X ) [32X attribute
   [29X[2XCrossedSquareOfCat2Group[102X( [3XCC[103X ) [32X attribute
   
-  [33X[0;0Y[13XThese functions are temporarily disabled.[113X[133X
+  [33X[0;0Y[13XThese functions are very experimental, and should not be relied on![113X[133X
   
   [33X[0;0YThese  functions  provide  the conversion from crossed square to cat2-group,
   and  conversely.  (They are the 3-dimensional equivalents of [10XCat1GroupOfXMod[110X
@@ -492,9 +492,11 @@
     [4X[28Xcrossed square with:[128X[104X
     [4X[28X      up = [Group( () )->Group( [ (1,2) ] )][128X[104X
     [4X[28X    left = [Group( () )->Group( [ (), (3,4,5) ] )][128X[104X
-    [4X[28X    down = [Group( [ (), (3,4,5) ] )->Group( () )][128X[104X
-    [4X[28X   right = [Group( [ (1,2) ] )->Group( () )][128X[104X
-    [4X[28X[128X[104X
+    [4X[28X    down = [Group( [ (), (3,4,5) ] ) -> Group( () )][128X[104X
+    [4X[28X   right = [Group( [ (1,2) ] ) -> Group( () )][128X[104X
+    [4X[25Xgap>[125X [27XCat2GroupOfCrossedSquare( XSact );[127X[104X
+    [4X[28XWarning: these conversion functions are still under development[128X[104X
+    [4X[28Xfail[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -536,7 +538,7 @@
   [22X[n][122X, and [22X3n[122X homomorphisms[133X
   
   
-  [24X[33X[0;6Yt_{[n],i},  h_{[n],i}  :  G_{[n]}  \to  G_{n  \setminus \{i\}},~ e_{[n],i} :
+  [24X[33X[0;6Yt_{[n],i},  h_{[n],i}  :  G_{[n]}  \to G_{[n] \setminus \{i\}},~ e_{[n],i} :
   G_{[n] \setminus \{i\}} \to G_{[n]},[133X
   
   [124X

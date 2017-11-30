@@ -495,7 +495,7 @@ true
 
 </li>
 </ul>
-<p>Our third definition defines a cat<span class="SimpleMath">\(^2\)</span>-groups as a "cat<span class="SimpleMath">\(^1\)</span>-group of cat<span class="SimpleMath">\(^1\)</span>-groups". A cat<span class="SimpleMath">\(^2\)</span>-group <span class="SimpleMath">\(\mathcal{C}\)</span> consists of two cat<span class="SimpleMath">\(^1\)</span>-groups <span class="SimpleMath">\(\mathcal{C}_1 = (e_1;t_1,h_1 : G_1 \to R_1)\)</span> and <span class="SimpleMath">\(\mathcal{C}_2 = (e_2;t_2,h_2 : G_2 \to R_2)\)</span> and cat<span class="SimpleMath">\(^1\)</span>-morphisms <span class="SimpleMath">\(t = (\ddot{t},\dot{t}),\; h = (\ddot{h},\dot{h}) : \mathcal{C}_1 \to \mathcal{C}_2,\; e = (\ddot{e},\dot{e}) : \mathcal{C}_2 \to \mathcal{C}_1\)</span>, subject to the following conditions:</p>
+<p>Our third definition defines a cat<span class="SimpleMath">\(^2\)</span>-group as a "cat<span class="SimpleMath">\(^1\)</span>-group of cat<span class="SimpleMath">\(^1\)</span>-groups". A cat<span class="SimpleMath">\(^2\)</span>-group <span class="SimpleMath">\(\mathcal{C}\)</span> consists of two cat<span class="SimpleMath">\(^1\)</span>-groups <span class="SimpleMath">\(\mathcal{C}_1 = (e_1;t_1,h_1 : G_1 \to R_1)\)</span> and <span class="SimpleMath">\(\mathcal{C}_2 = (e_2;t_2,h_2 : G_2 \to R_2)\)</span> and cat<span class="SimpleMath">\(^1\)</span>-morphisms <span class="SimpleMath">\(t = (\ddot{t},\dot{t}),\; h = (\ddot{h},\dot{h}) : \mathcal{C}_1 \to \mathcal{C}_2,\; e = (\ddot{e},\dot{e}) : \mathcal{C}_2 \to \mathcal{C}_1\)</span>, subject to the following conditions:</p>
 
 <p class="center">\[
 (t \circ e) ~\mbox{and}~ (h \circ e)
@@ -534,7 +534,7 @@ true
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat2GroupOfCrossedSquare</code>( <var class="Arg">xsq</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CrossedSquareOfCat2Group</code>( <var class="Arg">CC</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<p><em>These functions are temporarily disabled.</em></p>
+<p><em>These functions are very experimental, and should not be relied on!</em></p>
 
 <p>These functions provide the conversion from crossed square to cat2-group, and conversely. (They are the 3-dimensional equivalents of <code class="code">Cat1GroupOfXMod</code> and <code class="code">XModOfCat1Group</code>.)</p>
 
@@ -545,9 +545,11 @@ true
 crossed square with:
       up = [Group( () )-&gt;Group( [ (1,2) ] )]
     left = [Group( () )-&gt;Group( [ (), (3,4,5) ] )]
-    down = [Group( [ (), (3,4,5) ] )-&gt;Group( () )]
-   right = [Group( [ (1,2) ] )-&gt;Group( () )]
-
+    down = [Group( [ (), (3,4,5) ] ) -&gt; Group( () )]
+   right = [Group( [ (1,2) ] ) -&gt; Group( () )]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Cat2GroupOfCrossedSquare( XSact );</span>
+Warning: these conversion functions are still under development
+fail
 
 </pre></div>
 
@@ -588,7 +590,7 @@ G_A \to G_{A \setminus \{i\}}),
 <p>A cat<span class="SimpleMath">\(^n\)</span>-group <span class="SimpleMath">\(\mathcal{C}\)</span> consists of <span class="SimpleMath">\(2^n\)</span> groups <span class="SimpleMath">\(G_A\)</span>, one for each subset <span class="SimpleMath">\(A\)</span> of <span class="SimpleMath">\([n]\)</span>, and <span class="SimpleMath">\(3n\)</span> homomorphisms</p>
 
 <p class="center">\[
-t_{[n],i}, h_{[n],i} : G_{[n]} \to G_{n \setminus \{i\}},~ 
+t_{[n],i}, h_{[n],i} : G_{[n]} \to G_{[n] \setminus \{i\}},~ 
  e_{[n],i} : G_{[n] \setminus \{i\}} \to G_{[n]}, 
 \]</p>
 
