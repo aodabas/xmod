@@ -1,6 +1,6 @@
 name: XMod
 version: 2.64
-date: 30/11/2017
+date: 2017-11-30
 description: |
     Crossed Modules and Cat1-Groups
 
@@ -32,7 +32,7 @@ needed-pkgs:
       url: "http://hamilton.nuigalway.ie/Hap/www"
     - name: "AutPGrp"
       version: ">= 1.6"
-      url: "http://www.icm.tu-bs.de/~beick/so.html"
+      url: "https://gap-packages.github.io/autpgrp/"
 
 suggested-pkgs:
     - name: "GAPDoc"
