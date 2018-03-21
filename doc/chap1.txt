@@ -51,18 +51,17 @@
   and  crossed modules are contained in Chapter [14X4[114X, and are described in detail
   in their paper [IOU16].[133X
   
-  [33X[0;0YThe current version is 2.64 for [5XGAP[105X 4.8, released on 30th November 2017.[133X
+  [33X[0;0YThe    package    may    be    obtained    as    a   compressed   tar   file
+  [11XXMod-version.number.tar.gz[111X by ftp from one of the following sites:[133X
   
-  [33X[0;0YThe package may be obtained as a compressed tar file [11Xxmod-2.64.tar.gz[111X by ftp
-  from one of the following sites:[133X
+  [30X    [33X[0;6Ythe            [5XXMod[105X           GitHub           release           site:
+        [7Xhttps://github.com/gap-packages.github.io/xmod/[107X.[133X
   
   [30X    [33X[0;6Yany                  [5XGAP[105X                 archive,                 e.g.
-        [7Xhttp://www.gap-system.org/Packages/packages.html[107X;[133X
+        [7Xhttps://www.gap-system.org/Packages/packages.html[107X;[133X
   
-  [30X    [33X[0;6Ythe                            Bangor                            site:
-        [7Xhttp://www.maths.bangor.ac.uk/chda/gap4/xmod/xmod.html[107X;[133X
-  
-  [30X    [33X[0;6Ythe package GitHub repository: [7Xhttps://github.com/gap-packages/xmod[107X.[133X
+  [33X[0;0YThe      package      also      has      a     GitHub     repository     at:
+  [7Xhttps://github.com/gap-packages/xmod/[107X.[133X
   
   [33X[0;0YCrossed  modules  and  cat1-groups are special types of [13X2-dimensional groups[113X
   [Bro82],   [BHS11],   and   are   implemented   as  [10X2DimensionalDomains[110X  and
@@ -134,7 +133,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XReadPackage( "xmod, "makedocrel.g" ); [127X[104X
+    [4X[25Xgap>[125X [27XReadPackage( "xmod, "makedoc.g" ); [127X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -152,10 +151,4 @@
   [33X[0;0YAdditional  information can be found on the [13XComputational Higher-dimensional
   Discrete                 Algebra[113X                 website                 at:
   [7Xhttp://pages.bangor.ac.uk/~mas023/chda/intro.html[107X.[133X
-  
-  [33X[0;0YThis  version  2.61  had  to  be  released  in a hurry when required package
-  [5Xgroupoids[105X  was  renamed as [5Xgroupoids[105X. As a result some functions for crossed
-  squares  and  cat2-groups,  still  under  development, had to be temporarily
-  removed,  and  two test files had to be removed from the list of files to be
-  tested.[133X
   

@@ -4,19 +4,19 @@
   
   [1X6.1 [33X[0;0YActor of a crossed module[133X[101X
   
-  [33X[0;0YThe  [13Xactor[113X  of  [22XmathcalX[122X  is  a  crossed  module  [22X(∆ : mathcalW(mathcalX) ->
-  Aut(mathcalX))[122X  which was shown by Lue and Norrie, in [Nor87] and [Nor90] to
-  give  the  automorphism  object  of  a  crossed  module  [22XmathcalX[122X.  In  this
-  implementation, the source of the actor is a permutation representation [22XW[122X of
-  the  Whitehead group of regular derivations, and the range of the actor is a
-  permutation  representation  [22XA[122X  of  the  automorphism group [22XAut(mathcalX)[122X of
-  [22XmathcalX[122X.[133X
+  [33X[0;0YThe   [13Xactor[113X   of   [22XmathcalX[122X  is  a  crossed  module  [22XAct(mathcalX)  =  (∆  :
+  mathcalW(mathcalX)  ->  Aut(mathcalX))[122X which was shown by Lue and Norrie, in
+  [Nor87]  and  [Nor90]  to  give  the automorphism object of a crossed module
+  [22XmathcalX[122X.  In  this implementation, the source of the actor is a permutation
+  representation  [22XW[122X  of  the  Whitehead  group of regular derivations, and the
+  range  of  the  actor  is a permutation representation [22XA[122X of the automorphism
+  group [22XAut(mathcalX)[122X of [22XmathcalX[122X.[133X
   
   [1X6.1-1 AutomorphismPermGroup[101X
   
-  [29X[2XAutomorphismPermGroup[102X( [3Xxmod[103X ) [32X attribute
-  [29X[2XGeneratingAutomorphisms[102X( [3Xxmod[103X ) [32X attribute
-  [29X[2XPermAutomorphismAsXModMorphism[102X( [3Xxmod[103X, [3Xperm[103X ) [32X attribute
+  [33X[1;0Y[29X[2XAutomorphismPermGroup[102X( [3Xxmod[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XGeneratingAutomorphisms[102X( [3Xxmod[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XPermAutomorphismAsXModMorphism[102X( [3Xxmod[103X, [3Xperm[103X ) [32X attribute[133X
   
   [33X[0;0YThe automorphisms [22X( σ, ρ )[122X of [22XmathcalX[122X form a group [22XAut(mathcalX)[122X of crossed
   module  isomorphisms.  The  function  [10XAutomorphismPermGroup[110X  finds  a set of
@@ -25,7 +25,7 @@
   crossed  module of [22XmathcalX[122X. The individual automorphisms can be constructed
   from       the      permutation      group      using      the      function
   [10XPermAutomorphismAsXModMorphism[110X.  The  example  below uses the crossed module
-  [10XX3=[c3->s3][110X constructed in section [14X5.1[114X.[133X
+  [10XX3=[c3->s3][110X constructed in section [14X5.2[114X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -53,11 +53,10 @@
   
   [1X6.1-2 WhiteheadXMod[101X
   
-  [29X[2XWhiteheadXMod[102X( [3Xxmod[103X ) [32X attribute
-  [29X[2XLueXMod[102X( [3Xxmod[103X ) [32X attribute
-  [29X[2XNorrieXMod[102X( [3Xxmod[103X ) [32X attribute
-  [29X[2XActorXMod[102X( [3Xxmod[103X ) [32X attribute
-  [29X[2XAutomorphismPermGroup[102X( [3Xxmod[103X ) [32X attribute
+  [33X[1;0Y[29X[2XWhiteheadXMod[102X( [3Xxmod[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLueXMod[102X( [3Xxmod[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNorrieXMod[102X( [3Xxmod[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XActorXMod[102X( [3Xxmod[103X ) [32X attribute[133X
   
   [33X[0;0YAn  automorphism [22X( σ, ρ )[122X of [10XX[110X acts on the Whitehead monoid by [22Xχ^(σ,ρ) = σ ∘
   χ  ∘  ρ^-1[122X,  and  this determines the action for the actor. In fact the four
@@ -153,9 +152,9 @@
   
   [1X6.1-3 XModCentre[101X
   
-  [29X[2XXModCentre[102X( [3Xxmod[103X ) [32X attribute
-  [29X[2XInnerActorXMod[102X( [3Xxmod[103X ) [32X attribute
-  [29X[2XInnerMorphism[102X( [3Xxmod[103X ) [32X attribute
+  [33X[1;0Y[29X[2XXModCentre[102X( [3Xxmod[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XInnerActorXMod[102X( [3Xxmod[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XInnerMorphism[102X( [3Xxmod[103X ) [32X attribute[133X
   
   [33X[0;0YPairs  of  boundaries  or identity mappings provide six morphisms of crossed
   modules.   In   particular,   the   boundaries   of  [22XmathcalW(mathcalX)[122X  and

@@ -3,7 +3,7 @@
   [1XReferences[101X
   
   [[20XAlp97[120X]   [16XAlp,  M.[116X,  [17XGAP,  crossed  modules,  cat1-groups:  applications  of
-  computational  group  theory[117X,  Ph.{D}.~thesis,  University  of Wales, Bangor
+  computational  group  theory[117X,  Ph.{D}.  thesis,  University of Wales, Bangor
   (1997).
   
   [[20XAW00[120X]  [16XAlp, M. and Wensley, C. D.[116X, [17XEnumeration of cat1-groups of low order[117X,
@@ -39,17 +39,21 @@
   59--72.
   
   [[20XEll84[120X]  [16XEllis,  G.[116X, [17XCrossed modules and their higher dimensional analogues[117X,
-  Ph.{D}.~thesis, University of Wales, Bangor (1984).
+  Ph.{D}. thesis, University of Wales, Bangor (1984).
   
   [[20XES87[120X] [16XEllis, G. and Steiner, R.[116X, [17XHigher dimensional crossed modules and the
   homotopy  groups  of  (n+1)-ads.[117X,  [18XJ.  Pure  and  Appl.  Algebra[118X, [19X46[119X (1987),
   117--136.
   
+  [[20XGH17[120X]  [16XGutsche,  S. and Horn, M.[116X, [17XAutoDoc - Generate documentation from GAP
+  source    code    (Version    2017.09.15)[117X    (2017),    ((    GAP   package,
+  https://github.com/gap-packages/AutoDoc )).
+  
   [[20XGil90[120X]  [16XGilbert,  N.  D.[116X,  [17XDerivations,  automorphisms and crossed modules[117X,
   [18XComm. in Algebra[118X, [19X18[119X (1990), 2703--2734.
   
-  [[20XHor17[120X]  [16XHorn,  M.[116X,  [17X  GitHubPagesForGAP  - a GitHub Pages generator for GAP
-  packages        [117X,        [19X0.2[119X       (2017),       ((       GAP       package,
+  [[20XHor17[120X] [16XHorn, M.[116X, [17XGitHubPagesForGAP - Template for easily using GitHub Pages
+  within    GAP    packages    (Version   0.2)[117X   (2017),   ((   GAP   package,
   https://gap-system.github.io/GitHubPagesForGAP/ )).
   
   [[20XIOU16[120X]  [16XIlgaz,  E.,  Odabas,  A.  and  Uslu,  E.  O.[116X, [17XIsoclinism of crossed
@@ -67,10 +71,10 @@
   [18XJ. App. Algebra[118X, [19X24[119X (1982), 179--202.
   
   [[20XMoo01[120X]  [16XMoore,  E. J.[116X, [17XGraphs of Groups: Word Computations and Free Crossed
-  Resolutions[117X, Ph.{D}.~thesis, University of Wales, Bangor (2001).
+  Resolutions[117X, Ph.{D}. thesis, University of Wales, Bangor (2001).
   
   [[20XNor87[120X]  [16XNorrie,  K.  J.[116X,  [17XCrossed  modules and analogues of group theorems[117X,
-  Ph.{D}.~thesis, King's College, University of London (1987).
+  Ph.{D}. thesis, King's College, University of London (1987).
   
   [[20XNor90[120X]  [16XNorrie,  K. J.[116X, [17XActions and automorphisms of crossed modules[117X, [18XBull.
   Soc. Math. France[118X, [19X118[119X (1990), 129--146.

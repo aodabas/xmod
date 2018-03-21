@@ -38,7 +38,7 @@
   [24X[33X[0;6Y\vcenter{\xymatrix{      &     &     S_{[2]}     \ar[rr]^{\ddot{\partial}_1}
   \ar[dd]_{\ddot{\partial}_2}  &&  S_{\{2\}}  \ar[dd]^{\dot{\partial}_2}  & \\
   \mathcal{S}  &  =  &  &&  \\  &  &  S_{\{1\}}  \ar[rr]_{\dot{\partial}_1} &&
-  S_{\emptyset} }} }}[133X
+  S_{\emptyset} }}[133X
   
   [124X
   
@@ -129,11 +129,11 @@
   
   [1X8.2-1 CrossedSquare[101X
   
-  [29X[2XCrossedSquare[102X( [3Xargs[103X ) [32X function
-  [29X[2XCrossedSquareByNormalSubgroups[102X( [3XP[103X, [3XN[103X, [3XM[103X, [3XL[103X ) [32X operation
-  [29X[2XActorCrossedSquare[102X( [3XX0[103X ) [32X operation
-  [29X[2XTranspose3dGroup[102X( [3XS0[103X ) [32X attribute
-  [29X[2XName[102X( [3XS0[103X ) [32X attribute
+  [33X[1;0Y[29X[2XCrossedSquare[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCrossedSquareByNormalSubgroups[102X( [3XP[103X, [3XN[103X, [3XM[103X, [3XL[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XActorCrossedSquare[102X( [3XX0[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTranspose3dGroup[102X( [3XS0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XName[102X( [3XS0[103X ) [32X attribute[133X
   
   [33X[0;0YHere are some standard examples of crossed squares.[133X
   
@@ -209,7 +209,7 @@
   
   [1X8.2-2 CentralQuotient[101X
   
-  [29X[2XCentralQuotient[102X( [3XX0[103X ) [32X attribute
+  [33X[1;0Y[29X[2XCentralQuotient[102X( [3XX0[103X ) [32X attribute[133X
   
   [33X[0;0YThe  central  quotient  of  a  crossed module [22XmathcalX = (∂ : S -> R)[122X is the
   crossed square where:[133X
@@ -251,25 +251,25 @@
   
   [1X8.2-3 IsCrossedSquare[101X
   
-  [29X[2XIsCrossedSquare[102X( [3Xobj[103X ) [32X property
-  [29X[2XIs3dObject[102X( [3Xobj[103X ) [32X property
-  [29X[2XIsPerm3dObject[102X( [3Xobj[103X ) [32X property
-  [29X[2XIsPc3dObject[102X( [3Xobj[103X ) [32X property
-  [29X[2XIsFp3dObject[102X( [3Xobj[103X ) [32X property
-  [29X[2XIsPreCrossedSquare[102X( [3Xobj[103X ) [32X property
+  [33X[1;0Y[29X[2XIsCrossedSquare[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIs3dObject[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPerm3dObject[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPc3dObject[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsFp3dObject[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPreCrossedSquare[102X( [3Xobj[103X ) [32X property[133X
   
   [33X[0;0YThese  are  the  basic  properties  for  3d-groups,  and  crossed squares in
   particular.[133X
   
   [1X8.2-4 Up2DimensionalGroup[101X
   
-  [29X[2XUp2DimensionalGroup[102X( [3XXS[103X ) [32X attribute
-  [29X[2XLeft2DimensionalGroup[102X( [3XXS[103X ) [32X attribute
-  [29X[2XDown2DimensionalGroup[102X( [3XXS[103X ) [32X attribute
-  [29X[2XRight2DimensionalGroup[102X( [3XXS[103X ) [32X attribute
-  [29X[2XDiagonalAction[102X( [3XXS[103X ) [32X attribute
-  [29X[2XCrossedPairing[102X( [3XXS[103X ) [32X attribute
-  [29X[2XImageElmCrossedPairing[102X( [3XXS[103X, [3Xpair[103X ) [32X operation
+  [33X[1;0Y[29X[2XUp2DimensionalGroup[102X( [3XXS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLeft2DimensionalGroup[102X( [3XXS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDown2DimensionalGroup[102X( [3XXS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRight2DimensionalGroup[102X( [3XXS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDiagonalAction[102X( [3XXS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCrossedPairing[102X( [3XXS[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XImageElmCrossedPairing[102X( [3XXS[103X, [3Xpair[103X ) [32X operation[133X
   
   [33X[0;0YIn  this implementation the attributes used in the construction of a crossed
   square  [10XXS[110X  are  the  four  crossed  modules (2d-groups) on the sides of the
@@ -306,12 +306,12 @@
   
   [1X8.3-1 Source[101X
   
-  [29X[2XSource[102X( [3Xmap[103X ) [32X attribute
-  [29X[2XRange[102X( [3Xmap[103X ) [32X attribute
-  [29X[2XUp2DimensionalMorphism[102X( [3Xmap[103X ) [32X attribute
-  [29X[2XLeft2DimensionalMorphism[102X( [3Xmap[103X ) [32X attribute
-  [29X[2XDown2DimensionalMorphism[102X( [3Xmap[103X ) [32X attribute
-  [29X[2XRight2DimensionalMorphism[102X( [3Xmap[103X ) [32X attribute
+  [33X[1;0Y[29X[2XSource[102X( [3Xmap[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRange[102X( [3Xmap[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XUp2DimensionalMorphism[102X( [3Xmap[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XLeft2DimensionalMorphism[102X( [3Xmap[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XDown2DimensionalMorphism[102X( [3Xmap[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRight2DimensionalMorphism[102X( [3Xmap[103X ) [32X attribute[133X
   
   [33X[0;0YMorphisms  of  [10X3dObjects[110X are implemented as [10X3dMappings[110X. These have a pair of
   3d-groups  as  source  and  range,  together  with four 2d-morphisms mapping
@@ -320,11 +320,11 @@
   
   [1X8.3-2 IsCrossedSquareMorphism[101X
   
-  [29X[2XIsCrossedSquareMorphism[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsPreCrossedSquareMorphism[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsBijective[102X( [3Xmor[103X ) [32X property
-  [29X[2XIsEndomorphism3dObject[102X( [3Xmor[103X ) [32X property
-  [29X[2XIsAutomorphism3dObject[102X( [3Xmor[103X ) [32X property
+  [33X[1;0Y[29X[2XIsCrossedSquareMorphism[102X( [3Xmap[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPreCrossedSquareMorphism[102X( [3Xmap[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsBijective[102X( [3Xmor[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XIsEndomorphism3dObject[102X( [3Xmor[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsAutomorphism3dObject[102X( [3Xmor[103X ) [32X property[133X
   
   [33X[0;0YA  morphism  [10Xmor[110X  between  two pre-crossed squares [22XmathcalS_1[122X and [22XmathcalS_2[122X
   consists  of  four  crossed  module  morphisms  [10XUp2DimensionalMorphism(mor)[110X,
@@ -456,9 +456,9 @@
   
   [1X8.4-1 Cat2Group[101X
   
-  [29X[2XCat2Group[102X( [3Xargs[103X ) [32X function
-  [29X[2XPreCat2Group[102X( [3Xargs[103X ) [32X function
-  [29X[2XPreCat2GroupByPreCat1Groups[102X( [3XL[103X ) [32X operation
+  [33X[1;0Y[29X[2XCat2Group[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPreCat2Group[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPreCat2GroupByPreCat1Groups[102X( [3XL[103X ) [32X operation[133X
   
   [33X[0;0YThe  global  functions [10XCat2Group[110X and [10XPreCat2Group[110X are normally called with a
   single argument, a list of cat1-groups.[133X
@@ -477,8 +477,8 @@
   
   [1X8.4-2 Cat2GroupOfCrossedSquare[101X
   
-  [29X[2XCat2GroupOfCrossedSquare[102X( [3Xxsq[103X ) [32X attribute
-  [29X[2XCrossedSquareOfCat2Group[102X( [3XCC[103X ) [32X attribute
+  [33X[1;0Y[29X[2XCat2GroupOfCrossedSquare[102X( [3Xxsq[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCrossedSquareOfCat2Group[102X( [3XCC[103X ) [32X attribute[133X
   
   [33X[0;0Y[13XThese functions are very experimental, and should not be relied on![113X[133X
   

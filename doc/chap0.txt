@@ -1,46 +1,67 @@
   
   
-                                      [1X[5XXMod[105X[101X
+                                     [1X XMod [101X
   
   
-                     [1XCrossed modules and cat1-groups in [5XGAP[105X[101X
+                       [1X Crossed Modules and Cat1-Groups [101X
   
   
-                                  Version 2.64
+                                      2.65
   
   
-                                   30/11/2017
+                                 21 March 2018
   
   
-                                 Chris Wensley
+                             Christopher D. Wensley
   
                                    Murat Alp
   
-                                  Alper Odabaş
+                                  Alper Odabas
   
-                                Enver Önder Uslu
+                                Enver Onder Uslu
   
   
   
-  Chris Wensley
+  Christopher D. Wensley
       Email:    [7Xmailto:c.d.wensley@bangor.ac.uk[107X
       Homepage: [7Xhttp://pages.bangor.ac.uk/~mas023/[107X
-      Address:  [33X[0;14YSchool of Computer Science, Bangor University,[133X
-                [33X[0;14YDean Street, Bangor, Gwynedd, LL57 1UT, U.K.[133X
+      Address:  [33X[0;14YDr. C.D. Wensley[133X
+                [33X[0;14YSchool of Computer Science[133X
+                [33X[0;14YBangor University[133X
+                [33X[0;14YDean Street[133X
+                [33X[0;14YBangor[133X
+                [33X[0;14YGwynedd LL57 1UT[133X
+                [33X[0;14YUK[133X
   
   
   Murat Alp
       Email:    [7Xmailto:muratalp@nigde.edu.tr[107X
-      Address:  [33X[0;14YNigde Üniversitesi,[133X
-                [33X[0;14YFen Edebiyat Fakültesi, Matematik Bölümü[133X
-                [33X[0;14YNigde, Turkey.[133X
+      Address:  [33X[0;14YProf. Dr. M. Alp[133X
+                [33X[0;14YÖmer Halisdemir University[133X
+                [33X[0;14YArt and Science Faculty[133X
+                [33X[0;14YMathematics Department[133X
+                [33X[0;14YNigde[133X
+                [33X[0;14YTurkey[133X
   
   
-  Alper Odabaş
+  Alper Odabas
       Email:    [7Xmailto:aodabas@ogu.edu.tr[107X
-      Homepage: [7Xhttp://fef.ogu.edu.tr/matbil/aodabas/[107X
-      Address:  [33X[0;14YDepartment of Mathematics and Computer Science,[133X
-                [33X[0;14YOsmangazi University, Eskişehir, Turkey[133X
+      Address:  [33X[0;14YDr. A. Odabas[133X
+                [33X[0;14YOsmangazi University[133X
+                [33X[0;14YArts and Sciences Faculty[133X
+                [33X[0;14YDepartment of Mathematics and Computer Science[133X
+                [33X[0;14YEskisehir[133X
+                [33X[0;14YTurkey[133X
+  
+  
+  Enver Onder Uslu
+      Email:    [7Xmailto:enveruslu@ogu.edu.tr[107X
+      Address:  [33X[0;14YDr. E. O. Uslu[133X
+                [33X[0;14YOsmangazi University[133X
+                [33X[0;14YArts and Sciences Faculty[133X
+                [33X[0;14YDepartment of Mathematics and Computer Science[133X
+                [33X[0;14YEskisehir[133X
+                [33X[0;14YTurkey[133X
   
   
   
@@ -63,7 +84,7 @@
   
   [30X    [33X[0;6Ycrossed modules of finite groupoids (experimental version).[133X
   
-  [33X[0;0Y[5XXMod[105X  was  originally  implemented in 1997 using the [5XGAP[105X3 language, when the
+  [33X[0;0Y[5XXMod[105X  was  originally  implemented in 1996 using the [5XGAP[105X3 language, when the
   second author was studying for a Ph.D. [Alp97] in Bangor.[133X
   
   [33X[0;0YIn  April  2002  the  first  and  third  parts  were  converted to [5XGAP[105X4, the
@@ -75,8 +96,6 @@
   modules,  written  by  Alper  Odabaş  and  Enver Uslu, were added. These are
   contained in Chapter [14X4[114X, and are described in detail in the paper [IOU16].[133X
   
-  [33X[0;0YThe current version is 2.64, released 30th November 2017 for [5XGAP[105X 4.8.[133X
-  
   [33X[0;0YBug reports, suggestions and comments are, of course, welcome. Please submit
   an  issue at [7Xhttp://github.com/gap-packages/xmod/issues/[107X or send an email to
   the first author at [7Xmailto:c.d.wensley@bangor.ac.uk[107X.[133X
@@ -84,23 +103,21 @@
   
   -------------------------------------------------------
   [1XCopyright[101X
-  [33X[0;0Y© 1997-2017 Chris Wensley et al. [5XXMod[105X is free software; you can redistribute
-  it  and/or  modify  it  under  the  terms  of the GNU General Public License
-  ([7Xhttp://www.fsf.org/licenses/gpl.html[107X)  as  published  by  the Free Software
-  Foundation;  either  version 2 of the License, or (at your option) any later
-  version.[133X
+  [33X[0;0Y© 1996-2018, Chris Wensley et al.[133X
+  
+  [33X[0;0YThe  [5XXMod[105X package is free software; you can redistribute it and/or modify it
+  under  the  terms of the GNU General Public License as published by the Free
+  Software  Foundation;  either  version 2 of the License, or (at your option)
+  any later version.[133X
   
   
   -------------------------------------------------------
   [1XAcknowledgements[101X
-  [33X[0;0YThis  documentation  was  prepared  with  the [5XGAPDoc[105X package [LN17] of Frank
-  Lübeck and Max Neunhöffer.[133X
+  [33X[0;0YThis  documentation  was  prepared with the [5XGAPDoc[105X [LN17] and [5XAutoDoc[105X [GH17]
+  packages.[133X
   
-  [33X[0;0YThe  procedure  used  to  mount  new  releases  on  GitHub uses the packages
-  [5XGitHubPagesForGAP[105X [Hor17] and [5XReleaseTools[105X of Max Horn.[133X
-  
-  [33X[0;0YThe  second  author wishes to acknowledge support from Dumlupinar University
-  and the Turkish government.[133X
+  [33X[0;0YThe   procedure   used   to   produce   new   releases   uses   the  package
+  [5XGitHubPagesForGAP[105X [Hor17] and the package [5XReleaseTools[105X.[133X
   
   
   -------------------------------------------------------
@@ -169,15 +186,18 @@
       4.3-1 Isoclinism
       4.3-2 IsStemDomain
       4.3-3 IsoclinicRank
-  5 [33X[0;0YDerivations and Sections[133X
-    5.1 [33X[0;0YWhitehead Multiplication[133X
-      5.1-1 IsDerivation
-      5.1-2 DerivationByImages
-      5.1-3 SectionByImages
+  5 [33X[0;0YWhitehead group of a crossed module[133X
+    5.1 [33X[0;0YDerivations and Sections[133X
+      5.1-1 DerivationByImages
+      5.1-2 PrincipalDerivation
+      5.1-3 SectionByHomomorphism
+      5.1-4 IdentityDerivation
+      5.1-5 WhiteheadProduct
     5.2 [33X[0;0YWhitehead Groups and Monoids[133X
-      5.2-1 RegularDerivations
-      5.2-2 CompositeDerivation
-      5.2-3 WhiteheadGroupTable
+      5.2-1 AllDerivations
+      5.2-2 RegularDerivations
+      5.2-3 PrincipalDerivations
+      5.2-4 AllSections
   6 [33X[0;0YActors of 2d-groups[133X
     6.1 [33X[0;0YActor of a crossed module[133X
       6.1-1 AutomorphismPermGroup

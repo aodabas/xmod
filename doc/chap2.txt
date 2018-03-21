@@ -30,16 +30,16 @@
   
   [1X2.1-1 XMod[101X
   
-  [29X[2XXMod[102X( [3Xargs[103X ) [32X function
-  [29X[2XXModByBoundaryAndAction[102X( [3Xbdy[103X, [3Xact[103X ) [32X operation
-  [29X[2XXModByTrivialAction[102X( [3Xbdy[103X ) [32X operation
-  [29X[2XXModByNormalSubgroup[102X( [3XG[103X, [3XN[103X ) [32X operation
-  [29X[2XXModByCentralExtension[102X( [3Xbdy[103X ) [32X operation
-  [29X[2XXModByAutomorphismGroup[102X( [3Xgrp[103X ) [32X operation
-  [29X[2XXModByInnerAutomorphismGroup[102X( [3Xgrp[103X ) [32X operation
-  [29X[2XXModByGroupOfAutomorphisms[102X( [3XG[103X, [3XA[103X ) [32X operation
-  [29X[2XXModByAbelianModule[102X( [3Xabmod[103X ) [32X operation
-  [29X[2XDirectProductOp[102X( [3XL[103X, [3XX1[103X ) [32X operation
+  [33X[1;0Y[29X[2XXMod[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XXModByBoundaryAndAction[102X( [3Xbdy[103X, [3Xact[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XXModByTrivialAction[102X( [3Xbdy[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XXModByNormalSubgroup[102X( [3XG[103X, [3XN[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XXModByCentralExtension[102X( [3Xbdy[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XXModByAutomorphismGroup[102X( [3Xgrp[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XXModByInnerAutomorphismGroup[102X( [3Xgrp[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XXModByGroupOfAutomorphisms[102X( [3XG[103X, [3XA[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XXModByAbelianModule[102X( [3Xabmod[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XDirectProductOp[102X( [3XL[103X, [3XX1[103X ) [32X operation[133X
   
   [33X[0;0YThe   global   function  [10XXMod[110X  implements  one  of  the  following  standard
   constructions:[133X
@@ -74,10 +74,10 @@
   
   [1X2.1-2 Source[101X
   
-  [29X[2XSource[102X( [3XX0[103X ) [32X attribute
-  [29X[2XRange[102X( [3XX0[103X ) [32X attribute
-  [29X[2XBoundary[102X( [3XX0[103X ) [32X attribute
-  [29X[2XXModAction[102X( [3XX0[103X ) [32X attribute
+  [33X[1;0Y[29X[2XSource[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRange[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XBoundary[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XXModAction[102X( [3XX0[103X ) [32X attribute[133X
   
   [33X[0;0YThe  following  attributes  are used in the construction of a crossed module
   [10XX0[110X.[133X
@@ -93,16 +93,16 @@
   
   [1X2.1-3 ImageElmXModAction[101X
   
-  [29X[2XImageElmXModAction[102X( [3XX0[103X, [3Xs[103X, [3Xr[103X ) [32X operation
+  [33X[1;0Y[29X[2XImageElmXModAction[102X( [3XX0[103X, [3Xs[103X, [3Xr[103X ) [32X operation[133X
   
   [33X[0;0YThis function returns the element [22Xs^r[122X given by [10XXModAction(X0)[110X.[133X
   
   [1X2.1-4 Size[101X
   
-  [29X[2XSize[102X( [3XX0[103X ) [32X attribute
-  [29X[2XName[102X( [3XX0[103X ) [32X attribute
-  [29X[2XIdGroup[102X( [3XX0[103X ) [32X attribute
-  [29X[2XExternalSetXMod[102X( [3XX0[103X ) [32X attribute
+  [33X[1;0Y[29X[2XSize[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XName[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIdGroup[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XExternalSetXMod[102X( [3XX0[103X ) [32X attribute[133X
   
   [33X[0;0YMore  familiar  attributes are [10XName[110X, [10XSize[110X and [10XIdGroup[110X. The name is formed by
   concatenating  the  names of the source and range (if these exist). [10XSize[110X and
@@ -165,11 +165,11 @@
   
   [1X2.2-1 IsXMod[101X
   
-  [29X[2XIsXMod[102X( [3XX0[103X ) [32X property
-  [29X[2XIsPreXMod[102X( [3XX0[103X ) [32X property
-  [29X[2XIsPerm2DimensionalGroup[102X( [3XX0[103X ) [32X property
-  [29X[2XIsPc2DimensionalGroup[102X( [3XX0[103X ) [32X property
-  [29X[2XIsFp2DimensionalGroup[102X( [3XX0[103X ) [32X property
+  [33X[1;0Y[29X[2XIsXMod[102X( [3XX0[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPreXMod[102X( [3XX0[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPerm2DimensionalGroup[102X( [3XX0[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPc2DimensionalGroup[102X( [3XX0[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsFp2DimensionalGroup[102X( [3XX0[103X ) [32X property[133X
   
   [33X[0;0YA  structure  which  has [10XIsPerm2DimensionalGroup[110X is a precrossed module or a
   pre-cat1-group (see section [14X2.4[114X) whose source and range are both permutation
@@ -193,9 +193,9 @@
   
   [1X2.2-2 SubXMod[101X
   
-  [29X[2XSubXMod[102X( [3XX0[103X, [3Xsrc[103X, [3Xrng[103X ) [32X operation
-  [29X[2XTrivialSubXMod[102X( [3XX0[103X ) [32X attribute
-  [29X[2XNormalSubXMods[102X( [3XX0[103X ) [32X attribute
+  [33X[1;0Y[29X[2XSubXMod[102X( [3XX0[103X, [3Xsrc[103X, [3Xrng[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XTrivialSubXMod[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XNormalSubXMods[102X( [3XX0[103X ) [32X attribute[133X
   
   [33X[0;0YWith  the  standard  crossed  module  constructors  listed above as building
   blocks, sub-crossed modules, normal sub-crossed modules [22XmathcalN ⊲ mathcalX[122X,
@@ -243,8 +243,8 @@
   
   [1X2.3-1 PreXModByBoundaryAndAction[101X
   
-  [29X[2XPreXModByBoundaryAndAction[102X( [3Xbdy[103X, [3Xact[103X ) [32X operation
-  [29X[2XSubPreXMod[102X( [3XX0[103X, [3Xsrc[103X, [3Xrng[103X ) [32X operation
+  [33X[1;0Y[29X[2XPreXModByBoundaryAndAction[102X( [3Xbdy[103X, [3Xact[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XSubPreXMod[102X( [3XX0[103X, [3Xsrc[103X, [3Xrng[103X ) [32X operation[133X
   
   [33X[0;0YIf  axiom [22XXMod 2[122X is [13Xnot[113X satisfied, the corresponding structure is known as a
   [13Xpre-crossed module[113X.[133X
@@ -269,8 +269,8 @@
   
   [1X2.3-2 PeifferSubgroup[101X
   
-  [29X[2XPeifferSubgroup[102X( [3XX0[103X ) [32X attribute
-  [29X[2XXModByPeifferQuotient[102X( [3Xprexmod[103X ) [32X attribute
+  [33X[1;0Y[29X[2XPeifferSubgroup[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XXModByPeifferQuotient[102X( [3Xprexmod[103X ) [32X attribute[133X
   
   [33X[0;0YThe  [13XPeiffer subgroup[113X [22XP[122X of a pre-crossed module [22Xmathcal X[122X is the subgroup of
   [22Xker(∂)[122X generated by [13XPeiffer commutators[113X[133X
@@ -328,10 +328,10 @@
   
   [1X2.4-1 Cat1Group[101X
   
-  [29X[2XCat1Group[102X( [3Xargs[103X ) [32X function
-  [29X[2XPreCat1Group[102X( [3Xargs[103X ) [32X function
-  [29X[2XPreCat1GroupByTailHeadEmbedding[102X( [3Xt[103X, [3Xh[103X, [3Xe[103X ) [32X operation
-  [29X[2XPreCat1GroupByEndomorphisms[102X( [3Xt[103X, [3Xh[103X ) [32X operation
+  [33X[1;0Y[29X[2XCat1Group[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPreCat1Group[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPreCat1GroupByTailHeadEmbedding[102X( [3Xt[103X, [3Xh[103X, [3Xe[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPreCat1GroupByEndomorphisms[102X( [3Xt[103X, [3Xh[103X ) [32X operation[133X
   
   [33X[0;0YThe  global  functions  [10XCat1Group[110X  and [10XPreCat1Group[110X can be called in various
   ways.[133X
@@ -370,15 +370,15 @@
   
   [1X2.4-2 Source[101X
   
-  [29X[2XSource[102X( [3XC[103X ) [32X attribute
-  [29X[2XRange[102X( [3XC[103X ) [32X attribute
-  [29X[2XTailMap[102X( [3XC[103X ) [32X attribute
-  [29X[2XHeadMap[102X( [3XC[103X ) [32X attribute
-  [29X[2XRangeEmbedding[102X( [3XC[103X ) [32X attribute
-  [29X[2XKernelEmbedding[102X( [3XC[103X ) [32X attribute
-  [29X[2XBoundary[102X( [3XC[103X ) [32X attribute
-  [29X[2XName[102X( [3XC[103X ) [32X attribute
-  [29X[2XSize[102X( [3XC[103X ) [32X attribute
+  [33X[1;0Y[29X[2XSource[102X( [3XC[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRange[102X( [3XC[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XTailMap[102X( [3XC[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XHeadMap[102X( [3XC[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRangeEmbedding[102X( [3XC[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XKernelEmbedding[102X( [3XC[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XBoundary[102X( [3XC[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XName[102X( [3XC[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSize[102X( [3XC[103X ) [32X attribute[133X
   
   [33X[0;0YThese are the attributes of a cat1-group [22XmathcalC[122X in this implementation.[133X
   
@@ -416,10 +416,10 @@
   
   [1X2.4-3 DiagonalCat1Group[101X
   
-  [29X[2XDiagonalCat1Group[102X( [3Xgen1[103X ) [32X operation
-  [29X[2XPreCat1GroupByNormalSubgroup[102X( [3XG[103X, [3XN[103X ) [32X operation
-  [29X[2XCat1GroupByPeifferQuotient[102X( [3XP[103X ) [32X operation
-  [29X[2XReverseCat1Group[102X( [3XC0[103X ) [32X attribute
+  [33X[1;0Y[29X[2XDiagonalCat1Group[102X( [3Xgen1[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPreCat1GroupByNormalSubgroup[102X( [3XG[103X, [3XN[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCat1GroupByPeifferQuotient[102X( [3XP[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XReverseCat1Group[102X( [3XC0[103X ) [32X attribute[133X
   
   [33X[0;0YThese  are  some  more  constructors  for cat1-groups. The following listing
   shows  an  example  of a permutation cat1-group of size [22X[576,24][122X with source
@@ -470,11 +470,11 @@
   
   [1X2.5-1 IsCat1Group[101X
   
-  [29X[2XIsCat1Group[102X( [3XC0[103X ) [32X property
-  [29X[2XIsPreXCat1Group[102X( [3XC0[103X ) [32X property
-  [29X[2XIsIdentityCat1Group[102X( [3XC0[103X ) [32X property
-  [29X[2XIsEndomorphismPreCat1Group[102X( [3XC0[103X ) [32X property
-  [29X[2XEndomorphismPreCat1Group[102X( [3XC0[103X ) [32X attribute
+  [33X[1;0Y[29X[2XIsCat1Group[102X( [3XC0[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPreXCat1Group[102X( [3XC0[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsIdentityCat1Group[102X( [3XC0[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsEndomorphismPreCat1Group[102X( [3XC0[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XEndomorphismPreCat1Group[102X( [3XC0[103X ) [32X attribute[133X
   
   [33X[0;0Y[10XIsIdentityCat1Group(C0)[110X  is  true  when  the  head  and  tail maps of [10XC0[110X are
   identity  mappings. [10XIsEndomorphismPreCat1Group(C0)[110X is true when the range of
@@ -514,10 +514,10 @@
   
   [1X2.5-2 Cat1GroupOfXMod[101X
   
-  [29X[2XCat1GroupOfXMod[102X( [3XX0[103X ) [32X attribute
-  [29X[2XXModOfCat1Group[102X( [3XC0[103X ) [32X attribute
-  [29X[2XPreCat1GroupOfPreXMod[102X( [3XP0[103X ) [32X attribute
-  [29X[2XPreXModOfPreCat1Group[102X( [3XP0[103X ) [32X attribute
+  [33X[1;0Y[29X[2XCat1GroupOfXMod[102X( [3XX0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XXModOfCat1Group[102X( [3XC0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XPreCat1GroupOfPreXMod[102X( [3XP0[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XPreXModOfPreCat1Group[102X( [3XP0[103X ) [32X attribute[133X
   
   [33X[0;0YThe   category   of  crossed  modules  is  equivalent  to  the  category  of
   cat1-groups,  and the functors between these two categories may be described
@@ -578,7 +578,7 @@
   
   [1X2.6-1 Cat1Select[101X
   
-  [29X[2XCat1Select[102X( [3Xsize[103X, [3Xgpnum[103X, [3Xnum[103X ) [32X attribute
+  [33X[1;0Y[29X[2XCat1Select[102X( [3Xsize[103X, [3Xgpnum[103X, [3Xnum[103X ) [32X attribute[133X
   
   [33X[0;0YThe  function  [10XCat1Select[110X  may  be  used  in  three ways. [10XCat1Select( size )[110X
   returns  the  names  of  the  groups with this size, while [10XCat1Select( size,
@@ -653,7 +653,7 @@
   
   [1X2.6-2 AllCat1DataGroupsBasic[101X
   
-  [29X[2XAllCat1DataGroupsBasic[102X( [3Xgp[103X ) [32X operation
+  [33X[1;0Y[29X[2XAllCat1DataGroupsBasic[102X( [3Xgp[103X ) [32X operation[133X
   
   [33X[0;0YFor  a  group  [22XG[122X of size greater than [22X70[122X which is reasonably straightforward
   this  function  may be used to construct a list of all cat1-group structures
@@ -691,8 +691,8 @@
   
   [1X2.7-1 IdGroup[101X
   
-  [29X[2XIdGroup[102X( [3X2DimensionalGroup[103X ) [32X operation
-  [29X[2XStructureDescription[102X( [3X2DimensionalGroup[103X ) [32X operation
+  [33X[1;0Y[29X[2XIdGroup[102X( [3X2DimensionalGroup[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XStructureDescription[102X( [3X2DimensionalGroup[103X ) [32X operation[133X
   
   [33X[0;0YThese  functions return two-element lists formed by applying the function to
   the source and range of the 2d-group.[133X

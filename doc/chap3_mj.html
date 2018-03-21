@@ -28,15 +28,15 @@
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7BBEA95E7AE1F317">3.1 <span class="Heading">Morphisms of 2-dimensional groups</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7DE8173F80E07AB1">3.1-1 Source</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7FFD094F7FFB1F17">3.1-1 Source</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X78CADE4D7EB1EA44">3.2 <span class="Heading">Morphisms of pre-crossed modules</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X82B912B18127A42A">3.2-1 IsXModMorphism</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7F065FD7822C0A12">3.2-2 IsInjective</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7E078F497F4EFA9F">3.2-2 IsInjective</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7CEABD6487CF2A38">3.2-3 XModMorphism</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7EE95CB284960A8D">3.2-4 IsomorphismPerm2DimensionalGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X854FC0C781AD62EC">3.2-4 IsomorphismPerm2DimensionalGroup</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X84DDF8247FC4982B">3.3 <span class="Heading">Morphisms of pre-cat1-groups</span></a>
 </span>
@@ -48,7 +48,7 @@
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X811F886081AAB95F">3.4-1 CompositionMorphism</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7DCD99628504B810">3.4-2 Kernel</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X83C3A2478159DE76">3.4-2 Kernel</a></span>
 </div></div>
 </div>
 
@@ -60,14 +60,14 @@
 
 <p>This chapter describes morphisms of (pre-)crossed modules and (pre-)cat1-groups.</p>
 
-<p><a id="X7DE8173F80E07AB1" name="X7DE8173F80E07AB1"></a></p>
+<p><a id="X7FFD094F7FFB1F17" name="X7FFD094F7FFB1F17"></a></p>
 
 <h5>3.1-1 Source</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Source</code>( <var class="Arg">map</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Range</code>( <var class="Arg">map</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SourceHom</code>( <var class="Arg">map</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RangeHom</code>( <var class="Arg">map</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Source</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Range</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SourceHom</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; RangeHom</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>Morphisms of <em>2-dimensional groups</em> are implemented as <em>2-dimensional mappings</em>. These have a pair of 2-dimensional groups as source and range, together with two group homomorphisms mapping between corresponding source and range groups. These functions return <code class="code">fail</code> when invalid data is supplied.</p>
 
 <p><a id="X78CADE4D7EB1EA44" name="X78CADE4D7EB1EA44"></a></p>
@@ -78,8 +78,8 @@
 
 <h5>3.2-1 IsXModMorphism</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsXModMorphism</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreXModMorphism</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsXModMorphism</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreXModMorphism</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>A morphism between two pre-crossed modules <span class="SimpleMath">\(\mathcal{X}_{1} = (\partial_1 : S_1 \to R_1)\)</span> and <span class="SimpleMath">\(\mathcal{X}_{2} = (\partial_2 : S_2 \to R_2)\)</span> is a pair <span class="SimpleMath">\((\sigma, \rho)\)</span>, where <span class="SimpleMath">\(\sigma : S_1 \to S_2\)</span> and <span class="SimpleMath">\(\rho : R_1 \to R_2\)</span> commute with the two boundary maps and are morphisms for the two actions:</p>
 
 <p class="center">\[
@@ -87,43 +87,31 @@
 \sigma(s^r) ~=~ (\sigma s)^{\rho r}.
 \]</p>
 
-<p>Here is a diagram of the situation.</p>
-
-<p class="center">\[
-\vcenter{\xymatrix{
-  S_1 \ar[rr]^{\sigma} \ar[dd]_{\partial_1}
-     &amp;&amp; S_2 \ar[dd]^{\partial_2} \\
-     &amp;&amp;  \\
-  R_1 \ar[rr]_{\rho}
-     &amp;&amp; R_2 
-}}
-\]</p>
-
 <p>Here <span class="SimpleMath">\(\sigma\)</span> is the <code class="code">SourceHom</code> and <span class="SimpleMath">\(\rho\)</span> is the <code class="code">RangeHom</code> of the morphism. When <span class="SimpleMath">\(\mathcal{X}_{1} = \mathcal{X}_{2}\)</span> and <span class="SimpleMath">\(\sigma, \rho\)</span> are automorphisms then <span class="SimpleMath">\((\sigma, \rho)\)</span> is an automorphism of <span class="SimpleMath">\(\mathcal{X}_1\)</span>. The group of automorphisms is denoted by <span class="SimpleMath">\({\rm Aut}(\mathcal{X}_1 )\)</span>.</p>
 
-<p><a id="X7F065FD7822C0A12" name="X7F065FD7822C0A12"></a></p>
+<p><a id="X7E078F497F4EFA9F" name="X7E078F497F4EFA9F"></a></p>
 
 <h5>3.2-2 IsInjective</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsInjective</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSurjective</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSingleValued</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTotal</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsBijective</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsEndo2DimensionalMapping</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsInjective</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSurjective</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsSingleValued</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsTotal</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsBijective</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;method&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsEndo2DimensionalMapping</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>The usual properties of mappings are easily checked. It is usually sufficient to verify that both the <code class="code">SourceHom</code> and the <code class="code">RangeHom</code> have the required property.</p>
 
 <p><a id="X7CEABD6487CF2A38" name="X7CEABD6487CF2A38"></a></p>
 
 <h5>3.2-3 XModMorphism</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModMorphism</code>( <var class="Arg">args</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModMorphismByHoms</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var>, <var class="Arg">sigma</var>, <var class="Arg">rho</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreXModMorphism</code>( <var class="Arg">args</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreXModMorphismByHoms</code>( <var class="Arg">P1</var>, <var class="Arg">P2</var>, <var class="Arg">sigma</var>, <var class="Arg">rho</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InclusionMorphism2DimensionalDomains</code>( <var class="Arg">X1</var>, <var class="Arg">S1</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InnerAutomorphismXMod</code>( <var class="Arg">X1</var>, <var class="Arg">r</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMapping</code>( <var class="Arg">X1</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModMorphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModMorphismByHoms</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var>, <var class="Arg">sigma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreXModMorphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreXModMorphismByHoms</code>( <var class="Arg">P1</var>, <var class="Arg">P2</var>, <var class="Arg">sigma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InclusionMorphism2DimensionalDomains</code>( <var class="Arg">X1</var>, <var class="Arg">S1</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InnerAutomorphismXMod</code>( <var class="Arg">X1</var>, <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMapping</code>( <var class="Arg">X1</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>These are the constructors for morphisms of pre-crossed and crossed modules.</p>
 
 <p>In the following example we construct a simple automorphism of the crossed module <code class="code">X1</code> constructed in the previous chapter.</p>
@@ -163,13 +151,13 @@ true
 
 </pre></div>
 
-<p><a id="X7EE95CB284960A8D" name="X7EE95CB284960A8D"></a></p>
+<p><a id="X854FC0C781AD62EC" name="X854FC0C781AD62EC"></a></p>
 
 <h5>3.2-4 IsomorphismPerm2DimensionalGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPerm2DimensionalGroup</code>( <var class="Arg">obj</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPc2DimensionalGroup</code>( <var class="Arg">obj</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismByIsomorphisms</code>( <var class="Arg">D</var>, <var class="Arg">list</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPerm2DimensionalGroup</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPc2DimensionalGroup</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismByIsomorphisms</code>( <var class="Arg">D</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>When <span class="SimpleMath">\({\mathcal D}\)</span> is a <span class="SimpleMath">\(2\)</span>-dimensional domain with source <span class="SimpleMath">\(S\)</span> and range <span class="SimpleMath">\(R\)</span> and <span class="SimpleMath">\(\sigma : S \to S',~ \rho : R \to R'\)</span> are isomorphisms, then <code class="code">IsomorphismByIsomorphisms(D,[sigma,rho])</code> returns an isomorphism <span class="SimpleMath">\((\sigma,\rho) : {\mathcal D} \to {\mathcal D}'\)</span> where <span class="SimpleMath">\({\mathcal D}'\)</span> has source <span class="SimpleMath">\(S'\)</span> and range <span class="SimpleMath">\(R'\)</span>. Be sure to test <code class="code">IsBijective</code> for the two functions <span class="SimpleMath">\(\sigma,\rho\)</span> before applying this operation.</p>
 
 <p>Using <code class="code">IsomorphismByIsomorphisms</code> with a pair of isomorphisms obtained using <code class="code">IsomorphismPermGroup</code> or <code class="code">IsomorphismPcGroup</code>, we may construct a crossed module or a cat1-group of permutation groups or pc-groups.</p>
@@ -211,15 +199,15 @@ e_2 \circ \rho ~=~ \gamma \circ e_1.
 
 <h5>3.3-1 IsCat1Morphism</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCat1Morphism</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreCat1Morphism</code>( <var class="Arg">map</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat1Morphism</code>( <var class="Arg">args</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat1MorphismByHoms</code>( <var class="Arg">C1</var>, <var class="Arg">C2</var>, <var class="Arg">gamma</var>, <var class="Arg">rho</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat1Morphism</code>( <var class="Arg">args</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat1MorphismByHoms</code>( <var class="Arg">P1</var>, <var class="Arg">P2</var>, <var class="Arg">gamma</var>, <var class="Arg">rho</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InclusionMorphism2DimensionalDomains</code>( <var class="Arg">C1</var>, <var class="Arg">S1</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InnerAutomorphismCat1</code>( <var class="Arg">C1</var>, <var class="Arg">r</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMapping</code>( <var class="Arg">C1</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCat1Morphism</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreCat1Morphism</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat1Morphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat1MorphismByHoms</code>( <var class="Arg">C1</var>, <var class="Arg">C2</var>, <var class="Arg">gamma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat1Morphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat1MorphismByHoms</code>( <var class="Arg">P1</var>, <var class="Arg">P2</var>, <var class="Arg">gamma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InclusionMorphism2DimensionalDomains</code>( <var class="Arg">C1</var>, <var class="Arg">S1</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InnerAutomorphismCat1</code>( <var class="Arg">C1</var>, <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMapping</code>( <var class="Arg">C1</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>For an example we form a second cat1-group <code class="code">C2=[g18=&gt;s3a]</code>, similar to <code class="code">C1</code> in <a href="chap2_mj.html#X7CF4C37F87D27EBA"><span class="RefLink">2.4-1</span></a>, then construct an isomorphism <span class="SimpleMath">\((\gamma,\rho)\)</span> between them.</p>
 
 
@@ -251,11 +239,11 @@ Morphism of cat1-groups :-
 
 <h5>3.3-2 IsomorphismPermObject</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPermObject</code>( <var class="Arg">obj</var> )</td><td class="tdright">( function )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPerm2DimensionalGroup</code>( <var class="Arg">2DimensionalGroup</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismFp2DimensionalGroup</code>( <var class="Arg">2DimensionalGroup</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPc2DimensionalGroup</code>( <var class="Arg">2DimensionalGroup</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SmallerDegreePerm2DimensionalDomain</code>( <var class="Arg">2DimensionalDomain</var> )</td><td class="tdright">( function )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPermObject</code>( <var class="Arg">obj</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPerm2DimensionalGroup</code>( <var class="Arg">2DimensionalGroup</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismFp2DimensionalGroup</code>( <var class="Arg">2DimensionalGroup</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsomorphismPc2DimensionalGroup</code>( <var class="Arg">2DimensionalGroup</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SmallerDegreePerm2DimensionalDomain</code>( <var class="Arg">2DimensionalDomain</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <p>The global function <code class="code">IsomorphismPermObject</code> calls <code class="code">IsomorphismPerm2DimensionalGroup</code>, which constructs a morphism whose <code class="code">SourceHom</code> and <code class="code">RangeHom</code> are calculated using <code class="code">IsomorphismPermGroup</code> on the source and range. Similarly <code class="code">SmallerDegreePermutationRepresentation</code> may be used on the two groups to obtain <code class="code">SmallerDegreePerm2DimensionalDomain</code>. Names are assigned automatically.</p>
 
 
@@ -300,7 +288,7 @@ Morphism of cat1-groups :-
 
 <h5>3.4-1 CompositionMorphism</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CompositionMorphism</code>( <var class="Arg">map2</var>, <var class="Arg">map1</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CompositionMorphism</code>( <var class="Arg">map2</var>, <var class="Arg">map1</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>Composition of morphisms (written <code class="code">(&lt;map1&gt; * &lt;map2&gt;)</code> when maps act on the right) calls the <code class="code">CompositionMorphism</code> function for maps (acting on the left), applied to the appropriate type of 2d-mapping.</p>
 
 
@@ -321,12 +309,12 @@ true
 
 </pre></div>
 
-<p><a id="X7DCD99628504B810" name="X7DCD99628504B810"></a></p>
+<p><a id="X83C3A2478159DE76" name="X83C3A2478159DE76"></a></p>
 
 <h5>3.4-2 Kernel</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Kernel</code>( <var class="Arg">map</var> )</td><td class="tdright">( operation )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Kernel2DimensionalMapping</code>( <var class="Arg">map</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Kernel</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Kernel2DimensionalMapping</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>The kernel of a morphism of crossed modules is a normal subcrossed module whose groups are the kernels of the source and target homomorphisms. The inclusion of the kernel is a standard example of a crossed square, but these have not yet been implemented.</p>
 
 

@@ -49,7 +49,7 @@
 
 <h5>9.1-1 SinglePiecePreXModWithObjects</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SinglePiecePreXModWithObjects</code>( <var class="Arg">pxmod</var>, <var class="Arg">obs</var>, <var class="Arg">isdisc</var> )</td><td class="tdright">( operation )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SinglePiecePreXModWithObjects</code>( <var class="Arg">pxmod</var>, <var class="Arg">obs</var>, <var class="Arg">isdisc</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>At present the experimental operation <code class="code">SinglePiecePreXModWithObjects</code> accepts a precrossed module <code class="code">pxmod</code>, a set of objects <code class="code">obs</code>, and a boolean <code class="code">isdisc</code> which is <code class="code">true</code> when the source groupoid is homogeneous and discrete and <code class="code">false</code> when the source groupoid is connected. Other operations will be added as time permits.</p>
 
 <p>In the example the crossed module <code class="code">DX4</code> has discrete source, and is a groupoid equivalent of <code class="code">XModByNormalSubgroup</code>.</p>
@@ -76,9 +76,9 @@ single piece groupoid: &lt; s4, [ -9, -8, -7 ] &gt;
 
 <h5>9.1-2 IsXModWithObjects</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDirectProductWithCompleteDigraphDomain</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsDirectProductWithCompleteDigraphDomain</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>The precrossed module <code class="code">DX4</code> belongs to the category <code class="code">Is2DimensionalGroupWithObjects</code> and is, of course, a crossed module.</p>
 
 
@@ -98,9 +98,9 @@ true
 
 <h5>9.1-3 IsPermPreXModWithObjects</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPermPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPcPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFpPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( property )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPermPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPcPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFpPreXModWithObjects</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <p>To test these properties we test the precrossed modules from which they were constructed.</p>
 
 
@@ -119,8 +119,8 @@ false
 
 <h5>9.1-4 Root2dGroup</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Root2dGroup</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModAction</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">( attribute )</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Root2dGroup</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModAction</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>The attributes of a precrossed module with objects include the standard <code class="code">Source</code>; <code class="code">Range</code>; <code class="code">Boundary</code>; and <code class="code">XModAction</code> as with precrossed modules of groups. There is also <code class="code">ObjectList</code>, as in the <strong class="pkg">groupoids</strong> package. Additionally there is <code class="code">Root2dGroup</code> which is the underlying precrossed module used in the construction.</p>
 
 <p>Note that <code class="code">XModAction</code> is now a groupoid homomorphism from the source groupoid to a one-object groupoid (with object <code class="code">0</code>) where the group is the automorphism group of the range groupoid.</p>

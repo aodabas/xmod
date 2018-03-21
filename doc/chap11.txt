@@ -143,7 +143,8 @@
   
   [1X11.2-4 [33X[0;0YLatest Version[133X[101X
   
-  [33X[0;0YThe latest version, 2.64, was released on 30th November 2017.[133X
+  [33X[0;0YThe  latest  version  conmtains  additional  material  on crossed modules of
+  groupoids.[133X
   
   
   [1X11.3 [33X[0;0YWhat needs doing next?[133X[101X
@@ -190,8 +191,8 @@
               actions are standard, and the crossed pairing is[133X
   
   
-  [24X            [33X[0;12Y\boxtimes  \;:\;  {\rm  Inn}\ L \times {\rm Inn}\ L \to L, \quad
-              (\beta_l, \beta_{l^{\prime}}) \;\mapsto\; [l, l^{\prime}]~.[133X
+  [24X            [33X[0;12Y\boxtimes  \;:\;  \Inn\  L \times \Inn\ L \to L, \quad (\beta_l,
+              \beta_{l^{\prime}}) \;\mapsto\; [l, l^{\prime}]~.[133X
   
   [124X
   

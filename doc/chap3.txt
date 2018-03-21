@@ -9,10 +9,10 @@
   
   [1X3.1-1 Source[101X
   
-  [29X[2XSource[102X( [3Xmap[103X ) [32X attribute
-  [29X[2XRange[102X( [3Xmap[103X ) [32X attribute
-  [29X[2XSourceHom[102X( [3Xmap[103X ) [32X attribute
-  [29X[2XRangeHom[102X( [3Xmap[103X ) [32X attribute
+  [33X[1;0Y[29X[2XSource[102X( [3Xmap[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRange[102X( [3Xmap[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSourceHom[102X( [3Xmap[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XRangeHom[102X( [3Xmap[103X ) [32X attribute[133X
   
   [33X[0;0YMorphisms of [13X2-dimensional groups[113X are implemented as [13X2-dimensional mappings[113X.
   These have a pair of 2-dimensional groups as source and range, together with
@@ -24,8 +24,8 @@
   
   [1X3.2-1 IsXModMorphism[101X
   
-  [29X[2XIsXModMorphism[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsPreXModMorphism[102X( [3Xmap[103X ) [32X property
+  [33X[1;0Y[29X[2XIsXModMorphism[102X( [3Xmap[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPreXModMorphism[102X( [3Xmap[103X ) [32X property[133X
   
   [33X[0;0YA  morphism  between two pre-crossed modules [22XmathcalX_1 = (∂_1 : S_1 -> R_1)[122X
   and  [22XmathcalX_2  = (∂_2 : S_2 -> R_2)[122X is a pair [22X(σ, ρ)[122X, where [22Xσ : S_1 -> S_2[122X
@@ -38,14 +38,6 @@
   
   [124X
   
-  [33X[0;0YHere is a diagram of the situation.[133X
-  
-  
-  [24X[33X[0;6Y\vcenter{\xymatrix{   S_1   \ar[rr]^{\sigma}   \ar[dd]_{\partial_1}  &&  S_2
-  \ar[dd]^{\partial_2} \\ && \\ R_1 \ar[rr]_{\rho} && R_2 }}[133X
-  
-  [124X
-  
   [33X[0;0YHere  [22Xσ[122X  is  the  [10XSourceHom[110X  and  [22Xρ[122X  is  the  [10XRangeHom[110X of the morphism. When
   [22XmathcalX_1  =  mathcalX_2[122X  and  [22Xσ,  ρ[122X  are  automorphisms  then [22X(σ, ρ)[122X is an
   automorphism  of  [22XmathcalX_1[122X.  The  group  of  automorphisms  is  denoted by
@@ -53,12 +45,12 @@
   
   [1X3.2-2 IsInjective[101X
   
-  [29X[2XIsInjective[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsSurjective[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsSingleValued[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsTotal[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsBijective[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsEndo2DimensionalMapping[102X( [3Xmap[103X ) [32X property
+  [33X[1;0Y[29X[2XIsInjective[102X( [3Xmap[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XIsSurjective[102X( [3Xmap[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XIsSingleValued[102X( [3Xmap[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XIsTotal[102X( [3Xmap[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XIsBijective[102X( [3Xmap[103X ) [32X method[133X
+  [33X[1;0Y[29X[2XIsEndo2DimensionalMapping[102X( [3Xmap[103X ) [32X property[133X
   
   [33X[0;0YThe  usual  properties  of  mappings  are  easily  checked.  It  is  usually
   sufficient  to  verify  that  both  the  [10XSourceHom[110X and the [10XRangeHom[110X have the
@@ -66,13 +58,13 @@
   
   [1X3.2-3 XModMorphism[101X
   
-  [29X[2XXModMorphism[102X( [3Xargs[103X ) [32X function
-  [29X[2XXModMorphismByHoms[102X( [3XX1[103X, [3XX2[103X, [3Xsigma[103X, [3Xrho[103X ) [32X operation
-  [29X[2XPreXModMorphism[102X( [3Xargs[103X ) [32X function
-  [29X[2XPreXModMorphismByHoms[102X( [3XP1[103X, [3XP2[103X, [3Xsigma[103X, [3Xrho[103X ) [32X operation
-  [29X[2XInclusionMorphism2DimensionalDomains[102X( [3XX1[103X, [3XS1[103X ) [32X operation
-  [29X[2XInnerAutomorphismXMod[102X( [3XX1[103X, [3Xr[103X ) [32X operation
-  [29X[2XIdentityMapping[102X( [3XX1[103X ) [32X attribute
+  [33X[1;0Y[29X[2XXModMorphism[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XXModMorphismByHoms[102X( [3XX1[103X, [3XX2[103X, [3Xsigma[103X, [3Xrho[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPreXModMorphism[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPreXModMorphismByHoms[102X( [3XP1[103X, [3XP2[103X, [3Xsigma[103X, [3Xrho[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInclusionMorphism2DimensionalDomains[102X( [3XX1[103X, [3XS1[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInnerAutomorphismXMod[102X( [3XX1[103X, [3Xr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIdentityMapping[102X( [3XX1[103X ) [32X attribute[133X
   
   [33X[0;0YThese are the constructors for morphisms of pre-crossed and crossed modules.[133X
   
@@ -115,9 +107,9 @@
   
   [1X3.2-4 IsomorphismPerm2DimensionalGroup[101X
   
-  [29X[2XIsomorphismPerm2DimensionalGroup[102X( [3Xobj[103X ) [32X attribute
-  [29X[2XIsomorphismPc2DimensionalGroup[102X( [3Xobj[103X ) [32X attribute
-  [29X[2XIsomorphismByIsomorphisms[102X( [3XD[103X, [3Xlist[103X ) [32X operation
+  [33X[1;0Y[29X[2XIsomorphismPerm2DimensionalGroup[102X( [3Xobj[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsomorphismPc2DimensionalGroup[102X( [3Xobj[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsomorphismByIsomorphisms[102X( [3XD[103X, [3Xlist[103X ) [32X operation[133X
   
   [33X[0;0YWhen [22Xmathcal D[122X is a [22X2[122X-dimensional domain with source [22XS[122X and range [22XR[122X and [22Xσ : S
   ->     S',~     ρ     :     R     ->     R'[122X     are    isomorphisms,    then
@@ -165,15 +157,15 @@
   
   [1X3.3-1 IsCat1Morphism[101X
   
-  [29X[2XIsCat1Morphism[102X( [3Xmap[103X ) [32X property
-  [29X[2XIsPreCat1Morphism[102X( [3Xmap[103X ) [32X property
-  [29X[2XCat1Morphism[102X( [3Xargs[103X ) [32X function
-  [29X[2XCat1MorphismByHoms[102X( [3XC1[103X, [3XC2[103X, [3Xgamma[103X, [3Xrho[103X ) [32X operation
-  [29X[2XPreCat1Morphism[102X( [3Xargs[103X ) [32X function
-  [29X[2XPreCat1MorphismByHoms[102X( [3XP1[103X, [3XP2[103X, [3Xgamma[103X, [3Xrho[103X ) [32X operation
-  [29X[2XInclusionMorphism2DimensionalDomains[102X( [3XC1[103X, [3XS1[103X ) [32X operation
-  [29X[2XInnerAutomorphismCat1[102X( [3XC1[103X, [3Xr[103X ) [32X operation
-  [29X[2XIdentityMapping[102X( [3XC1[103X ) [32X attribute
+  [33X[1;0Y[29X[2XIsCat1Morphism[102X( [3Xmap[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPreCat1Morphism[102X( [3Xmap[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XCat1Morphism[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCat1MorphismByHoms[102X( [3XC1[103X, [3XC2[103X, [3Xgamma[103X, [3Xrho[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPreCat1Morphism[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPreCat1MorphismByHoms[102X( [3XP1[103X, [3XP2[103X, [3Xgamma[103X, [3Xrho[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInclusionMorphism2DimensionalDomains[102X( [3XC1[103X, [3XS1[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInnerAutomorphismCat1[102X( [3XC1[103X, [3Xr[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIdentityMapping[102X( [3XC1[103X ) [32X attribute[133X
   
   [33X[0;0YFor  an  example we form a second cat1-group [10XC2=[g18=>s3a][110X, similar to [10XC1[110X in
   [14X2.4-1[114X, then construct an isomorphism [22X(γ,ρ)[122X between them.[133X
@@ -204,11 +196,11 @@
   
   [1X3.3-2 IsomorphismPermObject[101X
   
-  [29X[2XIsomorphismPermObject[102X( [3Xobj[103X ) [32X function
-  [29X[2XIsomorphismPerm2DimensionalGroup[102X( [3X2DimensionalGroup[103X ) [32X attribute
-  [29X[2XIsomorphismFp2DimensionalGroup[102X( [3X2DimensionalGroup[103X ) [32X attribute
-  [29X[2XIsomorphismPc2DimensionalGroup[102X( [3X2DimensionalGroup[103X ) [32X attribute
-  [29X[2XSmallerDegreePerm2DimensionalDomain[102X( [3X2DimensionalDomain[103X ) [32X function
+  [33X[1;0Y[29X[2XIsomorphismPermObject[102X( [3Xobj[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsomorphismPerm2DimensionalGroup[102X( [3X2DimensionalGroup[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsomorphismFp2DimensionalGroup[102X( [3X2DimensionalGroup[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XIsomorphismPc2DimensionalGroup[102X( [3X2DimensionalGroup[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XSmallerDegreePerm2DimensionalDomain[102X( [3X2DimensionalDomain[103X ) [32X function[133X
   
   [33X[0;0YThe         global        function        [10XIsomorphismPermObject[110X        calls
   [10XIsomorphismPerm2DimensionalGroup[110X,   which   constructs   a   morphism  whose
@@ -255,7 +247,7 @@
   
   [1X3.4-1 CompositionMorphism[101X
   
-  [29X[2XCompositionMorphism[102X( [3Xmap2[103X, [3Xmap1[103X ) [32X operation
+  [33X[1;0Y[29X[2XCompositionMorphism[102X( [3Xmap2[103X, [3Xmap1[103X ) [32X operation[133X
   
   [33X[0;0YComposition  of  morphisms  (written  [10X(<map1> * <map2>)[110X when maps act on the
   right) calls the [10XCompositionMorphism[110X function for maps (acting on the left),
@@ -280,8 +272,8 @@
   
   [1X3.4-2 Kernel[101X
   
-  [29X[2XKernel[102X( [3Xmap[103X ) [32X operation
-  [29X[2XKernel2DimensionalMapping[102X( [3Xmap[103X ) [32X attribute
+  [33X[1;0Y[29X[2XKernel[102X( [3Xmap[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XKernel2DimensionalMapping[102X( [3Xmap[103X ) [32X attribute[133X
   
   [33X[0;0YThe  kernel  of  a morphism of crossed modules is a normal subcrossed module
   whose  groups  are  the  kernels of the source and target homomorphisms. The

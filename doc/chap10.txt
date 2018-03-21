@@ -20,8 +20,8 @@
   
   [1X10.1-1 InclusionMappingGroups[101X
   
-  [29X[2XInclusionMappingGroups[102X( [3XG[103X, [3XH[103X ) [32X operation
-  [29X[2XMappingToOne[102X( [3XG[103X, [3XH[103X ) [32X operation
+  [33X[1;0Y[29X[2XInclusionMappingGroups[102X( [3XG[103X, [3XH[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XMappingToOne[102X( [3XG[103X, [3XH[103X ) [32X operation[133X
   
   [33X[0;0YThis  set  of utilities concerns mappings. The map [10Xincd8[110X is the inclusion of
   [10Xd8[110X  in [10Xd16[110X used in Section [14X3.4[114X. [10XMappingToOne(G,H)[110X maps the whole of [22XG[122X to the
@@ -40,8 +40,8 @@
   
   [1X10.1-2 InnerAutomorphismsByNormalSubgroup[101X
   
-  [29X[2XInnerAutomorphismsByNormalSubgroup[102X( [3XG[103X, [3XN[103X ) [32X operation
-  [29X[2XIsGroupOfAutomorphisms[102X( [3XA[103X ) [32X property
+  [33X[1;0Y[29X[2XInnerAutomorphismsByNormalSubgroup[102X( [3XG[103X, [3XN[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsGroupOfAutomorphisms[102X( [3XA[103X ) [32X property[133X
   
   [33X[0;0YInner  automorphisms of a group [10XG[110X by the elements of a normal subgroup [10XN[110X are
   calculated with the first of these functions, usually with [10XG[110X = [10XN[110X.[133X
@@ -62,10 +62,10 @@
   
   [1X10.2-1 AbelianModuleObject[101X
   
-  [29X[2XAbelianModuleObject[102X( [3Xgrp[103X, [3Xact[103X ) [32X operation
-  [29X[2XIsAbelianModule[102X( [3Xobj[103X ) [32X property
-  [29X[2XAbelianModuleGroup[102X( [3Xobj[103X ) [32X attribute
-  [29X[2XAbelianModuleAction[102X( [3Xobj[103X ) [32X attribute
+  [33X[1;0Y[29X[2XAbelianModuleObject[102X( [3Xgrp[103X, [3Xact[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsAbelianModule[102X( [3Xobj[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XAbelianModuleGroup[102X( [3Xobj[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XAbelianModuleAction[102X( [3Xobj[103X ) [32X attribute[133X
   
   [33X[0;0YAn  abelian  module  is an abelian group together with a group action. These
   are used by the crossed module constructor [10XXModByAbelianModule[110X.[133X

@@ -19,15 +19,17 @@
   [2XAllCat1DataGroupsBasic[102X 2.6-2 
   [2XAllDerivations[102X 5.2-1 
   [2XAllInducedXMods[102X 7.2-2 
-  [2XAllSections[102X 5.2-1 
+  [2XAllSections[102X 5.2-4 
   [2XAllStemGroupFamilies[102X 4.2-2 
   [2XAllStemGroupIds[102X 4.2-2 
   [2XAllXMods[102X 4.1-11 
   [2XAllXModsUpToIsomorphism[102X 4.1-12 
-  [2XAreIsoclinicDomains[102X 4.2-1  4.3-1 
+  [2XAreIsoclinicDomains[102X, for crossed modules of groups 4.3-1 
+      for groups 4.2-1 
   AutoGroup 2.1-2 
-  [2XAutomorphismPermGroup[102X 6.1-1  6.1-2 
-  [2XBoundary[102X 2.1-2  2.4-2 
+  [2XAutomorphismPermGroup[102X 6.1-1 
+  [2XBoundary[102X, for cat1-groups 2.4-2 
+      for crossed modules 2.1-2 
   cat1-group 2.4 
   [2XCat1Group[102X 2.4-1 
   [2XCat1GroupByPeifferQuotient[102X 2.4-3 
@@ -40,11 +42,10 @@
   [2XCat2GroupOfCrossedSquare[102X 8.4-2 
   catn-group 8.5 
   [2XCentralizer[102X 4.1-7 
-  [2XCentralQuotient[102X 4.1-8  8.2-2 
+  [2XCentralQuotient[102X 4.1-8 
+      for crossed modules 8.2-2 
   [2XCentreXMod[102X 4.1-7 
   [2XCommutatorSubXMod[102X 4.1-4 
-  [2XCompositeDerivation[102X 5.2-2 
-  [2XCompositeSection[102X 5.2-2 
   [2XCompositionMorphism[102X 3.4-1 
   [2XCoproductXMod[102X 7.1-1 
   [2XCrossActionSubgroup[102X 4.1-4 
@@ -59,13 +60,14 @@
   [2XCrossedSquare[102X 8.2-1 
   [2XCrossedSquareByNormalSubgroups[102X 8.2-1 
   [2XCrossedSquareOfCat2Group[102X 8.4-2 
-  derivation, of crossed module 5.1-1 
-  [2XDerivationByImages[102X 5.1-2 
+  derivation, of crossed module 5.1 
+  [2XDerivationByImages[102X 5.1-1 
   [2XDerivationBySection[102X 5.1-3 
+  [2XDerivationClass[102X 5.2-1 
   [2XDerivedSubXMod[102X 4.1-5 
   [2XDiagonalAction[102X 8.2-4 
   [2XDiagonalCat1Group[102X 2.4-3 
-  [2XDirectProductOp[102X 2.1-1 
+  [2XDirectProductOp[102X, for crossed modules 2.1-1 
   [2XDisplacement[102X 4.1-3 
   [2XDisplacementSubgroup[102X 4.1-3 
   display a 2d-group 2.1-4 
@@ -78,15 +80,20 @@
   [2XFixedPointSubgroupXMod[102X 4.1-6 
   [2XGeneratingAutomorphisms[102X 6.1-1 
   [2XHeadMap[102X 2.4-2 
-  [2XIdentityMapping[102X 3.2-3  3.3-1 
-  [2XIdGroup[102X 2.1-4  2.7-1 
+  [2XIdentityDerivation[102X 5.1-4 
+  [2XIdentityMapping[102X, for pre-xmods 3.2-3 
+      for precat1-morphisms 3.3-1 
+  [2XIdentitySection[102X 5.1-4 
+  [2XIdGroup[102X, for 2d-groups 2.7-1 
+      for crossed modules 2.1-4 
   [2XImageElmCrossedPairing[102X 8.2-4 
   [2XImageElmXModAction[102X 2.1-3 
-  [2XImagesList[102X 5.2-1 
+  [2XImagesList[102X 5.2-2 
   [2XImagesTable[102X 5.2-1 
   inclusion mapping 10.1 
   [2XInclusionMappingGroups[102X 10.1-1 
-  [2XInclusionMorphism2DimensionalDomains[102X 3.2-3  3.3-1 
+  [2XInclusionMorphism2DimensionalDomains[102X, for cat1-groups 3.3-1 
+      for crossed modules 3.2-3 
   induced crossed module 7.2 
   [2XInducedCat1[102X 7.2-1 
   [2XInducedXMod[102X 7.2-1 
@@ -107,7 +114,8 @@
   [2XIsAspherical2DimensionalGroup[102X 4.1-9 
   [2XIsAutomorphism3dObject[102X 8.3-2 
   IsAutomorphismGroup2DimensionalGroup 2.2 
-  [2XIsBijective[102X 3.2-2  8.3-2 
+  [2XIsBijective[102X 8.3-2 
+      for pre-xmod morphisms 3.2-2 
   [2XIsCat1Group[102X 2.5-1 
   [2XIsCat1Morphism[102X 3.3-1 
   IsCentralExtension2DimensionalGroup 2.2 
@@ -125,18 +133,25 @@
   [2XIsGroupOfAutomorphisms[102X 10.1-2 
   [2XIsIdentityCat1Group[102X 2.5-1 
   [2XIsInducedXMod[102X 7.2-1 
-  [2XIsInjective[102X 3.2-2 
+  [2XIsInjective[102X, for pre-xmod morphisms 3.2-2 
+  IsMonoidOfUp2DimensionalMappingsObj 5.2 
   [2XIsNilpotent2DimensionalGroup[102X 4.1-10 
   IsNormal for crossed modules 2.2-1 
   IsNormalSubgroup2DimensionalGroup 2.2 
-  [2XIsoclinicMiddleLength[102X 4.2-3  4.3-3 
-  [2XIsoclinicRank[102X 4.2-3  4.3-3 
-  [2XIsoclinicStemDomain[102X 4.2-2  4.3-2 
-  [2XIsoclinism[102X 4.2-1  4.3-1 
+  [2XIsoclinicMiddleLength[102X, for crossed modules of groups 4.3-3 
+      for groups 4.2-3 
+  [2XIsoclinicRank[102X, for crossed modules of groups 4.3-3 
+      for groups 4.2-3 
+  [2XIsoclinicStemDomain[102X, for crossed modules of groups 4.3-2 
+      for groups 4.2-2 
+  [2XIsoclinism[102X, for crossed modules 4.3-1 
+      for groups 4.2-1 
   [2XIsomorphismByIsomorphisms[102X 3.2-4 
-  [2XIsomorphismFp2DimensionalGroup[102X 3.3-2 
-  [2XIsomorphismPc2DimensionalGroup[102X 3.2-4  3.3-2 
-  [2XIsomorphismPerm2DimensionalGroup[102X 3.2-4  3.3-2 
+  [2XIsomorphismFp2DimensionalGroup[102X, for pre-cat1 morphisms 3.3-2 
+  [2XIsomorphismPc2DimensionalGroup[102X, for pre-cat1 morphisms 3.3-2 
+      for pre-xmod morphisms 3.2-4 
+  [2XIsomorphismPerm2DimensionalGroup[102X, for pre-cat1 morphisms 3.3-2 
+      for pre-xmod morphisms 3.2-4 
   [2XIsomorphismPermObject[102X 3.3-2 
   [2XIsomorphismXMods[102X 4.1-12 
   [2XIsPc2DimensionalGroup[102X 2.2-1 
@@ -152,23 +167,23 @@
   [2XIsPreXMod[102X 2.2-1 
   [2XIsPreXModMorphism[102X 3.2-1 
   [2XIsPreXModWithObjects[102X 9.1-2 
-  [2XIsSection[102X 5.1-1 
+  [2XIsSection[102X 5.1-3 
   [2XIsSimplyConnected2DimensionalGroup[102X 4.1-9 
-  [2XIsSingleValued[102X 3.2-2 
-  [2XIsStemDomain[102X 4.2-2  4.3-2 
-  [2XIsSurjective[102X 3.2-2 
-  [2XIsTotal[102X 3.2-2 
+  [2XIsSingleValued[102X, for pre-xmod morphisms 3.2-2 
+  [2XIsStemDomain[102X, for crossed modules of groups 4.3-2 
+      for groups 4.2-2 
+  [2XIsSurjective[102X, for pre-xmod morphisms 3.2-2 
+  [2XIsTotal[102X, for pre-xmod morphisms 3.2-2 
   IsTrivialAction2DimensionalGroup 2.2 
   [2XIsUp2DimensionalMapping[102X 5.1-1 
   [2XIsXMod[102X 2.2-1 
   [2XIsXModMorphism[102X 3.2-1 
   [2XIsXModWithObjects[102X 9.1-2 
-  [2XKernel[102X 3.4-2 
+  [2XKernel[102X, for 2d-mappings 3.4-2 
   [2XKernel2DimensionalMapping[102X 3.4-2 
   [2XKernelEmbedding[102X 2.4-2 
   [2XLeft2DimensionalGroup[102X 8.2-4 
   [2XLeft2DimensionalMorphism[102X 8.3-1 
-  License .-2 
   [2XLowerCentralSeriesOfXMod[102X 4.1-10 
   [2XLueXMod[102X 6.1-2 
   [2XMappingToOne[102X 10.1-1 
@@ -176,7 +191,9 @@
   morphism of 2d-group 3.1 
   morphism of 3d-group 8.3 
   [2XMorphismOfInducedXMod[102X 7.2-1 
-  [2XName[102X 2.1-4  2.4-2  8.2-1 
+  [2XName[102X 8.2-1 
+      for cat1-groups 2.4-2 
+      for crossed modules 2.1-4 
   [2XNaturalMorphismByNormalSubPreXMod[102X 4.1-1 
   [2XNilpotencyClass2DimensionalGroup[102X 4.1-10 
   [2XNormalizer[102X 4.1-7 
@@ -202,28 +219,37 @@
   [2XPreXModMorphism[102X 3.2-3 
   [2XPreXModMorphismByHoms[102X 3.2-3 
   [2XPreXModOfPreCat1Group[102X 2.5-2 
-  [2XRange[102X 2.1-2  2.4-2  3.1-1  8.3-1 
+  [2XPrincipalDerivation[102X 5.1-2 
+  [2XPrincipalDerivations[102X 5.2-3 
+  [2XRange[102X 8.3-1 
+      for 2d-group mappings 3.1-1 
+      for cat1-groups 2.4-2 
+      for crossed modules 2.1-2 
   [2XRangeEmbedding[102X 2.4-2 
   [2XRangeHom[102X 3.1-1 
-  regular derivation 5.1-1 
-  [2XRegularDerivations[102X 5.2-1 
-  [2XRegularSections[102X 5.2-1 
+  regular derivation 5.1 
+  [2XRegularDerivations[102X 5.2-2 
+  [2XRegularSections[102X 5.2-4 
   restriction mapping 10.1 
   [2XReverseCat1Group[102X 2.4-3 
   [2XRight2DimensionalGroup[102X 8.2-4 
   [2XRight2DimensionalMorphism[102X 8.3-1 
   [2XRoot2dGroup[102X 9.1-4 
-  section, of cat1-group 5.1-1 
+  section, of cat1-group 5.1 
   [2XSectionByDerivation[102X 5.1-3 
-  [2XSectionByImages[102X 5.1-3 
+  [2XSectionByHomomorphism[102X 5.1-3 
   selection of a small cat1-group 2.6 
   [2XSinglePiecePreXModWithObjects[102X 9.1-1 
-  [2XSize[102X 2.1-4  2.4-2 
-  [2XSmallerDegreePerm2DimensionalDomain[102X 3.3-2 
-  [2XSource[102X 2.1-2  2.4-2  3.1-1  8.3-1 
+  [2XSize[102X, for cat1-groups 2.4-2 
+      for crossed modules 2.1-4 
+  [2XSmallerDegreePerm2DimensionalDomain[102X, for pre-cat1 morphisms 3.3-2 
+  [2XSource[102X 8.3-1 
+      for 2d-group mappings 3.1-1 
+      for cat1-groups 2.4-2 
+      for crossed modules 2.1-2 
   [2XSourceHom[102X 3.1-1 
   [2XStabilizerSubgroupXMod[102X 4.1-6 
-  [2XStructureDescription[102X 2.7-1 
+  [2XStructureDescription[102X, for 2d-groups 2.7-1 
   [2XSubPreXMod[102X 2.3-1 
   [2XSubXMod[102X 2.2-2 
   [2XTailMap[102X 2.4-2 
@@ -232,20 +258,23 @@
   up 2d-mapping of 2d-group 5. 
   [2XUp2DimensionalGroup[102X 8.2-4 
   [2XUp2DimensionalMorphism[102X 8.3-1 
-  [2XUpGeneratorImages[102X 5.2-2 
-  [2XUpImagePositions[102X 5.2-2 
+  [2XUpGeneratorImages[102X 5.1-1 
+  [2XUpImagePositions[102X 5.1-1 
   version 1 for [5XGAP[105X 3 11.1-1 
   version 2.001 for [5XGAP[105X 4 11.1-3 
-  Whitehead group 5.1-1 
-  Whitehead monoid 5.1-1 
-  Whitehead multiplication 5.1  5.1-1 
-  [2XWhiteheadGroupTable[102X 5.2-3 
-  [2XWhiteheadMonoidTable[102X 5.2-3 
-  [2XWhiteheadPermGroup[102X 5.2-3 
-  [2XWhiteheadTransMonoid[102X 5.2-3 
+  Whitehead group 5.1 
+  Whitehead monoid 5.1 
+  Whitehead multiplication 5.1 
+  [2XWhiteheadGroupTable[102X 5.2-2 
+  [2XWhiteheadMonoidTable[102X 5.2-1 
+  [2XWhiteheadOrder[102X 5.1-5 
+  [2XWhiteheadPermGroup[102X 5.2-2 
+  [2XWhiteheadProduct[102X 5.1-5 
+  [2XWhiteheadTransformationMonoid[102X 5.2-1 
   [2XWhiteheadXMod[102X 6.1-2 
   [2XXMod[102X 2.1-1 
-  [2XXModAction[102X 2.1-2  9.1-4 
+  [2XXModAction[102X, for crossed modules of groupoids 9.1-4 
+      for crossed modules of groups 2.1-2 
   [2XXModByAbelianModule[102X 2.1-1 
   [2XXModByAutomorphismGroup[102X 2.1-1 
   [2XXModByBoundaryAndAction[102X 2.1-1 

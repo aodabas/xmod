@@ -12,7 +12,7 @@
   
   [1X7.1-1 CoproductXMod[101X
   
-  [29X[2XCoproductXMod[102X( [3XX1[103X, [3XX2[103X ) [32X operation
+  [33X[1;0Y[29X[2XCoproductXMod[102X( [3XX1[103X, [3XX2[103X ) [32X operation[133X
   
   [33X[0;0YThis  function  calculates  the  coproduct crossed module of crossed modules
   [22Xmathcal X_1 = (∂_1 : S_1 -> R)[122X and [22Xmathcal X_2 = (∂_2 : S_2 -> R)[122X which have
@@ -55,10 +55,10 @@
   
   [1X7.2-1 InducedXMod[101X
   
-  [29X[2XInducedXMod[102X( [3Xargs[103X ) [32X function
-  [29X[2XInducedCat1[102X( [3Xargs[103X ) [32X function
-  [29X[2XIsInducedXMod[102X( [3Xxmod[103X ) [32X property
-  [29X[2XMorphismOfInducedXMod[102X( [3Xxmod[103X ) [32X attribute
+  [33X[1;0Y[29X[2XInducedXMod[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XInducedCat1[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XIsInducedXMod[102X( [3Xxmod[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XMorphismOfInducedXMod[102X( [3Xxmod[103X ) [32X attribute[133X
   
   [33X[0;0YA  morphism  of  crossed modules [22X(σ, ρ) : mathcal X_1 -> mathcal X_2[122X factors
   uniquely through an induced crossed module [22Xρ_∗ mathcal X_1 = (δ : ρ_∗ S_1 ->
@@ -161,7 +161,7 @@
   
   [1X7.2-2 AllInducedXMods[101X
   
-  [29X[2XAllInducedXMods[102X( [3XQ[103X ) [32X operation
+  [33X[1;0Y[29X[2XAllInducedXMods[102X( [3XQ[103X ) [32X operation[133X
   
   [33X[0;0YThis  function calculates all the induced crossed modules [10XInducedXMod( Q, P,
   M  )[110X,  where  [10XP[110X runs over all conjugacy classes of subgroups of [10XQ[110X and [10XM[110X runs

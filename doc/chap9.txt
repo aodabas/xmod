@@ -16,7 +16,7 @@
   
   [1X9.1-1 SinglePiecePreXModWithObjects[101X
   
-  [29X[2XSinglePiecePreXModWithObjects[102X( [3Xpxmod[103X, [3Xobs[103X, [3Xisdisc[103X ) [32X operation
+  [33X[1;0Y[29X[2XSinglePiecePreXModWithObjects[102X( [3Xpxmod[103X, [3Xobs[103X, [3Xisdisc[103X ) [32X operation[133X
   
   [33X[0;0YAt  present the experimental operation [10XSinglePiecePreXModWithObjects[110X accepts
   a  precrossed module [10Xpxmod[110X, a set of objects [10Xobs[110X, and a boolean [10Xisdisc[110X which
@@ -46,9 +46,9 @@
   
   [1X9.1-2 IsXModWithObjects[101X
   
-  [29X[2XIsXModWithObjects[102X( [3Xpxmod[103X ) [32X property
-  [29X[2XIsPreXModWithObjects[102X( [3Xpxmod[103X ) [32X property
-  [29X[2XIsDirectProductWithCompleteDigraphDomain[102X( [3Xpxmod[103X ) [32X property
+  [33X[1;0Y[29X[2XIsXModWithObjects[102X( [3Xpxmod[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPreXModWithObjects[102X( [3Xpxmod[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsDirectProductWithCompleteDigraphDomain[102X( [3Xpxmod[103X ) [32X property[133X
   
   [33X[0;0YThe     precrossed     module     [10XDX4[110X     belongs     to     the    category
   [10XIs2DimensionalGroupWithObjects[110X and is, of course, a crossed module.[133X
@@ -67,9 +67,9 @@
   
   [1X9.1-3 IsPermPreXModWithObjects[101X
   
-  [29X[2XIsPermPreXModWithObjects[102X( [3Xpxmod[103X ) [32X property
-  [29X[2XIsPcPreXModWithObjects[102X( [3Xpxmod[103X ) [32X property
-  [29X[2XIsFpPreXModWithObjects[102X( [3Xpxmod[103X ) [32X property
+  [33X[1;0Y[29X[2XIsPermPreXModWithObjects[102X( [3Xpxmod[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPcPreXModWithObjects[102X( [3Xpxmod[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsFpPreXModWithObjects[102X( [3Xpxmod[103X ) [32X property[133X
   
   [33X[0;0YTo test these properties we test the precrossed modules from which they were
   constructed.[133X
@@ -87,8 +87,8 @@
   
   [1X9.1-4 Root2dGroup[101X
   
-  [29X[2XRoot2dGroup[102X( [3Xpxmod[103X ) [32X attribute
-  [29X[2XXModAction[102X( [3Xpxmod[103X ) [32X attribute
+  [33X[1;0Y[29X[2XRoot2dGroup[102X( [3Xpxmod[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XXModAction[102X( [3Xpxmod[103X ) [32X attribute[133X
   
   [33X[0;0YThe  attributes  of  a  precrossed  module with objects include the standard
   [10XSource[110X;  [10XRange[110X;  [10XBoundary[110X;  and  [10XXModAction[110X  as  with  precrossed modules of
