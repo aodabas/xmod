@@ -1,105 +1,91 @@
   
-  [1X10 [33X[0;0YUtility functions[133X[101X
+  [1X10 [33X[0;0YApplications[133X[101X
   
-  [33X[0;0YBy a utility function we mean a [5XGAP[105X function which is[133X
-  
-  [30X    [33X[0;6Yneeded by other functions in this package,[133X
-  
-  [30X    [33X[0;6Ynot (as far as we know) provided by the standard [5XGAP[105X library,[133X
-  
-  [30X    [33X[0;6Ymore suitable for inclusion in the main library than in this package.[133X
-  
-  [33X[0;0YSections  on  [13XPrinting  Lists[113X  and  [13XDistinct and Common Representatives[113X were
-  moved to the [5XUtils[105X package with version 2.56.[133X
+  [33X[0;0YThis  chapter was added in April 2018 for version 2.66 of [5XXMod[105X. Initially it
+  describes  crossed  modules  for  free loop spaces. Further applications may
+  arise in due course.[133X
   
   
-  [1X10.1 [33X[0;0YInclusion and Restriction Mappings[133X[101X
+  [1X10.1 [33X[0;0YFree Loop Spaces[133X[101X
   
-  [33X[0;0YThese functions have been moved to the [5Xgpd[105X package, but are still documented
-  here.[133X
+  [33X[0;0YThese  functions have been used to produce examples for Ronald Brown's paper
+  [13XCrossed  modules,  and the homotopy [22X2[122X-type of a free loop space[113X [Bro18]. The
+  relevant theorem in that paper is as follows.[133X
   
-  [1X10.1-1 InclusionMappingGroups[101X
+  [33X[0;0Y[12XTheorem  2.1[112X  [13X Let [22XmathcalM = (∂ : M -> P)[122X be a crossed module of groups and
+  let  [22XX = BmathcalM[122X be the classifying space of [22XmathcalM[122X. Then the components
+  of  [22XLX[122X,  the  free loop space on [22XX[122X, are determined by equivalence classes of
+  elements [22Xa ∈ P[122X where [22Xa,a'[122X are equivalent if and only if there are elements [22Xm
+  ∈ M, p ∈ P[122X such that [22Xa'= p + a - ∂ m - p[122X. [113X[133X
   
-  [33X[1;0Y[29X[2XInclusionMappingGroups[102X( [3XG[103X, [3XH[103X ) [32X operation[133X
-  [33X[1;0Y[29X[2XMappingToOne[102X( [3XG[103X, [3XH[103X ) [32X operation[133X
+  [33X[0;0Y[13X  Further  the  homotopy  [22X2[122X-type  of  a  component  of  [22XLX[122X given by [22Xa ∈ P[122X is
+  determined  by the crossed module of groups [22XLmathcalM[a] = (∂_a : M -> P(a))[122X
+  where: [113X[133X
   
-  [33X[0;0YThis  set  of utilities concerns mappings. The map [10Xincd8[110X is the inclusion of
-  [10Xd8[110X  in [10Xd16[110X used in Section [14X3.4[114X. [10XMappingToOne(G,H)[110X maps the whole of [22XG[122X to the
-  identity element in [22XH[122X.[133X
+  [30X    [33X[0;6Y[13X  [22XP(a)[122X  is  the  subgroup of the cat[22X^1[122X-group [22XG = P ⋉ M[122X such that [22X∂ m =
+        [p,a] = -p-a+p+a[122X; [113X[133X
   
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XPrint( incd8, "\n" );[127X[104X
-    [4X[28X[ (11,13,15,17)(12,14,16,18), (11,18)(12,17)(13,16)(14,15) ] ->[128X[104X
-    [4X[28X[ (11,13,15,17)(12,14,16,18), (11,18)(12,17)(13,16)(14,15) ][128X[104X
-    [4X[25Xgap>[125X [27Ximd8 := Image( incd8 );;[127X[104X
-    [4X[25Xgap>[125X [27XMappingToOne( c4, imd8 );[127X[104X
-    [4X[28X[ (11,13,15,17)(12,14,16,18) ] -> [ () ][128X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
+  [30X    [33X[0;6Y[13X [22X∂_a(m) = (∂ m, m^-1m^a)[122X for [22Xm ∈ M[122X; [113X[133X
   
-  [1X10.1-2 InnerAutomorphismsByNormalSubgroup[101X
+  [30X    [33X[0;6Y[13X  the action of [22XP(a)[122X on [22XM[122X is given by [22Xn^(p,m) = n^p[122X for [22Xn ∈ M, (p,m) ∈
+        P(a)[122X. [113X[133X
   
-  [33X[1;0Y[29X[2XInnerAutomorphismsByNormalSubgroup[102X( [3XG[103X, [3XN[103X ) [32X operation[133X
-  [33X[1;0Y[29X[2XIsGroupOfAutomorphisms[102X( [3XA[103X ) [32X property[133X
+  [33X[0;0Y[13X In particular [22Xπ_1(LX,a)[122X is isomorphic to [22Xmathrmcokernel(∂_a)[122X, and [22Xπ_2(LX,a)
+  ≅  π_2(X,*)^bara}[122X,  the elements of [22Xπ_2(X,*)[122X fixed under the action of [22Xbara[122X,
+  the class of [22Xa[122X in [22Xπ_1(X,*)[122X. [113X[133X
   
-  [33X[0;0YInner  automorphisms of a group [10XG[110X by the elements of a normal subgroup [10XN[110X are
-  calculated with the first of these functions, usually with [10XG[110X = [10XN[110X.[133X
+  [33X[0;0Y[13X   There   is   an   exact   sequence   [22Xπ  stackrelϕ->  π  ->  π_1(LX,a)  ->
+  C_bara}(π_1(X,*))  ->  1[122X,  in  which [22Xπ = π_2(X,*)[122X, and [22Xϕ[122X is the morphism [22Xm ↦
+  m^-1m^a[122X. [113X[133X
   
-  [4X[32X  Example  [32X[104X
-    [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27Xautd8 := AutomorphismGroup( d8 );;[127X[104X
-    [4X[25Xgap>[125X [27Xinnd8 := InnerAutomorphismsByNormalSubgroup( d8, d8 );;[127X[104X
-    [4X[25Xgap>[125X [27XGeneratorsOfGroup( innd8 );[127X[104X
-    [4X[28X[ ^(1,2,3,4), ^(1,3) ][128X[104X
-    [4X[25Xgap>[125X [27XIsGroupOfAutomorphisms( innd8 );[127X[104X
-    [4X[28Xtrue[128X[104X
-    [4X[28X[128X[104X
-  [4X[32X[104X
+  [1X10.1-1 LoopsXMod[101X
   
+  [33X[1;0Y[29X[2XLoopsXMod[102X( [3XM[103X, [3Xa[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XAllLoopsXMod[102X( [3XM[103X ) [32X operation[133X
   
-  [1X10.2 [33X[0;0YAbelian Modules[133X[101X
+  [33X[0;0YThe  operation  [10XLoopsXMod(M,a)[110X  calculates  the  crossed module [22XLmathcalM[a][122X
+  described in the theorem.[133X
   
-  [1X10.2-1 AbelianModuleObject[101X
+  [33X[0;0YThe  operation  [10XAllLoopsXMod(M)[110X  returns  a list of crossed modules, one for
+  each  equivalence  class  of  elements  [22Xp  ∈  P[122X.  [12XThese operations should be
+  considered experimental at present.[112X[133X
   
-  [33X[1;0Y[29X[2XAbelianModuleObject[102X( [3Xgrp[103X, [3Xact[103X ) [32X operation[133X
-  [33X[1;0Y[29X[2XIsAbelianModule[102X( [3Xobj[103X ) [32X property[133X
-  [33X[1;0Y[29X[2XAbelianModuleGroup[102X( [3Xobj[103X ) [32X attribute[133X
-  [33X[1;0Y[29X[2XAbelianModuleAction[102X( [3Xobj[103X ) [32X attribute[133X
-  
-  [33X[0;0YAn  abelian  module  is an abelian group together with a group action. These
-  are used by the crossed module constructor [10XXModByAbelianModule[110X.[133X
-  
-  [33X[0;0YThe    resulting    [10XXabmod[110X    is    isomorphic    to    the    output   from
-  [10XXModByAutomorphismGroup( k4 );[110X.[133X
+  [33X[0;0YIn  the example below the automorphism crossed module [10XX8[110X has [22XM ≅ C_2^3[122X and [22XP
+  =  PSL(3,2)[122X  is the automorphism group of [22XM[122X. There are [22X6[122X equivalence classes
+  and,  for  each [22XLX[122X calculated, the [10XSize[110X and [10XStructureDescription[110X are printed
+  out.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27Xx := (6,7)(8,9);;  y := (6,8)(7,9);;  z := (6,9)(7,8);;[127X[104X
-    [4X[25Xgap>[125X [27Xk4a := Group( x, y );;  SetName( k4a, "k4a" );[127X[104X
-    [4X[25Xgap>[125X [27Xgens3a := [ (1,2), (2,3) ];;[127X[104X
-    [4X[25Xgap>[125X [27Xs3a := Group( gens3a );;  SetName( s3a, "s3a" );[127X[104X
-    [4X[25Xgap>[125X [27Xalpha := GroupHomomorphismByImages( k4a, k4a, [x,y], [y,x] );;[127X[104X
-    [4X[25Xgap>[125X [27Xbeta := GroupHomomorphismByImages( k4a, k4a, [x,y], [x,z] );;[127X[104X
-    [4X[25Xgap>[125X [27Xauta := Group( alpha, beta );;[127X[104X
-    [4X[25Xgap>[125X [27Xacta := GroupHomomorphismByImages( s3a, auta, gens3a, [alpha,beta] );;[127X[104X
-    [4X[25Xgap>[125X [27Xabmod := AbelianModuleObject( k4a, acta );;[127X[104X
-    [4X[25Xgap>[125X [27XXabmod := XModByAbelianModule( abmod );[127X[104X
-    [4X[28X[k4a->s3a][128X[104X
-    [4X[25Xgap>[125X [27XDisplay( Xabmod );[127X[104X
-    [4X[28X[128X[104X
-    [4X[28XCrossed module [k4a->s3a] :- [128X[104X
-    [4X[28X: Source group k4a has generators:[128X[104X
-    [4X[28X  [ (6,7)(8,9), (6,8)(7,9) ][128X[104X
-    [4X[28X: Range group s3a has generators:[128X[104X
-    [4X[28X  [ (1,2), (2,3) ][128X[104X
-    [4X[28X: Boundary homomorphism maps source generators to:[128X[104X
-    [4X[28X  [ (), () ][128X[104X
-    [4X[28X: Action homomorphism maps range generators to automorphisms:[128X[104X
-    [4X[28X  (1,2) --> { source gens --> [ (6,8)(7,9), (6,7)(8,9) ] }[128X[104X
-    [4X[28X  (2,3) --> { source gens --> [ (6,7)(8,9), (6,9)(7,8) ] }[128X[104X
-    [4X[28X  These 2 automorphisms generate the group of automorphisms.[128X[104X
-    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xk8 := Group( (3,4), (5,6), (7,8) );; [127X[104X
+    [4X[25Xgap>[125X [27XSetName( k8, "k8" ); [127X[104X
+    [4X[25Xgap>[125X [27XX8 := XModByAutomorphismGroup( k8 );; [127X[104X
+    [4X[25Xgap>[125X [27XSetName( X8, "X8" );[127X[104X
+    [4X[25Xgap>[125X [27XPrint( "X8: ", Size( X8 ), " : ", StructureDescription( X8 ), "\n" );  [127X[104X
+    [4X[28XX8: [ 8, 168 ] : [ "C2 x C2 x C2", "PSL(3,2)" ][128X[104X
+    [4X[25Xgap>[125X [27XLX := LoopsXMod( X8, (1,2)(5,6) );;[127X[104X
+    [4X[25Xgap>[125X [27XSize( LX );  StructureDescription( LX ); [127X[104X
+    [4X[28X[ 8, 64 ][128X[104X
+    [4X[28X[ "C2 x C2 x C2", "((C2 x C2 x C2 x C2) : C2) : C2" ][128X[104X
+    [4X[25Xgap>[125X [27XSetInfoLevel( InfoXMod, 1 );[127X[104X
+    [4X[25Xgap>[125X [27XLX8 := AllLoopsXMod( X8 );;[127X[104X
+    [4X[28X#I  LoopsXMod with a = ()[128X[104X
+    [4X[28X#I  [ 8, 1344 ] : [ "C2 x C2 x C2", "(C2 x C2 x C2) : PSL(3,2)" ][128X[104X
+    [4X[28X#I  LoopsXMod with a = (4,5)(6,7)[128X[104X
+    [4X[28X#I  [ 8, 64 ] : [ "C2 x C2 x C2", "((C2 x C2 x C2) : (C2 x C2)) : C2" ][128X[104X
+    [4X[28X#I  LoopsXMod with a = (2,3)(4,6,5,7)[128X[104X
+    [4X[28X#I  [ 8, 32 ] : [ "C2 x C2 x C2", "(C2 x C2 x C2) : C4" ][128X[104X
+    [4X[28X#I  LoopsXMod with a = (2,4,6)(3,5,7)[128X[104X
+    [4X[28X#I  [ 8, 24 ] : [ "C2 x C2 x C2", "C2 x A4" ][128X[104X
+    [4X[28X#I  LoopsXMod with a = (1,2,4,3,6,7,5)[128X[104X
+    [4X[28X#I  [ 8, 56 ] : [ "C2 x C2 x C2", "(C2 x C2 x C2) : C7" ][128X[104X
+    [4X[28X#I  LoopsXMod with a = (1,2,4,5,7,3,6)[128X[104X
+    [4X[28X#I  [ 8, 56 ] : [ "C2 x C2 x C2", "(C2 x C2 x C2) : C7" ][128X[104X
+    [4X[25Xgap>[125X [27Xiso := IsomorphismGroups( Range( LX ), Range( LX8[2] ) );[127X[104X
+    [4X[28X[ (1,2)(3,4)(5,6)(7,8), (1,3)(2,4)(5,7)(6,8), (1,5)(2,6)(3,7)(4,8), [128X[104X
+    [4X[28X  (5,8)(6,7), (2,3)(6,7), (2,7)(3,6) ] -> [128X[104X
+    [4X[28X[ (1,5)(2,6)(3,7)(4,8), (1,6)(2,5)(3,8)(4,7), (1,4)(2,3)(5,8)(6,7), [128X[104X
+    [4X[28X  (1,2)(5,6), (1,2)(3,4), (1,3)(2,4) ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
