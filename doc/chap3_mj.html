@@ -124,17 +124,17 @@
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rho1 := IdentityMapping( Range( X1 ) );</span>
 IdentityMapping( PAut(c5) )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mor1 := XModMorphism( X1, X1, sigma1, rho1 );</span>
-[[c5-&gt;PAut(c5))] =&gt; [c5-&gt;PAut(c5))]] 
+[[c5-&gt;Aut(c5))] =&gt; [c5-&gt;Aut(c5))]] 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( mor1 );</span>
-Morphism of crossed modules :-
-: Source = [c5-&gt;PAut(c5))] with generating sets:
+Morphism of crossed modules :- 
+: Source = [c5-&gt;Aut(c5)] with generating sets:
   [ (5,6,7,8,9) ]
-  [ (1,2,3,4) ]
+  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ]
 : Range = Source
 : Source Homomorphism maps source generators to:
   [ (5,9,8,7,6) ]
 : Range Homomorphism maps range generators to:
-  [ (1,2,3,4) ]
+  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsAutomorphism2DimensionalDomain( mor1 );</span>
 true 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Order( mor1 );</span>

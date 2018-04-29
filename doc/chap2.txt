@@ -122,17 +122,18 @@
     [4X[25Xgap>[125X [27Xc5 := Group( (5,6,7,8,9) );;[127X[104X
     [4X[25Xgap>[125X [27XSetName( c5, "c5" );[127X[104X
     [4X[25Xgap>[125X [27XX1 := XModByAutomorphismGroup( c5 );[127X[104X
-    [4X[28X[c5 -> PAut(c5)] [128X[104X
+    [4X[28X[c5 -> Aut(c5)] [128X[104X
     [4X[25Xgap>[125X [27XDisplay( X1 );[127X[104X
-    [4X[28XCrossed module [c5 -> PAut(c5)] :-[128X[104X
+    [4X[28XCrossed module [c5->Aut(c5)] :- [128X[104X
     [4X[28X: Source group c5 has generators:[128X[104X
     [4X[28X  [ (5,6,7,8,9) ][128X[104X
-    [4X[28X: Range group PAut(c5) has generators:[128X[104X
-    [4X[28X  [ (1,2,3,4) ][128X[104X
+    [4X[28X: Range group Aut(c5) has generators:[128X[104X
+    [4X[28X  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ][128X[104X
     [4X[28X: Boundary homomorphism maps source generators to:[128X[104X
-    [4X[28X  [ () ][128X[104X
+    [4X[28X  [ IdentityMapping( c5 ) ][128X[104X
     [4X[28X: Action homomorphism maps range generators to automorphisms:[128X[104X
-    [4X[28X  (1,2,3,4) --> { source gens --> [ (5,7,9,6,8) ] }[128X[104X
+    [4X[28X  GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [128X[104X
+    [4X[28X[ (5,7,9,6,8) ] ) --> { source gens --> [ (5,7,9,6,8) ] }[128X[104X
     [4X[28X  This automorphism generates the group of automorphisms.[128X[104X
     [4X[25Xgap>[125X [27XSize( X1 );  IdGroup( X1 ); [127X[104X
     [4X[28X[ 5, 4 ][128X[104X
@@ -141,13 +142,15 @@
     [4X[28X<xset:[ (), (5,6,7,8,9), (5,7,9,6,8), (5,8,6,9,7), (5,9,8,7,6) ]>[128X[104X
     [4X[25Xgap>[125X [27XOrbits( ext );[127X[104X
     [4X[28X[ [ () ], [ (5,6,7,8,9), (5,7,9,6,8), (5,9,8,7,6), (5,8,6,9,7) ] ][128X[104X
-    [4X[25Xgap>[125X [27XImageElmXModAction( X1, (5,6,7,8,9), (1,2,3,4) );[127X[104X
-    [4X[28X(5,7,9,6,8)[128X[104X
+    [4X[25Xgap>[125X [27Xa := GeneratorsOfGroup( Range( X1 ) )[1]^2; [127X[104X
+    [4X[28X[ (5,6,7,8,9) ] -> [ (5,9,8,7,6) ][128X[104X
+    [4X[25Xgap>[125X [27XImageElmXModAction( X1, (5,7,9,6,8), a );[127X[104X
+    [4X[28X(5,8,6,9,7)[128X[104X
     [4X[25Xgap>[125X [27XRepresentationsOfObject( X1 );[127X[104X
     [4X[28X[ "IsComponentObjectRep", "IsAttributeStoringRep", "IsPreXModObj" ][128X[104X
     [4X[25Xgap>[125X [27XKnownAttributesOfObject( X1);[127X[104X
     [4X[28X[ "Name", "Size", "Range", "Source", "IdGroup", "Boundary", "XModAction", [128X[104X
-    [4X[28X  "ExternalSetXMod" ][128X[104X
+    [4X[28X  "ExternalSetXMod", "IsomorphismPerm2DimensionalGroup" ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   

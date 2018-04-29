@@ -183,17 +183,18 @@
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c5 := Group( (5,6,7,8,9) );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( c5, "c5" );</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X1 := XModByAutomorphismGroup( c5 );</span>
-[c5 -&gt; PAut(c5)] 
+[c5 -&gt; Aut(c5)] 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( X1 );</span>
-Crossed module [c5 -&gt; PAut(c5)] :-
+Crossed module [c5-&gt;Aut(c5)] :- 
 : Source group c5 has generators:
   [ (5,6,7,8,9) ]
-: Range group PAut(c5) has generators:
-  [ (1,2,3,4) ]
+: Range group Aut(c5) has generators:
+  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ]
 : Boundary homomorphism maps source generators to:
-  [ () ]
+  [ IdentityMapping( c5 ) ]
 : Action homomorphism maps range generators to automorphisms:
-  (1,2,3,4) --&gt; { source gens --&gt; [ (5,7,9,6,8) ] }
+  GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], 
+[ (5,7,9,6,8) ] ) --&gt; { source gens --&gt; [ (5,7,9,6,8) ] }
   This automorphism generates the group of automorphisms.
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( X1 );  IdGroup( X1 ); </span>
 [ 5, 4 ]
@@ -202,13 +203,15 @@ Crossed module [c5 -&gt; PAut(c5)] :-
 &lt;xset:[ (), (5,6,7,8,9), (5,7,9,6,8), (5,8,6,9,7), (5,9,8,7,6) ]&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Orbits( ext );</span>
 [ [ () ], [ (5,6,7,8,9), (5,7,9,6,8), (5,9,8,7,6), (5,8,6,9,7) ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ImageElmXModAction( X1, (5,6,7,8,9), (1,2,3,4) );</span>
-(5,7,9,6,8)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := GeneratorsOfGroup( Range( X1 ) )[1]^2; </span>
+[ (5,6,7,8,9) ] -&gt; [ (5,9,8,7,6) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ImageElmXModAction( X1, (5,7,9,6,8), a );</span>
+(5,8,6,9,7)
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentationsOfObject( X1 );</span>
 [ "IsComponentObjectRep", "IsAttributeStoringRep", "IsPreXModObj" ]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownAttributesOfObject( X1);</span>
 [ "Name", "Size", "Range", "Source", "IdGroup", "Boundary", "XModAction", 
-  "ExternalSetXMod" ]
+  "ExternalSetXMod", "IsomorphismPerm2DimensionalGroup" ]
 
 </pre></div>
 

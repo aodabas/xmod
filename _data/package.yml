@@ -1,6 +1,6 @@
 name: XMod
-version: 2.66
-date: 2018-04-16
+version: 2.67
+date: 2018-04-29
 description: |
     Crossed Modules and Cat1-Groups
 
@@ -12,7 +12,6 @@ authors:
     - name: Alper Odabas
       url: mailto:aodabas@ogu.edu.tr
     - name: Enver Onder Uslu
-      url: mailto:enveruslu@ogu.edu.tr
 
 maintainers:
     - name: Christopher D. Wensley
@@ -45,7 +44,7 @@ packageinfo: https://gap-packages.github.io/xmod/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/xmod/releases/download/v2.66/XMod-2.66.tar.gz
+      url: https://github.com/gap-packages/xmod/releases/download/v2.67/XMod-2.67.tar.gz
 
 abstract: |
     The <span class="pkgname">XMod</span> package provides a collection   of functions for computing with crossed modules and cat1-groups, their derivations and sections, morphisms of these structures, and higher-dimensional generalisations.

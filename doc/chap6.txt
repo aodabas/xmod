@@ -25,7 +25,7 @@
   crossed  module of [22XmathcalX[122X. The individual automorphisms can be constructed
   from       the      permutation      group      using      the      function
   [10XPermAutomorphismAsXModMorphism[110X.  The  example  below uses the crossed module
-  [10XX3=[c3->s3][110X constructed in section [14X5.2[114X.[133X
+  [10XX3=[c3->s3][110X constructed in section [14X5.1[114X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X

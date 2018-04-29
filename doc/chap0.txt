@@ -6,10 +6,10 @@
                        [1X Crossed Modules and Cat1-Groups [101X
   
   
-                                      2.66
+                                      2.67
   
   
-                                 16 April 2018
+                                 29 April 2018
   
   
                              Christopher D. Wensley
@@ -47,16 +47,6 @@
   Alper Odabas
       Email:    [7Xmailto:aodabas@ogu.edu.tr[107X
       Address:  [33X[0;14YDr. A. Odabas[133X
-                [33X[0;14YOsmangazi University[133X
-                [33X[0;14YArts and Sciences Faculty[133X
-                [33X[0;14YDepartment of Mathematics and Computer Science[133X
-                [33X[0;14YEskisehir[133X
-                [33X[0;14YTurkey[133X
-  
-  
-  Enver Onder Uslu
-      Email:    [7Xmailto:enveruslu@ogu.edu.tr[107X
-      Address:  [33X[0;14YDr. E. O. Uslu[133X
                 [33X[0;14YOsmangazi University[133X
                 [33X[0;14YArts and Sciences Faculty[133X
                 [33X[0;14YDepartment of Mathematics and Computer Science[133X

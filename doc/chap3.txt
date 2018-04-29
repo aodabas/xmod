@@ -78,17 +78,17 @@
     [4X[25Xgap>[125X [27Xrho1 := IdentityMapping( Range( X1 ) );[127X[104X
     [4X[28XIdentityMapping( PAut(c5) )[128X[104X
     [4X[25Xgap>[125X [27Xmor1 := XModMorphism( X1, X1, sigma1, rho1 );[127X[104X
-    [4X[28X[[c5->PAut(c5))] => [c5->PAut(c5))]] [128X[104X
+    [4X[28X[[c5->Aut(c5))] => [c5->Aut(c5))]] [128X[104X
     [4X[25Xgap>[125X [27XDisplay( mor1 );[127X[104X
-    [4X[28XMorphism of crossed modules :-[128X[104X
-    [4X[28X: Source = [c5->PAut(c5))] with generating sets:[128X[104X
+    [4X[28XMorphism of crossed modules :- [128X[104X
+    [4X[28X: Source = [c5->Aut(c5)] with generating sets:[128X[104X
     [4X[28X  [ (5,6,7,8,9) ][128X[104X
-    [4X[28X  [ (1,2,3,4) ][128X[104X
+    [4X[28X  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ][128X[104X
     [4X[28X: Range = Source[128X[104X
     [4X[28X: Source Homomorphism maps source generators to:[128X[104X
     [4X[28X  [ (5,9,8,7,6) ][128X[104X
     [4X[28X: Range Homomorphism maps range generators to:[128X[104X
-    [4X[28X  [ (1,2,3,4) ][128X[104X
+    [4X[28X  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ][128X[104X
     [4X[25Xgap>[125X [27XIsAutomorphism2DimensionalDomain( mor1 );[127X[104X
     [4X[28Xtrue [128X[104X
     [4X[25Xgap>[125X [27XOrder( mor1 );[127X[104X

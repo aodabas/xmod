@@ -73,16 +73,22 @@
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d24 := DihedralGroup(24);;  SetName( d24, "d24" );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X24 := XModByAutomorphismGroup( d24 );;  Size(X24);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d24 := DihedralGroup( IsPermGroup, 24 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( d24, "d24" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Y24 := XModByAutomorphismGroup( d24 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( Y24 );</span>
 [ 24, 48 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X24 := Image( IsomorphismPerm2DimensionalGroup( Y24 ) );</span>
+[d24-&gt;Group( [ ( 2, 4), ( 1, 2, 3, 4)( 5, 8)( 6, 9)( 7,10), ( 6,10)( 7, 9), 
+  ( 5, 9, 7)( 6,10, 8) ] )]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nsx := NormalSubXMods( X24 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( nsx );</span>
+40
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ids := List( nsx, n -&gt; IdGroup(n) );; </span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pos1 := Position( ids, [ [4,1], [8,3] ] );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Xn1 := nsx[pos1]; </span>
 [Group( [ f2*f4^2, f3*f4 ] )-&gt;Group( [ f3, f4, f5 ] )]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nat1 := NaturalMorphismByNormalSubPreXMod( X24, Xn1 ); </span>
-[[d24-&gt;PAut(d24)] =&gt; [..]]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">nat1 := NaturalMorphismByNormalSubPreXMod( X24, Xn1 );; </span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Qn1 := FactorPreXMod( X24, Xn1 );; </span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ Size(Xn1), Size(Qn1) ];</span>
 [ [ 4, 8 ], [ 6, 6 ] ]
@@ -100,13 +106,10 @@
 <div class="example"><pre>
 
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pos2 := Position( ids, [ [24,6], [12,4] ] );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Xn2 := nsx[pos2]; </span>
-[d24-&gt;Group( [ f1*f3, f2, f5 ] )]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Xn2 := nsx[pos2];; </span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pos3 := Position( ids, [ [12,2], [24,5] ] );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Xn3 := nsx[pos3]; </span>
-[Group( [ f2, f3, f4 ] )-&gt;Group( [ f1, f2, f4, f5 ] )]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Xn23 := IntersectionSubXMods( X24, Xn2, Xn3 );</span>
-[Group( [ f2, f3, f4 ] )-&gt;Group( [ f2, f5, f2^2, f2*f5, f2^2*f5 ] )]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Xn3 := nsx[pos3];; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Xn23 := IntersectionSubXMods( X24, Xn2, Xn3 );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">[ Size(Xn2), Size(Xn3), Size(Xn23) ];</span>
 [ [ 24, 12 ], [ 12, 24 ], [ 12, 6 ] ]
 
@@ -512,9 +515,11 @@ false
 true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ism89 := Isoclinism( X8, X9 );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( ism89 );</span>
-[ [[Group( [ f1 ] )-&gt;Group( [ f2 ] )] =&gt; [Group( [ f1 ] )-&gt;Group( [ f2 ] )]], 
-  [[Group( [ f3 ] )-&gt;Group( &lt;identity&gt; of ... )] =&gt; [Group( 
-    [ f3 ] )-&gt;Group( &lt;identity&gt; of ... )]] ]
+[ [[Group( [ f1, f2, &lt;identity&gt; of ... ] ) -&gt; Group( [ f2, f2 ] )] =&gt; [Group( 
+    [ f1, f2, &lt;identity&gt; of ..., &lt;identity&gt; of ... ] ) -&gt; Group( 
+    [ f2, f2 ] )]], 
+  [[Group( [ f3 ] ) -&gt; Group( &lt;identity&gt; of ... )] =&gt; [Group( 
+    [ f3 ] ) -&gt; Group( &lt;identity&gt; of ... )]] ]
 
 </pre></div>
 

@@ -59,7 +59,8 @@
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27Xk8 := Group( (3,4), (5,6), (7,8) );; [127X[104X
     [4X[25Xgap>[125X [27XSetName( k8, "k8" ); [127X[104X
-    [4X[25Xgap>[125X [27XX8 := XModByAutomorphismGroup( k8 );; [127X[104X
+    [4X[25Xgap>[125X [27XY8 := XModByAutomorphismGroup( k8 );; [127X[104X
+    [4X[25Xgap>[125X [27XX8 := Image( IsomorphismPerm2DimensionalGroup( Y8 ) );;[127X[104X
     [4X[25Xgap>[125X [27XSetName( X8, "X8" );[127X[104X
     [4X[25Xgap>[125X [27XPrint( "X8: ", Size( X8 ), " : ", StructureDescription( X8 ), "\n" );  [127X[104X
     [4X[28XX8: [ 8, 168 ] : [ "C2 x C2 x C2", "PSL(3,2)" ][128X[104X
@@ -69,18 +70,12 @@
     [4X[28X[ "C2 x C2 x C2", "((C2 x C2 x C2 x C2) : C2) : C2" ][128X[104X
     [4X[25Xgap>[125X [27XSetInfoLevel( InfoXMod, 1 );[127X[104X
     [4X[25Xgap>[125X [27XLX8 := AllLoopsXMod( X8 );;[127X[104X
-    [4X[28X#I  LoopsXMod with a = ()[128X[104X
-    [4X[28X#I  [ 8, 1344 ] : [ "C2 x C2 x C2", "(C2 x C2 x C2) : PSL(3,2)" ][128X[104X
-    [4X[28X#I  LoopsXMod with a = (4,5)(6,7)[128X[104X
-    [4X[28X#I  [ 8, 64 ] : [ "C2 x C2 x C2", "((C2 x C2 x C2) : (C2 x C2)) : C2" ][128X[104X
-    [4X[28X#I  LoopsXMod with a = (2,3)(4,6,5,7)[128X[104X
-    [4X[28X#I  [ 8, 32 ] : [ "C2 x C2 x C2", "(C2 x C2 x C2) : C4" ][128X[104X
-    [4X[28X#I  LoopsXMod with a = (2,4,6)(3,5,7)[128X[104X
-    [4X[28X#I  [ 8, 24 ] : [ "C2 x C2 x C2", "C2 x A4" ][128X[104X
-    [4X[28X#I  LoopsXMod with a = (1,2,4,3,6,7,5)[128X[104X
-    [4X[28X#I  [ 8, 56 ] : [ "C2 x C2 x C2", "(C2 x C2 x C2) : C7" ][128X[104X
-    [4X[28X#I  LoopsXMod with a = (1,2,4,5,7,3,6)[128X[104X
-    [4X[28X#I  [ 8, 56 ] : [ "C2 x C2 x C2", "(C2 x C2 x C2) : C7" ][128X[104X
+    [4X[28X#I  LoopsXMod with a = (), [ 8, 1344 ] [128X[104X
+    [4X[28X#I  LoopsXMod with a = (4,5)(6,7), [ 8, 64 ][128X[104X
+    [4X[28X#I  LoopsXMod with a = (2,3)(4,6,5,7), [ 8, 32 ][128X[104X
+    [4X[28X#I  LoopsXMod with a = (2,4,6)(3,5,7), [ 8, 24 ] [128X[104X
+    [4X[28X#I  LoopsXMod with a = (1,2,4,3,6,7,5), [ 8, 56 ] [128X[104X
+    [4X[28X#I  LoopsXMod with a = (1,2,4,5,7,3,6), [ 8, 56 ][128X[104X
     [4X[25Xgap>[125X [27Xiso := IsomorphismGroups( Range( LX ), Range( LX8[2] ) );[127X[104X
     [4X[28X[ (1,2)(3,4)(5,6)(7,8), (1,3)(2,4)(5,7)(6,8), (1,5)(2,6)(3,7)(4,8), [128X[104X
     [4X[28X  (5,8)(6,7), (2,3)(6,7), (2,7)(3,6) ] -> [128X[104X
