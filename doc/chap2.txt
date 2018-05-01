@@ -108,7 +108,7 @@
   concatenating  the  names of the source and range (if these exist). [10XSize[110X and
   [10XIdGroup[110X return two-element lists.[133X
   
-  [33X[0;0YThe [10XExternalSetXMod[110X for a crossed module is the source group considered as a
+  [33X[0;0YThe [2XExternalSetXMod[102X for a crossed module is the source group considered as a
   G-set of the range group using the crossed module action.[133X
   
   [33X[0;0YThe [10XDisplay[110X function is used to print details of 2d-groups.[133X
@@ -581,7 +581,7 @@
   
   [1X2.6-1 Cat1Select[101X
   
-  [33X[1;0Y[29X[2XCat1Select[102X( [3Xsize[103X, [3Xgpnum[103X, [3Xnum[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XCat1Select[102X( [3Xsize[103X, [3Xgpnum[103X, [3Xnum[103X ) [32X operation[133X
   
   [33X[0;0YThe  function  [10XCat1Select[110X  may  be  used  in  three ways. [10XCat1Select( size )[110X
   returns  the  names  of  the  groups with this size, while [10XCat1Select( size,

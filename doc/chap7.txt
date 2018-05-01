@@ -13,6 +13,7 @@
   [1X7.1-1 CoproductXMod[101X
   
   [33X[1;0Y[29X[2XCoproductXMod[102X( [3XX1[103X, [3XX2[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XCoproductInfo[102X( [3XX0[103X ) [32X attribute[133X
   
   [33X[0;0YThis  function  calculates  the  coproduct crossed module of crossed modules
   [22Xmathcal X_1 = (∂_1 : S_1 -> R)[122X and [22Xmathcal X_2 = (∂_2 : S_2 -> R)[122X which have
@@ -33,20 +34,24 @@
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27Xq8 := Group( (1,2,3,4)(5,8,7,6), (1,5,3,7)(2,6,4,8) );;[127X[104X
     [4X[25Xgap>[125X [27XX8 := XModByAutomorphismGroup( q8 );;[127X[104X
-    [4X[25Xgap>[125X [27Xs4 := Range( X8 );; [127X[104X
-    [4X[25Xgap>[125X [27XSetName( q8, "q8" );  SetName( s4, "s4" ); [127X[104X
-    [4X[25Xgap>[125X [27Xk4 := NormalSubgroups( s4 )[3];;  SetName( k4, "k4" );[127X[104X
-    [4X[25Xgap>[125X [27XZ8 := XModByNormalSubgroup( s4, k4 );;[127X[104X
+    [4X[25Xgap>[125X [27Xs4b := Range( X8 );; [127X[104X
+    [4X[25Xgap>[125X [27XSetName( q8, "q8" );  SetName( s4b, "s4b" ); [127X[104X
+    [4X[25Xgap>[125X [27Xa := q8.1;;  b := q8.2;; [127X[104X
+    [4X[25Xgap>[125X [27Xalpha := GroupHomomorphismByImages( q8, q8, [a,b], [a^-1,b] );;[127X[104X
+    [4X[25Xgap>[125X [27Xbeta := GroupHomomorphismByImages( q8, q8, [a,b], [a,b^-1] );;[127X[104X
+    [4X[25Xgap>[125X [27Xk4b := Subgroup( s4b, [ alpha, beta ] );;  SetName( k4b, "k4b" );[127X[104X
+    [4X[25Xgap>[125X [27XZ8 := XModByNormalSubgroup( s4b, k4b );;[127X[104X
     [4X[25Xgap>[125X [27XSetName( X8, "X8" );  SetName( Z8, "Z8" );  [127X[104X
     [4X[25Xgap>[125X [27XSetInfoLevel( InfoXMod, 1 ); [127X[104X
     [4X[25Xgap>[125X [27XXZ8 := CoproductXMod( X8, Z8 );[127X[104X
-    [4X[28X#I  prexmod is [ "C2 x C2 x Q8", "S4" ][128X[104X
-    [4X[28X#I  peiffer subgroup is C2[128X[104X
-    [4X[28X#I  the coproduct is [ "C2 x C2 x C2 x C2", "S4" ][128X[104X
-    [4X[28X[Group( [ f1, f2, f3, f4 ] )->s4][128X[104X
+    [4X[28X#I  prexmod is [ [ 32, 47 ], [ 24, 12 ] ][128X[104X
+    [4X[28X#I  peiffer subgroup is C2, [ 2, 1 ][128X[104X
+    [4X[28X#I  the coproduct is [ "C2 x C2 x C2 x C2", "S4" ], [ [ 16, 14 ], [ 24, 12 ] ][128X[104X
+    [4X[28X[Group( [ f1, f2, f3, f4 ] )->s4b][128X[104X
     [4X[25Xgap>[125X [27XSetName( XZ8, "XZ8" ); [127X[104X
     [4X[25Xgap>[125X [27Xinfo := CoproductInfo( XZ8 );[127X[104X
     [4X[28Xrec( embeddings := [ [X8 => XZ8], [Z8 => XZ8] ], xmods := [ X8, Z8 ] )[128X[104X
+    [4X[25Xgap>[125X [27XSetInfoLevel( InfoXMod, 0 ); [127X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -56,8 +61,9 @@
   [1X7.2-1 InducedXMod[101X
   
   [33X[1;0Y[29X[2XInducedXMod[102X( [3Xargs[103X ) [32X function[133X
-  [33X[1;0Y[29X[2XInducedCat1[102X( [3Xargs[103X ) [32X function[133X
   [33X[1;0Y[29X[2XIsInducedXMod[102X( [3Xxmod[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XSurjectiveInducedXMod[102X( [3Xxmod[103X, [3Xhom[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XInclusionInducedXModByCopower[102X( [3Xxmod[103X, [3Xhom[103X, [3Xlist[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XMorphismOfInducedXMod[102X( [3Xxmod[103X ) [32X attribute[133X
   
   [33X[0;0YA  morphism  of  crossed modules [22X(σ, ρ) : mathcal X_1 -> mathcal X_2[122X factors
@@ -135,11 +141,17 @@
     [4X[28X[[c4->d8] => [d8->d16]][128X[104X
     [4X[25Xgap>[125X [27Xincd8 := RangeHom( inc8 );;[127X[104X
     [4X[25Xgap>[125X [27XindY8 := InducedXMod( Y8, incd8 );[127X[104X
-    [4X[28X#I induced group has Size: 16[128X[104X
-    [4X[28X#I factor 2 is abelian  with invariants: [ 4, 4 ][128X[104X
     [4X[28Xi*([c4->d8])[128X[104X
+    [4X[25Xgap>[125X [27XStructureDescription( indY8 );[127X[104X
+    [4X[28X[ "C4 x C4", "D16" ][128X[104X
     [4X[25Xgap>[125X [27XmorY8 := MorphismOfInducedXMod( indY8 );[127X[104X
     [4X[28X[[c4->d8] => i*([c4->d8])][128X[104X
+    [4X[25Xgap>[125X [27Xs3c := Subgroup( s4, [ (2,3), (3,4) ] );;  [127X[104X
+    [4X[25Xgap>[125X [27XSetName( s3c, "s3c" );[127X[104X
+    [4X[25Xgap>[125X [27XindXs3c := InducedXMod( s4, s3c, s3c );[127X[104X
+    [4X[28Xi*([s3c->s3c])[128X[104X
+    [4X[25Xgap>[125X [27XStructureDescription( indXs3c );[127X[104X
+    [4X[28X[ "GL(2,3)", "S4" ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -166,4 +178,27 @@
   [33X[0;0YThis  function calculates all the induced crossed modules [10XInducedXMod( Q, P,
   M  )[110X,  where  [10XP[110X runs over all conjugacy classes of subgroups of [10XQ[110X and [10XM[110X runs
   over all non-trivial subgroups of [10XP[110X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xall := AllInducedXMods( q8 );;[127X[104X
+    [4X[25Xgap>[125X [27Xids := List( all, x -> IdGroup(x) );;[127X[104X
+    [4X[25Xgap>[125X [27XSort( ids );[127X[104X
+    [4X[25Xgap>[125X [27Xids;[127X[104X
+    [4X[28X[ [ [ 1, 1 ], [ 8, 4 ] ], [ [ 1, 1 ], [ 8, 4 ] ], [ [ 1, 1 ], [ 8, 4 ] ], [128X[104X
+    [4X[28X  [ [ 1, 1 ], [ 8, 4 ] ], [ [ 4, 2 ], [ 8, 4 ] ], [ [ 4, 2 ], [ 8, 4 ] ], [128X[104X
+    [4X[28X  [ [ 4, 2 ], [ 8, 4 ] ], [ [ 16, 2 ], [ 8, 4 ] ], [ [ 16, 2 ], [ 8, 4 ] ], [128X[104X
+    [4X[28X  [ [ 16, 2 ], [ 8, 4 ] ], [ [ 16, 14 ], [ 8, 4 ] ] ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  
+  [1X7.3 [33X[0;0YInduced cat[22X^1[122X[101X[1X-groups[133X[101X
+  
+  [1X7.3-1 InducedCat1Group[101X
+  
+  [33X[1;0Y[29X[2XInducedCat1Group[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XInducedCat1GroupByFreeProduct[102X( [3Xgrp[103X, [3Xhom[103X ) [32X property[133X
+  
+  [33X[0;0YThis area requires development.[133X
   

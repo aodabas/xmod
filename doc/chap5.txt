@@ -117,19 +117,19 @@
   
   [33X[0;0YSections  [13Xare[113X  group homomorphisms, so do not need a special representation.
   Operations  [10XSectionByDerivation[110X  and [10XDerivationBySection[110X convert derivations
-  to  sections,  and  vice-versa,  calling [10XCat1GroupOfXMod[110X and [10XXModOfCat1Group[110X
-  automatically.[133X
+  to   sections,   and   vice-versa,   calling   [2XCat1GroupOfXMod[102X  ([14X2.5-2[114X)  and
+  [2XXModOfCat1Group[102X ([14X2.5-2[114X) automatically.[133X
   
   [33X[0;0YTwo strategies for calculating derivations and sections are implemented, see
-  [AW00].  The default method for [10XAllDerivations[110X is to search for all possible
-  sets  of images using a backtracking procedure, and when all the derivations
-  are  found  it  is  not  known  which are regular. In early versions of this
-  package,  the  default  method  for  [10XAllSections(  <C>  )[110X was to compute all
-  endomorphisms on the range group [10XR[110X of [10XC[110X as possibilities for the composite [22Xh
-  ξ[122X.  A backtrack method then found possible images for such a section. In the
-  current  version  the  derivations  of  the  associated  crossed  module are
-  calculated,    and    these    are   all   converted   to   sections   using
-  [10XSectionByDerivation[110X.[133X
+  [AW00].  The  default method for [2XAllDerivations[102X ([14X5.2-1[114X) is to search for all
+  possible  sets  of  images  using a backtracking procedure, and when all the
+  derivations  are  found it is not known which are regular. In early versions
+  of  this  package,  the default method for [10XAllSections( <C> )[110X was to compute
+  all  endomorphisms  on  the  range  group  [10XR[110X  of  [10XC[110X as possibilities for the
+  composite  [22Xh  ξ[122X.  A  backtrack  method then found possible images for such a
+  section.  In  the  current version the derivations of the associated crossed
+  module  are  calculated,  and  these  are  all  converted  to sections using
+  [2XSectionByDerivation[102X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -176,7 +176,7 @@
   [33X[0;0YThe [10XWhiteheadProduct[110X may be applied to two derivations to form [22Xχ_1 ⋆ χ_2[122X, or
   to  two  sections  to  form  [22Xξ_1  ⋆  ξ_2[122X.  The  [10XWhiteheadOrder[110X  of a regular
   derivation  [22Xχ[122X  is  the smallest power of [22Xχ[122X, using this product, equal to the
-  [10XIdentityDerivation[110X.[133X
+  [2XIdentityDerivation[102X ([14X5.1-4[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X

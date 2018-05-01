@@ -93,9 +93,9 @@
 
 <h5>12.1-5 <span class="Heading">Versions 2.002 -- 2.006</span></h5>
 
-<p>Version 2.004 of April 14th 2004 added the <code class="code">Cat1Select</code> functionality of version 1 to the <code class="code">Cat1</code> function.</p>
+<p>Version 2.004 of April 14th 2004 added the <code class="func">Cat1Select</code> (<a href="chap2.html#X7B8E67D880E380C8"><span class="RefLink">2.6-1</span></a>) functionality of version 1 to the <code class="func">Cat1Group</code> (<a href="chap2.html#X7CF4C37F87D27EBA"><span class="RefLink">2.4-1</span></a>) function.</p>
 
-<p>A significant addition in Version 2.005 was the conversion of the actor crossed module functions from the <code class="file">3.4.4</code> version. This included <code class="code">AutomorphismPermGroup</code> for a crossed module, <code class="code">WhiteheadXMod</code>, <code class="code">NorrieXMod</code>, <code class="code">LueXMod</code>, <code class="code">ActorXMod</code>, <code class="code">Centre</code> of a crossed module, <code class="code">InnerMorphism</code> and <code class="code">InnerActorXMod</code>.</p>
+<p>A significant addition in Version 2.005 was the conversion of the actor crossed module functions from the <code class="file">3.4.4</code> version. This included <code class="func">AutomorphismPermGroup</code> (<a href="chap6.html#X80F121357F06E72D"><span class="RefLink">6.1-1</span></a>) for a crossed module; <code class="func">WhiteheadXMod</code> (<a href="chap6.html#X790EBC7C7D320C03"><span class="RefLink">6.1-2</span></a>); <code class="func">NorrieXMod</code> (<a href="chap6.html#X790EBC7C7D320C03"><span class="RefLink">6.1-2</span></a>); <code class="func">LueXMod</code> (<a href="chap6.html#X790EBC7C7D320C03"><span class="RefLink">6.1-2</span></a>); <code class="func">ActorXMod</code> (<a href="chap6.html#X790EBC7C7D320C03"><span class="RefLink">6.1-2</span></a>); <code class="func">CentreXMod</code> (<a href="chap4.html#X7B57446086BA1BF0"><span class="RefLink">4.1-7</span></a>) of a crossed module; <code class="func">InnerMorphism</code> (<a href="chap6.html#X85CF21F57F0F1329"><span class="RefLink">6.1-3</span></a>); and <code class="func">InnerActorXMod</code> (<a href="chap6.html#X85CF21F57F0F1329"><span class="RefLink">6.1-3</span></a>).</p>
 
 <p><a id="X7F6E650E85384C25" name="X7F6E650E85384C25"></a></p>
 
@@ -111,10 +111,10 @@
 <li><p>Converted the documentation to the format of the <strong class="pkg">GAPDoc</strong> package.</p>
 
 </li>
-<li><p>Improved <code class="code">AutomorphismPermGroup</code> for crossed modules, and introduced a special method for conjugation crossed modules.</p>
+<li><p>Improved <code class="func">AutomorphismPermGroup</code> (<a href="chap6.html#X80F121357F06E72D"><span class="RefLink">6.1-1</span></a>) for crossed modules, and introduced a special method for conjugation crossed modules.</p>
 
 </li>
-<li><p>Substantial revisons made to <code class="code">XModByCentralExtension</code>, <code class="code">NorrieXMod</code>, <code class="code">LueXMod</code>, <code class="code">ActorXMod</code>, and <code class="code">InclusionInducedXModByCopower</code>.</p>
+<li><p>Substantial revisons made to <code class="func">XModByCentralExtension</code> (<a href="chap2.html#X7C8175AE7F76B586"><span class="RefLink">2.1-1</span></a>); <code class="func">NorrieXMod</code> (<a href="chap6.html#X790EBC7C7D320C03"><span class="RefLink">6.1-2</span></a>); <code class="func">LueXMod</code> (<a href="chap6.html#X790EBC7C7D320C03"><span class="RefLink">6.1-2</span></a>); <code class="func">ActorXMod</code> (<a href="chap6.html#X790EBC7C7D320C03"><span class="RefLink">6.1-2</span></a>); and <code class="func">InclusionInducedXModByCopower</code> (<a href="chap7.html#X874CB2A278AADE3A"><span class="RefLink">7.2-1</span></a>).</p>
 
 </li>
 <li><p>Version 2.010, of October 2007, was timed to coincide with the release of <strong class="pkg">GAP</strong> 4.4.10, and included a change of filenames; and correct file protection codes.</p>
@@ -143,9 +143,9 @@
 
 <h5>12.2-1 <span class="Heading">AllCat1s</span></h5>
 
-<p>Version 2.21 contained major changes to the <code class="code">Cat1Select</code> operation: the list <code class="code">CAT1_LIST</code> of cat1-structures in the data file <code class="file">cat1data.g</code> was changed from permutation groups to pc-groups, with the generators of subgroups; images of the tail map; and images of the head map being given as <code class="code">ExtRepOfObj</code> of words in the generators.</p>
+<p>Version 2.21 contained major changes to the <code class="func">Cat1Select</code> (<a href="chap2.html#X7B8E67D880E380C8"><span class="RefLink">2.6-1</span></a>) operation: the list <code class="code">CAT1_LIST</code> of cat1-structures in the data file <code class="file">cat1data.g</code> was changed from permutation groups to pc-groups, with the generators of subgroups; images of the tail map; and images of the head map being given as <code class="code">ExtRepOfObj</code> of words in the generators.</p>
 
-<p>The <code class="code">AllCat1s</code> function was reintroduced from the <strong class="pkg">GAP</strong>3 version, and renamed as the operation <code class="code">AllCat1sBasic</code>.</p>
+<p>The <code class="code">AllCat1s</code> function was reintroduced from the <strong class="pkg">GAP</strong>3 version, and renamed as the operation <code class="func">AllCat1DataGroupsBasic</code> (<a href="chap2.html#X8768CDA180561393"><span class="RefLink">2.6-2</span></a>).</p>
 
 <p>In version 2.25 the data in <code class="file">cat1data.g</code> was extended from groups of size up to <span class="SimpleMath">48</span> to groups of size up to <span class="SimpleMath">70</span>. In particular, the <span class="SimpleMath">267</span> groups of size 64 give rise to a total of <span class="SimpleMath">1275</span> cat1-groups. The authors are indebted to Van Luyen Le in Galway for pointing out a number of errors in the version of this list distributed with version 2.24 of this package.</p>
 

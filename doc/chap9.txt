@@ -25,7 +25,7 @@
   permits.[133X
   
   [33X[0;0YIn the example the crossed module [10XDX4[110X has discrete source, and is a groupoid
-  equivalent of [10XXModByNormalSubgroup[110X.[133X
+  equivalent of [2XXModByNormalSubgroup[102X ([14X2.1-1[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -91,10 +91,10 @@
   [33X[1;0Y[29X[2XXModAction[102X( [3Xpxmod[103X ) [32X attribute[133X
   
   [33X[0;0YThe  attributes  of  a  precrossed  module with objects include the standard
-  [10XSource[110X;  [10XRange[110X;  [10XBoundary[110X;  and  [10XXModAction[110X  as  with  precrossed modules of
-  groups.  There is also [10XObjectList[110X, as in the [5Xgroupoids[105X package. Additionally
-  there  is  [10XRoot2dGroup[110X which is the underlying precrossed module used in the
-  construction.[133X
+  [10XSource[110X;  [10XRange[110X;  [2XBoundary[102X ([14X2.1-2[114X); and [2XXModAction[102X ([14X2.1-2[114X) as with precrossed
+  modules  of  groups.  There is also [10XObjectList[110X, as in the [5Xgroupoids[105X package.
+  Additionally  there is [10XRoot2dGroup[110X which is the underlying precrossed module
+  used in the construction.[133X
   
   [33X[0;0YNote that [10XXModAction[110X is now a groupoid homomorphism from the source groupoid
   to a one-object groupoid (with object [10X0[110X) where the group is the automorphism

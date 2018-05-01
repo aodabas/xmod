@@ -45,7 +45,7 @@
     [4X[28X[Group( [ f2*f4^2, f3*f4 ] )->Group( [ f3, f4, f5 ] )][128X[104X
     [4X[25Xgap>[125X [27Xnat1 := NaturalMorphismByNormalSubPreXMod( X24, Xn1 );; [127X[104X
     [4X[25Xgap>[125X [27XQn1 := FactorPreXMod( X24, Xn1 );; [127X[104X
-    [4X[25Xgap>[125X [27X[ Size(Xn1), Size(Qn1) ];[127X[104X
+    [4X[25Xgap>[125X [27X[ Size( Xn1 ), Size( Qn1 ) ];[127X[104X
     [4X[28X[ [ 4, 8 ], [ 6, 6 ] ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
@@ -62,11 +62,15 @@
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27Xpos2 := Position( ids, [ [24,6], [12,4] ] );;[127X[104X
     [4X[25Xgap>[125X [27XXn2 := nsx[pos2];; [127X[104X
+    [4X[25Xgap>[125X [27XIdGroup( Xn2 );         [127X[104X
+    [4X[28X[ [ 24, 6 ], [ 12, 4 ] ][128X[104X
     [4X[25Xgap>[125X [27Xpos3 := Position( ids, [ [12,2], [24,5] ] );;[127X[104X
     [4X[25Xgap>[125X [27XXn3 := nsx[pos3];; [127X[104X
+    [4X[25Xgap>[125X [27XIdGroup( Xn3 );[127X[104X
+    [4X[28X[ [ 12, 2 ], [ 24, 5 ] ][128X[104X
     [4X[25Xgap>[125X [27XXn23 := IntersectionSubXMods( X24, Xn2, Xn3 );;[127X[104X
-    [4X[25Xgap>[125X [27X[ Size(Xn2), Size(Xn3), Size(Xn23) ];[127X[104X
-    [4X[28X[ [ 24, 12 ], [ 12, 24 ], [ 12, 6 ] ][128X[104X
+    [4X[25Xgap>[125X [27XIdGroup( Xn23 );[127X[104X
+    [4X[28X[ [ 12, 2 ], [ 6, 2 ] ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -87,7 +91,7 @@
   [33X[0;0YIn  a similar way, when a group [22XR[122X acts on a group [22XS[122X, the [13Xdisplacement[113X of [22Xs ∈
   S[122X by [22Xr ∈ R[122X is defined to be [22X⟨ r,s ⟩ := (s^-1)^rs ∈ S[122X. When [22XmathcalX = (∂ : S
   ->  R)[122X  is  a pre-crossed module, the first crossed module axiom requires [22X∂⟨
-  r,s  ⟩ = [r,∂ s][122X. For a given action [22Xα[122X the [10XDisplacement[110X function may be used
+  r,s  ⟩ = [r,∂ s][122X. For a given action [22Xα[122X the [2XDisplacement[102X function may be used
   to  calculate [22X⟨ r,s ⟩[122X. Displacements satisfy the following identities, where
   [22Xs,t ∈ S,~ p,q,r ∈ R[122X:[133X
   
@@ -99,7 +103,7 @@
   
   [124X
   
-  [33X[0;0YThe  [10XDisplacementSubgroup[110X  of  [22XmathcalX[122X  is the subgroup [22XDisp(mathcalX)[122X of [22XS[122X
+  [33X[0;0YThe  [2XDisplacementSubgroup[102X  of  [22XmathcalX[122X  is the subgroup [22XDisp(mathcalX)[122X of [22XS[122X
   generated  by  these  displacements.  The  identities  imply  [22X⟨  r,s ⟩^t = ⟨
   r,st^r^-1} ⟩ ⟨ r^-1,t ⟩[122X, so [22XDisp(mathcalX)[122X is normal in [22XS[122X.[133X
   
@@ -107,16 +111,23 @@
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27Xpos4 := Position( ids, [ [6,2], [24,14] ] );;[127X[104X
     [4X[25Xgap>[125X [27XXn4 := nsx[pos4];; [127X[104X
+    [4X[25Xgap>[125X [27Xbn4 := Boundary( Xn4 );;[127X[104X
     [4X[25Xgap>[125X [27XSn4 := Source(Xn4);; [127X[104X
     [4X[25Xgap>[125X [27XRn4 := Range(Xn4);; [127X[104X
-    [4X[25Xgap>[125X [27Xr := Rn4.1;;  s := Sn4.1;; [127X[104X
-    [4X[25Xgap>[125X [27Xd := Displacement( XModAction(Xn4), r, s );[127X[104X
-    [4X[28Xf4[128X[104X
-    [4X[25Xgap>[125X [27Xbn4 := Boundary( Xn4 );;[127X[104X
+    [4X[25Xgap>[125X [27XgenRn4 := GeneratorsOfGroup( Rn4 );;[127X[104X
+    [4X[25Xgap>[125X [27XL := List( genRn4, g -> ( Order(g) = 2 ) and [127X[104X
+    [4X[25X>[125X [27X                not ( IsNormal( Rn4, Subgroup( Rn4, [g] ) ) ) );;[127X[104X
+    [4X[25Xgap>[125X [27Xpos := Position( L, true );;[127X[104X
+    [4X[25Xgap>[125X [27Xs := Sn4.1;  r := genRn4[pos]; [127X[104X
+    [4X[28X(1,3,5,7,9,11)(2,4,6,8,10,12)[128X[104X
+    [4X[28X(6,10)(7,9)[128X[104X
+    [4X[25Xgap>[125X [27Xact := XModAction( Xn4 );; [127X[104X
+    [4X[25Xgap>[125X [27Xd := Displacement( act, r, s );[127X[104X
+    [4X[28X(1,5,9)(2,6,10)(3,7,11)(4,8,12)[128X[104X
     [4X[25Xgap>[125X [27XImage( bn4, d ) = Comm( r, Image( bn4, s ) );  [127X[104X
     [4X[28Xtrue[128X[104X
     [4X[25Xgap>[125X [27XDisplacementSubgroup( Xn4 );[127X[104X
-    [4X[28XGroup([ f4 ])[128X[104X
+    [4X[28XGroup([ (1,5,9)(2,6,10)(3,7,11)(4,8,12) ])[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -134,12 +145,12 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XCrossActionSubgroup( X24, Xn2, Xn3 );[127X[104X
-    [4X[28XGroup([ f2 ])[128X[104X
-    [4X[25Xgap>[125X [27XCn23 := CommutatorSubXMod( X24, Xn2, Xn3 );[127X[104X
-    [4X[28X[Group( [ f2 ] )->Group( [ f2, f5 ] )][128X[104X
-    [4X[25Xgap>[125X [27XSize(Cn23);[127X[104X
-    [4X[28X[ 12, 6 ][128X[104X
+    [4X[25Xgap>[125X [27XCAn23 := CrossActionSubgroup( X24, Xn2, Xn3 );;[127X[104X
+    [4X[25Xgap>[125X [27XIdGroup( CAn23 );[127X[104X
+    [4X[28X[ 12, 2 ][128X[104X
+    [4X[25Xgap>[125X [27XCn23 := CommutatorSubXMod( X24, Xn2, Xn3 );;[127X[104X
+    [4X[25Xgap>[125X [27XIdGroup( Cn23 );[127X[104X
+    [4X[28X[ [ 12, 2 ], [ 6, 2 ] ][128X[104X
     [4X[25Xgap>[125X [27XXn23 = Cn23;[127X[104X
     [4X[28Xtrue[128X[104X
     [4X[28X[128X[104X
@@ -155,8 +166,9 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XDXn4 := DerivedSubXMod( Xn4 );  [127X[104X
-    [4X[28X[Group( [ f4 ] )->Group( [ f2 ] )][128X[104X
+    [4X[25Xgap>[125X [27XDXn4 := DerivedSubXMod( Xn4 );;[127X[104X
+    [4X[25Xgap>[125X [27XIdGroup( DXn4 );[127X[104X
+    [4X[28X[ [ 3, 1 ], [ 3, 1 ] ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -176,9 +188,10 @@
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
     [4X[25Xgap>[125X [27Xfix := FixedPointSubgroupXMod( Xn4, Sn4, Rn4 );[127X[104X
-    [4X[28XGroup([ f3*f4 ])[128X[104X
-    [4X[25Xgap>[125X [27Xstab := StabilizerSubgroupXMod( Xn4, Sn4, Rn4 );[127X[104X
-    [4X[28XGroup([ f5, f2*f3 ])[128X[104X
+    [4X[28XGroup([ (1,7)(2,8)(3,9)(4,10)(5,11)(6,12) ])[128X[104X
+    [4X[25Xgap>[125X [27Xstab := StabilizerSubgroupXMod( Xn4, Sn4, Rn4 );;[127X[104X
+    [4X[25Xgap>[125X [27XIdGroup( stab );[127X[104X
+    [4X[28X[ 12, 5 ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -223,16 +236,16 @@
   
   [33X[0;0YThe  [10XCentralQuotient[110X  of  a group [22XG[122X is the crossed module [22X(G -> G/Z(G))[122X with
   the  natural  homomorphism  as  the  boundary map. This is a special case of
-  [10XXModByCentralExtension[110X (see [14X2.1[114X).[133X
+  [2XXModByCentralExtension[102X ([14X2.1-1[114X).[133X
   
   [33X[0;0YSimilarly,  the central quotient of a crossed module [22XmathcalX[122X is the crossed
-  square [22X(mathcalX ⇒ mathcalX/Z(mathcalX)[122X (see section [14X8.2[114X).[133X
+  square [22X(mathcalX ⇒ mathcalX/Z(mathcalX))[122X (see section [14X8.2[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XQ24 := CentralQuotient( d24 );  Size( Q24 );                     [127X[104X
-    [4X[28X[d24->Group( [ f1, f2, f3 ] )][128X[104X
-    [4X[28X[ 24, 12 ][128X[104X
+    [4X[25Xgap>[125X [27XQ24 := CentralQuotient( d24);  IdGroup( Q24 );                     [127X[104X
+    [4X[28X[d24->d24/Z(d24)][128X[104X
+    [4X[28X[ [ 24, 6 ], [ 12, 4 ] ][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -312,13 +325,13 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XLowerCentralSeries(X24);      [127X[104X
-    [4X[28X[ [d24->PAut(d24)], [Group( [ f2 ] )->Group( [ f2, f5 ] )], [128X[104X
-    [4X[28X  [Group( [ f3*f4^2 ] )->Group( [ f2 ] )], [Group( [ f4 ] )->Group( [ f2 ] )] [128X[104X
-    [4X[28X ][128X[104X
-    [4X[25Xgap>[125X [27XIsNilpotent2DimensionalGroup(X24);      [127X[104X
+    [4X[25Xgap>[125X [27Xlcs := LowerCentralSeries( X24 );;      [127X[104X
+    [4X[25Xgap>[125X [27XList( lcs, g -> IdGroup(g) );[127X[104X
+    [4X[28X[ [ [ 24, 6 ], [ 48, 38 ] ], [ [ 12, 2 ], [ 6, 2 ] ], [ [ 6, 2 ], [ 3, 1 ] ], [128X[104X
+    [4X[28X  [ [ 3, 1 ], [ 3, 1 ] ] ][128X[104X
+    [4X[25Xgap>[125X [27XIsNilpotent2DimensionalGroup( X24 );      [127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XNilpotencyClassOf2DimensionalGroup(X24);[127X[104X
+    [4X[25Xgap>[125X [27XNilpotencyClassOf2DimensionalGroup( X24 );[127X[104X
     [4X[28X0[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
@@ -466,9 +479,9 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XIsoclinicMiddleLength(G);[127X[104X
+    [4X[25Xgap>[125X [27XIsoclinicMiddleLength( G );[127X[104X
     [4X[28X1[128X[104X
-    [4X[25Xgap>[125X [27XIsoclinicRank(G);[127X[104X
+    [4X[25Xgap>[125X [27XIsoclinicRank( G );[127X[104X
     [4X[28X4[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X

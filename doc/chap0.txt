@@ -6,10 +6,10 @@
                        [1X Crossed Modules and Cat1-Groups [101X
   
   
-                                      2.67
+                                      2.68
   
   
-                                 29 April 2018
+                                   1 May 2018
   
   
                              Christopher D. Wensley
@@ -199,6 +199,8 @@
     7.2 [33X[0;0YInduced crossed modules[133X
       7.2-1 InducedXMod
       7.2-2 AllInducedXMods
+    7.3 [33X[0;0YInduced cat[22X^1[122X-groups[133X
+      7.3-1 InducedCat1Group
   8 [33X[0;0Y3d-groups and 3d-mappings : crossed squares and cat[22X^2[122X-groups[133X
     8.1 [33X[0;0YDefinition of a crossed square and a crossed [22Xn[122X-cube of groups[133X
     8.2 [33X[0;0YConstructions for crossed squares[133X

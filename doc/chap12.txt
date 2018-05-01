@@ -52,14 +52,14 @@
   
   [1X12.1-5 [33X[0;0YVersions 2.002 -- 2.006[133X[101X
   
-  [33X[0;0YVersion  2.004  of  April  14th  2004  added the [10XCat1Select[110X functionality of
-  version 1 to the [10XCat1[110X function.[133X
+  [33X[0;0YVersion  2.004 of April 14th 2004 added the [2XCat1Select[102X ([14X2.6-1[114X) functionality
+  of version 1 to the [2XCat1Group[102X ([14X2.4-1[114X) function.[133X
   
   [33X[0;0YA  significant  addition  in  Version  2.005 was the conversion of the actor
   crossed   module   functions   from   the   [11X3.4.4[111X   version.  This  included
-  [10XAutomorphismPermGroup[110X  for  a  crossed  module,  [10XWhiteheadXMod[110X,  [10XNorrieXMod[110X,
-  [10XLueXMod[110X,   [10XActorXMod[110X,   [10XCentre[110X   of  a  crossed  module,  [10XInnerMorphism[110X  and
-  [10XInnerActorXMod[110X.[133X
+  [2XAutomorphismPermGroup[102X  ([14X6.1-1[114X)  for a crossed module; [2XWhiteheadXMod[102X ([14X6.1-2[114X);
+  [2XNorrieXMod[102X  ([14X6.1-2[114X);  [2XLueXMod[102X ([14X6.1-2[114X); [2XActorXMod[102X ([14X6.1-2[114X); [2XCentreXMod[102X ([14X4.1-7[114X)
+  of a crossed module; [2XInnerMorphism[102X ([14X6.1-3[114X); and [2XInnerActorXMod[102X ([14X6.1-3[114X).[133X
   
   
   [1X12.1-6 [33X[0;0YVersions 2.007 -- 2.010[133X[101X
@@ -73,11 +73,12 @@
   
   [30X    [33X[0;6YConverted the documentation to the format of the [5XGAPDoc[105X package.[133X
   
-  [30X    [33X[0;6YImproved  [10XAutomorphismPermGroup[110X  for crossed modules, and introduced a
-        special method for conjugation crossed modules.[133X
+  [30X    [33X[0;6YImproved   [2XAutomorphismPermGroup[102X  ([14X6.1-1[114X)  for  crossed  modules,  and
+        introduced a special method for conjugation crossed modules.[133X
   
-  [30X    [33X[0;6YSubstantial   revisons  made  to  [10XXModByCentralExtension[110X,  [10XNorrieXMod[110X,
-        [10XLueXMod[110X, [10XActorXMod[110X, and [10XInclusionInducedXModByCopower[110X.[133X
+  [30X    [33X[0;6YSubstantial   revisons   made   to   [2XXModByCentralExtension[102X   ([14X2.1-1[114X);
+        [2XNorrieXMod[102X   ([14X6.1-2[114X);   [2XLueXMod[102X   ([14X6.1-2[114X);   [2XActorXMod[102X   ([14X6.1-2[114X);  and
+        [2XInclusionInducedXModByCopower[102X ([14X7.2-1[114X).[133X
   
   [30X    [33X[0;6YVersion 2.010, of October 2007, was timed to coincide with the release
         of  [5XGAP[105X  4.4.10,  and included a change of filenames; and correct file
@@ -98,14 +99,14 @@
   
   [1X12.2-1 [33X[0;0YAllCat1s[133X[101X
   
-  [33X[0;0YVersion  2.21  contained major changes to the [10XCat1Select[110X operation: the list
-  [10XCAT1_LIST[110X  of  cat1-structures  in the data file [11Xcat1data.g[111X was changed from
-  permutation groups to pc-groups, with the generators of subgroups; images of
-  the tail map; and images of the head map being given as [10XExtRepOfObj[110X of words
-  in the generators.[133X
+  [33X[0;0YVersion  2.21  contained  major changes to the [2XCat1Select[102X ([14X2.6-1[114X) operation:
+  the  list  [10XCAT1_LIST[110X  of  cat1-structures  in  the  data file [11Xcat1data.g[111X was
+  changed  from  permutation  groups  to  pc-groups,  with  the  generators of
+  subgroups; images of the tail map; and images of the head map being given as
+  [10XExtRepOfObj[110X of words in the generators.[133X
   
   [33X[0;0YThe [10XAllCat1s[110X function was reintroduced from the [5XGAP[105X3 version, and renamed as
-  the operation [10XAllCat1sBasic[110X.[133X
+  the operation [2XAllCat1DataGroupsBasic[102X ([14X2.6-2[114X).[133X
   
   [33X[0;0YIn  version  2.25 the data in [11Xcat1data.g[111X was extended from groups of size up
   to  [22X48[122X  to groups of size up to [22X70[122X. In particular, the [22X267[122X groups of size 64

@@ -38,10 +38,10 @@
   
   [124X
   
-  [33X[0;0YHere  [22Xσ[122X  is  the  [10XSourceHom[110X  and  [22Xρ[122X  is  the  [10XRangeHom[110X of the morphism. When
-  [22XmathcalX_1  =  mathcalX_2[122X  and  [22Xσ,  ρ[122X  are  automorphisms  then [22X(σ, ρ)[122X is an
-  automorphism  of  [22XmathcalX_1[122X.  The  group  of  automorphisms  is  denoted by
-  [22XAut(mathcalX_1 )[122X.[133X
+  [33X[0;0YHere  [22Xσ[122X  is  the  [2XSourceHom[102X  ([14X3.1-1[114X)  and  [22Xρ[122X  is the [2XRangeHom[102X ([14X3.1-1[114X) of the
+  morphism.  When  [22XmathcalX_1 = mathcalX_2[122X and [22Xσ, ρ[122X are automorphisms then [22X(σ,
+  ρ)[122X  is  an automorphism of [22XmathcalX_1[122X. The group of automorphisms is denoted
+  by [22XAut(mathcalX_1 )[122X.[133X
   
   [1X3.2-2 IsInjective[101X
   
@@ -53,8 +53,8 @@
   [33X[1;0Y[29X[2XIsEndo2DimensionalMapping[102X( [3Xmap[103X ) [32X property[133X
   
   [33X[0;0YThe  usual  properties  of  mappings  are  easily  checked.  It  is  usually
-  sufficient  to  verify  that  both  the  [10XSourceHom[110X and the [10XRangeHom[110X have the
-  required property.[133X
+  sufficient  to  verify  that  both  the  [2XSourceHom[102X  ([14X3.1-1[114X) and the [2XRangeHom[102X
+  ([14X3.1-1[114X) have the required property.[133X
   
   [1X3.2-3 XModMorphism[101X
   
@@ -118,7 +118,7 @@
   to  test  [10XIsBijective[110X  for  the  two  functions  [22Xσ,ρ[122X  before  applying  this
   operation.[133X
   
-  [33X[0;0YUsing  [10XIsomorphismByIsomorphisms[110X  with a pair of isomorphisms obtained using
+  [33X[0;0YUsing  [2XIsomorphismByIsomorphisms[102X  with a pair of isomorphisms obtained using
   [10XIsomorphismPermGroup[110X  or  [10XIsomorphismPcGroup[110X,  we  may  construct  a crossed
   module or a cat1-group of permutation groups or pc-groups.[133X
   
@@ -204,10 +204,11 @@
   
   [33X[0;0YThe         global        function        [10XIsomorphismPermObject[110X        calls
   [10XIsomorphismPerm2DimensionalGroup[110X,   which   constructs   a   morphism  whose
-  [10XSourceHom[110X  and  [10XRangeHom[110X  are  calculated  using [10XIsomorphismPermGroup[110X on the
-  source  and  range.  Similarly [10XSmallerDegreePermutationRepresentation[110X may be
-  used  on the two groups to obtain [10XSmallerDegreePerm2DimensionalDomain[110X. Names
-  are assigned automatically.[133X
+  [2XSourceHom[102X    ([14X3.1-1[114X)    and    [2XRangeHom[102X   ([14X3.1-1[114X)   are   calculated   using
+  [10XIsomorphismPermGroup[110X  on  the  source  and  range.  Similarly  the operation
+  [10XSmallerDegreePermutationRepresentation[110X  may  be  used  on  the two groups to
+  obtain the attribute [10XSmallerDegreePerm2DimensionalDomain[110X. Names are assigned
+  automatically.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -250,7 +251,7 @@
   [33X[1;0Y[29X[2XCompositionMorphism[102X( [3Xmap2[103X, [3Xmap1[103X ) [32X operation[133X
   
   [33X[0;0YComposition  of  morphisms  (written  [10X(<map1> * <map2>)[110X when maps act on the
-  right) calls the [10XCompositionMorphism[110X function for maps (acting on the left),
+  right) calls the [2XCompositionMorphism[102X function for maps (acting on the left),
   applied to the appropriate type of 2d-mapping.[133X
   
   [4X[32X  Example  [32X[104X
