@@ -24,8 +24,9 @@
   the  source  groupoid  is  connected. Other operations will be added as time
   permits.[133X
   
-  [33X[0;0YIn the example the crossed module [10XDX4[110X has discrete source, and is a groupoid
-  equivalent of [2XXModByNormalSubgroup[102X ([14X2.1-1[114X).[133X
+  [33X[0;0YIn the example the crossed module [10XDX4[110X has discrete source, while the crossed
+  module   [10XCX4[110X  has  connected  source.  These  are  groupoid  equivalents  of
+  [2XXModByNormalSubgroup[102X ([14X2.1-1[114X).[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
@@ -34,13 +35,20 @@
     [4X[25Xgap>[125X [27Xa4 := Subgroup( s4, [ (1,2,3), (2,3,4) ] );;[127X[104X
     [4X[25Xgap>[125X [27XSetName( a4, "a4" );[127X[104X
     [4X[25Xgap>[125X [27XX4 := XModByNormalSubgroup( s4, a4 );; [127X[104X
-    [4X[25Xgap>[125X [27XDX4 := SinglePiecePreXModWithObjects( X4, [-9,-8,-7], false );[127X[104X
+    [4X[25Xgap>[125X [27XDX4 := SinglePiecePreXModWithObjects( X4, [-9,-8,-7], true );[127X[104X
+    [4X[28Xprecrossed module with source groupoid:[128X[104X
+    [4X[28Xhomogeneous, discrete groupoid: < a4, [ -9, -8, -7 ] >[128X[104X
+    [4X[28Xand range groupoid:[128X[104X
+    [4X[28Xsingle piece groupoid: < s4, [ -9, -8, -7 ] >[128X[104X
+    [4X[25Xgap>[125X [27XDa4 := Source( DX4 );; [127X[104X
+    [4X[25Xgap>[125X [27XDs4 := Range( DX4 );;[127X[104X
+    [4X[25Xgap>[125X [27XCX4 := SinglePiecePreXModWithObjects( X4, [-9,-8,-7], false );[127X[104X
     [4X[28Xprecrossed module with source groupoid:[128X[104X
     [4X[28Xsingle piece groupoid: < a4, [ -9, -8, -7 ] >[128X[104X
     [4X[28Xand range groupoid:[128X[104X
     [4X[28Xsingle piece groupoid: < s4, [ -9, -8, -7 ] >[128X[104X
-    [4X[25Xgap>[125X [27XGa4 := Source( DX4 );; [127X[104X
-    [4X[25Xgap>[125X [27XGs4 := Range( DX4 );;[127X[104X
+    [4X[25Xgap>[125X [27XCa4 := Source( CX4 );; [127X[104X
+    [4X[25Xgap>[125X [27XCs4 := Range( CX4 );;[127X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   
@@ -76,11 +84,11 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XIsPermPreXModWithObjects( DX4 );[127X[104X
+    [4X[25Xgap>[125X [27XIsPermPreXModWithObjects( CX4 );[127X[104X
     [4X[28Xtrue[128X[104X
-    [4X[25Xgap>[125X [27XIsPcPreXModWithObjects( DX4 );  [127X[104X
+    [4X[25Xgap>[125X [27XIsPcPreXModWithObjects( CX4 );  [127X[104X
     [4X[28Xfalse[128X[104X
-    [4X[25Xgap>[125X [27XIsFpPreXModWithObjects( DX4 );[127X[104X
+    [4X[25Xgap>[125X [27XIsFpPreXModWithObjects( CX4 );[127X[104X
     [4X[28Xfalse[128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
@@ -102,21 +110,21 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XKnownAttributesOfObject(DX4);[127X[104X
-    [4X[28X[ "Range", "Source", "Boundary", "ObjectList", "XModAction", "Root2dGroup" ][128X[104X
-    [4X[25Xgap>[125X [27XRoot2dGroup( DX4 ); [127X[104X
+    [4X[25Xgap>[125X [27XSet( KnownAttributesOfObject( CX4 ) );[127X[104X
+    [4X[28X[ "Boundary", "ObjectList", "Range", "Root2dGroup", "Source", "XModAction" ][128X[104X
+    [4X[25Xgap>[125X [27XRoot2dGroup( CX4 ); [127X[104X
     [4X[28X[a4->s4][128X[104X
-    [4X[25Xgap>[125X [27Xact := XModAction( DX4 );; [127X[104X
-    [4X[25Xgap>[125X [27Xr := Arrow( Gs4, (1,2,3,4), -7, -8 );; [127X[104X
+    [4X[25Xgap>[125X [27Xact := XModAction( CX4 );; [127X[104X
+    [4X[25Xgap>[125X [27Xr := Arrow( Cs4, (1,2,3,4), -7, -8 );; [127X[104X
     [4X[25Xgap>[125X [27XImageElm( act, r );            [127X[104X
     [4X[28X[groupoid homomorphism : [128X[104X
     [4X[28X[ [ [(1,2,3) : -9 -> -9], [(2,3,4) : -9 -> -9], [() : -9 -> -8], [128X[104X
     [4X[28X      [() : -9 -> -7] ], [128X[104X
     [4X[28X  [ [(2,3,4) : -9 -> -9], [(1,3,4) : -9 -> -9], [() : -9 -> -7], [128X[104X
     [4X[28X      [() : -9 -> -8] ] ] : 0 -> 0][128X[104X
-    [4X[25Xgap>[125X [27Xs := Arrow( Ga4, (1,2,4), -8, -8 );;[127X[104X
+    [4X[25Xgap>[125X [27Xs := Arrow( Ca4, (1,2,4), -8, -8 );;[127X[104X
     [4X[25Xgap>[125X [27X##  calculate s^r [127X[104X
-    [4X[25Xgap>[125X [27Xims := ImageElmXModAction( DX4, s, r );[127X[104X
+    [4X[25Xgap>[125X [27Xims := ImageElmXModAction( CX4, s, r );[127X[104X
     [4X[28X[(1,2,3) : -7 -> -7][128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X

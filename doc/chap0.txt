@@ -6,10 +6,10 @@
                        [1X Crossed Modules and Cat1-Groups [101X
   
   
-                                      2.68
+                                      2.69
   
   
-                                   1 May 2018
+                                  20 July 2018
   
   
                              Christopher D. Wensley
