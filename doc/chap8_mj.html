@@ -72,7 +72,7 @@ and a crossed <span class="SimpleMath">\(n\)</span>-cube of groups</span></h4>
 
 
 <ul>
-<li><p>groups <span class="SimpleMath">\(S_J\)</span> for each of the four subsets <span class="SimpleMath">\(J \subseteq [2]\)</span>;</p>
+<li><p>groups <span class="SimpleMath">\(S_J\)</span> for each of the four subsets <span class="SimpleMath">\(J \subseteq [2]\)</span> (we often find it convenient to write <span class="SimpleMath">\(L = S_{[2]},~ M = S_{\{1\}},~ N = S_{\{2\}}\)</span> and <span class="SimpleMath">\(P = S_{\emptyset}\)</span>);</p>
 
 </li>
 <li><p>a commutative diagram of group homomorphisms:</p>
@@ -81,8 +81,10 @@ and a crossed <span class="SimpleMath">\(n\)</span>-cube of groups</span></h4>
   \ddot{\partial}_1 : S_{[2]} \to S_{\{2\}}, \quad 
   \ddot{\partial}_2 : S_{[2]} \to S_{\{1\}}, \quad 
   \dot{\partial}_1 : S_{\{1\}} \to S_{\emptyset}, \quad 
-  \dot{\partial}_2 : S_{\{2\}} \to S_{\emptyset}; 
+  \dot{\partial}_2 : S_{\{2\}} \to S_{\emptyset} 
   \]</p>
+
+<p>(again we often write <span class="SimpleMath">\(\lambda_1 = \ddot{\partial}_1,~ \lambda_2 = \ddot{\partial}_2,~ \mu = \dot{\partial}_1\)</span> and <span class="SimpleMath">\( \nu = \dot{\partial}_2\)</span>);</p>
 
 </li>
 <li><p>actions of <span class="SimpleMath">\(S_{\emptyset}\)</span> on <span class="SimpleMath">\(S_{\{1\}}, S_{\{2\}}\)</span> and <span class="SimpleMath">\(S_{[2]}\)</span> which determine actions of <span class="SimpleMath">\(S_{\{1\}}\)</span> on <span class="SimpleMath">\(S_{\{2\}}\)</span> and <span class="SimpleMath">\(S_{[2]}\)</span> via <span class="SimpleMath">\(\dot{\partial}_1\)</span> and actions of <span class="SimpleMath">\(S_{\{2\}}\)</span> on <span class="SimpleMath">\(S_{\{1\}}\)</span> and <span class="SimpleMath">\(S_{[2]}\)</span> via <span class="SimpleMath">\(\dot{\partial}_2\;\)</span>;</p>
@@ -98,38 +100,41 @@ and a crossed <span class="SimpleMath">\(n\)</span>-cube of groups</span></h4>
 
 \vcenter{\xymatrix{
        &amp;   &amp;  S_{[2]} \ar[rr]^{\ddot{\partial}_1} \ar[dd]_{\ddot{\partial}_2} 
-              &amp;&amp; S_{\{2\}} \ar[dd]^{\dot{\partial}_2} &amp;   \\
-\mathcal{S}  &amp; = &amp;  &amp;&amp;  \\
-       &amp;   &amp;  S_{\{1\}} \ar[rr]_{\dot{\partial}_1}  
-              &amp;&amp; S_{\emptyset} 
+              &amp;&amp; S_{\{2\}} \ar[dd]^{\dot{\partial}_2} &amp;&amp; 
+              L \ar[rr]^{\lambda_1} \ar[dd]_{\lambda_2} 
+              &amp;&amp; N \ar[dd]^{\nu} &amp;   \\
+\mathcal{S}  &amp; = &amp;  &amp;&amp;  &amp; = &amp;&amp;  \\
+       &amp;   &amp;  S_{\{1\}} \ar[rr]_{\lambda_1}  
+              &amp;&amp; S_{\emptyset} &amp;&amp;  
+              M \ar[rr]_{\mu}  
+              &amp;&amp; P 
 }}
 \]</p>
 
-<p>The following axioms must be satisfied for all <span class="SimpleMath">\(l \in S_{[2]},\; m,m_1,m_2 \in S_{\{1\}},\; n,n_1,n_2 \in S_{\{2\}},\; p \in S_{\emptyset}\)</span>:</p>
+<p>The following axioms must be satisfied for all <span class="SimpleMath">\(l \in L,\; m,m_1,m_2 \in M,\; n,n_1,n_2 \in N,\; p \in P\)</span>.</p>
 
 
 <ul>
-<li><p>the homomorphisms <span class="SimpleMath">\(\ddot{\partial}_1, \ddot{\partial}_2\)</span> preserve the action of <span class="SimpleMath">\(S_{\emptyset}\;\)</span>;</p>
+<li><p>The homomorphisms <span class="SimpleMath">\(\lambda_1, \lambda_2\)</span> preserve the action of <span class="SimpleMath">\(P\;\)</span>.</p>
 
 </li>
-<li><p>each of the upper, left-hand, lower, and right-hand sides of the square,</p>
+<li><p>Each of the upper, left-hand, lower, and right-hand sides of the square,</p>
 
 <p class="center">\[
- \ddot{\mathcal{S}}_1 = (\ddot{\partial}_1 : S_{[2]} \to S_{\{2\}}), 
- \ddot{\mathcal{S}}_2 = (\ddot{\partial}_2 : S_{[2]} \to S_{\{1\}}), 
-  \dot{\mathcal{S}}_1  = (\dot{\partial}_1 : S_{\{1\}} \to S_{\emptyset}), 
-  \dot{\mathcal{S}}_2  = (\dot{\partial}_2 : S_{\{2\}} \to S_{\emptyset}),
+ \ddot{\mathcal{S}}_1 = (\lambda_1 : L \to N), \quad 
+ \ddot{\mathcal{S}}_2 = (\lambda_2 : L \to M), \quad 
+  \dot{\mathcal{S}}_1  = (\mu : M \to P), \quad 
+  \dot{\mathcal{S}}_2  = (\nu : N \to P),
 \]</p>
 
 <p>and the diagonal</p>
 
 <p class="center">\[
-\mathcal{S}_{12} = (\partial_{12} := \dot{\partial}_1\ddot{\partial}_2 
-                  = \dot{\partial}_2\ddot{\partial}_1 
-                  : S_{[2]} \to S_{\emptyset})
+\mathcal{S}_{12} = (\partial_{12} := 
+                   \mu \circ \lambda_2 = \nu \circ \lambda_1 : L \to P)
 \]</p>
 
-<p>are crossed modules (with actions via <span class="SimpleMath">\(S_{\emptyset}\)</span>);</p>
+<p>are crossed modules (with actions via <span class="SimpleMath">\(P\)</span>). The first four of these are called the <em>up, left, down</em> and <em>right</em> crossed modules of <span class="SimpleMath">\(\mathcal{S}\)</span>.</p>
 
 </li>
 <li><p><span class="SimpleMath">\(\boxtimes\)</span> is a <em>crossed pairing</em>:</p>
@@ -142,19 +147,19 @@ and a crossed <span class="SimpleMath">\(n\)</span>-cube of groups</span></h4>
 <li><p><span class="SimpleMath">\((m \boxtimes n_1n_2) \;=\; (m \boxtimes n_2)\;{(m \boxtimes n_1)}^{n_2}\)</span>,</p>
 
 </li>
-<li><p><span class="SimpleMath">\((m \boxtimes n)^{p} \;=\; (m^p \boxtimes n^p)\)</span>;</p>
+<li><p><span class="SimpleMath">\((m \boxtimes n)^{p} \;=\; (m^p \boxtimes n^p)\)</span>.</p>
 
 </li>
 </ul>
 </li>
-<li><p><span class="SimpleMath">\(\ddot{\partial}_1 (m \boxtimes n) \;=\; (n^{-1})^{m}\;n \quad \mbox{and} \quad \ddot{\partial}_2 (m \boxtimes n) \;=\; m^{-1}\;m^{n}\)</span>,</p>
+<li><p><span class="SimpleMath">\(\ddot{\partial}_1 (m \boxtimes n) \;=\; (n^{-1})^{m}\;n \quad \mbox{and} \quad \ddot{\partial}_2 (m \boxtimes n) \;=\; m^{-1}\;m^{n}\)</span>.</p>
 
 </li>
 <li><p><span class="SimpleMath">\((m \boxtimes \ddot{\partial}_1 l) \;=\; (l^{-1})^{m}\;l \quad \mbox{and} \quad (\ddot{\partial}_2 l \boxtimes n) \;=\; l^{-1}\;l^n\)</span>.</p>
 
 </li>
 </ul>
-<p>Note that the actions of <span class="SimpleMath">\(S_{\{1\}}\)</span> on <span class="SimpleMath">\(S_{\{2\}}\)</span> and <span class="SimpleMath">\(S_{\{2\}}\)</span> on <span class="SimpleMath">\(S_{\{1\}}\)</span> via <span class="SimpleMath">\(S_{\emptyset}\)</span> are compatible since</p>
+<p>Note that the actions of <span class="SimpleMath">\(M\)</span> on <span class="SimpleMath">\(N\)</span> and <span class="SimpleMath">\(N\)</span> on <span class="SimpleMath">\(M\)</span> via <span class="SimpleMath">\(P\)</span> are compatible since</p>
 
 <p class="center">\[
 {m_1}^{(n^m)} \;=\; {m_1}^{\dot{\partial}_2(n^m)} 
@@ -164,9 +169,7 @@ and a crossed <span class="SimpleMath">\(n\)</span>-cube of groups</span></h4>
 
 <p>(A <em>precrossed square</em> is a similar structure which satisfies some subset of these axioms. [More needed here.])</p>
 
-<p>In what follows we shall generally use the following notation for the <span class="SimpleMath">\(S_J\)</span>, namely <span class="SimpleMath">\(L = S_{[2]};~ M = S_{\{1\}};~ N = S_{\{2\}}\)</span> and <span class="SimpleMath">\(P = S_{\emptyset}\)</span>.</p>
-
-<p>Crossed squares are the <span class="SimpleMath">\(n=2\)</span> case of a crossed <span class="SimpleMath">\(n\)</span>-cube of groups, defined as follows. (This is an attempt to translate Definition 2.1 in Ronnie's <em>Computing homotopy types using crossed n-cubes of groups</em> into right actions -- but this definition is not yet completely understood!)</p>
+<p>Crossed squares are the <span class="SimpleMath">\(n=2\)</span> case of a crossed <span class="SimpleMath">\(n\)</span>-cube of groups, defined as follows. (This is an attempt to translate Definition 2.1 in Ronnie Brown's <em>Computing homotopy types using crossed n-cubes of groups</em> into right actions -- but this definition is not yet completely understood!)</p>
 
 <p>A <em>crossed</em> <span class="SimpleMath">\(n\)</span><em>-cube of groups</em> consists of the following:</p>
 
@@ -185,13 +188,13 @@ and a crossed <span class="SimpleMath">\(n\)</span>-cube of groups</span></h4>
 
 </li>
 </ul>
-<p>The following axioms must be satisfied (long list to be added).</p>
+<p>There is then a long list of axioms which must be satisfied.</p>
 
 <p><a id="X820A7D30847BC828" name="X820A7D30847BC828"></a></p>
 
 <h4>8.2 <span class="Heading">Constructions for crossed squares</span></h4>
 
-<p>Analogously to the data structure used for crossed modules, crossed squares are implemented as <code class="code">3d-groups</code>. When times allows, cat<span class="SimpleMath">\(^2\)</span>-groups will also be implemented, with conversion between the two types of structure. Some standard constructions of crossed squares are listed below. At present, a limited number of constructions are implemented. Morphisms of crossed squares have also been implemented, though there is a lot still to be done.</p>
+<p>Analogously to the data structure used for crossed modules, crossed squares are implemented as <code class="code">3d-groups</code>. When times allows, cat<span class="SimpleMath">\(^2\)</span>-groups will also be implemented, with conversion between the two types of structure. Some standard constructions of crossed squares are listed below. At present, a limited number of constructions are implemented. Morphisms of crossed squares have also been implemented, though there is still a lot to be done.</p>
 
 <p><a id="X87FBE3CE87DC8CD5" name="X87FBE3CE87DC8CD5"></a></p>
 
@@ -206,10 +209,10 @@ and a crossed <span class="SimpleMath">\(n\)</span>-cube of groups</span></h4>
 
 
 <ul>
-<li><p>If <span class="SimpleMath">\(M, N\)</span> are normal subgroups of a group <span class="SimpleMath">\(P\)</span>, and <span class="SimpleMath">\(L = M \cap N\)</span>, then the four inclusions, <span class="SimpleMath">\(L \to N,~ L \to M,~ M \to P,~ N \to P\)</span>, together with the actions of <span class="SimpleMath">\(P\)</span> on <span class="SimpleMath">\(M, N\)</span> and <span class="SimpleMath">\(L\)</span> given by conjugation, form a crossed square with crossed pairing</p>
+<li><p>If <span class="SimpleMath">\(L, M, N\)</span> are normal subgroups of a group <span class="SimpleMath">\(P\)</span>, and <span class="SimpleMath">\([M,N] \leqslant L \leqslant M \cap N\)</span>, then the four inclusions <span class="SimpleMath">\(L \to N,~ L \to M,~ M \to P,~ N \to P\)</span>, together with the actions of <span class="SimpleMath">\(P\)</span> on <span class="SimpleMath">\(M, N\)</span> and <span class="SimpleMath">\(L\)</span> given by conjugation, form a crossed square with crossed pairing</p>
 
 <p class="center">\[
-\boxtimes \;:\; M \times N \to M\cap N, \quad 
+\boxtimes \;:\; M \times N \to L, \quad 
 (m,n) \mapsto [m,n] \,=\, m^{-1}n^{-1}mn \,=\,(n^{-1})^mn \,=\, m^{-1}m^n\,. 
 \]</p>
 
@@ -222,13 +225,13 @@ and a crossed <span class="SimpleMath">\(n\)</span>-cube of groups</span></h4>
 \boxtimes \;:\;  R \times W \,\to\, S, \quad (r,\chi) \,\mapsto\, \chi r~.
 \]</p>
 
-<p>This is implemented as <code class="code">ActorCrossedSquare( X0 );</code>.</p>
+<p>This is implemented as <code class="code">ActorCrossedSquare(X0);</code>.</p>
 
 </li>
-<li><p>The <em>transpose</em> of <span class="SimpleMath">\(\mathcal{S}\)</span> is the crossed square <span class="SimpleMath">\(\tilde{\mathcal{S}}\)</span> obtained by interchanging <span class="SimpleMath">\(S_{\{1\}}\)</span> with <span class="SimpleMath">\(S_{\{2\}}\)</span>, <span class="SimpleMath">\(\ddot{\partial}_1\)</span> with <span class="SimpleMath">\(\ddot{\partial}_2\)</span>, and <span class="SimpleMath">\(\dot{\partial}_1\)</span> with <span class="SimpleMath">\(\dot{\partial}_2\)</span>. The crossed pairing is given by</p>
+<li><p>The <em>transpose</em> of <span class="SimpleMath">\(\mathcal{S}\)</span> is the crossed square <span class="SimpleMath">\(\tilde{\mathcal{S}}\)</span> obtained by interchanging <span class="SimpleMath">\(M\)</span> with <span class="SimpleMath">\(N\)</span>, <span class="SimpleMath">\(\lambda_1\)</span> with <span class="SimpleMath">\(\lambda_2\)</span>, and <span class="SimpleMath">\(\mu\)</span> with <span class="SimpleMath">\(\nu\)</span>. The crossed pairing is given by</p>
 
 <p class="center">\[
-\tilde{\boxtimes} \;:\; S_{\{2\}} \times S_{\{1\}} \to S_{[2]}, \quad 
+\tilde{\boxtimes} \;:\; N \times M \to L, \quad 
 (n,m) \;\mapsto\; n\,\tilde{\boxtimes}\,m := (m \boxtimes n)^{-1}~.
 \]</p>
 
@@ -285,7 +288,7 @@ crossed square with:
 <li><p>the right crossed module is the quotient <span class="SimpleMath">\(\mathcal{X}/Z(\mathcal{X})\)</span> (see <code class="func">CentreXMod</code> (<a href="chap4_mj.html#X7B57446086BA1BF0"><span class="RefLink">4.1-7</span></a>));</p>
 
 </li>
-<li><p>the top and bottom homomorphisms are the natural homomorphisms onto the quotient groups;</p>
+<li><p>the up and down homomorphisms are the natural homomorphisms onto the quotient groups;</p>
 
 </li>
 <li><p>the crossed pairing <span class="SimpleMath">\(\boxtimes : (R \times F) \to S\)</span>, where <span class="SimpleMath">\(F = \Fix(\mathcal{X},S,R)\)</span>, is the displacement element <span class="SimpleMath">\(\boxtimes(r,Fs) = \langle r,s \rangle = (s^{-1})^rs\quad\)</span> (see <code class="func">Displacement</code> (<a href="chap4_mj.html#X7E20208279038BB8"><span class="RefLink">4.1-3</span></a>) and section <a href="chap4_mj.html#X81338C977972AD83"><span class="RefLink">4.3</span></a>).</p>
@@ -337,9 +340,10 @@ crossed square with:
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DiagonalAction</code>( <var class="Arg">XS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CrossedPairing</code>( <var class="Arg">XS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ImageElmCrossedPairing</code>( <var class="Arg">XS</var>, <var class="Arg">pair</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>In this implementation the attributes used in the construction of a crossed square <code class="code">XS</code> are the four crossed modules (2d-groups) on the sides of the square (up; down, left; and right); the diagonal action of <span class="SimpleMath">\(P\)</span> on <span class="SimpleMath">\(L\)</span>; and the crossed pairing.</p>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Diagonal2DimensionalGroup</code>( <var class="Arg">XS</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>In this implementation the attributes used in the construction of a crossed square <code class="code">XS</code> are the four crossed modules (2d-groups) on the sides of the square (up; left; down and right); the diagonal action of <span class="SimpleMath">\(P\)</span> on <span class="SimpleMath">\(L\)</span>; and the crossed pairing. The diagonal crossed module <span class="SimpleMath">\((L \to P)\)</span> is an additional attribute.</p>
 
-<p>The <strong class="pkg">GAP</strong> development team have suggested that crossed pairings should be implemented as a special case of <code class="code">BinaryMappings</code> -- a structure which does not yet exist in <strong class="pkg">GAP</strong>. As a temporary measure, crossed pairings have been implemented using <code class="code">Mapping2ArgumentsByFunction</code>.</p>
+<p>The <strong class="pkg">GAP</strong> development team have suggested that crossed pairings should be implemented as a special case of <code class="code">BinaryMappings</code> -- a structure which does not yet exist in <strong class="pkg">GAP</strong>. In the meantime crossed pairings have been implemented using <code class="code">Mapping2ArgumentsByFunction</code>.</p>
 
 
 <div class="example"><pre>
@@ -351,11 +355,11 @@ Actor[d10a-&gt;d20]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">xpconj := CrossedPairing( XSconj );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ImageElmCrossedPairing( xpconj, [ p2, p12 ] );</span>
 (1,9,7,5,3)(2,10,8,6,4)
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">diag := DiagonalAction( XSact );</span>
-[ (1,3,5,2,4)(6,10,14,8,12)(7,11,15,9,13), (1,2,5,4)(6,8,14,12)(7,11,13,9) 
- ] -&gt; 
-[ (1,3,5,2,4)(6,10,14,8,12)(7,11,15,9,13), (1,2,5,4)(6,8,14,12)(7,11,13,9) 
- ] -&gt; [ ^(1,3,5,7,9)(2,4,6,8,10), ^(1,2,5,4)(3,8)(6,7,10,9) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">diact := DiagonalAction( XSact );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ImageElm( diact, (1,4)(2,3)(6,9)(7,8) );  </span>
+^(1,5,7,3)(2,8,6,10)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">diag := Diagonal2DimensionalGroup( XSconj );</span>
+[c5d-&gt;d20]
 
 </pre></div>
 
@@ -474,7 +478,7 @@ true
 <li><p><span class="SimpleMath">\( \dot{t}_1\circ\ddot{h}_2 = \dot{h}_2\circ\ddot{t}_1, ~ \dot{t}_2\circ\ddot{h}_1 = \dot{h}_1\circ\ddot{t}_2, ~ \dot{e}_1\circ\dot{t}_2 = \ddot{t}_2\circ\ddot{e}_1, ~ \dot{e}_2\circ\dot{t}_1 = \ddot{t}_1\circ\ddot{e}_2, ~ \dot{e}_1\circ\dot{h}_2 = \ddot{h}_2\circ\ddot{e}_1, ~ \dot{e}_2\circ\dot{h}_1 = \ddot{h}_1\circ\ddot{e}_2, \)</span></p>
 
 </li>
-<li><p><span class="SimpleMath">\( \dot{t}_1\circ\ddot{t}_2 = \dot{t}_2\circ\ddot{t}_1 = t_{[2]}, ~ \dot{h}_1\circ\ddot{h}_2 = \dot{h}_2\circ\ddot{h}_1 = h_{[2]}, ~ \dot{e}_1\circ\ddot{e}_2 = \dot{e}_2\circ\ddot{e}_1 = e_{[2]}, \)</span> making the diagonal a cat<span class="SimpleMath">\(^1\)</span>-group <span class="SimpleMath">\((e_{[2]}; t_{[2]}, h_{[2]} : C_{[2]} \to C_{\emptyset})\)</span>.</p>
+<li><p><span class="SimpleMath">\( \dot{t}_1\circ\ddot{t}_2 = \dot{t}_2\circ\ddot{t}_1 = t_{[2]}, ~ \dot{h}_1\circ\ddot{h}_2 = \dot{h}_2\circ\ddot{h}_1 = h_{[2]}, ~ \dot{e}_1\circ\ddot{e}_2 = \dot{e}_2\circ\ddot{e}_1 = e_{[2]}, \)</span> making the diagonal a pre-cat<span class="SimpleMath">\(^1\)</span>-group <span class="SimpleMath">\((e_{[2]}; t_{[2]}, h_{[2]} : C_{[2]} \to C_{\emptyset})\)</span>.</p>
 
 </li>
 </ul>
@@ -511,19 +515,30 @@ true
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat2Group</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat2Group</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCat2Group</code>( <var class="Arg">C</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat2GroupByPreCat1Groups</code>( <var class="Arg">L</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>The global functions <code class="code">Cat2Group</code> and <code class="code">PreCat2Group</code> are normally called with a single argument, a list of cat1-groups.</p>
 
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CC6 := Cat2Group( Cat1Group(6,2,2), Cat1Group(6,2,3) );</span>
-generating (pre-)cat1-groups:
-1 : [C6=&gt;Group( [ f1 ] )]
-2 : [C6=&gt;Group( [ f2 ] )]
-
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsCat2Group( CC6 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := (1,2,3,4)(5,6,7,8);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">b := (1,5)(2,6)(3,7)(4,8);; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c := (2,6)(4,8);;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">G16 := Group( a, b, c );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( G16, "c4c2:c2" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t1a := GroupHomomorphismByImages( G16, G16, [a,b,c], [(),(),c] );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">C1a := PreCat1GroupByEndomorphisms( t1a, t1a );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">t1b := GroupHomomorphismByImages( G16, G16, [a,b,c], [a,(),()] );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">C1b := PreCat1GroupByEndomorphisms( t1b, t1b );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">C16 := Cat2Group( C1a, C1b );</span>
+cat2-group with generating (pre-)cat1-groups:
+1 : [c4c2:c2 =&gt; Group( [ (), (), (2,6)(4,8) ] )]
+2 : [c4c2:c2 =&gt; Group( [ (1,2,3,4)(5,6,7,8), (), () ] )]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsCat2Group( C16 );</span>
 true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">IsCat1Group( Diagonal2DimensionalGroup( C16 ) );</span>
+false
 
 </pre></div>
 
@@ -540,14 +555,15 @@ true
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">xsCC6 := CrossedSquareOfCat2Group( CC6 );</span>
-crossed square with:
-      up = [Group( () )-&gt;Group( [ (1,2) ] )]
-    left = [Group( () )-&gt;Group( [ (), (3,4,5) ] )]
-    down = [Group( [ (), (3,4,5) ] ) -&gt; Group( () )]
-   right = [Group( [ (1,2) ] ) -&gt; Group( () )]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">xsC16 := CrossedSquareOfCat2Group( C16 );</span>
+crossed square with crossed modules:
+      up = [Group( [ (1,5)(2,6)(3,7)(4,8) ] ) -&gt; Group( [ ( 2, 6)( 4, 8) ] )]
+    left = [Group( [ (1,5)(2,6)(3,7)(4,8) ] ) -&gt; Group( 
+[ (1,2,3,4)(5,6,7,8), (), () ] )]
+    down = [Group( [ (1,2,3,4)(5,6,7,8), (), () ] ) -&gt; Group( () )]
+   right = [Group( [ ( 2, 6)( 4, 8) ] ) -&gt; Group( () )]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Cat2GroupOfCrossedSquare( XSact );</span>
-Warning: these conversion functions are still under development
+Warning: these conversion functions are still being developed.
 fail
 
 </pre></div>
