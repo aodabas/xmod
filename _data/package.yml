@@ -1,6 +1,6 @@
 name: XMod
-version: 2.71
-date: 2018-09-13
+version: 2.72
+date: 2018-09-16
 description: |
     Crossed Modules and Cat1-Groups
 
@@ -47,7 +47,7 @@ packageinfo: https://gap-packages.github.io/xmod/PackageInfo.g
 
 downloads:
     - name: .tar.gz
-      url: https://github.com/gap-packages/xmod/releases/download/v2.71/XMod-2.71.tar.gz
+      url: https://github.com/gap-packages/xmod/releases/download/v2.72/XMod-2.72.tar.gz
 
 abstract: |
     The <span class="pkgname">XMod</span> package provides a collection   of functions for computing with crossed modules and cat1-groups, their derivations and sections, morphisms of these structures, and higher-dimensional generalisations.
