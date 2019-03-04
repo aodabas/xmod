@@ -60,19 +60,20 @@
   
   [33X[0;0YAn  automorphism [22X( σ, ρ )[122X of [10XX[110X acts on the Whitehead monoid by [22Xχ^(σ,ρ) = σ ∘
   χ  ∘  ρ^-1[122X,  and  this determines the action for the actor. In fact the four
-  groups  [22XR, S, W, A[122X, the homomorphisms between them, and the various actions,
-  give five crossed modules forming a [13Xcrossed square[113X:[133X
-  
-  [30X    [33X[0;6Y[22XmathcalX = (∂ : S -> R),~[122X the initial crossed module, on the left,[133X
+  groups  [22XS, W, R, A[122X, the homomorphisms between them, and the various actions,
+  give  five  crossed modules forming a [13Xcrossed square[113X (see [2XActorCrossedSquare[102X
+  ([14X8.2-3[114X)).[133X
   
   [30X    [33X[0;6Y[22XmathcalW(mathcalX)  =  (η  : S -> W),~[122X the Whitehead crossed module of
         [22XmathcalX[122X, at the top,[133X
   
-  [30X    [33X[0;6Y[22XmathcalN(X) = (α : R -> A),~[122X the Norrie crossed module of [22XmathcalX[122X, at
-        the bottom,[133X
+  [30X    [33X[0;6Y[22XmathcalX = (∂ : S -> R),~[122X the initial crossed module, on the left,[133X
   
   [30X    [33X[0;6Y[22XAct(mathcalX)  = ( ∆ : W -> A),~[122X the actor crossed module of [22XmathcalX[122X,
-        on the right, and[133X
+        on the right,[133X
+  
+  [30X    [33X[0;6Y[22XmathcalN(X) = (α : R -> A),~[122X the Norrie crossed module of [22XmathcalX[122X, on
+        the bottom, and[133X
   
   [30X    [33X[0;6Y[22XmathcalL(mathcalX)  = (∆∘η = α∘∂ : S -> A),~[122X the Lue crossed module of
         [22XmathcalX[122X, along the top-left to bottom-right diagonal.[133X

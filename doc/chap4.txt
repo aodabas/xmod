@@ -243,7 +243,7 @@
   
   [33X[0;0YThe  [10XCentralQuotient[110X  of  a group [22XG[122X is the crossed module [22X(G -> G/Z(G))[122X with
   the  natural  homomorphism  as  the  boundary map. This is a special case of
-  [2XXModByCentralExtension[102X ([14X2.1-1[114X).[133X
+  [2XXModByCentralExtension[102X ([14X2.1-5[114X).[133X
   
   [33X[0;0YSimilarly,  the central quotient of a crossed module [22XmathcalX[122X is the crossed
   square [22X(mathcalX ⇒ mathcalX/Z(mathcalX))[122X (see section [14X8.2[114X).[133X

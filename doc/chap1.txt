@@ -44,7 +44,7 @@
   derivations,  sections and actors, were included in the January 2004 release
   2.002  for  [5XGAP[105X 4.4. Many of the function names have been changed during the
   conversion,  for  example  [10XConjugationXMod[110X  has  become [2XXModByNormalSubgroup[102X
-  ([14X2.1-1[114X).  For  a  list  of  name  changes  see the file [11Xnames.pdf[111X in the [11Xdoc[111X
+  ([14X2.1-2[114X).  For  a  list  of  name  changes  see the file [11Xnames.pdf[111X in the [11Xdoc[111X
   directory.[133X
   
   [33X[0;0YIn  October  2015  Alper  Odabaş  and  Enver  Uslu were added to the list of

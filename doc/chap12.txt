@@ -76,9 +76,9 @@
   [30X    [33X[0;6YImproved   [2XAutomorphismPermGroup[102X  ([14X6.1-1[114X)  for  crossed  modules,  and
         introduced a special method for conjugation crossed modules.[133X
   
-  [30X    [33X[0;6YSubstantial   revisons   made   to   [2XXModByCentralExtension[102X   ([14X2.1-1[114X);
+  [30X    [33X[0;6YSubstantial   revisons   made   to   [2XXModByCentralExtension[102X   ([14X2.1-5[114X);
         [2XNorrieXMod[102X   ([14X6.1-2[114X);   [2XLueXMod[102X   ([14X6.1-2[114X);   [2XActorXMod[102X   ([14X6.1-2[114X);  and
-        [2XInclusionInducedXModByCopower[102X ([14X7.2-1[114X).[133X
+        [2XInclusionInducedXModByCopower[102X ([14X???InclusionInducedXModByCopower???[114X).[133X
   
   [30X    [33X[0;6YVersion 2.010, of October 2007, was timed to coincide with the release
         of  [5XGAP[105X  4.4.10,  and included a change of filenames; and correct file

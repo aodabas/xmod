@@ -56,7 +56,9 @@
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CoproductXMod</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; CoproductInfo</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>This function calculates the coproduct crossed module of crossed modules <span class="SimpleMath">mathcal X_1 = (∂_1 : S_1 -&gt; R)</span> and <span class="SimpleMath">mathcal X_2 = (∂_2 : S_2 -&gt; R)</span> which have a common range <span class="SimpleMath">R</span>. The source <span class="SimpleMath">S_2</span> of <span class="SimpleMath">mathcal X_2</span> acts on <span class="SimpleMath">S_1</span> via <span class="SimpleMath">∂_2</span> and the action of <span class="SimpleMath">mathcal X_1</span>, so we can form a precrossed module <span class="SimpleMath">(∂' : S_1 ⋉ S_2 -&gt; R)</span> where <span class="SimpleMath">∂'(s_1,s_2) = (∂_1 s_1)(∂_2 s_2)</span>. The action of this precrossed module is the diagonal action <span class="SimpleMath">(s_1,s_2)^r = (s_1^r,s_2^r)</span>. Factoring out by the Peiffer subgroup, we obtain the coproduct crossed module <span class="SimpleMath">mathcal X_1 ∘ mathcal X_2</span>.</p>
+<p>This function calculates the coproduct crossed module of two or more crossed modules which have a common range <span class="SimpleMath">R</span>. The standard method applies to <span class="SimpleMath">mathcal X_1 = (∂_1 : S_1 -&gt; R)</span> and <span class="SimpleMath">mathcal X_2 = (∂_2 : S_2 -&gt; R)</span>. See below for the case of three or more crossed modules.</p>
+
+<p>The source <span class="SimpleMath">S_2</span> of <span class="SimpleMath">mathcal X_2</span> acts on <span class="SimpleMath">S_1</span> via <span class="SimpleMath">∂_2</span> and the action of <span class="SimpleMath">mathcal X_1</span>, so we can form a precrossed module <span class="SimpleMath">(∂' : S_1 ⋉ S_2 -&gt; R)</span> where <span class="SimpleMath">∂'(s_1,s_2) = (∂_1 s_1)(∂_2 s_2)</span>. The action of this precrossed module is the diagonal action <span class="SimpleMath">(s_1,s_2)^r = (s_1^r,s_2^r)</span>. Factoring out by the Peiffer subgroup, we obtain the coproduct crossed module <span class="SimpleMath">mathcal X_1 ∘ mathcal X_2</span>.</p>
 
 <p>In the example the structure descriptions of the precrossed module, the Peiffer subgroup, and the resulting coproduct are printed out when <code class="code">InfoLevel(InfoXMod}</code> is at least <span class="SimpleMath">1</span>. The coproduct comes supplied with attribute <code class="code">CoproductInfo</code>, which includes the embedding morphisms of the two factors.</p>
 
@@ -86,6 +88,34 @@ rec( embeddings := [ [X8 =&gt; XZ8], [Z8 =&gt; XZ8] ], xmods := [ X8, Z8 ] )
 
 </pre></div>
 
+<p>Given a list of more than two crossed modules with a common range <span class="SimpleMath">R</span>, then an iterated coproduct is formed:</p>
+
+<p class="pcenter">
+\bigcirc~\left[ \mathcal{X}_1,\mathcal{X}_2,\ldots,\mathcal{X}_n\right] 
+    ~=~ \mathcal{X}_1 \circ (\mathcal{X}_2 \circ ( \ldots 
+        (\mathcal{X}_{n-1} \circ \mathcal{X}_n) \ldots ) ). 
+</p>
+
+<p>The <code class="code">embeddings</code> field of the <code class="code">CoproductInfo</code> of the resulting crossed module <span class="SimpleMath">mathcalY</span> contains the <span class="SimpleMath">n</span> morphisms <span class="SimpleMath">ϵ_i : mathcalX_i -&gt; mathcalY (1 leqslant i leqslant n)</span>.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Y := CoproductXMod( [ X8, X8, Z8, Z8 ] );</span>
+[Group( [ f1, f2, f3, f4, f5, f6, f7, f8 ] )-&gt;s4b]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription( Y );          </span>
+[ "C2 x C2 x C2 x C2 x C2 x C2 x C2 x C2", "S4" ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">CoproductInfo( Y );</span>
+rec( 
+  embeddings := 
+    [ [X8 =&gt; [Group( [ f1, f2, f3, f4, f5, f6, f7, f8 ] ) -&gt; s4b]], 
+      [X8 =&gt; [Group( [ f1, f2, f3, f4, f5, f6, f7, f8 ] ) -&gt; s4b]], 
+      [Z8 =&gt; [Group( [ f1, f2, f3, f4, f5, f6, f7, f8 ] ) -&gt; s4b]], 
+      [Z8 =&gt; [Group( [ f1, f2, f3, f4, f5, f6, f7, f8 ] ) -&gt; s4b]] ], 
+  xmods := [ X8, X8, Z8, Z8 ] )
+
+</pre></div>
+
 <p><a id="X7966FF497C36C465" name="X7966FF497C36C465"></a></p>
 
 <h4>7.2 <span class="Heading">Induced crossed modules</span></h4>
@@ -96,14 +126,14 @@ rec( embeddings := [ [X8 =&gt; XZ8], [Z8 =&gt; XZ8] ], xmods := [ X8, Z8 ] )
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InducedXMod</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsInducedXMod</code>( <var class="Arg">xmod</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SurjectiveInducedXMod</code>( <var class="Arg">xmod</var>, <var class="Arg">hom</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InclusionInducedXModByCopower</code>( <var class="Arg">xmod</var>, <var class="Arg">hom</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InducedXModBySurjection</code>( <var class="Arg">xmod</var>, <var class="Arg">hom</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InducedXModByCopower</code>( <var class="Arg">xmod</var>, <var class="Arg">hom</var>, <var class="Arg">list</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MorphismOfInducedXMod</code>( <var class="Arg">xmod</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <p>A morphism of crossed modules <span class="SimpleMath">(σ, ρ) : mathcal X_1 -&gt; mathcal X_2</span> factors uniquely through an induced crossed module <span class="SimpleMath">ρ_∗ mathcal X_1 = (δ : ρ_∗ S_1 -&gt; R_2)</span>. Similarly, a morphism of cat1-groups factors through an induced cat1-group. Calculation of induced crossed modules of <span class="SimpleMath">mathcal X</span> also provides an algebraic means of determining the homotopy <span class="SimpleMath">2</span>-type of homotopy pushouts of the classifying space of <span class="SimpleMath">mathcal X</span>. For more background from algebraic topology see references in <a href="chapBib.html#biBBH1">[BH78]</a>, <a href="chapBib.html#biBBW1">[BW95]</a>, <a href="chapBib.html#biBBW2">[BW96]</a>. Induced crossed modules and induced cat1-groups also provide the building blocks for constructing pushouts in the categories <em>XMod</em> and <em>Cat1</em>.</p>
 
-<p>Data for the cases of algebraic interest is provided by a conjugation crossed module <span class="SimpleMath">mathcal X = (∂ : S -&gt; R)</span> and a homomorphism <span class="SimpleMath">ι</span> from <span class="SimpleMath">R</span> to a third group <span class="SimpleMath">Q</span>. (It is hoped to implement more general cases in due course.) The output from the calculation is a crossed module <span class="SimpleMath">ι_∗mathcal X = (δ : ι_∗S -&gt; Q)</span> together with a morphism of crossed modules <span class="SimpleMath">mathcal X -&gt; ι_∗mathcal X</span>. When <span class="SimpleMath">ι</span> is a surjection with kernel <span class="SimpleMath">K</span> then <span class="SimpleMath">ι_∗S = S/[K,S]</span> (see <a href="chapBib.html#biBBH1">[BH78]</a>). (For many years, up until June 2018, this manual has stated the result to be <span class="SimpleMath">[K,S]</span>, though the correct quotient has been calculated.) When <span class="SimpleMath">ι</span> is an inclusion the induced crossed module may be calculated using a copower construction <a href="chapBib.html#biBBW1">[BW95]</a> or, in the case when <span class="SimpleMath">R</span> is normal in <span class="SimpleMath">Q</span>, as a coproduct of crossed modules (<a href="chapBib.html#biBBW2">[BW96]</a>, but not yet implemented). When <span class="SimpleMath">ι</span> is neither a surjection nor an inclusion, <span class="SimpleMath">ι</span> is factored as the composite of the surjection onto the image and the inclusion of the image in <span class="SimpleMath">Q</span>, and then the composite induced crossed module is constructed. These constructions use Tietze transformation routines in the library file <code class="code">tietze.gi</code>.</p>
+<p>Data for the cases of algebraic interest is provided by a crossed module <span class="SimpleMath">mathcal X = (∂ : S -&gt; R)</span> and a homomorphism <span class="SimpleMath">ι : R -&gt; Q</span>. The output from the calculation is a crossed module <span class="SimpleMath">ι_∗mathcal X = (δ : ι_∗S -&gt; Q)</span> together with a morphism of crossed modules <span class="SimpleMath">mathcal X -&gt; ι_∗mathcal X</span>. When <span class="SimpleMath">ι</span> is a surjection with kernel <span class="SimpleMath">K</span> then <span class="SimpleMath">ι_∗S = S/[K,S]</span> (see <a href="chapBib.html#biBBH1">[BH78]</a>). (For many years, up until June 2018, this manual has stated the result to be <span class="SimpleMath">[K,S]</span>, though the correct quotient has been calculated.) When <span class="SimpleMath">ι</span> is an inclusion the induced crossed module may be calculated using a copower construction <a href="chapBib.html#biBBW1">[BW95]</a> or, in the case when <span class="SimpleMath">R</span> is normal in <span class="SimpleMath">Q</span>, as a coproduct of crossed modules (<a href="chapBib.html#biBBW2">[BW96]</a>, but not yet implemented). When <span class="SimpleMath">ι</span> is neither a surjection nor an inclusion, <span class="SimpleMath">ι</span> is factored as the composite of the surjection onto the image and the inclusion of the image in <span class="SimpleMath">Q</span>, and then the composite induced crossed module is constructed. These constructions use Tietze transformation routines in the library file <code class="code">tietze.gi</code>.</p>
 
-<p>As a first, surjective example, we take for <span class="SimpleMath">mathcal X</span> the normal inclusion crossed module of <code class="code">a4</code> in <code class="code">s4</code>, and for <span class="SimpleMath">ι</span> the surjection from <code class="code">s4</code> to <code class="code">s3</code> with kernel <code class="code">k4</code>. The induced crossed module is isomorphic to <code class="code">X3</code>.</p>
+<p>As a first, surjective example, we take for <span class="SimpleMath">mathcal X</span> the normal inclusion crossed module of <code class="code">a4</code> in <code class="code">s4</code>, and for <span class="SimpleMath">ι</span> the surjection from <code class="code">s4</code> to <code class="code">s3</code> with kernel <code class="code">k4</code>. The induced crossed module is isomorphic to <code class="code">X3 = [c3-&gt;s3]</code>.</p>
 
 
 <div class="example"><pre>
@@ -115,7 +145,7 @@ rec( embeddings := [ [X8 =&gt; XZ8], [Z8 =&gt; XZ8] ], xmods := [ X8, Z8 ] )
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3b := Group( (5,6),(6,7) );;  SetName( s3b, "s3b" );</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">epi := GroupHomomorphismByImages( s4, s3b, s4gens, [(5,6),(6,7),(5,6)] );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X4 := XModByNormalSubgroup( s4, a4 );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">indX4 := SurjectiveInducedXMod( X4, epi );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">indX4 := InducedXModBySurjection( X4, epi );</span>
 [a4/ker-&gt;s3b]
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( indX4 );</span>
 
@@ -136,38 +166,26 @@ Crossed module [a4/ker-&gt;s3b] :-
 
 </pre></div>
 
-<p>For a second, injective example we take for <span class="SimpleMath">mathcal X</span> a conjugation crossed module.</p>
+<p>For a second, injective example we take for <span class="SimpleMath">mathcal X</span> the automorphism crossed module <code class="code">X8</code> of <code class="func">CoproductXMod</code> (<a href="chap7.html#X7C01F5D98046E44B"><span class="RefLink">7.1-1</span></a>), and for <span class="SimpleMath">ι</span> an inclusion of <code class="code">s4b</code> in <code class="code">s5</code>. The resulting source group is <code class="code">SL(2,5)</code>.</p>
 
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d8 := Subgroup( d16, [ b1^2, b2 ] );  SetName( d8, "d8" ); </span>
-Group([ (11,13,15,17)(12,14,16,18), (12,18)(13,17)(14,16) ])
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c4 := Subgroup( d8, [ b1^2 ] );  SetName( c4, "c4" ); </span>
-Group([ (11,13,15,17)(12,14,16,18) ])
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Y16 := XModByNormalSubgroup( d16, d8 );                   </span>
-[d8-&gt;d16]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Y8 := SubXMod( Y16, c4, d8 );            </span>
-[c4-&gt;d8]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">inc8 := InclusionMorphism2DimensionalDomains( Y16, Y8 ); </span>
-[[c4-&gt;d8] =&gt; [d8-&gt;d16]]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">incd8 := RangeHom( inc8 );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">indY8 := InducedXMod( Y8, incd8 );</span>
-i*([c4-&gt;d8])
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription( indY8 );</span>
-[ "C4 x C4", "D16" ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">morY8 := MorphismOfInducedXMod( indY8 );</span>
-[[c4-&gt;d8] =&gt; i*([c4-&gt;d8])]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3c := Subgroup( s4, [ (2,3), (3,4) ] );;  </span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( s3c, "s3c" );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">indXs3c := InducedXMod( s4, s3c, s3c );</span>
-i*([s3c-&gt;s3c])
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription( indXs3c );</span>
-[ "GL(2,3)", "S4" ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iso4 := IsomorphismGroups( s4b, s4 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s5 := Group( (1,2,3,4,5), (4,5) );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( s5, "s5" ); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">inc45 := InclusionMappingGroups( s5, s4 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">iota45 := iso4 * inc45;; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">indX8 := InducedXMod( X8, iota45 );</span>
+i*(X8)
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( indX8 );</span>
+[ 120, 120 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription( indX8 );          </span>
+[ "SL(2,5)", "S5" ]
 
 </pre></div>
 
-<p>For a third example we use the version <code class="code">InducedXMod(Q,R,S)</code> of this global function. We take the identity mapping on <code class="code">s3c</code> as boundary, and the inclusion of <code class="code">s3c</code> in <code class="code">s4</code> as <span class="SimpleMath">ι</span>. The induced group is a general linear group <code class="code">GL(2,3)</code>.</p>
+<p>For a third example we use the version <code class="code">InducedXMod(Q,R,S)</code> of this global function, with <span class="SimpleMath">Q geqslant R ⊵ S</span>. We take the identity mapping on <code class="code">s3c</code> as boundary, and the inclusion of <code class="code">s3c</code> in <code class="code">s4</code> as <span class="SimpleMath">ι</span>. The induced group is a general linear group <code class="code">GL(2,3)</code>.</p>
 
 
 <div class="example"><pre>
@@ -187,7 +205,7 @@ i*([s3c-&gt;s3c])
 <h5>7.2-2 AllInducedXMods</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; AllInducedXMods</code>( <var class="Arg">Q</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>This function calculates all the induced crossed modules <code class="code">InducedXMod( Q, R, S )</code>, where <code class="code">R</code> runs over all conjugacy classes of subgroups of <code class="code">Q</code> and <code class="code">S</code> runs over all non-trivial subgroups of <code class="code">R</code>.</p>
+<p>This function calculates all the induced crossed modules <code class="code">InducedXMod(Q,R,S)</code>, where <code class="code">R</code> runs over all conjugacy classes of subgroups of <code class="code">Q</code> and <code class="code">S</code> runs over all non-trivial normal subgroups of <code class="code">R</code>.</p>
 
 
 <div class="example"><pre>

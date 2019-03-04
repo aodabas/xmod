@@ -68,7 +68,7 @@
   [33X[1;0Y[29X[2XAbelianModuleAction[102X( [3Xobj[103X ) [32X attribute[133X
   
   [33X[0;0YAn  abelian  module  is an abelian group together with a group action. These
-  are used by the crossed module constructor [2XXModByAbelianModule[102X ([14X2.1-1[114X).[133X
+  are used by the crossed module constructor [2XXModByAbelianModule[102X ([14X2.1-7[114X).[133X
   
   [33X[0;0YThe    resulting    [10XXabmod[110X    is    isomorphic    to    the    output   from
   [10XXModByAutomorphismGroup( k4 );[110X.[133X

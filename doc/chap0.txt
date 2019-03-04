@@ -6,10 +6,10 @@
                        [1X Crossed Modules and Cat1-Groups [101X
   
   
-                                      2.72
+                                      2.73
   
   
-                               16 September 2018
+                                  4 March 2019
   
   
                              Christopher D. Wensley
@@ -119,12 +119,20 @@
   2 [33X[0;0Y2d-groups : crossed modules and cat1-groups[133X
     2.1 [33X[0;0YConstructions for crossed modules[133X
       2.1-1 XMod
-      2.1-2 Source
-      2.1-3 ImageElmXModAction
-      2.1-4 Size
+      2.1-2 XModByNormalSubgroup
+      2.1-3 XModByTrivialAction
+      2.1-4 XModByAutomorphismGroup
+      2.1-5 XModByCentralExtension
+      2.1-6 XModByPullback
+      2.1-7 XModByAbelianModule
+      2.1-8 DirectProductOp
+      2.1-9 Source
+      2.1-10 ImageElmXModAction
+      2.1-11 Size
     2.2 [33X[0;0YProperties of crossed modules[133X
       2.2-1 IsXMod
       2.2-2 SubXMod
+      2.2-3 KernelCokernelXMod
     2.3 [33X[0;0YPre-crossed modules[133X
       2.3-1 PreXModByBoundaryAndAction
       2.3-2 PeifferSubgroup
@@ -148,8 +156,9 @@
       3.2-2 IsInjective
       3.2-3 XModMorphism
       3.2-4 IsomorphismPerm2DimensionalGroup
+      3.2-5 MorphismOfPullback
     3.3 [33X[0;0YMorphisms of pre-cat1-groups[133X
-      3.3-1 IsCat1Morphism
+      3.3-1 IsCat1GroupMorphism
       3.3-2 IsomorphismPermObject
     3.4 [33X[0;0YOperations on morphisms[133X
       3.4-1 CompositionMorphism
@@ -201,19 +210,30 @@
       7.2-2 AllInducedXMods
     7.3 [33X[0;0YInduced cat[22X^1[122X-groups[133X
       7.3-1 InducedCat1Group
-  8 [33X[0;0Y3d-groups and 3d-mappings : crossed squares and cat[22X^2[122X-groups[133X
+  8 [33X[0;0YCrossed squares and Cat[22X^2[122X-groups[133X
     8.1 [33X[0;0YDefinition of a crossed square and a crossed [22Xn[122X-cube of groups[133X
     8.2 [33X[0;0YConstructions for crossed squares[133X
-      8.2-1 CrossedSquare
-      8.2-2 CentralQuotient
-      8.2-3 IsCrossedSquare
-      8.2-4 Up2DimensionalGroup
+      8.2-1 CrossedSquareByNormalSubgroups
+      8.2-2 CrossedSquareByNormalSubXMod
+      8.2-3 ActorCrossedSquare
+      8.2-4 CrossedSquareByAutomorphismGroup
+      8.2-5 CrossedSquareByPullback
+      8.2-6 CrossedSquareByXModSplitting
+      8.2-7 CrossedSquare
+      8.2-8 Transpose3DimensionalGroup
+      8.2-9 CentralQuotient
+      8.2-10 IsCrossedSquare
+      8.2-11 Up2DimensionalGroup
+      8.2-12 ImageElmCrossedPairing
     8.3 [33X[0;0YMorphisms of crossed squares[133X
-      8.3-1 Source
-      8.3-2 IsCrossedSquareMorphism
+      8.3-1 CrossedSquareMorphism
+      8.3-2 Source
+      8.3-3 IsCrossedSquareMorphism
+      8.3-4 InclusionMorphismHigherDimensionalDomains
     8.4 [33X[0;0YDefinitions and constructions for cat[22X^2[122X-groups and their morphisms[133X
       8.4-1 Cat2Group
-      8.4-2 Cat2GroupOfCrossedSquare
+      8.4-2 Cat2GroupMorphism
+      8.4-3 Cat2GroupOfCrossedSquare
     8.5 [33X[0;0YDefinition and constructions for cat[22X^n[122X-groups and their morphisms[133X
   9 [33X[0;0YCrossed modules of groupoids[133X
     9.1 [33X[0;0YConstructions for crossed modules of groupoids[133X

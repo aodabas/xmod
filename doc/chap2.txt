@@ -10,7 +10,7 @@
   
   [33X[0;0YA  crossed  module  (of groups) [22XmathcalX = (∂ : S -> R )[122X consists of a group
   homomorphism  [22X∂[122X, called the [13Xboundary[113X of [22XmathcalX[122X, with [13Xsource[113X [22XS[122X and [13Xrange[113X [22XR[122X.
-  The  group  [22XR[122X  acts on itself by conjugation, and on [22XS[122X by an action [22Xα : R ->
+  The  group  [22XR[122X  acts on itself by conjugation, and on [22XS[122X by an [13Xaction[113X [22Xα : R ->
   Aut(S)[122X such that, for all [22Xs,s_1,s_2 ∈ S[122X and [22Xr ∈ R[122X,[133X
   
   
@@ -20,59 +20,206 @@
   [124X
   
   [33X[0;0YWhen only the first of these axioms is satisfied, the resulting structure is
-  a  [13Xpre-crossed  module[113X (see section [14X2.3[114X). (Much of the literature on crossed
-  modules  uses  left actions, but we have chosen to use right actions in this
-  package since that is the standard choice for group actions in [5XGAP[105X.)[133X
+  a [13Xpre-crossed module[113X (see section [14X2.3[114X). The kernel of [22X∂[122X is abelian.[133X
   
-  [33X[0;0YThe kernel of [22X∂[122X is abelian.[133X
-  
-  [33X[0;0YThere are a variety of constructors for crossed modules:[133X
+  [33X[0;0Y(Much  of  the  literature on crossed modules uses left actions, but we have
+  chosen  to  use  right  actions  in  this package since that is the standard
+  choice for group actions in [5XGAP[105X.)[133X
   
   [1X2.1-1 XMod[101X
   
   [33X[1;0Y[29X[2XXMod[102X( [3Xargs[103X ) [32X function[133X
   [33X[1;0Y[29X[2XXModByBoundaryAndAction[102X( [3Xbdy[103X, [3Xact[103X ) [32X operation[133X
-  [33X[1;0Y[29X[2XXModByTrivialAction[102X( [3Xbdy[103X ) [32X operation[133X
+  
+  [33X[0;0YThe  global  function [10XXMod[110X calls one of the standard constructions described
+  in  the  following  subsections. In the example the boundary is the identity
+  mapping on [10Xc5[110X and the action is trivial.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xc5 := Group( (5,6,7,8,9) );;[127X[104X
+    [4X[25Xgap>[125X [27XSetName( c5, "c5" );[127X[104X
+    [4X[25Xgap>[125X [27Xid5 := IdentityMapping( c5 );;[127X[104X
+    [4X[25Xgap>[125X [27Xac5 := AutomorphismGroup( c5 );; [127X[104X
+    [4X[25Xgap>[125X [27Xact := MappingToOne( c5, ac5 );;[127X[104X
+    [4X[25Xgap>[125X [27XXMod( id5, act ) = XModByBoundaryAndAction( id5, act );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.1-2 XModByNormalSubgroup[101X
+  
   [33X[1;0Y[29X[2XXModByNormalSubgroup[102X( [3XG[103X, [3XN[103X ) [32X operation[133X
-  [33X[1;0Y[29X[2XXModByCentralExtension[102X( [3Xbdy[103X ) [32X operation[133X
-  [33X[1;0Y[29X[2XXModByAutomorphismGroup[102X( [3Xgrp[103X ) [32X operation[133X
-  [33X[1;0Y[29X[2XXModByInnerAutomorphismGroup[102X( [3Xgrp[103X ) [32X operation[133X
+  
+  [33X[0;0YA  [13Xconjugation  crossed  module[113X is the inclusion of a normal subgroup [22XS ⊴ R[122X,
+  where [22XR[122X acts on [22XS[122X by conjugation.[133X
+  
+  [1X2.1-3 XModByTrivialAction[101X
+  
+  [33X[1;0Y[29X[2XXModByTrivialAction[102X( [3Xbdy[103X ) [32X operation[133X
+  
+  [33X[0;0YA  [13Xtrivial action crossed module[113X [22X(∂ : S -> R)[122X has [22Xs^r = s[122X for all [22Xs ∈ S, r ∈
+  R[122X, the source is abelian and the image lies in the centre of the range.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xq8 := QuaternionGroup( IsPermGroup, 8 );[127X[104X
+    [4X[28XGroup([ (1,5,3,7)(2,8,4,6), (1,2,3,4)(5,6,7,8) ])[128X[104X
+    [4X[25Xgap>[125X [27XSetName( q8, "q8" );[127X[104X
+    [4X[25Xgap>[125X [27Xc2 := Centre( q8 );                     [127X[104X
+    [4X[28XGroup([ (1,3)(2,4)(5,7)(6,8) ])[128X[104X
+    [4X[25Xgap>[125X [27XSetName( c2, "<-1>" );[127X[104X
+    [4X[25Xgap>[125X [27Xbdy := InclusionMappingGroups( q8, c2 );;[127X[104X
+    [4X[25Xgap>[125X [27XX8a := XModByTrivialAction( bdy );[127X[104X
+    [4X[28X[<-1>->q8][128X[104X
+    [4X[25Xgap>[125X [27Xc4 := Subgroup( q8, [q8.1] );;[127X[104X
+    [4X[25Xgap>[125X [27XSetName( c4, "<i>" );[127X[104X
+    [4X[25Xgap>[125X [27XX8b := XModByNormalSubgroup( q8, c4 );[127X[104X
+    [4X[28X[<i>->q8][128X[104X
+    [4X[25Xgap>[125X [27XDisplay(X8b);        [127X[104X
+    [4X[28XCrossed module [<i>->q8] :- [128X[104X
+    [4X[28X: Source group has generators:[128X[104X
+    [4X[28X  [ (1,5,3,7)(2,8,4,6) ][128X[104X
+    [4X[28X: Range group q8 has generators:[128X[104X
+    [4X[28X  [ (1,5,3,7)(2,8,4,6), (1,2,3,4)(5,6,7,8) ][128X[104X
+    [4X[28X: Boundary homomorphism maps source generators to:[128X[104X
+    [4X[28X  [ (1,5,3,7)(2,8,4,6) ][128X[104X
+    [4X[28X: Action homomorphism maps range generators to automorphisms:[128X[104X
+    [4X[28X  (1,5,3,7)(2,8,4,6) --> { source gens --> [ (1,5,3,7)(2,8,4,6) ] }[128X[104X
+    [4X[28X  (1,2,3,4)(5,6,7,8) --> { source gens --> [ (1,7,3,5)(2,6,4,8) ] }[128X[104X
+    [4X[28X  These 2 automorphisms generate the group of automorphisms.[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.1-4 XModByAutomorphismGroup[101X
+  
+  [33X[1;0Y[29X[2XXModByAutomorphismGroup[102X( [3Xgrp[103X ) [32X attribute[133X
+  [33X[1;0Y[29X[2XXModByInnerAutomorphismGroup[102X( [3Xgrp[103X ) [32X attribute[133X
   [33X[1;0Y[29X[2XXModByGroupOfAutomorphisms[102X( [3XG[103X, [3XA[103X ) [32X operation[133X
+  
+  [33X[0;0YAn [13Xautomorphism crossed module[113X has as range a subgroup [22XR[122X of the automorphism
+  group  Aut[22X(S)[122X  of  [22XS[122X  which  contains the inner automorphism group of [22XS[122X. The
+  boundary maps [22Xs ∈ S[122X to the inner automorphism of [22XS[122X by [22Xs[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XX5 := XModByAutomorphismGroup( c5 );[127X[104X
+    [4X[28X[c5 -> Aut(c5)] [128X[104X
+    [4X[25Xgap>[125X [27XDisplay( X5 );[127X[104X
+    [4X[28XCrossed module [c5->Aut(c5)] :- [128X[104X
+    [4X[28X: Source group c5 has generators:[128X[104X
+    [4X[28X  [ (5,6,7,8,9) ][128X[104X
+    [4X[28X: Range group Aut(c5) has generators:[128X[104X
+    [4X[28X  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ][128X[104X
+    [4X[28X: Boundary homomorphism maps source generators to:[128X[104X
+    [4X[28X  [ IdentityMapping( c5 ) ][128X[104X
+    [4X[28X: Action homomorphism maps range generators to automorphisms:[128X[104X
+    [4X[28X  GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [128X[104X
+    [4X[28X[ (5,7,9,6,8) ] ) --> { source gens --> [ (5,7,9,6,8) ] }[128X[104X
+    [4X[28X  This automorphism generates the group of automorphisms.[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.1-5 XModByCentralExtension[101X
+  
+  [33X[1;0Y[29X[2XXModByCentralExtension[102X( [3Xbdy[103X ) [32X operation[133X
+  
+  [33X[0;0YA  [13Xcentral extension crossed module[113X has as boundary a surjection [22X∂ : S -> R[122X,
+  with central kernel, where [22Xr ∈ R[122X acts on [22XS[122X by conjugation with [22X∂^-1r[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xgen12 := [ (1,2,3,4,5,6), (2,6)(3,5) ];;[127X[104X
+    [4X[25Xgap>[125X [27Xd12 := Group( gen12 );;                  [127X[104X
+    [4X[25Xgap>[125X [27Xgen6 := [ (7,8,9), (8,9) ];;[127X[104X
+    [4X[25Xgap>[125X [27Xs3 := Group( gen6 );;[127X[104X
+    [4X[25Xgap>[125X [27Xpr12 := GroupHomomorphismByImages( d12, s3, gen12, gen6 );;[127X[104X
+    [4X[25Xgap>[125X [27XKernel( pr12 ) = Centre( d12 );[127X[104X
+    [4X[28Xtrue[128X[104X
+    [4X[25Xgap>[125X [27XX12 := XModByCentralExtension( pr12 );;[127X[104X
+    [4X[25Xgap>[125X [27XDisplay( X12 );                         [127X[104X
+    [4X[28XCrossed module :- [128X[104X
+    [4X[28X: Source group has generators:[128X[104X
+    [4X[28X  [ (1,2,3,4,5,6), (2,6)(3,5) ][128X[104X
+    [4X[28X: Range group has generators:[128X[104X
+    [4X[28X  [ (7,8,9), (8,9) ][128X[104X
+    [4X[28X: Boundary homomorphism maps source generators to:[128X[104X
+    [4X[28X  [ (7,8,9), (8,9) ][128X[104X
+    [4X[28X: Action homomorphism maps range generators to automorphisms:[128X[104X
+    [4X[28X  (7,8,9) --> { source gens --> [ (1,2,3,4,5,6), (1,3)(4,6) ] }[128X[104X
+    [4X[28X  (8,9) --> { source gens --> [ (1,6,5,4,3,2), (2,6)(3,5) ] }[128X[104X
+    [4X[28X  These 2 automorphisms generate the group of automorphisms.[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.1-6 XModByPullback[101X
+  
+  [33X[1;0Y[29X[2XXModByPullback[102X( [3Xxmod[103X, [3Xhom[103X ) [32X operation[133X
+  
+  [33X[0;0YLet  [22XmathcalX_0 = (μ : M -> P)[122X be a crossed module. If [22Xν : N -> P[122X is a group
+  homomorphism  with the same range as [22XmathcalX_0[122X, form the pullback group [22XL =
+  M  ×_P N[122X, with projection [22Xλ : L -> N[122X (as defined in the [5XUtils[105X package). Then
+  [22XN[122X  acts on [22XL[122X by [22X(m,n)^n' := (m^ν n',n^n')[122X, so that [22XmathcalX_1 = (λ : L -> N)[122X
+  is  the  [13X  pullback  crossed module[113X determined by [22XmathcalX_0[122X and [22Xν[122X. There is
+  also a morphism of crossed modules [22X(κ,ν) : mathcalX_1 -> mathcalX_2[122X.[133X
+  
+  [33X[0;0YThe  example  forms  a  pullback  of  the crossed module [10XX12[110X of the previous
+  subsection.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xgens4 := [ (11,12), (12,13), (13,14) ];; [127X[104X
+    [4X[25Xgap>[125X [27Xs4 := Group( gens4 );; [127X[104X
+    [4X[25Xgap>[125X [27Xtheta := GroupHomomorphismByImages( s4, s3, gens4, [(7,8),(8,9),(7,8)] );;[127X[104X
+    [4X[25Xgap>[125X [27XX1 := XModByPullback( X12, theta );; [127X[104X
+    [4X[25Xgap>[125X [27XStructureDescription( Source( X1 ) );[127X[104X
+    [4X[28X"C2 x S4"[128X[104X
+    [4X[25Xgap>[125X [27Xinfo := PullbackInfo( Source( X1 ) );;[127X[104X
+    [4X[25Xgap>[125X [27Xinfo!.directProduct;[127X[104X
+    [4X[28XGroup([ (1,2,3,4,5,6), (2,6)(3,5), (7,8), (8,9), (9,10) ])[128X[104X
+    [4X[25Xgap>[125X [27Xinfo!.projections[1];[127X[104X
+    [4X[28X[ (7,8)(9,10), (7,9)(8,10), (2,6)(3,5)(8,9), (1,5,3)(2,6,4)(8,10,9), [128X[104X
+    [4X[28X  (1,6,5,4,3,2)(8,9,10) ] -> [ (), (), (2,6)(3,5), (1,5,3)(2,6,4), [128X[104X
+    [4X[28X  (1,6,5,4,3,2) ][128X[104X
+    [4X[25Xgap>[125X [27Xinfo!.projections[2];[127X[104X
+    [4X[28X[ (7,8)(9,10), (7,9)(8,10), (2,6)(3,5)(8,9), (1,5,3)(2,6,4)(8,10,9), [128X[104X
+    [4X[28X  (1,6,5,4,3,2)(8,9,10) ] -> [ (11,12)(13,14), (11,13)(12,14), (12,13), [128X[104X
+    [4X[28X  (12,14,13), (12,13,14) ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.1-7 XModByAbelianModule[101X
+  
   [33X[1;0Y[29X[2XXModByAbelianModule[102X( [3Xabmod[103X ) [32X operation[133X
+  
+  [33X[0;0YA [13Xcrossed abelian module[113X has an abelian module as source and the zero map as
+  boundary. See section [14X11.2[114X for an example.[133X
+  
+  [1X2.1-8 DirectProductOp[101X
+  
   [33X[1;0Y[29X[2XDirectProductOp[102X( [3XL[103X, [3XX1[103X ) [32X operation[133X
   
-  [33X[0;0YThe   global   function  [10XXMod[110X  implements  one  of  the  following  standard
-  constructions:[133X
+  [33X[0;0YThe direct product [22XmathcalX_1 × mathcalX_2[122X of two crossed modules has source
+  [22XS_1  ×  S_2[122X,  range  [22XR_1  × R_2[122X and boundary [22X∂_1 × ∂_2[122X, with [22XR_1, R_2[122X acting
+  trivially on [22XS_2, S_1[122X respectively.[133X
   
-  [30X    [33X[0;6YA  [13Xtrivial  action crossed module[113X [22X(∂ : S -> R)[122X has [22Xs^r = s[122X for all [22Xs ∈
-        S,  r  ∈  R[122X, the source is abelian and the image lies in the centre of
-        the range.[133X
+  [33X[0;0YSince  [10XDirectProduct[110X  is  a global function which only accepts groups, it is
+  necessary  to  provide  an "other method" for the operation [10XDirectProductOp[110X.
+  This  operation  takes  as parameters a list of crossed modules, followed by
+  the first of these: [10XDirectProductOp([X1,X2],X1);[110X. At present only the direct
+  product of two crossed modules is implemented.[133X
   
-  [30X    [33X[0;6YA [13Xconjugation crossed module[113X is the inclusion of a normal subgroup [22XS ⊴
-        R[122X, where [22XR[122X acts on [22XS[122X by conjugation.[133X
+  [33X[0;0YThe  example  constructs  the  product  of the two crossed modules formed in
+  subsection [2XXModByTrivialAction[102X ([14X2.1-3[114X).[133X
   
-  [30X    [33X[0;6YA  [13Xcentral extension crossed module[113X has as boundary a surjection [22X∂ : S
-        ->  R[122X,  with central kernel, where [22Xr ∈ R[122X acts on [22XS[122X by conjugation with
-        [22X∂^-1r[122X.[133X
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XDirectProductOp( [X8a,X8b], X8a );[127X[104X
+    [4X[28X[<-1>x<i>->q8xq8][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
   
-  [30X    [33X[0;6YAn  [13Xautomorphism  crossed  module[113X  has  as  range  a subgroup [22XR[122X of the
-        automorphism  group  Aut[22X(S)[122X of [22XS[122X which contains the inner automorphism
-        group  of [22XS[122X. The boundary maps [22Xs ∈ S[122X to the inner automorphism of [22XS[122X by
-        [22Xs[122X.[133X
-  
-  [30X    [33X[0;6YA  [13Xcrossed abelian module[113X has an abelian module as source and the zero
-        map as boundary.[133X
-  
-  [30X    [33X[0;6YThe  direct product [22XmathcalX_1 × mathcalX_2[122X of two crossed modules has
-        source  [22XS_1  ×  S_2[122X, range [22XR_1 × R_2[122X and boundary [22X∂_1 × ∂_2[122X, with [22XR_1,
-        R_2[122X acting trivially on [22XS_2, S_1[122X respectively.[133X
-  
-        [33X[0;6YSince [10XDirectProduct[110X is a global function which only accepts groups, it
-        is   necessary   to   provide   an   "other   method"   for  operation
-        [10XDirectProductOp[110X which, as usual, takes as parameters a list of crossed
-        modules, followed by the first of these: [10XDirectProductOp([X1,X2],X1);[110X[133X
-  
-  [1X2.1-2 Source[101X
+  [1X2.1-9 Source[101X
   
   [33X[1;0Y[29X[2XSource[102X( [3XX0[103X ) [32X attribute[133X
   [33X[1;0Y[29X[2XRange[102X( [3XX0[103X ) [32X attribute[133X
@@ -91,13 +238,31 @@
   [33X[0;0Y(Up  until  version  2.63  there  was an additional attribute [10XAutoGroup[110X, the
   range of [10XXModAction(X0)[110X.)[133X
   
-  [1X2.1-3 ImageElmXModAction[101X
+  [33X[0;0YThe   example   uses  the  crossed  module  [10XX12[110X  constructed  in  subsection
+  [2XXModByCentralExtension[102X ([14X2.1-5[114X).[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27XSource( X12 );   [127X[104X
+    [4X[28XGroup([ (1,2,3,4,5,6), (2,6)(3,5) ])[128X[104X
+    [4X[25Xgap>[125X [27XRange( X12 );    [127X[104X
+    [4X[28XGroup([ (7,8,9), (8,9) ])[128X[104X
+    [4X[25Xgap>[125X [27XBoundary( X12 ); [127X[104X
+    [4X[28X[ (1,2,3,4,5,6), (2,6)(3,5) ] -> [ (7,8,9), (8,9) ][128X[104X
+    [4X[25Xgap>[125X [27XXModAction( X12 );[127X[104X
+    [4X[28X[ (7,8,9), (8,9) ] -> [128X[104X
+    [4X[28X[ [ (1,2,3,4,5,6), (2,6)(3,5) ] -> [ (1,2,3,4,5,6), (1,3)(4,6) ], [128X[104X
+    [4X[28X  [ (1,2,3,4,5,6), (2,6)(3,5) ] -> [ (1,6,5,4,3,2), (2,6)(3,5) ] ][128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.1-10 ImageElmXModAction[101X
   
   [33X[1;0Y[29X[2XImageElmXModAction[102X( [3XX0[103X, [3Xs[103X, [3Xr[103X ) [32X operation[133X
   
   [33X[0;0YThis function returns the element [22Xs^r[122X given by [10XXModAction(X0)[110X.[133X
   
-  [1X2.1-4 Size[101X
+  [1X2.1-11 Size[101X
   
   [33X[1;0Y[29X[2XSize[102X( [3XX0[103X ) [32X attribute[133X
   [33X[1;0Y[29X[2XName[102X( [3XX0[103X ) [32X attribute[133X
@@ -113,42 +278,27 @@
   
   [33X[0;0YThe [10XDisplay[110X function is used to print details of 2d-groups.[133X
   
-  [33X[0;0YIn  the  simple example below, [10XX1[110X is an automorphism crossed module, using a
-  cyclic  group  of  size  five.  The [10XPrint[110X statements at the end list the [5XGAP[105X
-  representations, properties and attributes of [10XX1[110X.[133X
+  [33X[0;0YIn  the  simple  example  below,  [10XX5[110X  is  the  automorphism  crossed  module
+  constructed   in   subsection  [2XXModByAutomorphismGroup[102X  ([14X2.1-4[114X).  The  [10XPrint[110X
+  statements  at  the  end  of  the  example  list the [5XGAP[105X representations and
+  attributes of [10XX5[110X.[133X
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27Xc5 := Group( (5,6,7,8,9) );;[127X[104X
-    [4X[25Xgap>[125X [27XSetName( c5, "c5" );[127X[104X
-    [4X[25Xgap>[125X [27XX1 := XModByAutomorphismGroup( c5 );[127X[104X
-    [4X[28X[c5 -> Aut(c5)] [128X[104X
-    [4X[25Xgap>[125X [27XDisplay( X1 );[127X[104X
-    [4X[28XCrossed module [c5->Aut(c5)] :- [128X[104X
-    [4X[28X: Source group c5 has generators:[128X[104X
-    [4X[28X  [ (5,6,7,8,9) ][128X[104X
-    [4X[28X: Range group Aut(c5) has generators:[128X[104X
-    [4X[28X  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ][128X[104X
-    [4X[28X: Boundary homomorphism maps source generators to:[128X[104X
-    [4X[28X  [ IdentityMapping( c5 ) ][128X[104X
-    [4X[28X: Action homomorphism maps range generators to automorphisms:[128X[104X
-    [4X[28X  GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [128X[104X
-    [4X[28X[ (5,7,9,6,8) ] ) --> { source gens --> [ (5,7,9,6,8) ] }[128X[104X
-    [4X[28X  This automorphism generates the group of automorphisms.[128X[104X
-    [4X[25Xgap>[125X [27XSize( X1 );  IdGroup( X1 ); [127X[104X
+    [4X[25Xgap>[125X [27XSize( X5 );  IdGroup( X5 ); [127X[104X
     [4X[28X[ 5, 4 ][128X[104X
     [4X[28X[ [ 5, 1 ], [ 4, 1 ] ][128X[104X
-    [4X[25Xgap>[125X [27Xext := ExternalSetXMod( X1 ); [127X[104X
+    [4X[25Xgap>[125X [27Xext := ExternalSetXMod( X5 ); [127X[104X
     [4X[28X<xset:[ (), (5,6,7,8,9), (5,7,9,6,8), (5,8,6,9,7), (5,9,8,7,6) ]>[128X[104X
     [4X[25Xgap>[125X [27XOrbits( ext );[127X[104X
     [4X[28X[ [ () ], [ (5,6,7,8,9), (5,7,9,6,8), (5,9,8,7,6), (5,8,6,9,7) ] ][128X[104X
-    [4X[25Xgap>[125X [27Xa := GeneratorsOfGroup( Range( X1 ) )[1]^2; [127X[104X
+    [4X[25Xgap>[125X [27Xa := GeneratorsOfGroup( Range( X5 ) )[1]^2; [127X[104X
     [4X[28X[ (5,6,7,8,9) ] -> [ (5,9,8,7,6) ][128X[104X
-    [4X[25Xgap>[125X [27XImageElmXModAction( X1, (5,7,9,6,8), a );[127X[104X
+    [4X[25Xgap>[125X [27XImageElmXModAction( X5, (5,7,9,6,8), a );[127X[104X
     [4X[28X(5,8,6,9,7)[128X[104X
-    [4X[25Xgap>[125X [27XRepresentationsOfObject( X1 );[127X[104X
+    [4X[25Xgap>[125X [27XRepresentationsOfObject( X5 );[127X[104X
     [4X[28X[ "IsComponentObjectRep", "IsAttributeStoringRep", "IsPreXModObj" ][128X[104X
-    [4X[25Xgap>[125X [27XKnownAttributesOfObject( X1);[127X[104X
+    [4X[25Xgap>[125X [27XKnownAttributesOfObject( X5);[127X[104X
     [4X[28X[ "Name", "Size", "Range", "Source", "IdGroup", "Boundary", "XModAction", [128X[104X
     [4X[28X  "ExternalSetXMod", "IsomorphismPerm2DimensionalGroup" ][128X[104X
     [4X[28X[128X[104X
@@ -177,7 +327,7 @@
   [33X[0;0YA  structure  which  has [10XIsPerm2DimensionalGroup[110X is a precrossed module or a
   pre-cat1-group (see section [14X2.4[114X) whose source and range are both permutation
   groups.  The  properties  [10XIsPc2DimensionalGroup[110X,  [10XIsFp2DimensionalGroup[110X  are
-  defined similarly. In the example below we see that [10XX1[110X has [10XIsPreXMod[110X, [10XIsXMod[110X
+  defined similarly. In the example below we see that [10XX5[110X has [10XIsPreXMod[110X, [10XIsXMod[110X
   and  [10XIsPerm2DimensionalGroup[110X. There are also properties corresponding to the
   various      construction     methods     listed     in     section     [14X2.1[114X:
   [10XIsTrivialAction2DimensionalGroup[110X;         [10XIsNormalSubgroup2DimensionalGroup[110X;
@@ -186,7 +336,7 @@
   
   [4X[32X  Example  [32X[104X
     [4X[28X[128X[104X
-    [4X[25Xgap>[125X [27XKnownPropertiesOfObject( X1 );[127X[104X
+    [4X[25Xgap>[125X [27XKnownPropertiesOfObject( X5 );[127X[104X
     [4X[28X[ "IsEmpty", "IsTrivial", "IsNonTrivial", "IsFinite", [128X[104X
     [4X[28X  "CanEasilyCompareElements", "CanEasilySortElements", "IsDuplicateFree", [128X[104X
     [4X[28X  "IsGeneratorsOfSemigroup", "IsPreXModDomain", "IsPerm2DimensionalGroup", [128X[104X
@@ -238,6 +388,27 @@
     [4X[25Xgap>[125X [27XNX4 := NormalSubXMods( X4 );;[127X[104X
     [4X[25Xgap>[125X [27XLength( NX4 ); [127X[104X
     [4X[28X5[128X[104X
+    [4X[28X[128X[104X
+  [4X[32X[104X
+  
+  [1X2.2-3 KernelCokernelXMod[101X
+  
+  [33X[1;0Y[29X[2XKernelCokernelXMod[102X( [3XX0[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet  [22XmathcalX  =  (∂  :  S  -> R)[122X. If [22XK leqslant S[122X is the kernel of [22X∂[122X, and [22XJ
+  leqslant  R[122X  is  the  image  of  [22X∂[122X, form [22XC = R/J[122X. Then [22X(ν∂|_K : K -> C)[122X is a
+  crossed  module  where [22Xν : R -> C, r ↦ Jr[122X is the natural map, and the action
+  of [22XC[122X on [22XK[122X is given by [22Xk^Jr = k^r[122X.[133X
+  
+  [4X[32X  Example  [32X[104X
+    [4X[28X[128X[104X
+    [4X[25Xgap>[125X [27Xd8d8 := Group( (1,2,3,4), (1,3), (5,6,7,8), (5,7) );;[127X[104X
+    [4X[25Xgap>[125X [27XX88 := XModByAutomorphismGroup( d8d8 );;[127X[104X
+    [4X[25Xgap>[125X [27XSize( X88 );[127X[104X
+    [4X[28X[ 64, 2048 ][128X[104X
+    [4X[25Xgap>[125X [27XY88 := KernelCokernelXMod( X88 );;[127X[104X
+    [4X[25Xgap>[125X [27XStructureDescription( Y88 );[127X[104X
+    [4X[28X[ "C2 x C2", "(D8 x D8) : C2" ] [128X[104X
     [4X[28X[128X[104X
   [4X[32X[104X
   

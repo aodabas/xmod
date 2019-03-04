@@ -26,15 +26,23 @@
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7C8175AE7F76B586">2.1-1 XMod</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X790248A67CB9C33A">2.1-2 Source</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7AF6602C87845F1D">2.1-3 ImageElmXModAction</a></span>
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7DCC43E47B1764F2">2.1-4 Size</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X83050ED686776933">2.1-2 XModByNormalSubgroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X867B2D53832EF05E">2.1-3 XModByTrivialAction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X78B14FDA817CCEEF">2.1-4 XModByAutomorphismGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7D0F6FAA7AF69844">2.1-5 XModByCentralExtension</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X84FA2B0A795B6997">2.1-6 XModByPullback</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X824631577864961E">2.1-7 XModByAbelianModule</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7D9EF8C3856AA95A">2.1-8 DirectProductOp</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X790248A67CB9C33A">2.1-9 Source</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7AF6602C87845F1D">2.1-10 ImageElmXModAction</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7DCC43E47B1764F2">2.1-11 Size</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7CF622538749FE73">2.2 <span class="Heading">Properties of crossed modules</span></a>
 </span>
 <div class="ContSSBlock">
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7E77E6B881B1CE50">2.2-1 IsXMod</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7884284383284A87">2.2-2 SubXMod</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap2.html#X7D8165F77B23BCF6">2.2-3 KernelCokernelXMod</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap2.html#X7D435B6279032D4D">2.3 <span class="Heading">Pre-crossed modules</span></a>
 </span>
@@ -76,7 +84,7 @@
 
 <h4>2.1 <span class="Heading">Constructions for crossed modules</span></h4>
 
-<p>A crossed module (of groups) <span class="SimpleMath">mathcalX = (∂ : S -&gt; R )</span> consists of a group homomorphism <span class="SimpleMath">∂</span>, called the <em>boundary</em> of <span class="SimpleMath">mathcalX</span>, with <em>source</em> <span class="SimpleMath">S</span> and <em>range</em> <span class="SimpleMath">R</span>. The group <span class="SimpleMath">R</span> acts on itself by conjugation, and on <span class="SimpleMath">S</span> by an action <span class="SimpleMath">α : R -&gt; Aut(S)</span> such that, for all <span class="SimpleMath">s,s_1,s_2 ∈ S</span> and <span class="SimpleMath">r ∈ R</span>,</p>
+<p>A crossed module (of groups) <span class="SimpleMath">mathcalX = (∂ : S -&gt; R )</span> consists of a group homomorphism <span class="SimpleMath">∂</span>, called the <em>boundary</em> of <span class="SimpleMath">mathcalX</span>, with <em>source</em> <span class="SimpleMath">S</span> and <em>range</em> <span class="SimpleMath">R</span>. The group <span class="SimpleMath">R</span> acts on itself by conjugation, and on <span class="SimpleMath">S</span> by an <em>action</em> <span class="SimpleMath">α : R -&gt; Aut(S)</span> such that, for all <span class="SimpleMath">s,s_1,s_2 ∈ S</span> and <span class="SimpleMath">r ∈ R</span>,</p>
 
 <p class="pcenter">
 {\bf XMod\ 1}  :   \partial(s^r) 
@@ -88,11 +96,9 @@
    = {s_1}^{s_2}.
 </p>
 
-<p>When only the first of these axioms is satisfied, the resulting structure is a <em>pre-crossed module</em> (see section <a href="chap2.html#X7D435B6279032D4D"><span class="RefLink">2.3</span></a>). (Much of the literature on crossed modules uses left actions, but we have chosen to use right actions in this package since that is the standard choice for group actions in <strong class="pkg">GAP</strong>.)</p>
+<p>When only the first of these axioms is satisfied, the resulting structure is a <em>pre-crossed module</em> (see section <a href="chap2.html#X7D435B6279032D4D"><span class="RefLink">2.3</span></a>). The kernel of <span class="SimpleMath">∂</span> is abelian.</p>
 
-<p>The kernel of <span class="SimpleMath">∂</span> is abelian.</p>
-
-<p>There are a variety of constructors for crossed modules:</p>
+<p>(Much of the literature on crossed modules uses left actions, but we have chosen to use right actions in this package since that is the standard choice for group actions in <strong class="pkg">GAP</strong>.)</p>
 
 <p><a id="X7C8175AE7F76B586" name="X7C8175AE7F76B586"></a></p>
 
@@ -100,42 +106,189 @@
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XMod</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByBoundaryAndAction</code>( <var class="Arg">bdy</var>, <var class="Arg">act</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByTrivialAction</code>( <var class="Arg">bdy</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>The global function <code class="code">XMod</code> calls one of the standard constructions described in the following subsections. In the example the boundary is the identity mapping on <code class="code">c5</code> and the action is trivial.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c5 := Group( (5,6,7,8,9) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( c5, "c5" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">id5 := IdentityMapping( c5 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ac5 := AutomorphismGroup( c5 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">act := MappingToOne( c5, ac5 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">XMod( id5, act ) = XModByBoundaryAndAction( id5, act );</span>
+true
+
+</pre></div>
+
+<p><a id="X83050ED686776933" name="X83050ED686776933"></a></p>
+
+<h5>2.1-2 XModByNormalSubgroup</h5>
+
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByNormalSubgroup</code>( <var class="Arg">G</var>, <var class="Arg">N</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByCentralExtension</code>( <var class="Arg">bdy</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByAutomorphismGroup</code>( <var class="Arg">grp</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByInnerAutomorphismGroup</code>( <var class="Arg">grp</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>A <em>conjugation crossed module</em> is the inclusion of a normal subgroup <span class="SimpleMath">S ⊴ R</span>, where <span class="SimpleMath">R</span> acts on <span class="SimpleMath">S</span> by conjugation.</p>
+
+<p><a id="X867B2D53832EF05E" name="X867B2D53832EF05E"></a></p>
+
+<h5>2.1-3 XModByTrivialAction</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByTrivialAction</code>( <var class="Arg">bdy</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>A <em>trivial action crossed module</em> <span class="SimpleMath">(∂ : S -&gt; R)</span> has <span class="SimpleMath">s^r = s</span> for all <span class="SimpleMath">s ∈ S, r ∈ R</span>, the source is abelian and the image lies in the centre of the range.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">q8 := QuaternionGroup( IsPermGroup, 8 );</span>
+Group([ (1,5,3,7)(2,8,4,6), (1,2,3,4)(5,6,7,8) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( q8, "q8" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c2 := Centre( q8 );                     </span>
+Group([ (1,3)(2,4)(5,7)(6,8) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( c2, "&lt;-1&gt;" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">bdy := InclusionMappingGroups( q8, c2 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X8a := XModByTrivialAction( bdy );</span>
+[&lt;-1&gt;-&gt;q8]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c4 := Subgroup( q8, [q8.1] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( c4, "&lt;i&gt;" );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X8b := XModByNormalSubgroup( q8, c4 );</span>
+[&lt;i&gt;-&gt;q8]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display(X8b);        </span>
+Crossed module [&lt;i&gt;-&gt;q8] :- 
+: Source group has generators:
+  [ (1,5,3,7)(2,8,4,6) ]
+: Range group q8 has generators:
+  [ (1,5,3,7)(2,8,4,6), (1,2,3,4)(5,6,7,8) ]
+: Boundary homomorphism maps source generators to:
+  [ (1,5,3,7)(2,8,4,6) ]
+: Action homomorphism maps range generators to automorphisms:
+  (1,5,3,7)(2,8,4,6) --&gt; { source gens --&gt; [ (1,5,3,7)(2,8,4,6) ] }
+  (1,2,3,4)(5,6,7,8) --&gt; { source gens --&gt; [ (1,7,3,5)(2,6,4,8) ] }
+  These 2 automorphisms generate the group of automorphisms.
+
+</pre></div>
+
+<p><a id="X78B14FDA817CCEEF" name="X78B14FDA817CCEEF"></a></p>
+
+<h5>2.1-4 XModByAutomorphismGroup</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByAutomorphismGroup</code>( <var class="Arg">grp</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByInnerAutomorphismGroup</code>( <var class="Arg">grp</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByGroupOfAutomorphisms</code>( <var class="Arg">G</var>, <var class="Arg">A</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>An <em>automorphism crossed module</em> has as range a subgroup <span class="SimpleMath">R</span> of the automorphism group Aut<span class="SimpleMath">(S)</span> of <span class="SimpleMath">S</span> which contains the inner automorphism group of <span class="SimpleMath">S</span>. The boundary maps <span class="SimpleMath">s ∈ S</span> to the inner automorphism of <span class="SimpleMath">S</span> by <span class="SimpleMath">s</span>.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X5 := XModByAutomorphismGroup( c5 );</span>
+[c5 -&gt; Aut(c5)] 
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( X5 );</span>
+Crossed module [c5-&gt;Aut(c5)] :- 
+: Source group c5 has generators:
+  [ (5,6,7,8,9) ]
+: Range group Aut(c5) has generators:
+  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ]
+: Boundary homomorphism maps source generators to:
+  [ IdentityMapping( c5 ) ]
+: Action homomorphism maps range generators to automorphisms:
+  GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], 
+[ (5,7,9,6,8) ] ) --&gt; { source gens --&gt; [ (5,7,9,6,8) ] }
+  This automorphism generates the group of automorphisms.
+
+</pre></div>
+
+<p><a id="X7D0F6FAA7AF69844" name="X7D0F6FAA7AF69844"></a></p>
+
+<h5>2.1-5 XModByCentralExtension</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByCentralExtension</code>( <var class="Arg">bdy</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>A <em>central extension crossed module</em> has as boundary a surjection <span class="SimpleMath">∂ : S -&gt; R</span>, with central kernel, where <span class="SimpleMath">r ∈ R</span> acts on <span class="SimpleMath">S</span> by conjugation with <span class="SimpleMath">∂^-1r</span>.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gen12 := [ (1,2,3,4,5,6), (2,6)(3,5) ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d12 := Group( gen12 );;                  </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gen6 := [ (7,8,9), (8,9) ];;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s3 := Group( gen6 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">pr12 := GroupHomomorphismByImages( d12, s3, gen12, gen6 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Kernel( pr12 ) = Centre( d12 );</span>
+true
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X12 := XModByCentralExtension( pr12 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( X12 );                         </span>
+Crossed module :- 
+: Source group has generators:
+  [ (1,2,3,4,5,6), (2,6)(3,5) ]
+: Range group has generators:
+  [ (7,8,9), (8,9) ]
+: Boundary homomorphism maps source generators to:
+  [ (7,8,9), (8,9) ]
+: Action homomorphism maps range generators to automorphisms:
+  (7,8,9) --&gt; { source gens --&gt; [ (1,2,3,4,5,6), (1,3)(4,6) ] }
+  (8,9) --&gt; { source gens --&gt; [ (1,6,5,4,3,2), (2,6)(3,5) ] }
+  These 2 automorphisms generate the group of automorphisms.
+
+</pre></div>
+
+<p><a id="X84FA2B0A795B6997" name="X84FA2B0A795B6997"></a></p>
+
+<h5>2.1-6 XModByPullback</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByPullback</code>( <var class="Arg">xmod</var>, <var class="Arg">hom</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>Let <span class="SimpleMath">mathcalX_0 = (μ : M -&gt; P)</span> be a crossed module. If <span class="SimpleMath">ν : N -&gt; P</span> is a group homomorphism with the same range as <span class="SimpleMath">mathcalX_0</span>, form the pullback group <span class="SimpleMath">L = M ×_P N</span>, with projection <span class="SimpleMath">λ : L -&gt; N</span> (as defined in the <strong class="pkg">Utils</strong> package). Then <span class="SimpleMath">N</span> acts on <span class="SimpleMath">L</span> by <span class="SimpleMath">(m,n)^n' := (m^ν n',n^n')</span>, so that <span class="SimpleMath">mathcalX_1 = (λ : L -&gt; N)</span> is the <em> pullback crossed module</em> determined by <span class="SimpleMath">mathcalX_0</span> and <span class="SimpleMath">ν</span>. There is also a morphism of crossed modules <span class="SimpleMath">(κ,ν) : mathcalX_1 -&gt; mathcalX_2</span>.</p>
+
+<p>The example forms a pullback of the crossed module <code class="code">X12</code> of the previous subsection.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gens4 := [ (11,12), (12,13), (13,14) ];; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">s4 := Group( gens4 );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">theta := GroupHomomorphismByImages( s4, s3, gens4, [(7,8),(8,9),(7,8)] );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X1 := XModByPullback( X12, theta );; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription( Source( X1 ) );</span>
+"C2 x S4"
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">info := PullbackInfo( Source( X1 ) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">info!.directProduct;</span>
+Group([ (1,2,3,4,5,6), (2,6)(3,5), (7,8), (8,9), (9,10) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">info!.projections[1];</span>
+[ (7,8)(9,10), (7,9)(8,10), (2,6)(3,5)(8,9), (1,5,3)(2,6,4)(8,10,9), 
+  (1,6,5,4,3,2)(8,9,10) ] -&gt; [ (), (), (2,6)(3,5), (1,5,3)(2,6,4), 
+  (1,6,5,4,3,2) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">info!.projections[2];</span>
+[ (7,8)(9,10), (7,9)(8,10), (2,6)(3,5)(8,9), (1,5,3)(2,6,4)(8,10,9), 
+  (1,6,5,4,3,2)(8,9,10) ] -&gt; [ (11,12)(13,14), (11,13)(12,14), (12,13), 
+  (12,14,13), (12,13,14) ]
+
+</pre></div>
+
+<p><a id="X824631577864961E" name="X824631577864961E"></a></p>
+
+<h5>2.1-7 XModByAbelianModule</h5>
+
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModByAbelianModule</code>( <var class="Arg">abmod</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<p>A <em>crossed abelian module</em> has an abelian module as source and the zero map as boundary. See section <a href="chap11.html#X852BD9CA84C2AFF0"><span class="RefLink">11.2</span></a> for an example.</p>
+
+<p><a id="X7D9EF8C3856AA95A" name="X7D9EF8C3856AA95A"></a></p>
+
+<h5>2.1-8 DirectProductOp</h5>
+
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; DirectProductOp</code>( <var class="Arg">L</var>, <var class="Arg">X1</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<p>The global function <code class="code">XMod</code> implements one of the following standard constructions:</p>
+<p>The direct product <span class="SimpleMath">mathcalX_1 × mathcalX_2</span> of two crossed modules has source <span class="SimpleMath">S_1 × S_2</span>, range <span class="SimpleMath">R_1 × R_2</span> and boundary <span class="SimpleMath">∂_1 × ∂_2</span>, with <span class="SimpleMath">R_1, R_2</span> acting trivially on <span class="SimpleMath">S_2, S_1</span> respectively.</p>
+
+<p>Since <code class="code">DirectProduct</code> is a global function which only accepts groups, it is necessary to provide an "other method" for the operation <code class="code">DirectProductOp</code>. This operation takes as parameters a list of crossed modules, followed by the first of these: <code class="code">DirectProductOp([X1,X2],X1);</code>. At present only the direct product of two crossed modules is implemented.</p>
+
+<p>The example constructs the product of the two crossed modules formed in subsection <code class="func">XModByTrivialAction</code> (<a href="chap2.html#X867B2D53832EF05E"><span class="RefLink">2.1-3</span></a>).</p>
 
 
-<ul>
-<li><p>A <em>trivial action crossed module</em> <span class="SimpleMath">(∂ : S -&gt; R)</span> has <span class="SimpleMath">s^r = s</span> for all <span class="SimpleMath">s ∈ S, r ∈ R</span>, the source is abelian and the image lies in the centre of the range.</p>
+<div class="example"><pre>
 
-</li>
-<li><p>A <em>conjugation crossed module</em> is the inclusion of a normal subgroup <span class="SimpleMath">S ⊴ R</span>, where <span class="SimpleMath">R</span> acts on <span class="SimpleMath">S</span> by conjugation.</p>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">DirectProductOp( [X8a,X8b], X8a );</span>
+[&lt;-1&gt;x&lt;i&gt;-&gt;q8xq8]
 
-</li>
-<li><p>A <em>central extension crossed module</em> has as boundary a surjection <span class="SimpleMath">∂ : S -&gt; R</span>, with central kernel, where <span class="SimpleMath">r ∈ R</span> acts on <span class="SimpleMath">S</span> by conjugation with <span class="SimpleMath">∂^-1r</span>.</p>
+</pre></div>
 
-</li>
-<li><p>An <em>automorphism crossed module</em> has as range a subgroup <span class="SimpleMath">R</span> of the automorphism group Aut<span class="SimpleMath">(S)</span> of <span class="SimpleMath">S</span> which contains the inner automorphism group of <span class="SimpleMath">S</span>. The boundary maps <span class="SimpleMath">s ∈ S</span> to the inner automorphism of <span class="SimpleMath">S</span> by <span class="SimpleMath">s</span>.</p>
-
-</li>
-<li><p>A <em>crossed abelian module</em> has an abelian module as source and the zero map as boundary.</p>
-
-</li>
-<li><p>The direct product <span class="SimpleMath">mathcalX_1 × mathcalX_2</span> of two crossed modules has source <span class="SimpleMath">S_1 × S_2</span>, range <span class="SimpleMath">R_1 × R_2</span> and boundary <span class="SimpleMath">∂_1 × ∂_2</span>, with <span class="SimpleMath">R_1, R_2</span> acting trivially on <span class="SimpleMath">S_2, S_1</span> respectively.</p>
-
-<p>Since <code class="code">DirectProduct</code> is a global function which only accepts groups, it is necessary to provide an "other method" for operation <code class="code">DirectProductOp</code> which, as usual, takes as parameters a list of crossed modules, followed by the first of these: <code class="code">DirectProductOp([X1,X2],X1);</code></p>
-
-</li>
-</ul>
 <p><a id="X790248A67CB9C33A" name="X790248A67CB9C33A"></a></p>
 
-<h5>2.1-2 Source</h5>
+<h5>2.1-9 Source</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Source</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Range</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
@@ -154,16 +307,34 @@
 </ul>
 <p>(Up until version 2.63 there was an additional attribute <code class="code">AutoGroup</code>, the range of <code class="code">XModAction(X0)</code>.)</p>
 
+<p>The example uses the crossed module <code class="code">X12</code> constructed in subsection <code class="func">XModByCentralExtension</code> (<a href="chap2.html#X7D0F6FAA7AF69844"><span class="RefLink">2.1-5</span></a>).</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Source( X12 );   </span>
+Group([ (1,2,3,4,5,6), (2,6)(3,5) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Range( X12 );    </span>
+Group([ (7,8,9), (8,9) ])
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Boundary( X12 ); </span>
+[ (1,2,3,4,5,6), (2,6)(3,5) ] -&gt; [ (7,8,9), (8,9) ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">XModAction( X12 );</span>
+[ (7,8,9), (8,9) ] -&gt; 
+[ [ (1,2,3,4,5,6), (2,6)(3,5) ] -&gt; [ (1,2,3,4,5,6), (1,3)(4,6) ], 
+  [ (1,2,3,4,5,6), (2,6)(3,5) ] -&gt; [ (1,6,5,4,3,2), (2,6)(3,5) ] ]
+
+</pre></div>
+
 <p><a id="X7AF6602C87845F1D" name="X7AF6602C87845F1D"></a></p>
 
-<h5>2.1-3 ImageElmXModAction</h5>
+<h5>2.1-10 ImageElmXModAction</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; ImageElmXModAction</code>( <var class="Arg">X0</var>, <var class="Arg">s</var>, <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>This function returns the element <span class="SimpleMath">s^r</span> given by <code class="code">XModAction(X0)</code>.</p>
 
 <p><a id="X7DCC43E47B1764F2" name="X7DCC43E47B1764F2"></a></p>
 
-<h5>2.1-4 Size</h5>
+<h5>2.1-11 Size</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Size</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Name</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
@@ -175,41 +346,25 @@
 
 <p>The <code class="code">Display</code> function is used to print details of 2d-groups.</p>
 
-<p>In the simple example below, <code class="code">X1</code> is an automorphism crossed module, using a cyclic group of size five. The <code class="code">Print</code> statements at the end list the <strong class="pkg">GAP</strong> representations, properties and attributes of <code class="code">X1</code>.</p>
+<p>In the simple example below, <code class="code">X5</code> is the automorphism crossed module constructed in subsection <code class="func">XModByAutomorphismGroup</code> (<a href="chap2.html#X78B14FDA817CCEEF"><span class="RefLink">2.1-4</span></a>). The <code class="code">Print</code> statements at the end of the example list the <strong class="pkg">GAP</strong> representations and attributes of <code class="code">X5</code>.</p>
 
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">c5 := Group( (5,6,7,8,9) );;</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">SetName( c5, "c5" );</span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X1 := XModByAutomorphismGroup( c5 );</span>
-[c5 -&gt; Aut(c5)] 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( X1 );</span>
-Crossed module [c5-&gt;Aut(c5)] :- 
-: Source group c5 has generators:
-  [ (5,6,7,8,9) ]
-: Range group Aut(c5) has generators:
-  [ GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], [ (5,7,9,6,8) ] ) ]
-: Boundary homomorphism maps source generators to:
-  [ IdentityMapping( c5 ) ]
-: Action homomorphism maps range generators to automorphisms:
-  GroupHomomorphismByImages( c5, c5, [ (5,6,7,8,9) ], 
-[ (5,7,9,6,8) ] ) --&gt; { source gens --&gt; [ (5,7,9,6,8) ] }
-  This automorphism generates the group of automorphisms.
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( X1 );  IdGroup( X1 ); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( X5 );  IdGroup( X5 ); </span>
 [ 5, 4 ]
 [ [ 5, 1 ], [ 4, 1 ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ext := ExternalSetXMod( X1 ); </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ext := ExternalSetXMod( X5 ); </span>
 &lt;xset:[ (), (5,6,7,8,9), (5,7,9,6,8), (5,8,6,9,7), (5,9,8,7,6) ]&gt;
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Orbits( ext );</span>
 [ [ () ], [ (5,6,7,8,9), (5,7,9,6,8), (5,9,8,7,6), (5,8,6,9,7) ] ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := GeneratorsOfGroup( Range( X1 ) )[1]^2; </span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">a := GeneratorsOfGroup( Range( X5 ) )[1]^2; </span>
 [ (5,6,7,8,9) ] -&gt; [ (5,9,8,7,6) ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ImageElmXModAction( X1, (5,7,9,6,8), a );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">ImageElmXModAction( X5, (5,7,9,6,8), a );</span>
 (5,8,6,9,7)
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentationsOfObject( X1 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">RepresentationsOfObject( X5 );</span>
 [ "IsComponentObjectRep", "IsAttributeStoringRep", "IsPreXModObj" ]
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownAttributesOfObject( X1);</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownAttributesOfObject( X5);</span>
 [ "Name", "Size", "Range", "Source", "IdGroup", "Boundary", "XModAction", 
   "ExternalSetXMod", "IsomorphismPerm2DimensionalGroup" ]
 
@@ -232,12 +387,12 @@ Crossed module [c5-&gt;Aut(c5)] :-
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPerm2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPc2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsFp2DimensionalGroup</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<p>A structure which has <code class="code">IsPerm2DimensionalGroup</code> is a precrossed module or a pre-cat1-group (see section <a href="chap2.html#X7F868C2181018D0C"><span class="RefLink">2.4</span></a>) whose source and range are both permutation groups. The properties <code class="code">IsPc2DimensionalGroup</code>, <code class="code">IsFp2DimensionalGroup</code> are defined similarly. In the example below we see that <code class="code">X1</code> has <code class="code">IsPreXMod</code>, <code class="code">IsXMod</code> and <code class="code">IsPerm2DimensionalGroup</code>. There are also properties corresponding to the various construction methods listed in section <a href="chap2.html#X7BAD9A7F7AFEEC89"><span class="RefLink">2.1</span></a>: <code class="code">IsTrivialAction2DimensionalGroup</code>; <code class="code">IsNormalSubgroup2DimensionalGroup</code>; <code class="code">IsCentralExtension2DimensionalGroup</code>; <code class="code">IsAutomorphismGroup2DimensionalGroup</code>; <code class="code">IsAbelianModule2DimensionalGroup</code>.</p>
+<p>A structure which has <code class="code">IsPerm2DimensionalGroup</code> is a precrossed module or a pre-cat1-group (see section <a href="chap2.html#X7F868C2181018D0C"><span class="RefLink">2.4</span></a>) whose source and range are both permutation groups. The properties <code class="code">IsPc2DimensionalGroup</code>, <code class="code">IsFp2DimensionalGroup</code> are defined similarly. In the example below we see that <code class="code">X5</code> has <code class="code">IsPreXMod</code>, <code class="code">IsXMod</code> and <code class="code">IsPerm2DimensionalGroup</code>. There are also properties corresponding to the various construction methods listed in section <a href="chap2.html#X7BAD9A7F7AFEEC89"><span class="RefLink">2.1</span></a>: <code class="code">IsTrivialAction2DimensionalGroup</code>; <code class="code">IsNormalSubgroup2DimensionalGroup</code>; <code class="code">IsCentralExtension2DimensionalGroup</code>; <code class="code">IsAutomorphismGroup2DimensionalGroup</code>; <code class="code">IsAbelianModule2DimensionalGroup</code>.</p>
 
 
 <div class="example"><pre>
 
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownPropertiesOfObject( X1 );</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">KnownPropertiesOfObject( X5 );</span>
 [ "IsEmpty", "IsTrivial", "IsNonTrivial", "IsFinite", 
   "CanEasilyCompareElements", "CanEasilySortElements", "IsDuplicateFree", 
   "IsGeneratorsOfSemigroup", "IsPreXModDomain", "IsPerm2DimensionalGroup", 
@@ -291,6 +446,26 @@ true
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">NX4 := NormalSubXMods( X4 );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Length( NX4 ); </span>
 5
+
+</pre></div>
+
+<p><a id="X7D8165F77B23BCF6" name="X7D8165F77B23BCF6"></a></p>
+
+<h5>2.2-3 KernelCokernelXMod</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; KernelCokernelXMod</code>( <var class="Arg">X0</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Let <span class="SimpleMath">mathcalX = (∂ : S -&gt; R)</span>. If <span class="SimpleMath">K leqslant S</span> is the kernel of <span class="SimpleMath">∂</span>, and <span class="SimpleMath">J leqslant R</span> is the image of <span class="SimpleMath">∂</span>, form <span class="SimpleMath">C = R/J</span>. Then <span class="SimpleMath">(ν∂|_K : K -&gt; C)</span> is a crossed module where <span class="SimpleMath">ν : R -&gt; C, r ↦ Jr</span> is the natural map, and the action of <span class="SimpleMath">C</span> on <span class="SimpleMath">K</span> is given by <span class="SimpleMath">k^Jr = k^r</span>.</p>
+
+
+<div class="example"><pre>
+
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">d8d8 := Group( (1,2,3,4), (1,3), (5,6,7,8), (5,7) );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">X88 := XModByAutomorphismGroup( d8d8 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Size( X88 );</span>
+[ 64, 2048 ]
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Y88 := KernelCokernelXMod( X88 );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">StructureDescription( Y88 );</span>
+[ "C2 x C2", "(D8 x D8) : C2" ] 
 
 </pre></div>
 

@@ -52,7 +52,7 @@
   
   [33X[0;0YIn  the example below the automorphism crossed module [10XX8[110X has [22XM ≅ C_2^3[122X and [22XP
   =  PSL(3,2)[122X  is the automorphism group of [22XM[122X. There are [22X6[122X equivalence classes
-  and,  for  each  [22XLX[122X  calculated,  the  [2XSize[102X ([14X2.1-4[114X) and [2XStructureDescription[102X
+  and,  for  each  [22XLX[122X  calculated,  the [2XSize[102X ([14X2.1-11[114X) and [2XStructureDescription[102X
   ([14X2.7-1[114X) are printed out.[133X
   
   [4X[32X  Example  [32X[104X

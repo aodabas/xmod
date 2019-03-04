@@ -59,9 +59,9 @@
   [1X3.2-3 XModMorphism[101X
   
   [33X[1;0Y[29X[2XXModMorphism[102X( [3Xargs[103X ) [32X function[133X
-  [33X[1;0Y[29X[2XXModMorphismByHoms[102X( [3XX1[103X, [3XX2[103X, [3Xsigma[103X, [3Xrho[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XXModMorphismByGroupHomomorphisms[102X( [3XX1[103X, [3XX2[103X, [3Xsigma[103X, [3Xrho[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XPreXModMorphism[102X( [3Xargs[103X ) [32X function[133X
-  [33X[1;0Y[29X[2XPreXModMorphismByHoms[102X( [3XP1[103X, [3XP2[103X, [3Xsigma[103X, [3Xrho[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPreXModMorphismByGroupHomomorphisms[102X( [3XP1[103X, [3XP2[103X, [3Xsigma[103X, [3Xrho[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XInclusionMorphism2DimensionalDomains[102X( [3XX1[103X, [3XS1[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XInnerAutomorphismXMod[102X( [3XX1[103X, [3Xr[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XIdentityMapping[102X( [3XX1[103X ) [32X attribute[133X
@@ -142,6 +142,15 @@
     [4X[28X[128X[104X
   [4X[32X[104X
   
+  [1X3.2-5 MorphismOfPullback[101X
+  
+  [33X[1;0Y[29X[2XMorphismOfPullback[102X( [3Xxmod[103X ) [32X attribute[133X
+  
+  [33X[0;0YLet [22XmathcalX_1 = (λ : L -> N)[122X be the pullback crossed module obtained from a
+  crossed  module  [22XmathcalX_0 = (μ : M -> P)[122X and a group homomorphism [22Xν : N ->
+  P[122X.  Then  the  associated  crossed  module morphism is [22X(κ,ν) : mathcalX_1 ->
+  mathcalX_0[122X where [22Xκ[122X is the projection from [22XL[122X to [22XM[122X.[133X
+  
   
   [1X3.3 [33X[0;0YMorphisms of pre-cat1-groups[133X[101X
   
@@ -155,14 +164,14 @@
   
   [124X
   
-  [1X3.3-1 IsCat1Morphism[101X
+  [1X3.3-1 IsCat1GroupMorphism[101X
   
-  [33X[1;0Y[29X[2XIsCat1Morphism[102X( [3Xmap[103X ) [32X property[133X
-  [33X[1;0Y[29X[2XIsPreCat1Morphism[102X( [3Xmap[103X ) [32X property[133X
-  [33X[1;0Y[29X[2XCat1Morphism[102X( [3Xargs[103X ) [32X function[133X
-  [33X[1;0Y[29X[2XCat1MorphismByHoms[102X( [3XC1[103X, [3XC2[103X, [3Xgamma[103X, [3Xrho[103X ) [32X operation[133X
-  [33X[1;0Y[29X[2XPreCat1Morphism[102X( [3Xargs[103X ) [32X function[133X
-  [33X[1;0Y[29X[2XPreCat1MorphismByHoms[102X( [3XP1[103X, [3XP2[103X, [3Xgamma[103X, [3Xrho[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XIsCat1GroupMorphism[102X( [3Xmap[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XIsPreCat1GroupMorphism[102X( [3Xmap[103X ) [32X property[133X
+  [33X[1;0Y[29X[2XCat1GroupMorphism[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XCat1GroupMorphismByHoms[102X( [3XC1[103X, [3XC2[103X, [3Xgamma[103X, [3Xrho[103X ) [32X operation[133X
+  [33X[1;0Y[29X[2XPreCat1GroupMorphism[102X( [3Xargs[103X ) [32X function[133X
+  [33X[1;0Y[29X[2XPreCat1GroupMorphismByHoms[102X( [3XP1[103X, [3XP2[103X, [3Xgamma[103X, [3Xrho[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XInclusionMorphism2DimensionalDomains[102X( [3XC1[103X, [3XS1[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XInnerAutomorphismCat1[102X( [3XC1[103X, [3Xr[103X ) [32X operation[133X
   [33X[1;0Y[29X[2XIdentityMapping[102X( [3XC1[103X ) [32X attribute[133X
@@ -178,7 +187,7 @@
     [4X[25Xgap>[125X [27Ximgamma := [ (4,5,6), (1,2,3), (2,3)(5,6) ];; [127X[104X
     [4X[25Xgap>[125X [27Xgamma := GroupHomomorphismByImages( g18, g18, g18gens, imgamma );;[127X[104X
     [4X[25Xgap>[125X [27Xrho := IdentityMapping( s3a );; [127X[104X
-    [4X[25Xgap>[125X [27Xmor := Cat1Morphism( C1, C2, gamma, rho );;[127X[104X
+    [4X[25Xgap>[125X [27Xmor := Cat1GroupMorphism( C1, C2, gamma, rho );;[127X[104X
     [4X[25Xgap>[125X [27XDisplay( mor );;[127X[104X
     [4X[28XMorphism of cat1-groups :- [128X[104X
     [4X[28X: Source = [g18=>s3a] with generating sets:[128X[104X

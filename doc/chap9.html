@@ -49,7 +49,7 @@
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; SinglePiecePreXModWithObjects</code>( <var class="Arg">pxmod</var>, <var class="Arg">obs</var>, <var class="Arg">isdisc</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <p>At present the experimental operation <code class="code">SinglePiecePreXModWithObjects</code> accepts a precrossed module <code class="code">pxmod</code>, a set of objects <code class="code">obs</code>, and a boolean <code class="code">isdisc</code> which is <code class="code">true</code> when the source groupoid is homogeneous and discrete and <code class="code">false</code> when the source groupoid is connected. Other operations will be added as time permits.</p>
 
-<p>In the example the crossed module <code class="code">DX4</code> has discrete source, while the crossed module <code class="code">CX4</code> has connected source. These are groupoid equivalents of <code class="func">XModByNormalSubgroup</code> (<a href="chap2.html#X7C8175AE7F76B586"><span class="RefLink">2.1-1</span></a>).</p>
+<p>In the example the crossed module <code class="code">DX4</code> has discrete source, while the crossed module <code class="code">CX4</code> has connected source. These are groupoid equivalents of <code class="func">XModByNormalSubgroup</code> (<a href="chap2.html#X83050ED686776933"><span class="RefLink">2.1-2</span></a>).</p>
 
 
 <div class="example"><pre>
@@ -125,7 +125,7 @@ false
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Root2dGroup</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModAction</code>( <var class="Arg">pxmod</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
-<p>The attributes of a precrossed module with objects include the standard <code class="code">Source</code>; <code class="code">Range</code>; <code class="func">Boundary</code> (<a href="chap2.html#X790248A67CB9C33A"><span class="RefLink">2.1-2</span></a>); and <code class="func">XModAction</code> (<a href="chap2.html#X790248A67CB9C33A"><span class="RefLink">2.1-2</span></a>) as with precrossed modules of groups. There is also <code class="code">ObjectList</code>, as in the <strong class="pkg">groupoids</strong> package. Additionally there is <code class="code">Root2dGroup</code> which is the underlying precrossed module used in the construction.</p>
+<p>The attributes of a precrossed module with objects include the standard <code class="code">Source</code>; <code class="code">Range</code>; <code class="func">Boundary</code> (<a href="chap2.html#X790248A67CB9C33A"><span class="RefLink">2.1-9</span></a>); and <code class="func">XModAction</code> (<a href="chap2.html#X790248A67CB9C33A"><span class="RefLink">2.1-9</span></a>) as with precrossed modules of groups. There is also <code class="code">ObjectList</code>, as in the <strong class="pkg">groupoids</strong> package. Additionally there is <code class="code">Root2dGroup</code> which is the underlying precrossed module used in the construction.</p>
 
 <p>Note that <code class="code">XModAction</code> is now a groupoid homomorphism from the source groupoid to a one-object groupoid (with object <code class="code">0</code>) where the group is the automorphism group of the range groupoid.</p>
 

@@ -37,11 +37,12 @@
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7E078F497F4EFA9F">3.2-2 IsInjective</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7CEABD6487CF2A38">3.2-3 XModMorphism</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X854FC0C781AD62EC">3.2-4 IsomorphismPerm2DimensionalGroup</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X87BCAAF787A7FF69">3.2-5 MorphismOfPullback</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X84DDF8247FC4982B">3.3 <span class="Heading">Morphisms of pre-cat1-groups</span></a>
 </span>
 <div class="ContSSBlock">
-<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7BB8A8E0803AC8E5">3.3-1 IsCat1Morphism</a></span>
+<span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7C47D0EC782D4C40">3.3-1 IsCat1GroupMorphism</a></span>
 <span class="ContSS"><br /><span class="nocss">&nbsp;&nbsp;</span><a href="chap3_mj.html#X7C6AF7C285D546B2">3.3-2 IsomorphismPermObject</a></span>
 </div></div>
 <div class="ContSect"><span class="tocline"><span class="nocss">&nbsp;</span><a href="chap3_mj.html#X7B09A28579707CAF">3.4 <span class="Heading">Operations on morphisms</span></a>
@@ -106,9 +107,9 @@
 <h5>3.2-3 XModMorphism</h5>
 
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModMorphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModMorphismByHoms</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var>, <var class="Arg">sigma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; XModMorphismByGroupHomomorphisms</code>( <var class="Arg">X1</var>, <var class="Arg">X2</var>, <var class="Arg">sigma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreXModMorphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreXModMorphismByHoms</code>( <var class="Arg">P1</var>, <var class="Arg">P2</var>, <var class="Arg">sigma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreXModMorphismByGroupHomomorphisms</code>( <var class="Arg">P1</var>, <var class="Arg">P2</var>, <var class="Arg">sigma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InclusionMorphism2DimensionalDomains</code>( <var class="Arg">X1</var>, <var class="Arg">S1</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InnerAutomorphismXMod</code>( <var class="Arg">X1</var>, <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMapping</code>( <var class="Arg">X1</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
@@ -183,6 +184,13 @@ true
 
 </pre></div>
 
+<p><a id="X87BCAAF787A7FF69" name="X87BCAAF787A7FF69"></a></p>
+
+<h5>3.2-5 MorphismOfPullback</h5>
+
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; MorphismOfPullback</code>( <var class="Arg">xmod</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
+<p>Let <span class="SimpleMath">\(\mathcal{X}_1 = (\lambda : L \to N)\)</span> be the pullback crossed module obtained from a crossed module <span class="SimpleMath">\(\mathcal{X}_0 = (\mu : M \to P)\)</span> and a group homomorphism <span class="SimpleMath">\(\nu : N \to P\)</span>. Then the associated crossed module morphism is <span class="SimpleMath">\((\kappa,\nu) : \mathcal{X}_1 \to \mathcal{X}_0\)</span> where <span class="SimpleMath">\(\kappa\)</span> is the projection from <span class="SimpleMath">\(L\)</span> to <span class="SimpleMath">\(M\)</span>.</p>
+
 <p><a id="X84DDF8247FC4982B" name="X84DDF8247FC4982B"></a></p>
 
 <h4>3.3 <span class="Heading">Morphisms of pre-cat1-groups</span></h4>
@@ -195,16 +203,16 @@ t_2 \circ \gamma ~=~ \rho \circ t_1, \qquad
 e_2 \circ \rho ~=~ \gamma \circ e_1. 
 \]</p>
 
-<p><a id="X7BB8A8E0803AC8E5" name="X7BB8A8E0803AC8E5"></a></p>
+<p><a id="X7C47D0EC782D4C40" name="X7C47D0EC782D4C40"></a></p>
 
-<h5>3.3-1 IsCat1Morphism</h5>
+<h5>3.3-1 IsCat1GroupMorphism</h5>
 
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCat1Morphism</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreCat1Morphism</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat1Morphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat1MorphismByHoms</code>( <var class="Arg">C1</var>, <var class="Arg">C2</var>, <var class="Arg">gamma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat1Morphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
-<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat1MorphismByHoms</code>( <var class="Arg">P1</var>, <var class="Arg">P2</var>, <var class="Arg">gamma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsCat1GroupMorphism</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IsPreCat1GroupMorphism</code>( <var class="Arg">map</var> )</td><td class="tdright">(&nbsp;property&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat1GroupMorphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; Cat1GroupMorphismByHoms</code>( <var class="Arg">C1</var>, <var class="Arg">C2</var>, <var class="Arg">gamma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat1GroupMorphism</code>( <var class="Arg">args</var> )</td><td class="tdright">(&nbsp;function&nbsp;)</td></tr></table></div>
+<div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; PreCat1GroupMorphismByHoms</code>( <var class="Arg">P1</var>, <var class="Arg">P2</var>, <var class="Arg">gamma</var>, <var class="Arg">rho</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InclusionMorphism2DimensionalDomains</code>( <var class="Arg">C1</var>, <var class="Arg">S1</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; InnerAutomorphismCat1</code>( <var class="Arg">C1</var>, <var class="Arg">r</var> )</td><td class="tdright">(&nbsp;operation&nbsp;)</td></tr></table></div>
 <div class="func"><table class="func" width="100%"><tr><td class="tdleft"><code class="func">&#8227; IdentityMapping</code>( <var class="Arg">C1</var> )</td><td class="tdright">(&nbsp;attribute&nbsp;)</td></tr></table></div>
@@ -219,7 +227,7 @@ e_2 \circ \rho ~=~ \gamma \circ e_1.
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">imgamma := [ (4,5,6), (1,2,3), (2,3)(5,6) ];; </span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">gamma := GroupHomomorphismByImages( g18, g18, g18gens, imgamma );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">rho := IdentityMapping( s3a );; </span>
-<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mor := Cat1Morphism( C1, C2, gamma, rho );;</span>
+<span class="GAPprompt">gap&gt;</span> <span class="GAPinput">mor := Cat1GroupMorphism( C1, C2, gamma, rho );;</span>
 <span class="GAPprompt">gap&gt;</span> <span class="GAPinput">Display( mor );;</span>
 Morphism of cat1-groups :- 
 : Source = [g18=&gt;s3a] with generating sets:
